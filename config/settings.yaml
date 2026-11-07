@@ -9,6 +9,7 @@ data:  # Where data comes from
   current_season: 2027  # ESPN season label for 2026-27 (ESPN names a season by the year it ends)
   prior_season: 2026  # ESPN season label for 2025-26, used as a starting point early in the season
   exclude_out_players: true  # Leave players marked OUT by DraftKings out of the player pool
+  espn_max_new_games_per_run: 2000  # Most new ESPN box scores downloaded in one run (the first run backfills ~1,400 games)
   odds_regions: us  # Sportsbook region for The Odds API
   odds_markets: spreads,totals  # Betting markets to pull (no player props: those cost money)
 
