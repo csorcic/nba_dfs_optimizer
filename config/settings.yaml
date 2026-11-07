@@ -17,12 +17,21 @@ projections:  # How each player's fantasy-point projection is built
   recency_half_life_games: 10  # How fast old games fade: a game this many games ago counts half as much as the latest one
   use_prior_season: true  # Blend in last season's scoring rate early in the season (true or false)
   prior_season_k: 10  # Blend strength: this season counts games/(games + this number); bigger = trust last season longer
+  prior_season_minutes_k: 3  # Same blend for minutes; smaller because roles show up faster than scoring rates
   minutes_lookback_games: 10  # Number of recent games used to estimate a player's minutes
+  rotation_minutes: 18  # Players averaging fewer minutes than this sometimes sit; their minutes are scaled by how often they've played lately
+  max_minutes: 40  # Nobody is projected for more minutes than this, even with a minutes bump
+  bump_minutes_power: 0.0  # How a missing player's minutes are shared: 1 = in proportion to each teammate's minutes, 0 = evenly, 0.5 = in between
+  bump_same_position_weight: 1.0  # When a player is OUT, teammates at his position get this much extra share of his minutes (1.0 = double share)
+  starter_minutes_threshold: 28  # Players projected for at least this many minutes count as starters for blowout risk
   blowout_spread_threshold: 10  # Point spread at which starters start losing minutes to blowout risk
   blowout_minutes_cut_per_point: 0.01  # Share of starter minutes removed per spread point beyond the threshold (0.01 = 1%)
   blowout_max_minutes_cut: 0.12  # Most starter minutes ever removed for blowout risk (0.12 = 12%)
+  team_points_prior_k: 5  # Blend for each team's normal scoring: this season counts games/(games + this number)
   vegas_exponent: 1.0  # How strongly Vegas team totals move projections (0 = ignore Vegas, 1 = proportional)
+  sd_lookback_games: 40  # Number of recent games used to measure a player's boom/bust spread
   sd_prior_games: 8  # How many games of evidence before we trust a player's own boom/bust spread over his position's average
+  sd_scale: 1.15  # Widens (above 1) or narrows (below 1) every player's boom/bust range
   ceiling_z: 1.28  # Ceiling = projection + this many standard deviations (1.28 is about the 90th percentile)
   floor_z: 1.28  # Floor = projection - this many standard deviations (1.28 is about the 10th percentile)
   ownership_total_pct: 800  # Estimated ownership across all players adds up to this (8 roster spots x 100%)
@@ -39,3 +48,7 @@ optimizer:  # Starting values for the lineup builder (each can be changed in the
   gpp_ownership_penalty: 0.1  # In GPP mode, points subtracted per 1% of estimated ownership (fades chalk)
   stack_min_players: 0  # Require at least this many players from one game (0 = off)
   stack_bring_back: false  # When stacking, also require a player from the other team in that game
+
+backtest:  # How scripts/backtest.py groups its report
+  salary_tiers: [4000, 6000, 8000]  # Salary breakpoints for the report (under $4K, $4-6K, $6-8K, $8K+)
+  projection_tiers: [15, 25, 35]  # Projection breakpoints used when a day has no DK salary file

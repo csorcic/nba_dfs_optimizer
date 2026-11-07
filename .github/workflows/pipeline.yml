@@ -33,6 +33,8 @@ jobs:
           DK_SALARY_TOKEN: ${{ secrets.DK_SALARY_TOKEN }}
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python -m pipeline.run
+      - name: Backtest projections (current season)
+        run: python scripts/backtest.py
       - name: Save data back to the repo
         if: always()  # keep downloaded box scores even if a later step failed
         run: |
