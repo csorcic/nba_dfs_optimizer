@@ -1,0 +1,62 @@
+[
+{
+"event_id": "401812686",
+"start": "2025-10-08T23:30Z",
+"season": 2026,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "MIA",
+"away": "SAS",
+"home_score": 107,
+"away_score": 112,
+"odds": null
+},
+{
+"event_id": "401812687",
+"start": "2025-10-09T00:00Z",
+"season": 2026,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "HOU",
+"away": "UTA",
+"home_score": 140,
+"away_score": 127,
+"odds": null
+},
+{
+"event_id": "401812688",
+"start": "2025-10-09T00:00Z",
+"season": 2026,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "MEM",
+"away": "BOS",
+"home_score": 103,
+"away_score": 121,
+"odds": null
+},
+{
+"event_id": "401812689",
+"start": "2025-10-09T02:00Z",
+"season": 2026,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "GSW",
+"away": "POR",
+"home_score": 129,
+"away_score": 123,
+"odds": null
+},
+{
+"event_id": "401812690",
+"start": "2025-10-09T02:00Z",
+"season": 2026,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "SAC",
+"away": "TOR",
+"home_score": 122,
+"away_score": 130,
+"odds": null
+}
+]

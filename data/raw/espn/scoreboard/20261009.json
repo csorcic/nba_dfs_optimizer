@@ -1,0 +1,26 @@
+[
+{
+"event_id": "401898395",
+"start": "2026-10-09T12:00Z",
+"season": 2027,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "DAL",
+"away": "HOU",
+"home_score": 117,
+"away_score": 135,
+"odds": null
+},
+{
+"event_id": "401908940",
+"start": "2026-10-10T00:00Z",
+"season": 2027,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "CHI",
+"away": "MEM",
+"home_score": 100,
+"away_score": 104,
+"odds": null
+}
+]

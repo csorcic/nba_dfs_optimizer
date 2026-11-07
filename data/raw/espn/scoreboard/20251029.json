@@ -1,0 +1,122 @@
+[
+{
+"event_id": "401809986",
+"start": "2025-10-29T22:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "TOR",
+"away": "HOU",
+"home_score": 121,
+"away_score": 139,
+"odds": null
+},
+{
+"event_id": "401809983",
+"start": "2025-10-29T23:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "BOS",
+"away": "CLE",
+"home_score": 125,
+"away_score": 105,
+"odds": null
+},
+{
+"event_id": "401809984",
+"start": "2025-10-29T23:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "DET",
+"away": "ORL",
+"home_score": 135,
+"away_score": 116,
+"odds": null
+},
+{
+"event_id": "401809985",
+"start": "2025-10-29T23:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "BKN",
+"away": "ATL",
+"home_score": 112,
+"away_score": 117,
+"odds": null
+},
+{
+"event_id": "401809987",
+"start": "2025-10-30T00:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "CHI",
+"away": "SAC",
+"home_score": 126,
+"away_score": 113,
+"odds": null
+},
+{
+"event_id": "401809988",
+"start": "2025-10-30T00:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "DAL",
+"away": "IND",
+"home_score": 107,
+"away_score": 105,
+"odds": null
+},
+{
+"event_id": "401809989",
+"start": "2025-10-30T01:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "DEN",
+"away": "NOP",
+"home_score": 122,
+"away_score": 88,
+"odds": null
+},
+{
+"event_id": "401809990",
+"start": "2025-10-30T01:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "UTA",
+"away": "POR",
+"home_score": 134,
+"away_score": 136,
+"odds": null
+},
+{
+"event_id": "401809991",
+"start": "2025-10-30T01:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "MIN",
+"away": "LAL",
+"home_score": 115,
+"away_score": 116,
+"odds": null
+},
+{
+"event_id": "401809992",
+"start": "2025-10-30T02:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "PHX",
+"away": "MEM",
+"home_score": 113,
+"away_score": 114,
+"odds": null
+}
+]

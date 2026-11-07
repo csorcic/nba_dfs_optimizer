@@ -1,0 +1,50 @@
+[
+{
+"event_id": "401901820",
+"start": "2026-10-06T23:00Z",
+"season": 2027,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "CHA",
+"away": "BKN",
+"home_score": 90,
+"away_score": 124,
+"odds": null
+},
+{
+"event_id": "401898389",
+"start": "2026-10-07T00:00Z",
+"season": 2027,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "OKC",
+"away": "NOP",
+"home_score": 110,
+"away_score": 116,
+"odds": null
+},
+{
+"event_id": "401914128",
+"start": "2026-10-07T01:00Z",
+"season": 2027,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "UTA",
+"away": "DEN",
+"home_score": 106,
+"away_score": 117,
+"odds": null
+},
+{
+"event_id": "401898390",
+"start": "2026-10-07T02:00Z",
+"season": 2027,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "GSW",
+"away": "LAL",
+"home_score": 124,
+"away_score": 98,
+"odds": null
+}
+]

@@ -1,0 +1,74 @@
+[
+{
+"event_id": "401810104",
+"start": "2025-11-19T00:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "ORL",
+"away": "GSW",
+"home_score": 121,
+"away_score": 113,
+"odds": null
+},
+{
+"event_id": "401810105",
+"start": "2025-11-19T00:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "BKN",
+"away": "BOS",
+"home_score": 99,
+"away_score": 113,
+"odds": null
+},
+{
+"event_id": "401810106",
+"start": "2025-11-19T00:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "ATL",
+"away": "DET",
+"home_score": 112,
+"away_score": 120,
+"odds": null
+},
+{
+"event_id": "401810107",
+"start": "2025-11-19T01:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "SAS",
+"away": "MEM",
+"home_score": 111,
+"away_score": 101,
+"odds": null
+},
+{
+"event_id": "401810108",
+"start": "2025-11-19T03:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "LAL",
+"away": "UTA",
+"home_score": 140,
+"away_score": 126,
+"odds": null
+},
+{
+"event_id": "401810109",
+"start": "2025-11-19T04:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "POR",
+"away": "PHX",
+"home_score": 110,
+"away_score": 127,
+"odds": null
+}
+]

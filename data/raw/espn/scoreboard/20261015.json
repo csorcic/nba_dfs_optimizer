@@ -1,0 +1,26 @@
+[
+{
+"event_id": "401908945",
+"start": "2026-10-15T23:30Z",
+"season": 2027,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "NYK",
+"away": "TOR",
+"home_score": 122,
+"away_score": 120,
+"odds": null
+},
+{
+"event_id": "401908622",
+"start": "2026-10-16T00:30Z",
+"season": 2027,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "HOU",
+"away": "OKC",
+"home_score": 116,
+"away_score": 89,
+"odds": null
+}
+]

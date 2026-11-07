@@ -1,0 +1,26 @@
+[
+{
+"event_id": "401914127",
+"start": "2026-10-04T23:00Z",
+"season": 2027,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "DEN",
+"away": "UTA",
+"home_score": 97,
+"away_score": 109,
+"odds": null
+},
+{
+"event_id": "401918010",
+"start": "2026-10-04T23:00Z",
+"season": 2027,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "LAC",
+"away": "GSW",
+"home_score": 104,
+"away_score": 101,
+"odds": null
+}
+]

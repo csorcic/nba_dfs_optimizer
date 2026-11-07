@@ -1,0 +1,26 @@
+[
+{
+"event_id": "401812684",
+"start": "2025-10-07T23:00Z",
+"season": 2026,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "CLE",
+"away": "CHI",
+"home_score": 117,
+"away_score": 118,
+"odds": null
+},
+{
+"event_id": "401812685",
+"start": "2025-10-08T00:00Z",
+"season": 2026,
+"season_type": 1,
+"status": "STATUS_FINAL",
+"home": "MIN",
+"away": "IND",
+"home_score": 134,
+"away_score": 135,
+"odds": null
+}
+]

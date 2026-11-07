@@ -1,0 +1,38 @@
+[
+{
+"event_id": "401809799",
+"start": "2025-11-26T00:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "WAS",
+"away": "ATL",
+"home_score": 132,
+"away_score": 113,
+"odds": null
+},
+{
+"event_id": "401809800",
+"start": "2025-11-26T01:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "PHI",
+"away": "ORL",
+"home_score": 103,
+"away_score": 144,
+"odds": null
+},
+{
+"event_id": "401809801",
+"start": "2025-11-26T04:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "LAL",
+"away": "LAC",
+"home_score": 135,
+"away_score": 118,
+"odds": null
+}
+]

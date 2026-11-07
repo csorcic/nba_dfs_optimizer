@@ -1,0 +1,26 @@
+[
+{
+"event_id": "401909093",
+"start": "2026-10-22T23:00Z",
+"season": 2027,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "PHI",
+"away": "CLE",
+"home_score": 114,
+"away_score": 106,
+"odds": null
+},
+{
+"event_id": "401909094",
+"start": "2026-10-23T01:30Z",
+"season": 2027,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "OKC",
+"away": "DEN",
+"home_score": 96,
+"away_score": 84,
+"odds": null
+}
+]
