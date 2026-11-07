@@ -1,0 +1,26 @@
+[
+{
+"event_id": "401869411",
+"start": "2026-04-22T23:00Z",
+"season": 2026,
+"season_type": 3,
+"status": "STATUS_FINAL",
+"home": "DET",
+"away": "ORL",
+"home_score": 98,
+"away_score": 83,
+"odds": null
+},
+{
+"event_id": "401869368",
+"start": "2026-04-23T01:30Z",
+"season": 2026,
+"season_type": 3,
+"status": "STATUS_FINAL",
+"home": "OKC",
+"away": "PHX",
+"home_score": 120,
+"away_score": 107,
+"odds": null
+}
+]

@@ -1,0 +1,26 @@
+[
+{
+"event_id": "401866757",
+"start": "2026-04-15T23:30Z",
+"season": 2026,
+"season_type": 5,
+"status": "STATUS_FINAL",
+"home": "PHI",
+"away": "ORL",
+"home_score": 109,
+"away_score": 97,
+"odds": null
+},
+{
+"event_id": "401866756",
+"start": "2026-04-16T02:00Z",
+"season": 2026,
+"season_type": 5,
+"status": "STATUS_FINAL",
+"home": "LAC",
+"away": "GSW",
+"home_score": 121,
+"away_score": 126,
+"odds": null
+}
+]

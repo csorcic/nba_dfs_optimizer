@@ -1,0 +1,122 @@
+[
+{
+"event_id": "401810241",
+"start": "2025-12-20T22:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "DEN",
+"away": "HOU",
+"home_score": 101,
+"away_score": 115,
+"odds": null
+},
+{
+"event_id": "401810242",
+"start": "2025-12-21T00:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "PHI",
+"away": "DAL",
+"home_score": 121,
+"away_score": 114,
+"odds": null
+},
+{
+"event_id": "401810243",
+"start": "2025-12-21T00:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "TOR",
+"away": "BOS",
+"home_score": 96,
+"away_score": 112,
+"odds": null
+},
+{
+"event_id": "401810244",
+"start": "2025-12-21T00:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "NOP",
+"away": "IND",
+"home_score": 128,
+"away_score": 109,
+"odds": null
+},
+{
+"event_id": "401810245",
+"start": "2025-12-21T00:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "DET",
+"away": "CHA",
+"home_score": 112,
+"away_score": 86,
+"odds": null
+},
+{
+"event_id": "401810246",
+"start": "2025-12-21T01:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "MEM",
+"away": "WAS",
+"home_score": 122,
+"away_score": 130,
+"odds": null
+},
+{
+"event_id": "401810247",
+"start": "2025-12-21T01:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "GSW",
+"away": "PHX",
+"home_score": 119,
+"away_score": 116,
+"odds": null
+},
+{
+"event_id": "401810248",
+"start": "2025-12-21T02:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "UTA",
+"away": "ORL",
+"home_score": 127,
+"away_score": 128,
+"odds": null
+},
+{
+"event_id": "401810249",
+"start": "2025-12-21T03:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "SAC",
+"away": "POR",
+"home_score": 93,
+"away_score": 98,
+"odds": null
+},
+{
+"event_id": "401810250",
+"start": "2025-12-21T03:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "LAC",
+"away": "LAL",
+"home_score": 103,
+"away_score": 88,
+"odds": null
+}
+]

@@ -1,0 +1,38 @@
+[
+{
+"event_id": "401810683",
+"start": "2026-02-24T00:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "DET",
+"away": "SAS",
+"home_score": 103,
+"away_score": 114,
+"odds": null
+},
+{
+"event_id": "401810684",
+"start": "2026-02-24T01:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "MEM",
+"away": "SAC",
+"home_score": 114,
+"away_score": 123,
+"odds": null
+},
+{
+"event_id": "401810685",
+"start": "2026-02-24T02:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "HOU",
+"away": "UTA",
+"home_score": 125,
+"away_score": 105,
+"odds": null
+}
+]

@@ -1,0 +1,50 @@
+[
+{
+"event_id": "401810313",
+"start": "2025-12-31T01:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "MEM",
+"away": "PHI",
+"home_score": 136,
+"away_score": 139,
+"odds": null
+},
+{
+"event_id": "401810314",
+"start": "2025-12-31T02:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "UTA",
+"away": "BOS",
+"home_score": 119,
+"away_score": 129,
+"odds": null
+},
+{
+"event_id": "401810315",
+"start": "2025-12-31T03:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "LAL",
+"away": "DET",
+"home_score": 106,
+"away_score": 128,
+"odds": null
+},
+{
+"event_id": "401810316",
+"start": "2025-12-31T04:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "LAC",
+"away": "SAC",
+"home_score": 131,
+"away_score": 90,
+"odds": null
+}
+]

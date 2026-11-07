@@ -174,3 +174,14 @@ def test_matcher(dk_name, team, want_id, method):
     hit, how = m.match(dk_name, team)
     assert how == method
     assert (hit["espn_id"] if hit else None) == want_id
+
+
+def test_compact_boxscore_skips_player_without_id():
+    summary = json.loads((FIX / "espn_summary.json").read_text())
+    athletes = summary["boxscore"]["players"][0]["statistics"][0]["athletes"]
+    athletes.append({"athlete": {"shortName": "Olbrich"}, "starter": False, "didNotPlay": False,
+                     "stats": ["--", "0", "0-0", "0-0", "0-0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]})
+    game = {"event_id": "1", "start": "2026-11-07T00:00Z", "season": 2027, "season_type": 2,
+            "home": "ATL", "away": "WAS", "home_score": 1, "away_score": 0}
+    box = fetch_espn.compact_boxscore(summary, game)
+    assert all(p["espn_id"] for p in box["players"])

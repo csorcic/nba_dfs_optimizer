@@ -116,12 +116,14 @@ def compact_boxscore(summary: dict, game: dict) -> dict:
         for stat_group in team_block.get("statistics", []):
             keys = stat_group.get("keys", [])
             for a in stat_group.get("athletes", []):
+                ath = a.get("athlete") or {}
+                if not ath.get("id"):
+                    continue  # ESPN occasionally lists a player with no ID; can't use the row
                 stats = dict(zip(keys, a.get("stats") or []))
                 line = parse_stat_line(stats)
-                ath = a["athlete"]
                 players.append({
                     "espn_id": ath["id"],
-                    "name": ath["displayName"],
+                    "name": ath.get("displayName") or ath.get("shortName", ""),
                     "team": team,
                     "pos": (ath.get("position") or {}).get("abbreviation", ""),
                     "starter": bool(a.get("starter")),

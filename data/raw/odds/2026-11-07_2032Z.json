@@ -1,0 +1,42 @@
+{
+ "BKN@ATL": {
+  "total": 226.5,
+  "home_spread": -6.5,
+  "source": "espn",
+  "book": "DraftKings",
+  "home_implied": 116.5,
+  "away_implied": 110.0
+ },
+ "HOU@PHX": {
+  "total": 223.5,
+  "home_spread": 6.5,
+  "source": "espn",
+  "book": "DraftKings",
+  "home_implied": 108.5,
+  "away_implied": 115.0
+ },
+ "NYK@CLE": {
+  "total": 224.5,
+  "home_spread": 4.5,
+  "source": "espn",
+  "book": "DraftKings",
+  "home_implied": 110.0,
+  "away_implied": 114.5
+ },
+ "ORL@GSW": {
+  "total": 220.5,
+  "home_spread": -7.5,
+  "source": "espn",
+  "book": "DraftKings",
+  "home_implied": 114.0,
+  "away_implied": 106.5
+ },
+ "WAS@OKC": {
+  "total": 222.5,
+  "home_spread": -11.5,
+  "source": "espn",
+  "book": "DraftKings",
+  "home_implied": 117.0,
+  "away_implied": 105.5
+ }
+}

@@ -1,0 +1,38 @@
+[
+{
+"event_id": "401810219",
+"start": "2025-12-09T00:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "IND",
+"away": "SAC",
+"home_score": 116,
+"away_score": 105,
+"odds": null
+},
+{
+"event_id": "401810220",
+"start": "2025-12-09T00:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "MIN",
+"away": "PHX",
+"home_score": 105,
+"away_score": 108,
+"odds": null
+},
+{
+"event_id": "401810221",
+"start": "2025-12-09T01:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "NOP",
+"away": "SAS",
+"home_score": 132,
+"away_score": 135,
+"odds": null
+}
+]
