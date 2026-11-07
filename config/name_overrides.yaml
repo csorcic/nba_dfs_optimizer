@@ -1,0 +1,6 @@
+# Name overrides: fixes for players whose DraftKings name doesn't match ESPN.
+# The pipeline prints any unmatched players each run. To fix one, add a line:
+#   "DraftKings Name": "ESPN Name"
+# Example (remove the # to use it):
+#   "Nic Claxton": "Nicolas Claxton"
+overrides: {}  # Add DraftKings-name -> ESPN-name pairs here

@@ -1,0 +1,40 @@
+# NBA DFS Optimizer settings.
+# Every line here has a plain-English comment. Change a number, commit, and the
+# next pipeline run uses it. Settings that only affect the phone app (optimizer
+# knobs) can also be changed on the phone in the Settings screen.
+
+data:  # Where data comes from
+  salary_repo: csorcic/dk_salary  # The private repo that stores the daily DK salary CSV
+  salary_folder: salaries  # Folder inside that repo that holds the CSV files
+  current_season: 2027  # ESPN season label for 2026-27 (ESPN names a season by the year it ends)
+  prior_season: 2026  # ESPN season label for 2025-26, used as a starting point early in the season
+  exclude_out_players: true  # Leave players marked OUT by DraftKings out of the player pool
+  odds_regions: us  # Sportsbook region for The Odds API
+  odds_markets: spreads,totals  # Betting markets to pull (no player props: those cost money)
+
+projections:  # How each player's fantasy-point projection is built
+  recency_half_life_games: 10  # How fast old games fade: a game this many games ago counts half as much as the latest one
+  use_prior_season: true  # Blend in last season's scoring rate early in the season (true or false)
+  prior_season_k: 10  # Blend strength: this season counts games/(games + this number); bigger = trust last season longer
+  minutes_lookback_games: 10  # Number of recent games used to estimate a player's minutes
+  blowout_spread_threshold: 10  # Point spread at which starters start losing minutes to blowout risk
+  blowout_minutes_cut_per_point: 0.01  # Share of starter minutes removed per spread point beyond the threshold (0.01 = 1%)
+  blowout_max_minutes_cut: 0.12  # Most starter minutes ever removed for blowout risk (0.12 = 12%)
+  vegas_exponent: 1.0  # How strongly Vegas team totals move projections (0 = ignore Vegas, 1 = proportional)
+  sd_prior_games: 8  # How many games of evidence before we trust a player's own boom/bust spread over his position's average
+  ceiling_z: 1.28  # Ceiling = projection + this many standard deviations (1.28 is about the 90th percentile)
+  floor_z: 1.28  # Floor = projection - this many standard deviations (1.28 is about the 10th percentile)
+  ownership_total_pct: 800  # Estimated ownership across all players adds up to this (8 roster spots x 100%)
+
+optimizer:  # Starting values for the lineup builder (each can be changed in the app)
+  salary_cap: 50000  # DraftKings Classic salary cap in dollars
+  cash_lineups: 1  # Number of lineups to build in Cash mode
+  cash_floor_weight: 0.0  # In Cash mode, extra credit for a player's floor (0 = ignore floor)
+  gpp_lineups: 20  # Number of lineups to build in Tournament (GPP) mode (1 to 150)
+  gpp_min_unique: 3  # Each new GPP lineup must differ from every earlier one by at least this many players
+  gpp_max_exposure_pct: 50  # No player can be in more than this percent of GPP lineups
+  gpp_randomness: 1.0  # How much projections are shuffled between GPP lineups (0 = none, 1 = normal)
+  gpp_ceiling_weight: 0.3  # In GPP mode, how much a player's ceiling counts on top of his projection
+  gpp_ownership_penalty: 0.1  # In GPP mode, points subtracted per 1% of estimated ownership (fades chalk)
+  stack_min_players: 0  # Require at least this many players from one game (0 = off)
+  stack_bring_back: false  # When stacking, also require a player from the other team in that game
