@@ -1,0 +1,22 @@
+name: Setup check
+
+# Run this by hand (Actions tab -> Setup check -> Run workflow) after adding
+# or changing secrets. It reports whether each data source works.
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Check secrets and data sources
+        env:
+          DK_SALARY_TOKEN: ${{ secrets.DK_SALARY_TOKEN }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python -m pipeline.check_setup

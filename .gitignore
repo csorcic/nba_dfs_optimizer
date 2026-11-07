@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+node_modules/
+.env
+# Raw ESPN/odds caches are kept in git on purpose (data/raw/), so they are not ignored.
