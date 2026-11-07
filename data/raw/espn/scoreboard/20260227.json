@@ -1,0 +1,62 @@
+[
+{
+"event_id": "401810713",
+"start": "2026-02-28T00:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "DET",
+"away": "CLE",
+"home_score": 122,
+"away_score": 119,
+"odds": null
+},
+{
+"event_id": "401810714",
+"start": "2026-02-28T00:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "BOS",
+"away": "BKN",
+"home_score": 148,
+"away_score": 111,
+"odds": null
+},
+{
+"event_id": "401810715",
+"start": "2026-02-28T01:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "MIL",
+"away": "NYK",
+"home_score": 98,
+"away_score": 127,
+"odds": null
+},
+{
+"event_id": "401810716",
+"start": "2026-02-28T01:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "DAL",
+"away": "MEM",
+"home_score": 105,
+"away_score": 124,
+"odds": null
+},
+{
+"event_id": "401810717",
+"start": "2026-02-28T02:47Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "OKC",
+"away": "DEN",
+"home_score": 127,
+"away_score": 121,
+"odds": null
+}
+]

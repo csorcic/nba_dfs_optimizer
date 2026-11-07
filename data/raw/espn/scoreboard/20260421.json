@@ -1,0 +1,38 @@
+[
+{
+"event_id": "401869396",
+"start": "2026-04-21T23:00Z",
+"season": 2026,
+"season_type": 3,
+"status": "STATUS_FINAL",
+"home": "BOS",
+"away": "PHI",
+"home_score": 97,
+"away_score": 111,
+"odds": null
+},
+{
+"event_id": "401869378",
+"start": "2026-04-22T00:00Z",
+"season": 2026,
+"season_type": 3,
+"status": "STATUS_FINAL",
+"home": "SAS",
+"away": "POR",
+"home_score": 103,
+"away_score": 106,
+"odds": null
+},
+{
+"event_id": "401869397",
+"start": "2026-04-22T02:30Z",
+"season": 2026,
+"season_type": 3,
+"status": "STATUS_FINAL",
+"home": "LAL",
+"away": "HOU",
+"home_score": 101,
+"away_score": 94,
+"odds": null
+}
+]

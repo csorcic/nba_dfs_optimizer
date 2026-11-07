@@ -1,0 +1,62 @@
+[
+{
+"event_id": "401810718",
+"start": "2026-02-28T18:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "CHA",
+"away": "POR",
+"home_score": 109,
+"away_score": 93,
+"odds": null
+},
+{
+"event_id": "401810719",
+"start": "2026-02-28T20:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "MIA",
+"away": "HOU",
+"home_score": 115,
+"away_score": 105,
+"odds": null
+},
+{
+"event_id": "401810720",
+"start": "2026-03-01T00:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "WAS",
+"away": "TOR",
+"home_score": 125,
+"away_score": 134,
+"odds": null
+},
+{
+"event_id": "401810721",
+"start": "2026-03-01T01:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "GSW",
+"away": "LAL",
+"home_score": 101,
+"away_score": 129,
+"odds": null
+},
+{
+"event_id": "401810722",
+"start": "2026-03-01T02:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "UTA",
+"away": "NOP",
+"home_score": 105,
+"away_score": 115,
+"odds": null
+}
+]

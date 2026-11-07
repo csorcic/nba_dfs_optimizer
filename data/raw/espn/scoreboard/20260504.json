@@ -1,0 +1,26 @@
+[
+{
+"event_id": "401871159",
+"start": "2026-05-05T00:00Z",
+"season": 2026,
+"season_type": 3,
+"status": "STATUS_FINAL",
+"home": "NYK",
+"away": "PHI",
+"home_score": 137,
+"away_score": 98,
+"odds": null
+},
+{
+"event_id": "401871152",
+"start": "2026-05-05T01:30Z",
+"season": 2026,
+"season_type": 3,
+"status": "STATUS_FINAL",
+"home": "SAS",
+"away": "MIN",
+"home_score": 102,
+"away_score": 104,
+"odds": null
+}
+]

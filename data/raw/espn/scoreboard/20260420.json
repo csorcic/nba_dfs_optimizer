@@ -1,0 +1,38 @@
+[
+{
+"event_id": "401869369",
+"start": "2026-04-20T23:00Z",
+"season": 2026,
+"season_type": 3,
+"status": "STATUS_FINAL",
+"home": "CLE",
+"away": "TOR",
+"home_score": 115,
+"away_score": 105,
+"odds": null
+},
+{
+"event_id": "401869387",
+"start": "2026-04-21T00:00Z",
+"season": 2026,
+"season_type": 3,
+"status": "STATUS_FINAL",
+"home": "NYK",
+"away": "ATL",
+"home_score": 106,
+"away_score": 107,
+"odds": null
+},
+{
+"event_id": "401869395",
+"start": "2026-04-21T02:30Z",
+"season": 2026,
+"season_type": 3,
+"status": "STATUS_FINAL",
+"home": "DEN",
+"away": "MIN",
+"home_score": 114,
+"away_score": 119,
+"odds": null
+}
+]

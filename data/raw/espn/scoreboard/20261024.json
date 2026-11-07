@@ -1,0 +1,98 @@
+[
+{
+"event_id": "401909853",
+"start": "2026-10-24T22:00Z",
+"season": 2027,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "CHA",
+"away": "MIA",
+"home_score": 115,
+"away_score": 110,
+"odds": null
+},
+{
+"event_id": "401909854",
+"start": "2026-10-24T23:30Z",
+"season": 2027,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "CLE",
+"away": "BKN",
+"home_score": 125,
+"away_score": 121,
+"odds": null
+},
+{
+"event_id": "401909855",
+"start": "2026-10-24T23:30Z",
+"season": 2027,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "PHI",
+"away": "MIL",
+"home_score": 127,
+"away_score": 116,
+"odds": null
+},
+{
+"event_id": "401909857",
+"start": "2026-10-25T00:00Z",
+"season": 2027,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "CHI",
+"away": "WAS",
+"home_score": 120,
+"away_score": 124,
+"odds": null
+},
+{
+"event_id": "401909858",
+"start": "2026-10-25T00:00Z",
+"season": 2027,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "DAL",
+"away": "SAS",
+"home_score": 106,
+"away_score": 122,
+"odds": null
+},
+{
+"event_id": "401909856",
+"start": "2026-10-25T00:30Z",
+"season": 2027,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "ATL",
+"away": "HOU",
+"home_score": 114,
+"away_score": 121,
+"odds": null
+},
+{
+"event_id": "401909859",
+"start": "2026-10-25T01:00Z",
+"season": 2027,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "DEN",
+"away": "NOP",
+"home_score": 141,
+"away_score": 135,
+"odds": null
+},
+{
+"event_id": "401909860",
+"start": "2026-10-25T02:00Z",
+"season": 2027,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "PHX",
+"away": "GSW",
+"home_score": 131,
+"away_score": 122,
+"odds": null
+}
+]

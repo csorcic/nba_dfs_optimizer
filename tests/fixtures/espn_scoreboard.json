@@ -1,0 +1,104 @@
+{
+ "events": [
+  {
+   "id": "401909938",
+   "date": "2026-11-07T22:00Z",
+   "season": {
+    "year": 2027,
+    "type": 2,
+    "slug": "regular-season"
+   },
+   "status": {
+    "type": {
+     "name": "STATUS_SCHEDULED"
+    }
+   },
+   "competitions": [
+    {
+     "competitors": [
+      {
+       "homeAway": "home",
+       "team": {
+        "abbreviation": "IND"
+       },
+       "score": "0"
+      },
+      {
+       "homeAway": "away",
+       "team": {
+        "abbreviation": "DEN"
+       },
+       "score": "0"
+      }
+     ],
+     "odds": [
+      {
+       "provider": {
+        "name": "DraftKings"
+       },
+       "details": "DEN -7.5",
+       "overUnder": 229.5,
+       "spread": 7.5,
+       "homeTeamOdds": {
+        "favorite": false
+       },
+       "awayTeamOdds": {
+        "favorite": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "401909939",
+   "date": "2026-11-08T00:30Z",
+   "season": {
+    "year": 2027,
+    "type": 2,
+    "slug": "regular-season"
+   },
+   "status": {
+    "type": {
+     "name": "STATUS_SCHEDULED"
+    }
+   },
+   "competitions": [
+    {
+     "competitors": [
+      {
+       "homeAway": "home",
+       "team": {
+        "abbreviation": "ATL"
+       },
+       "score": "0"
+      },
+      {
+       "homeAway": "away",
+       "team": {
+        "abbreviation": "BKN"
+       },
+       "score": "0"
+      }
+     ],
+     "odds": [
+      {
+       "provider": {
+        "name": "DraftKings"
+       },
+       "details": "ATL -6.5",
+       "overUnder": 226.5,
+       "spread": -6.5,
+       "homeTeamOdds": {
+        "favorite": true
+       },
+       "awayTeamOdds": {
+        "favorite": false
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

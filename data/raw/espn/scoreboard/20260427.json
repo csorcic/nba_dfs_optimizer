@@ -1,0 +1,38 @@
+[
+{
+"event_id": "401869415",
+"start": "2026-04-28T00:00Z",
+"season": 2026,
+"season_type": 3,
+"status": "STATUS_FINAL",
+"home": "ORL",
+"away": "DET",
+"home_score": 94,
+"away_score": 88,
+"odds": null
+},
+{
+"event_id": "401869373",
+"start": "2026-04-28T01:30Z",
+"season": 2026,
+"season_type": 3,
+"status": "STATUS_FINAL",
+"home": "PHX",
+"away": "OKC",
+"home_score": 122,
+"away_score": 131,
+"odds": null
+},
+{
+"event_id": "401869401",
+"start": "2026-04-28T02:30Z",
+"season": 2026,
+"season_type": 3,
+"status": "STATUS_FINAL",
+"home": "DEN",
+"away": "MIN",
+"home_score": 125,
+"away_score": 113,
+"odds": null
+}
+]

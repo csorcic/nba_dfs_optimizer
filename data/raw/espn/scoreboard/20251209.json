@@ -1,0 +1,26 @@
+[
+{
+"event_id": "401809833",
+"start": "2025-12-09T23:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "ORL",
+"away": "MIA",
+"home_score": 117,
+"away_score": 108,
+"odds": null
+},
+{
+"event_id": "401809834",
+"start": "2025-12-10T01:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "TOR",
+"away": "NYK",
+"home_score": 101,
+"away_score": 117,
+"odds": null
+}
+]

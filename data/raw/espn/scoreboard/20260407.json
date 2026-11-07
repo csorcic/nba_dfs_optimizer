@@ -1,0 +1,122 @@
+[
+{
+"event_id": "401811003",
+"start": "2026-04-07T23:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "WAS",
+"away": "CHI",
+"home_score": 98,
+"away_score": 129,
+"odds": null
+},
+{
+"event_id": "401811007",
+"start": "2026-04-07T23:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "IND",
+"away": "MIN",
+"home_score": 104,
+"away_score": 124,
+"odds": null
+},
+{
+"event_id": "401811005",
+"start": "2026-04-07T23:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "BKN",
+"away": "MIL",
+"home_score": 96,
+"away_score": 90,
+"odds": null
+},
+{
+"event_id": "401811006",
+"start": "2026-04-07T23:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "TOR",
+"away": "MIA",
+"home_score": 121,
+"away_score": 95,
+"odds": null
+},
+{
+"event_id": "401811004",
+"start": "2026-04-08T00:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "BOS",
+"away": "CHA",
+"home_score": 113,
+"away_score": 102,
+"odds": null
+},
+{
+"event_id": "401811008",
+"start": "2026-04-08T00:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "NOP",
+"away": "UTA",
+"home_score": 156,
+"away_score": 137,
+"odds": null
+},
+{
+"event_id": "401811009",
+"start": "2026-04-08T02:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "GSW",
+"away": "SAC",
+"home_score": 110,
+"away_score": 105,
+"odds": null
+},
+{
+"event_id": "401811010",
+"start": "2026-04-08T02:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "LAL",
+"away": "OKC",
+"home_score": 87,
+"away_score": 123,
+"odds": null
+},
+{
+"event_id": "401811011",
+"start": "2026-04-08T02:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "LAC",
+"away": "DAL",
+"home_score": 116,
+"away_score": 103,
+"odds": null
+},
+{
+"event_id": "401811012",
+"start": "2026-04-08T03:00Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "PHX",
+"away": "HOU",
+"home_score": 105,
+"away_score": 119,
+"odds": null
+}
+]

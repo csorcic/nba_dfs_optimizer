@@ -1,0 +1,26 @@
+[
+{
+"event_id": "401809236",
+"start": "2025-10-23T23:30Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "IND",
+"away": "OKC",
+"home_score": 135,
+"away_score": 141,
+"odds": null
+},
+{
+"event_id": "401809237",
+"start": "2025-10-24T02:17Z",
+"season": 2026,
+"season_type": 2,
+"status": "STATUS_FINAL",
+"home": "GSW",
+"away": "DEN",
+"home_score": 137,
+"away_score": 131,
+"odds": null
+}
+]
