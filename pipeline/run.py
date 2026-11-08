@@ -104,7 +104,8 @@ def build_projections(table, lines, settings, current, prior) -> pd.DataFrame:
         team_lines[home] = {"implied": ln["home_implied"], "spread": ln["home_spread"]}
         team_lines[away] = {"implied": ln["away_implied"], "spread": -ln["home_spread"]}
     df = project(players, logs, team_lines, settings, current, prior)
-    return df[PLAYER_COLUMNS + ["out"] + PROJECTION_COLUMNS].sort_values("proj", ascending=False)
+    # reindex: line columns are absent when no game on the slate has a betting line yet
+    return df.reindex(columns=PLAYER_COLUMNS + ["out"] + PROJECTION_COLUMNS).sort_values("proj", ascending=False)
 
 
 def main(argv=None) -> int:

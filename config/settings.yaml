@@ -39,6 +39,8 @@ projections:  # How each player's fantasy-point projection is built
 optimizer:  # Starting values for the lineup builder (each can be changed in the app)
   salary_cap: 50000  # DraftKings Classic salary cap in dollars
   cash_lineups: 1  # Number of lineups to build in Cash mode
+  cash_max_lineups: 20  # Most lineups Cash mode will build
+  cash_min_unique: 1  # Each Cash lineup must differ from every earlier one by at least this many players
   cash_floor_weight: 0.0  # In Cash mode, extra credit for a player's floor (0 = ignore floor)
   gpp_lineups: 20  # Number of lineups to build in Tournament (GPP) mode (1 to 150)
   gpp_min_unique: 3  # Each new GPP lineup must differ from every earlier one by at least this many players

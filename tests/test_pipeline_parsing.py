@@ -185,3 +185,16 @@ def test_compact_boxscore_skips_player_without_id():
             "home": "ATL", "away": "WAS", "home_score": 1, "away_score": 0}
     box = fetch_espn.compact_boxscore(summary, game)
     assert all(p["espn_id"] for p in box["players"])
+
+
+def test_build_projections_without_any_betting_lines():
+    from pipeline.config import load_settings
+    from pipeline.run import PLAYER_COLUMNS, build_projections
+    table = [dict(p, home=int(p["home"]), espn_id="", espn_name="", match_method="unmatched", matched=0,
+                  games_current=0, games_prior=0, last_game="")
+             for p in fetch_salaries.parse_salary_csv(SALARY_CSV)]
+    s = load_settings()
+    df = build_projections(table, {}, s, s["data"]["current_season"], s["data"]["prior_season"])
+    assert set(PLAYER_COLUMNS) <= set(df.columns)
+    assert df["team_implied"].isna().all()
+    assert (df[~df["out"]]["proj_source"] == "dk_avg").all()
