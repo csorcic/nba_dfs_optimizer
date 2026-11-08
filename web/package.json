@@ -1,0 +1,14 @@
+{
+  "name": "nba-dfs-optimizer-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DraftKings NBA Classic lineup optimizer (runs in the browser)",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "highs": "1.15.3",
+    "javascript-lp-solver": "1.0.3"
+  }
+}

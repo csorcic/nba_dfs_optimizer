@@ -1,0 +1,3032 @@
+[
+{
+"id": "44828358",
+"name": "Shai Gilgeous-Alexander",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 10400,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 50.36,
+"floor": 30.77,
+"ceiling": 69.96,
+"status": ""
+},
+{
+"id": "44828392",
+"name": "Donovan Mitchell",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 8100,
+"slots": [
+"SG",
+"G",
+"UTIL"
+],
+"proj": 48.7,
+"floor": 31.13,
+"ceiling": 66.28,
+"status": ""
+},
+{
+"id": "44828361",
+"name": "Jalen Johnson",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 9900,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 46.26,
+"floor": 24.73,
+"ceiling": 67.79,
+"status": "Q"
+},
+{
+"id": "44828378",
+"name": "Karl-Anthony Towns",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 8500,
+"slots": [
+"PF",
+"C",
+"F",
+"UTIL"
+],
+"proj": 45.05,
+"floor": 30.06,
+"ceiling": 60.05,
+"status": ""
+},
+{
+"id": "44828402",
+"name": "Evan Mobley",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 7800,
+"slots": [
+"PF",
+"C",
+"F",
+"UTIL"
+],
+"proj": 44.97,
+"floor": 25.49,
+"ceiling": 64.45,
+"status": ""
+},
+{
+"id": "44828424",
+"name": "James Harden",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 7100,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 44.07,
+"floor": 28.24,
+"ceiling": 59.89,
+"status": ""
+},
+{
+"id": "44828364",
+"name": "Alperen Sengun",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 8900,
+"slots": [
+"PF",
+"C",
+"F",
+"UTIL"
+],
+"proj": 42.76,
+"floor": 20.95,
+"ceiling": 64.56,
+"status": ""
+},
+{
+"id": "44828389",
+"name": "Jalen Brunson",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 8200,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 42.43,
+"floor": 25.19,
+"ceiling": 59.67,
+"status": ""
+},
+{
+"id": "44828371",
+"name": "Franz Wagner",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 8700,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 40.78,
+"floor": 22.93,
+"ceiling": 58.64,
+"status": ""
+},
+{
+"id": "44828375",
+"name": "Anthony Davis",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 8600,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 40.28,
+"floor": 18.16,
+"ceiling": 62.41,
+"status": "Q"
+},
+{
+"id": "44828399",
+"name": "Trae Young",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 7900,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 37.38,
+"floor": 19.43,
+"ceiling": 55.34,
+"status": ""
+},
+{
+"id": "44828385",
+"name": "Devin Booker",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 8300,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 37.27,
+"floor": 19.56,
+"ceiling": 54.98,
+"status": ""
+},
+{
+"id": "44828382",
+"name": "Stephen Curry",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 8400,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 36.85,
+"floor": 18.18,
+"ceiling": 55.53,
+"status": ""
+},
+{
+"id": "44828412",
+"name": "Michael Porter Jr.",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 7300,
+"slots": [
+"SF",
+"F",
+"UTIL"
+],
+"proj": 35.47,
+"floor": 16.04,
+"ceiling": 54.9,
+"status": ""
+},
+{
+"id": "44828406",
+"name": "Julius Randle",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 7500,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 35.04,
+"floor": 18.87,
+"ceiling": 51.21,
+"status": ""
+},
+{
+"id": "44828409",
+"name": "Kevin Durant",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 7400,
+"slots": [
+"SF",
+"F",
+"UTIL"
+],
+"proj": 34.09,
+"floor": 18.1,
+"ceiling": 50.08,
+"status": ""
+},
+{
+"id": "44828395",
+"name": "Yaxel Lendeborg",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 8000,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 34.04,
+"floor": 10.37,
+"ceiling": 57.7,
+"status": ""
+},
+{
+"id": "44828419",
+"name": "Desmond Bane",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 7200,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 33.7,
+"floor": 17.23,
+"ceiling": 50.17,
+"status": ""
+},
+{
+"id": "44828415",
+"name": "Nickeil Alexander-Walker",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 7200,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 33.62,
+"floor": 18.22,
+"ceiling": 49.03,
+"status": ""
+},
+{
+"id": "44828434",
+"name": "Onyeka Okongwu",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 6800,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 32.72,
+"floor": 16.59,
+"ceiling": 48.86,
+"status": ""
+},
+{
+"id": "44828462",
+"name": "OG Anunoby",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 6300,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 32.23,
+"floor": 13.64,
+"ceiling": 50.83,
+"status": ""
+},
+{
+"id": "44828427",
+"name": "Miles Bridges",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 7100,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 32.02,
+"floor": 15.54,
+"ceiling": 48.51,
+"status": ""
+},
+{
+"id": "44828457",
+"name": "Dyson Daniels",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 6300,
+"slots": [
+"PG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 31.65,
+"floor": 15.64,
+"ceiling": 47.66,
+"status": ""
+},
+{
+"id": "44828484",
+"name": "Kyshawn George",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 5900,
+"slots": [
+"SG",
+"G",
+"UTIL"
+],
+"proj": 31.41,
+"floor": 13.15,
+"ceiling": 49.67,
+"status": ""
+},
+{
+"id": "44828447",
+"name": "Ajay Mitchell",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 6600,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 31.03,
+"floor": 17.78,
+"ceiling": 44.28,
+"status": ""
+},
+{
+"id": "44828453",
+"name": "Anthony Black",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 6400,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 30.98,
+"floor": 11.54,
+"ceiling": 50.42,
+"status": ""
+},
+{
+"id": "44828451",
+"name": "Wendell Carter Jr.",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 6500,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 30.06,
+"floor": 16.65,
+"ceiling": 43.48,
+"status": ""
+},
+{
+"id": "44828430",
+"name": "Amen Thompson",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 6900,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 29.79,
+"floor": 13.03,
+"ceiling": 46.55,
+"status": ""
+},
+{
+"id": "44828507",
+"name": "Peyton Watson",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 5700,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 29.61,
+"floor": 11.38,
+"ceiling": 47.83,
+"status": ""
+},
+{
+"id": "44828476",
+"name": "Isaiah Hartenstein",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 6100,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 29.15,
+"floor": 14.87,
+"ceiling": 43.42,
+"status": ""
+},
+{
+"id": "44828440",
+"name": "Jabari Smith Jr.",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 6700,
+"slots": [
+"PF",
+"C",
+"F",
+"UTIL"
+],
+"proj": 28.59,
+"floor": 14.53,
+"ceiling": 42.66,
+"status": ""
+},
+{
+"id": "44828492",
+"name": "CJ McCollum",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 5800,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 27.48,
+"floor": 12.96,
+"ceiling": 41.99,
+"status": ""
+},
+{
+"id": "44828569",
+"name": "Alexandre Sarr",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 4800,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 27.41,
+"floor": 9.38,
+"ceiling": 45.43,
+"status": ""
+},
+{
+"id": "44828465",
+"name": "Dillon Brooks",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 6300,
+"slots": [
+"SF",
+"F",
+"UTIL"
+],
+"proj": 27.23,
+"floor": 11.22,
+"ceiling": 43.25,
+"status": ""
+},
+{
+"id": "44828436",
+"name": "Brandin Podziemski",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 6800,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 27.14,
+"floor": 10.86,
+"ceiling": 43.41,
+"status": ""
+},
+{
+"id": "44828481",
+"name": "Fred VanVleet",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 6000,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 27.05,
+"floor": 11.29,
+"ceiling": 42.81,
+"status": ""
+},
+{
+"id": "44828468",
+"name": "AJ Dybantsa",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 6300,
+"slots": [
+"SF",
+"F",
+"UTIL"
+],
+"proj": 25.94,
+"floor": 11.87,
+"ceiling": 40.02,
+"status": ""
+},
+{
+"id": "44828603",
+"name": "Mario Hezonja",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 4300,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 25.74,
+"floor": 11.51,
+"ceiling": 39.98,
+"status": ""
+},
+{
+"id": "44828473",
+"name": "Jalen Green",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 6200,
+"slots": [
+"SG",
+"G",
+"UTIL"
+],
+"proj": 25.11,
+"floor": 6.31,
+"ceiling": 43.91,
+"status": ""
+},
+{
+"id": "44828625",
+"name": "Meleek Thomas",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 4200,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 24.23,
+"floor": 11.94,
+"ceiling": 36.51,
+"status": ""
+},
+{
+"id": "44828515",
+"name": "Tristan da Silva",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 5600,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 23.15,
+"floor": 9.04,
+"ceiling": 37.27,
+"status": ""
+},
+{
+"id": "44828526",
+"name": "Aaron Wiggins",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 5400,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 22.76,
+"floor": 6.65,
+"ceiling": 38.88,
+"status": ""
+},
+{
+"id": "44828566",
+"name": "Mikal Bridges",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 4800,
+"slots": [
+"SF",
+"F",
+"UTIL"
+],
+"proj": 22.29,
+"floor": 9.0,
+"ceiling": 35.59,
+"status": ""
+},
+{
+"id": "44828523",
+"name": "Collin Gillespie",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 5500,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 22.26,
+"floor": 5.44,
+"ceiling": 39.07,
+"status": ""
+},
+{
+"id": "44828539",
+"name": "Day'Ron Sharpe",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 5100,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 22.14,
+"floor": 7.25,
+"ceiling": 37.02,
+"status": ""
+},
+{
+"id": "44828555",
+"name": "Reed Sheppard",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 4900,
+"slots": [
+"SG",
+"G",
+"UTIL"
+],
+"proj": 21.56,
+"floor": 4.48,
+"ceiling": 38.63,
+"status": ""
+},
+{
+"id": "44828535",
+"name": "Tari Eason",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 5100,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 21.21,
+"floor": 7.91,
+"ceiling": 34.5,
+"status": ""
+},
+{
+"id": "44828503",
+"name": "Draymond Green",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 5700,
+"slots": [
+"PF",
+"C",
+"F",
+"UTIL"
+],
+"proj": 20.75,
+"floor": 8.78,
+"ceiling": 32.73,
+"status": "Q"
+},
+{
+"id": "44828581",
+"name": "Mikel Brown Jr.",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 4700,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 20.4,
+"floor": 8.11,
+"ceiling": 32.69,
+"status": ""
+},
+{
+"id": "44828511",
+"name": "De'Anthony Melton",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 5600,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 20.34,
+"floor": 5.14,
+"ceiling": 35.54,
+"status": ""
+},
+{
+"id": "44828587",
+"name": "Alex Caruso",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 4600,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 20.07,
+"floor": 8.68,
+"ceiling": 31.47,
+"status": ""
+},
+{
+"id": "44828549",
+"name": "Kingston Flemings",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 4900,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 19.99,
+"floor": 4.63,
+"ceiling": 35.35,
+"status": ""
+},
+{
+"id": "44828519",
+"name": "Jared McCain",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 5500,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 19.97,
+"floor": 5.66,
+"ceiling": 34.27,
+"status": ""
+},
+{
+"id": "44828658",
+"name": "Bilal Coulibaly",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 3900,
+"slots": [
+"SF",
+"F",
+"UTIL"
+],
+"proj": 19.92,
+"floor": 6.43,
+"ceiling": 33.41,
+"status": ""
+},
+{
+"id": "44828564",
+"name": "Aday Mara",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 4800,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 19.74,
+"floor": 7.18,
+"ceiling": 32.3,
+"status": ""
+},
+{
+"id": "44828531",
+"name": "Luguentz Dort",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 5200,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 18.96,
+"floor": 7.63,
+"ceiling": 30.28,
+"status": ""
+},
+{
+"id": "44828640",
+"name": "Andre Drummond",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 4000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 18.9,
+"floor": 2.03,
+"ceiling": 35.77,
+"status": ""
+},
+{
+"id": "44828560",
+"name": "Nolan Traore",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 4800,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 18.48,
+"floor": 4.86,
+"ceiling": 32.1,
+"status": ""
+},
+{
+"id": "44828611",
+"name": "Jordan Goodwin",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 4300,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 18.48,
+"floor": 6.09,
+"ceiling": 30.88,
+"status": "Q"
+},
+{
+"id": "44828552",
+"name": "Brandon Williams",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 4900,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 18.29,
+"floor": 5.53,
+"ceiling": 31.05,
+"status": ""
+},
+{
+"id": "44828541",
+"name": "Marcus Smart",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 5000,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 17.4,
+"floor": 4.38,
+"ceiling": 30.43,
+"status": ""
+},
+{
+"id": "44828665",
+"name": "Miles McBride",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 3900,
+"slots": [
+"SG",
+"G",
+"UTIL"
+],
+"proj": 17.39,
+"floor": 3.85,
+"ceiling": 30.93,
+"status": ""
+},
+{
+"id": "44828571",
+"name": "Jaylin Williams",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 4800,
+"slots": [
+"PF",
+"C",
+"F",
+"UTIL"
+],
+"proj": 17.36,
+"floor": 0.0,
+"ceiling": 36.07,
+"status": "Q"
+},
+{
+"id": "44828558",
+"name": "Oso Ighodaro",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 4900,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 17.34,
+"floor": 5.61,
+"ceiling": 29.06,
+"status": ""
+},
+{
+"id": "44828620",
+"name": "Landry Shamet",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 4200,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 17.1,
+"floor": 6.62,
+"ceiling": 27.58,
+"status": ""
+},
+{
+"id": "44828740",
+"name": "Danny Wolf",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 3500,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 16.94,
+"floor": 4.4,
+"ceiling": 29.47,
+"status": ""
+},
+{
+"id": "44828638",
+"name": "Nikola Vucevic",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 4000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 16.54,
+"floor": 0.0,
+"ceiling": 38.15,
+"status": ""
+},
+{
+"id": "44828758",
+"name": "Deandre Ayton",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 3200,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 16.28,
+"floor": 0.97,
+"ceiling": 31.58,
+"status": ""
+},
+{
+"id": "44828616",
+"name": "Kenrich Williams",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 4200,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 16.1,
+"floor": 1.16,
+"ceiling": 31.04,
+"status": ""
+},
+{
+"id": "44828496",
+"name": "Gui Santos",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 5800,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 15.7,
+"floor": 2.45,
+"ceiling": 28.94,
+"status": "Q"
+},
+{
+"id": "44828668",
+"name": "Noah Clowney",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 3900,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 15.68,
+"floor": 2.62,
+"ceiling": 28.74,
+"status": "Q"
+},
+{
+"id": "44828707",
+"name": "Tre Johnson",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 3600,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 15.56,
+"floor": 3.89,
+"ceiling": 27.22,
+"status": ""
+},
+{
+"id": "44828607",
+"name": "Moritz Wagner",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 4300,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 15.56,
+"floor": 4.91,
+"ceiling": 26.2,
+"status": ""
+},
+{
+"id": "44828609",
+"name": "Al Horford",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 4300,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 15.42,
+"floor": 1.99,
+"ceiling": 28.85,
+"status": ""
+},
+{
+"id": "44828672",
+"name": "Tyrese Proctor",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 3900,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 15.28,
+"floor": 1.06,
+"ceiling": 29.49,
+"status": ""
+},
+{
+"id": "44828634",
+"name": "Chaney Johnson",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 4000,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 14.88,
+"floor": 1.74,
+"ceiling": 28.02,
+"status": ""
+},
+{
+"id": "44828575",
+"name": "Jase Richardson",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 4700,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 14.5,
+"floor": 3.87,
+"ceiling": 25.13,
+"status": ""
+},
+{
+"id": "44828675",
+"name": "Bub Carrington",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 3800,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 14.4,
+"floor": 1.54,
+"ceiling": 27.25,
+"status": ""
+},
+{
+"id": "44828579",
+"name": "Khaman Maluach",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 4700,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 14.37,
+"floor": 0.47,
+"ceiling": 28.27,
+"status": ""
+},
+{
+"id": "44828591",
+"name": "Georges Niang",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 4400,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 13.88,
+"floor": 4.59,
+"ceiling": 23.18,
+"status": ""
+},
+{
+"id": "44828644",
+"name": "Luke Kennard",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 4000,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 13.19,
+"floor": 0.0,
+"ceiling": 27.62,
+"status": ""
+},
+{
+"id": "44828688",
+"name": "Keon Ellis",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 3700,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 13.18,
+"floor": 2.16,
+"ceiling": 24.2,
+"status": ""
+},
+{
+"id": "44828630",
+"name": "Ryan Dunn",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 4100,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 12.91,
+"floor": 0.17,
+"ceiling": 25.66,
+"status": ""
+},
+{
+"id": "44828661",
+"name": "Bennett Stirtz",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 3900,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 12.8,
+"floor": 1.88,
+"ceiling": 23.72,
+"status": ""
+},
+{
+"id": "44828679",
+"name": "Jamal Cain",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 3800,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 11.79,
+"floor": 0.0,
+"ceiling": 23.98,
+"status": ""
+},
+{
+"id": "44828712",
+"name": "Terance Mann",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 3600,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 11.52,
+"floor": 2.35,
+"ceiling": 20.7,
+"status": ""
+},
+{
+"id": "44828718",
+"name": "Gary Payton II",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 3500,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 10.77,
+"floor": 0.0,
+"ceiling": 24.74,
+"status": "Q"
+},
+{
+"id": "44828723",
+"name": "Jordan Clarkson",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 3500,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 10.46,
+"floor": 0.0,
+"ceiling": 21.67,
+"status": ""
+},
+{
+"id": "44828653",
+"name": "Will Richard",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 3900,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 10.39,
+"floor": 0.0,
+"ceiling": 22.84,
+"status": ""
+},
+{
+"id": "44828760",
+"name": "Tyler Kolek",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 3200,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 10.34,
+"floor": 0.27,
+"ceiling": 20.41,
+"status": ""
+},
+{
+"id": "44828623",
+"name": "Charles Bassey",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 4200,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 10.18,
+"floor": 0.0,
+"ceiling": 24.07,
+"status": ""
+},
+{
+"id": "44828683",
+"name": "Craig Porter Jr.",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 3800,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 9.97,
+"floor": 0.0,
+"ceiling": 24.13,
+"status": ""
+},
+{
+"id": "44828773",
+"name": "Bogdan Bogdanovic",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 3100,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 9.58,
+"floor": 0.0,
+"ceiling": 23.43,
+"status": ""
+},
+{
+"id": "44828754",
+"name": "Goga Bitadze",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 3300,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 9.54,
+"floor": 0.0,
+"ceiling": 22.76,
+"status": ""
+},
+{
+"id": "44828597",
+"name": "Thomas Bryant",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 4400,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 9.51,
+"floor": 0.0,
+"ceiling": 20.42,
+"status": ""
+},
+{
+"id": "44828700",
+"name": "Jose Alvarado",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 3700,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 7.29,
+"floor": 0.0,
+"ceiling": 21.57,
+"status": ""
+},
+{
+"id": "44828731",
+"name": "Corey Kispert",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 3500,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 6.88,
+"floor": 0.0,
+"ceiling": 18.43,
+"status": ""
+},
+{
+"id": "44828745",
+"name": "Graham Ike",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 3400,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 6.84,
+"floor": 0.0,
+"ceiling": 16.88,
+"status": ""
+},
+{
+"id": "44828736",
+"name": "Micah Peavy",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 3500,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 6.69,
+"floor": 0.0,
+"ceiling": 20.51,
+"status": ""
+},
+{
+"id": "44828686",
+"name": "Zuby Ejiofor",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 3800,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 6.59,
+"floor": 0.0,
+"ceiling": 15.26,
+"status": ""
+},
+{
+"id": "44828697",
+"name": "Jevon Carter",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 3700,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 6.27,
+"floor": 0.0,
+"ceiling": 17.52,
+"status": ""
+},
+{
+"id": "44828785",
+"name": "Khris Middleton",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 3100,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 6.17,
+"floor": 0.0,
+"ceiling": 20.45,
+"status": ""
+},
+{
+"id": "44828813",
+"name": "Oscar Tshiebwe",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 3000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 6.01,
+"floor": 0.0,
+"ceiling": 22.01,
+"status": ""
+},
+{
+"id": "44828796",
+"name": "Josh Minott",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 3000,
+"slots": [
+"PF",
+"C",
+"F",
+"UTIL"
+],
+"proj": 5.65,
+"floor": 0.0,
+"ceiling": 19.7,
+"status": ""
+},
+{
+"id": "44828703",
+"name": "Tristan Enaruna",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 3700,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 5.04,
+"floor": 0.0,
+"ceiling": 13.18,
+"status": ""
+},
+{
+"id": "44828778",
+"name": "Will Riley",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 3100,
+"slots": [
+"SG",
+"G",
+"UTIL"
+],
+"proj": 4.74,
+"floor": 0.0,
+"ceiling": 22.89,
+"status": ""
+},
+{
+"id": "44828899",
+"name": "Norchad Omier",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 3000,
+"slots": [
+"SF",
+"F",
+"UTIL"
+],
+"proj": 4.48,
+"floor": 0.94,
+"ceiling": 8.02,
+"status": ""
+},
+{
+"id": "44828793",
+"name": "L.J. Cryer",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 3000,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 4.36,
+"floor": 0.0,
+"ceiling": 14.12,
+"status": ""
+},
+{
+"id": "44828837",
+"name": "Pat Spencer",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 3000,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 4.13,
+"floor": 0.0,
+"ceiling": 16.6,
+"status": ""
+},
+{
+"id": "44828767",
+"name": "Josh Dix",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 3200,
+"slots": [
+"SF",
+"F",
+"UTIL"
+],
+"proj": 4.03,
+"floor": 0.08,
+"ceiling": 7.99,
+"status": ""
+},
+{
+"id": "44828756",
+"name": "James Wiseman",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 3300,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 3.89,
+"floor": 0.0,
+"ceiling": 10.71,
+"status": ""
+},
+{
+"id": "44828749",
+"name": "Mohamed Diawara",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 3400,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 3.88,
+"floor": 0.0,
+"ceiling": 13.71,
+"status": ""
+},
+{
+"id": "44828815",
+"name": "Jamaree Bouyea",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 3000,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 3.8,
+"floor": 0.0,
+"ceiling": 17.54,
+"status": ""
+},
+{
+"id": "44828781",
+"name": "Brooks Barnhizer",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 3100,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 3.56,
+"floor": 0.0,
+"ceiling": 12.27,
+"status": ""
+},
+{
+"id": "44828811",
+"name": "Duop Reath",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 3000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 3.35,
+"floor": 0.0,
+"ceiling": 10.57,
+"status": ""
+},
+{
+"id": "44828728",
+"name": "Alex Morales",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 3500,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 3.3,
+"floor": 0.0,
+"ceiling": 7.47,
+"status": ""
+},
+{
+"id": "44828841",
+"name": "Colin Castleton",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 3000,
+"slots": [
+"PF",
+"C",
+"F",
+"UTIL"
+],
+"proj": 2.64,
+"floor": 0.0,
+"ceiling": 6.21,
+"status": ""
+},
+{
+"id": "44828892",
+"name": "Dalen Terry",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 3000,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 2.39,
+"floor": 0.0,
+"ceiling": 12.38,
+"status": ""
+},
+{
+"id": "44828763",
+"name": "Isaiah Crawford",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 3200,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 2.21,
+"floor": 0.0,
+"ceiling": 8.79,
+"status": ""
+},
+{
+"id": "44828858",
+"name": "Drake Powell",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 3000,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 2.11,
+"floor": 0.0,
+"ceiling": 10.68,
+"status": ""
+},
+{
+"id": "44828770",
+"name": "Dalton Knecht",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 3200,
+"slots": [
+"SF",
+"F",
+"UTIL"
+],
+"proj": 2.11,
+"floor": 0.0,
+"ceiling": 10.55,
+"status": ""
+},
+{
+"id": "44828807",
+"name": "Malevy Leons",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 3000,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 1.98,
+"floor": 0.0,
+"ceiling": 11.15,
+"status": ""
+},
+{
+"id": "44828848",
+"name": "Rasheer Fleming",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 3000,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 1.97,
+"floor": 0.0,
+"ceiling": 12.14,
+"status": "Q"
+},
+{
+"id": "44828803",
+"name": "Jae'Sean Tate",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 3000,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 1.88,
+"floor": 0.0,
+"ceiling": 9.3,
+"status": ""
+},
+{
+"id": "44828845",
+"name": "Tre Mann",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 3000,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 1.88,
+"floor": 0.0,
+"ceiling": 10.5,
+"status": ""
+},
+{
+"id": "44828788",
+"name": "Pacome Dadiet",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 3100,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 1.82,
+"floor": 0.0,
+"ceiling": 7.17,
+"status": ""
+},
+{
+"id": "44828833",
+"name": "Dorian Finney-Smith",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 3000,
+"slots": [
+"PF",
+"C",
+"F",
+"UTIL"
+],
+"proj": 1.7,
+"floor": 0.0,
+"ceiling": 8.12,
+"status": ""
+},
+{
+"id": "44828800",
+"name": "Bruce Thornton",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 3000,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 1.65,
+"floor": 0.0,
+"ceiling": 4.09,
+"status": ""
+},
+{
+"id": "44828876",
+"name": "Ben Saraf",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 3000,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 1.47,
+"floor": 0.0,
+"ceiling": 12.88,
+"status": ""
+},
+{
+"id": "44828818",
+"name": "Koa Peat",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 3000,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 1.28,
+"floor": 0.0,
+"ceiling": 2.97,
+"status": ""
+},
+{
+"id": "44828863",
+"name": "RayJ Dennis",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 3000,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 0.97,
+"floor": 0.0,
+"ceiling": 11.71,
+"status": ""
+},
+{
+"id": "44828866",
+"name": "Anthony Gill",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 3000,
+"slots": [
+"PF",
+"C",
+"F",
+"UTIL"
+],
+"proj": 0.92,
+"floor": 0.0,
+"ceiling": 12.97,
+"status": ""
+},
+{
+"id": "44828742",
+"name": "Nikola Topic",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 3500,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 0.87,
+"floor": 0.0,
+"ceiling": 13.2,
+"status": ""
+},
+{
+"id": "44828852",
+"name": "Felix Okpara",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 3000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0.22,
+"floor": 0.05,
+"ceiling": 0.39,
+"status": ""
+},
+{
+"id": "44828368",
+"name": "Paolo Banchero",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 8800,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 13.66,
+"status": "OUT"
+},
+{
+"id": "44828487",
+"name": "Josh Hart",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 5900,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 11.92,
+"status": "OUT"
+},
+{
+"id": "44828500",
+"name": "Jalen Suggs",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 5800,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 13.59,
+"status": "OUT"
+},
+{
+"id": "44828471",
+"name": "Jarrett Allen",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 6200,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 15.6,
+"status": "OUT"
+},
+{
+"id": "44828478",
+"name": "Jimmy Butler",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 6100,
+"slots": [
+"SF",
+"F",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 12.37,
+"status": "OUT"
+},
+{
+"id": "44828444",
+"name": "Chet Holmgren",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 6700,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 14.47,
+"status": "OUT"
+},
+{
+"id": "44828545",
+"name": "Egor Demin",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 5000,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 13.81,
+"status": "OUT"
+},
+{
+"id": "44828601",
+"name": "Mark Williams",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 4400,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 11.58,
+"status": "OUT"
+},
+{
+"id": "44828599",
+"name": "Steven Adams",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 4400,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 8.86,
+"status": "OUT"
+},
+{
+"id": "44828715",
+"name": "Noah Penda",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 3600,
+"slots": [
+"SF",
+"F",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 11.12,
+"status": "OUT"
+},
+{
+"id": "44828693",
+"name": "Asa Newell",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 3700,
+"slots": [
+"PF",
+"C",
+"F",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 9.95,
+"status": "OUT"
+},
+{
+"id": "44828642",
+"name": "Jock Landale",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 4000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 14.73,
+"status": "OUT"
+},
+{
+"id": "44828648",
+"name": "Jaylon Tyson",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 4000,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 12.96,
+"status": "OUT"
+},
+{
+"id": "44828594",
+"name": "Sam Merrill",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 4400,
+"slots": [
+"SG",
+"G",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 11.2,
+"status": "OUT"
+},
+{
+"id": "44828585",
+"name": "Kristaps Porzingis",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 4700,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 11.39,
+"status": "OUT"
+},
+{
+"id": "44828752",
+"name": "Tristan Vukcevic",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 3400,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 11.99,
+"status": "OUT"
+},
+{
+"id": "44828747",
+"name": "Clint Capela",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 3400,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 12.89,
+"status": "OUT"
+},
+{
+"id": "44828828",
+"name": "Cason Wallace",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 3000,
+"slots": [
+"PG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 13.86,
+"status": "OUT"
+},
+{
+"id": "44828825",
+"name": "Jalen Williams",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 3000,
+"slots": [
+"SF",
+"F",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 9.03,
+"status": "OUT"
+},
+{
+"id": "44828821",
+"name": "Justin Champagnie",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 3000,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 11.43,
+"status": "OUT"
+},
+{
+"id": "44828854",
+"name": "Jaden Akins",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 3000,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 0.0,
+"status": ""
+},
+{
+"id": "44828879",
+"name": "Jalen Wilson",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 3000,
+"slots": [
+"SF",
+"F",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 10.99,
+"status": ""
+},
+{
+"id": "44828882",
+"name": "Khalifa Diop",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 3000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 0.0,
+"status": ""
+},
+{
+"id": "44828870",
+"name": "Reece Beekman",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 3000,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 0.0,
+"status": "OUT"
+},
+{
+"id": "44828873",
+"name": "Joshua Jefferson",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 3000,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 0.0,
+"status": ""
+},
+{
+"id": "44828886",
+"name": "Tyler Bilodeau",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 3000,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 0.0,
+"status": "OUT"
+},
+{
+"id": "44828884",
+"name": "Ernest Udeh Jr.",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 3000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 0.0,
+"status": ""
+},
+{
+"id": "44828889",
+"name": "Moses Moody",
+"team": "GSW",
+"opp": "ORL",
+"game": "ORL@GSW",
+"salary": 3000,
+"slots": [
+"SG",
+"G",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 11.34,
+"status": "OUT"
+},
+{
+"id": "44828897",
+"name": "Thomas Sorber",
+"team": "OKC",
+"opp": "WAS",
+"game": "WAS@OKC",
+"salary": 3000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 0.0,
+"status": "OUT"
+},
+{
+"id": "44828902",
+"name": "Nae'Qwan Tomlin",
+"team": "CLE",
+"opp": "NYK",
+"game": "NYK@CLE",
+"salary": 3000,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 11.19,
+"status": "OUT"
+},
+{
+"id": "44828906",
+"name": "Keshon Gilbert",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 3000,
+"slots": [
+"PG",
+"SG",
+"G",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 4.68,
+"status": "OUT"
+},
+{
+"id": "44828910",
+"name": "Mouhamed Gueye",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 3000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 10.41,
+"status": "OUT"
+},
+{
+"id": "44828912",
+"name": "Henri Veesaar",
+"team": "ATL",
+"opp": "BKN",
+"game": "BKN@ATL",
+"salary": 3000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 0.0,
+"status": "OUT"
+},
+{
+"id": "44828914",
+"name": "Drew Timme",
+"team": "PHX",
+"opp": "HOU",
+"game": "HOU@PHX",
+"salary": 3000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 8.3,
+"status": ""
+},
+{
+"id": "44828916",
+"name": "Izaiyah Nelson",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 3000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 0.0,
+"status": "OUT"
+},
+{
+"id": "44828918",
+"name": "Jonathan Isaac",
+"team": "ORL",
+"opp": "GSW",
+"game": "ORL@GSW",
+"salary": 3000,
+"slots": [
+"PF",
+"F",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 7.83,
+"status": "OUT"
+},
+{
+"id": "44828921",
+"name": "Jamir Watkins",
+"team": "WAS",
+"opp": "OKC",
+"game": "WAS@OKC",
+"salary": 3000,
+"slots": [
+"SG",
+"G",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 10.58,
+"status": "OUT"
+},
+{
+"id": "44828924",
+"name": "Tyler Nickel",
+"team": "NYK",
+"opp": "CLE",
+"game": "NYK@CLE",
+"salary": 3000,
+"slots": [
+"SG",
+"SF",
+"F",
+"G",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 0.0,
+"status": ""
+},
+{
+"id": "44828929",
+"name": "Grant Nelson",
+"team": "BKN",
+"opp": "ATL",
+"game": "BKN@ATL",
+"salary": 3000,
+"slots": [
+"C",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 5.51,
+"status": ""
+},
+{
+"id": "44828931",
+"name": "Quadir Copeland",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 3000,
+"slots": [
+"PG",
+"G",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 0.0,
+"status": ""
+},
+{
+"id": "44828934",
+"name": "Julian Phillips",
+"team": "HOU",
+"opp": "PHX",
+"game": "HOU@PHX",
+"salary": 3000,
+"slots": [
+"SF",
+"PF",
+"F",
+"UTIL"
+],
+"proj": 0,
+"floor": 0.0,
+"ceiling": 6.92,
+"status": ""
+}
+]

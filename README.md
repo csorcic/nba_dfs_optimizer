@@ -38,4 +38,9 @@ ESPN seasons are labeled by the year they end: 2027 = 2026-27, 2026 = 2025-26.
 Run the pipeline locally: `python -m pipeline.run` (needs `DK_SALARY_TOKEN`, or `DK_SALARY_DIR`
 pointing at a folder of salary CSVs).
 
-Run tests locally: `pip install -r requirements.txt && python -m pytest`
+Run tests locally: `pip install -r requirements.txt && python -m pytest`, and for the optimizer
+`cd web && npm ci && npm test`.
+
+Optimizer code lives in `web/src/optimizer/`: `rules.js` (DK rules + `validateLineup()`),
+`model.js` (the integer program), `solvers.js` (HiGHS, with javascript-lp-solver as a fallback),
+`optimizer.js` (builds lineups) and `csv.js` (DK bulk-upload CSV).
