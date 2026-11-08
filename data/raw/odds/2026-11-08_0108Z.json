@@ -1,0 +1,47 @@
+{
+ "BKN@ATL": {
+  "total": 235.0,
+  "home_spread": -1.25,
+  "source": "odds_api",
+  "books": 6,
+  "commence_time": "2026-11-08T00:40:00Z",
+  "home_implied": 118.12,
+  "away_implied": 116.88
+ },
+ "HOU@PHX": {
+  "total": 223.5,
+  "home_spread": 6.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-08T02:10:00Z",
+  "home_implied": 108.5,
+  "away_implied": 115.0
+ },
+ "NYK@CLE": {
+  "total": 223.0,
+  "home_spread": 4.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-08T01:10:00Z",
+  "home_implied": 109.25,
+  "away_implied": 113.75
+ },
+ "ORL@GSW": {
+  "total": 219.5,
+  "home_spread": -7.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-08T01:40:00Z",
+  "home_implied": 113.5,
+  "away_implied": 106.0
+ },
+ "WAS@OKC": {
+  "total": 224.0,
+  "home_spread": -12.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-08T01:10:00Z",
+  "home_implied": 118.25,
+  "away_implied": 105.75
+ }
+}
