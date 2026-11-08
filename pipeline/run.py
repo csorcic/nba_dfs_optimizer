@@ -15,7 +15,10 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
+import pandas as pd
+
 from pipeline import fetch_espn, fetch_odds, fetch_salaries
+from pipeline.project import pos_groups, project
 from pipeline.config import REPO_ROOT, load_name_overrides, load_settings
 from pipeline.names import Matcher
 
@@ -81,6 +84,29 @@ def build_player_table(players, matcher, played, lines, current, prior):
     return table, unmatched
 
 
+PROJECTION_COLUMNS = ["fppm", "minutes_base", "play_rate", "minutes_bump", "blowout_cut", "minutes",
+                      "vegas_factor", "proj", "proj_source", "sd", "ceiling", "floor"]
+
+
+def build_projections(table, lines, settings, current, prior) -> pd.DataFrame:
+    seasons = [current] + ([prior] if settings["projections"]["use_prior_season"] else [])
+    frames = [pd.read_csv(fetch_espn.GAMELOG_DIR / f"gamelogs_{s}.csv", dtype={"espn_id": str, "event_id": str})
+              for s in seasons if (fetch_espn.GAMELOG_DIR / f"gamelogs_{s}.csv").exists()]
+    logs = pd.concat(frames, ignore_index=True)
+    players = pd.DataFrame(table)
+    players["key"] = players["dk_id"]
+    players["pos_group"] = players["roster_positions"].map(pos_groups)
+    players["out"] = players["status"] == "OUT"
+    players["fallback"] = pd.to_numeric(players["avg_ppg"], errors="coerce")
+    team_lines = {}
+    for g, ln in lines.items():
+        away, home = g.split("@")
+        team_lines[home] = {"implied": ln["home_implied"], "spread": ln["home_spread"]}
+        team_lines[away] = {"implied": ln["away_implied"], "spread": -ln["home_spread"]}
+    df = project(players, logs, team_lines, settings, current, prior)
+    return df[PLAYER_COLUMNS + ["out"] + PROJECTION_COLUMNS].sort_values("proj", ascending=False)
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--skip-espn", action="store_true", help="don't download new box scores")
@@ -107,6 +133,9 @@ def main(argv=None) -> int:
     if not args.skip_espn:
         for season in seasons:
             print(f"  {fetch_espn.backfill_season(season, max_new=data['espn_max_new_games_per_run'])}")
+            n = fetch_espn.backfill_lines(season, max_new=data["espn_max_new_games_per_run"])
+            if n:
+                print(f"  added closing betting lines to {n} older {season} games")
     logs = {}
     for season in seasons:
         out = fetch_espn.build_gamelogs(season)
@@ -143,6 +172,17 @@ def main(argv=None) -> int:
     (out_dir / "unmatched.txt").write_text(
         "".join(f"{r['name']}\t{r['team']}\t{r['salary']}\t{r['status']}\n" for r in unmatched))
     print(f"5) Wrote {out_dir.relative_to(REPO_ROOT)}/players.csv, games.json, unmatched.txt")
+
+    print("6) Projections")
+    proj = build_projections(table, lines, settings, current, prior)
+    proj.to_csv(out_dir / "projections.csv", index=False)
+    active = proj[~proj["out"]].sort_values("proj", ascending=False)
+    print(f"  {len(active)} active players; sources {active['proj_source'].value_counts().to_dict()}")
+    for _, r in active.head(10).iterrows():
+        bump = f" (+{r['minutes_bump']:.1f} min bump)" if r["minutes_bump"] >= 1 else ""
+        print(f"    {r['name']:<28} {r['team']} ${r['salary']:>5}  proj {r['proj']:5.1f}  "
+              f"ceil {r['ceiling']:5.1f}  {r['minutes']:4.1f} min{bump}")
+    print(f"  wrote {(out_dir / 'projections.csv').relative_to(REPO_ROOT)}")
 
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:

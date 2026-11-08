@@ -130,8 +130,10 @@ def compact_boxscore(summary: dict, game: dict) -> dict:
                     "dnp": bool(a.get("didNotPlay")) or not a.get("stats"),
                     **line,
                 })
-    return {k: game[k] for k in ("event_id", "start", "season", "season_type", "home", "away",
-                                  "home_score", "away_score")} | {"players": players}
+    box = {k: game[k] for k in ("event_id", "start", "season", "season_type", "home", "away",
+                                 "home_score", "away_score")}
+    box["odds"] = parse_espn_odds(summary.get("pickcenter"), game["home"], game["away"])  # closing line
+    return box | {"players": players}
 
 
 def parse_stat_line(stats: dict) -> dict:
@@ -166,6 +168,31 @@ def fetch_boxscore(game: dict) -> dict:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(box, separators=(",", ":")))
     return box
+
+
+def backfill_lines(season: int, *, max_new: int | None = None) -> int:
+    """Add the closing betting line to cached box scores saved before lines were kept.
+
+    Box scores saved from now on already include it; this only re-reads older games once.
+    """
+    done = 0
+    for f in sorted((RAW / "boxscores" / str(season)).glob("*.json")):
+        box = json.loads(f.read_text())
+        if "odds" in box:
+            continue
+        if max_new is not None and done >= max_new:
+            break
+        try:
+            r = http.get(f"{BASE}/summary", params={"event": box["event_id"]}, pause=PAUSE)
+            r.raise_for_status()
+            box["odds"] = parse_espn_odds(r.json().get("pickcenter"), box["home"], box["away"])
+        except Exception as e:
+            print(f"  WARNING: closing line for {box['event_id']} failed: {e}")
+            continue
+        players = box.pop("players")
+        f.write_text(json.dumps(box | {"players": players}, separators=(",", ":")))
+        done += 1
+    return done
 
 
 def backfill_season(season: int, *, max_new: int | None = None) -> dict:
