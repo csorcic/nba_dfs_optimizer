@@ -24,7 +24,11 @@ self.addEventListener("fetch", (e) => {
     e.respondWith(
       fetch(e.request)
         .then((r) => {
-          if (r.ok) caches.open("dfs-data").then((c) => c.put(url.pathname, r.clone()));
+          // Copy the response now (it can only be read once) and save it for offline use.
+          if (r.ok) {
+            const copy = r.clone();
+            e.waitUntil(caches.open("dfs-data").then((c) => c.put(url.pathname, copy)));
+          }
           return r;
         })
         .catch(() => caches.open("dfs-data").then((c) => c.match(url.pathname)).then((r) => r || Response.error())),

@@ -86,6 +86,8 @@ h2:first-child { margin-top: 4px; }
 .stat { background: var(--surface-2); border-radius: 10px; padding: 8px 10px; }
 .stat b { display: block; font-size: 18px; }
 .stat span { font-size: 12px; color: var(--muted); }
+.stat[data-flag] { cursor: pointer; }
+.card p { margin: 0 0 8px; }
 
 .game { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; cursor: pointer; }
 .game .teams { font-weight: 600; font-size: 16px; }

@@ -165,6 +165,67 @@ try {
   await page.waitForSelector("#resetSettings");
   await shot("6-settings");
 
+  // ---- Phase 7 checks, each in a fresh phone context ----
+
+  // Started games + avoid-Q: pretend it's 5 minutes after the first tip-off.
+  {
+    const first = Math.min(...slate.games.map((g) => Date.parse(g.lock)));
+    const startedGames = new Set(slate.games.filter((g) => Date.parse(g.lock) <= first + 5 * 60000).map((g) => g.game));
+    const c2 = await browser.newContext({ ...devices["Pixel 7"], acceptDownloads: true, timezoneId: "America/Chicago", serviceWorkers: "block" });
+    const p2 = await c2.newPage();
+    p2.on("pageerror", (e) => errors.push(e.message));
+    await p2.clock.install({ time: new Date(first + 5 * 60000) });
+    await p2.goto(base);
+    await p2.waitForSelector(".game");
+    assert.ok(await p2.locator(".game .lock", { hasText: "Started" }).count() === startedGames.size);
+    await p2.waitForSelector("text=have started");
+    if (SHOTS) await p2.screenshot({ path: join(SHOTS, "9-started.png") });
+    await p2.click('a[data-view="build"]');
+    await p2.check("#excludeQ");
+    await p2.click("#buildBtn");
+    await p2.waitForSelector(".lineup", { timeout: 60000 });
+    const [d3] = await Promise.all([p2.waitForEvent("download"), p2.click("#dlCsv")]);
+    for (const row of readFileSync(await d3.path(), "utf8").trimEnd().split("\r\n").slice(1)) {
+      for (const id of row.split(",")) {
+        const pl = byId.get(id);
+        assert.ok(!startedGames.has(pl.game), `${pl.name} is in a started game`);
+        assert.notEqual(pl.status, "Q", `${pl.name} is Q`);
+      }
+    }
+    console.log(`Started games (${[...startedGames].join(", ")}) and Q players left out`);
+
+    // Stop a long build and keep what's done
+    await p2.click('a[data-view="build"]');
+    await p2.click('[data-mode="gpp"]');
+    await p2.fill("#opt_gpp_lineups", "150");
+    await p2.locator("#opt_gpp_lineups").blur();
+    await p2.click("#buildBtn");
+    await p2.waitForFunction(() => /Building… ([5-9]|\d\d)\//.test(document.querySelector("#buildBtn")?.textContent || ""), null, { timeout: 60000 });
+    await p2.click("#stopBtn");
+    await p2.waitForSelector("text=Stopped after");
+    const kept = await p2.locator(".lineup").count();
+    assert.ok(kept >= 5 && kept < 150, `kept ${kept}`);
+    console.log(`Stop kept ${kept} lineups`);
+    await c2.close();
+  }
+
+  // Offline: load once online (service worker caches the app and slate), then reload offline.
+  {
+    const c3 = await browser.newContext({ ...devices["Pixel 7"], timezoneId: "America/Chicago" });
+    const p3 = await c3.newPage();
+    await p3.goto(base);
+    await p3.evaluate(() => navigator.serviceWorker.ready);
+    await p3.reload(); // now controlled by the service worker, which caches the slate
+    await p3.waitForSelector(".game");
+    await c3.setOffline(true);
+    await p3.reload();
+    await p3.waitForSelector(".game");
+    await p3.waitForSelector("text=You're offline");
+    if (SHOTS) await p3.screenshot({ path: join(SHOTS, "10-offline.png") });
+    console.log("Offline reload shows the cached slate");
+    await c3.close();
+  }
+
   assert.deepEqual(errors, [], "browser errors");
   console.log("E2E PASSED");
 } finally {

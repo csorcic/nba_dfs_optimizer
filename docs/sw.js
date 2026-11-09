@@ -1,7 +1,7 @@
 // Service worker: makes the app installable and usable offline.
 // App files: served from cache (updated when a new version is deployed).
 // Slate data: network first, falling back to the last slate seen.
-const VERSION = "ae74c51270";
+const VERSION = "ea882172f7";
 const CACHE = `dfs-${VERSION}`;
 const SHELL = ["./","index.html","app/app.js","app/state.js","app/worker.js","app/styles.css","app/optimizer/rules.js","app/optimizer/model.js","app/optimizer/solvers.js","app/optimizer/optimizer.js","app/optimizer/csv.js","vendor/highs.mjs","vendor/highs.wasm","vendor/lp-solver.mjs","manifest.webmanifest","icons/icon-192.png","icons/icon-512.png","icons/maskable-512.png"];
 
@@ -24,7 +24,11 @@ self.addEventListener("fetch", (e) => {
     e.respondWith(
       fetch(e.request)
         .then((r) => {
-          if (r.ok) caches.open("dfs-data").then((c) => c.put(url.pathname, r.clone()));
+          // Copy the response now (it can only be read once) and save it for offline use.
+          if (r.ok) {
+            const copy = r.clone();
+            e.waitUntil(caches.open("dfs-data").then((c) => c.put(url.pathname, copy)));
+          }
           return r;
         })
         .catch(() => caches.open("dfs-data").then((c) => c.match(url.pathname)).then((r) => r || Response.error())),
