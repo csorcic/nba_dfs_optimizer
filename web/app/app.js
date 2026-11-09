@@ -15,7 +15,7 @@ const S = {
   settings: null,
   edits: emptyEdits(),
   results: null,
-  filters: { q: "", pos: "ALL", sort: "proj", showOut: false, game: null },
+  filters: { q: "", pos: "ALL", sort: "proj", showOut: false, game: null, flag: null },
   build: { running: false, done: 0, total: 0, error: null },
   loadError: null,
 };
@@ -46,7 +46,8 @@ function toast(msg) {
   clearTimeout(toast.timer);
   toast.timer = setTimeout(() => (t.hidden = true), 2600);
 }
-const players = () => effectivePlayers(S.slate?.players ?? [], S.edits);
+const started = (iso) => Date.now() >= Date.parse(iso);
+const players = () => effectivePlayers(S.slate?.players ?? [], S.edits).map((p) => ({ ...p, started: started(p.lock) }));
 const playerMap = () => new Map(players().map((p) => [p.id, p]));
 function spreadText(g) {
   if (g.homeSpread === null || g.homeSpread === undefined) return "";
@@ -56,6 +57,11 @@ function spreadText(g) {
 function setEdits(next) {
   S.edits = next;
   saveEdits(S.slate.slateDate, next);
+}
+
+function offlineNotice() {
+  if (navigator.onLine) return "";
+  return `<div class="card notice">You're offline. Showing the last slate saved on this phone (updated ${esc(ago(S.slate.generatedAt))}). Building lineups still works.</div>`;
 }
 
 // ---------------------------------------------------------------- loading
@@ -84,26 +90,32 @@ function renderSlate() {
   const unmatched = ps.filter((p) => !p.matched).length;
   const noLine = sl.games.filter((g) => g.total === null).length;
   const stale = sl.slateDate < todayYmd();
+  const nStarted = sl.games.filter((g) => started(g.lock)).length;
+  const hoursOld = (Date.now() - Date.parse(sl.generatedAt)) / 3.6e6;
   return `
-    ${stale ? `<div class="card notice">This is the ${esc(dayLabel(sl.slateDate))} slate. Today's hasn't been published yet; check back after about 9:15 AM.</div>` : ""}
-    ${noLine ? `<div class="card notice">${noLine} game${noLine > 1 ? "s have" : " has"} no betting line yet, so those players aren't adjusted for Vegas. The 4 PM update usually fills them in.</div>` : ""}
+    ${offlineNotice()}
+    ${stale ? `<div class="card notice">This is the ${esc(dayLabel(sl.slateDate))} slate. Today's hasn't been published yet; it usually appears after about 9:15 AM Central. If it's late, run the Pipeline on GitHub (Actions → Pipeline → Run workflow).</div>` : ""}
+    ${!stale && nStarted === sl.games.length ? `<div class="card notice">All games on this slate have started. The next slate appears tomorrow morning.</div>` : ""}
+    ${!stale && nStarted > 0 && nStarted < sl.games.length ? `<div class="card notice">${nStarted} of ${sl.games.length} games have started. Their players are left out of new builds automatically.</div>` : ""}
+    ${!stale && hoursOld > 10 ? `<div class="card notice">Projections are ${Math.round(hoursOld)} hours old, so late injury news and line moves may be missing.</div>` : ""}
+    ${noLine ? `<div class="card notice">${noLine} game${noLine > 1 ? "s have" : " has"} no betting line yet, so those players aren't adjusted for Vegas. Sportsbooks usually post them by the afternoon update.</div>` : ""}
     <h2>${esc(dayLabel(sl.slateDate))} · ${sl.games.length} games</h2>
     <p class="muted small">Projections updated ${esc(time(sl.generatedAt))} (${esc(ago(sl.generatedAt))}) · DK contest group ${esc(sl.draftGroupId)}</p>
     <div class="stats">
       <div class="stat"><b>${ps.length}</b><span>players</span></div>
-      <div class="stat"><b>${out}</b><span>OUT</span></div>
-      <div class="stat"><b>${q}</b><span>questionable</span></div>
-      <div class="stat"><b>${unmatched}</b><span>no stats match</span></div>
+      <div class="stat" data-flag="OUT" role="button"><b>${out}</b><span>OUT ›</span></div>
+      <div class="stat" data-flag="Q" role="button"><b>${q}</b><span>questionable ›</span></div>
+      <div class="stat" data-flag="nodata" role="button"><b>${unmatched}</b><span>no stats match ›</span></div>
     </div>
     <h2>Games</h2>
     ${sl.games.map((g) => `
       <div class="card game" data-game="${esc(g.game)}" role="button" tabindex="0">
         <span class="teams">${esc(g.away)} @ ${esc(g.home)}</span>
-        <span class="lock">${esc(time(g.lock))}</span>
+        <span class="lock">${started(g.lock) ? "Started" : esc(time(g.lock))}</span>
         <span class="line">${g.total === null ? "No line yet" : `Total ${g.total} · ${esc(spreadText(g))}`}</span>
         <span class="line" style="text-align:right">${g.total === null ? "" : `${esc(g.away)} ${g.awayTotal} · ${esc(g.home)} ${g.homeTotal}`}</span>
       </div>`).join("")}
-    <p class="muted small">Tap a game to see its players.</p>`;
+    <p class="muted small">Tap a game, or a number above, to see those players.</p>`;
 }
 
 const SORTS = {
@@ -123,6 +135,7 @@ function badges(p) {
   if (p.excluded) b += `<span class="badge">EXCL</span>`;
   if (p.edited) b += `<span class="badge edit">EDIT</span>`;
   if (!p.matched) b += `<span class="badge nodata" title="No ESPN stats; using DK average">NO DATA</span>`;
+  if (p.started) b += `<span class="badge">STARTED</span>`;
   return b;
 }
 
@@ -130,7 +143,8 @@ function filteredPlayers() {
   const f = S.filters;
   const q = f.q.trim().toLowerCase();
   return players()
-    .filter((p) => f.showOut || p.status !== "OUT" || p.locked)
+    .filter((p) => f.showOut || f.flag === "OUT" || p.status !== "OUT" || p.locked)
+    .filter((p) => !f.flag || (f.flag === "nodata" ? !p.matched : p.status === f.flag))
     .filter((p) => f.pos === "ALL" || p.slots.includes(f.pos))
     .filter((p) => !f.game || p.game === f.game)
     .filter((p) => !q || p.name.toLowerCase().includes(q) || p.team.toLowerCase() === q)
@@ -151,6 +165,7 @@ function renderPlayers() {
         </select>
         <button class="chip" id="showOut" aria-pressed="${f.showOut}">Show OUT</button>
         ${f.game ? `<button class="chip" id="clearGame" aria-pressed="true">${esc(f.game)} ✕</button>` : ""}
+        ${f.flag ? `<button class="chip" id="clearFlag" aria-pressed="true">${f.flag === "nodata" ? "No stats match" : f.flag} ✕</button>` : ""}
       </div>
     </div>
     <div id="plistWrap">${playerListHtml(list)}</div>`;
@@ -161,7 +176,7 @@ function playerListHtml(list) {
     <p class="muted small">${list.length} player${list.length === 1 ? "" : "s"} · tap one to lock, exclude or edit</p>
     <ul class="plist">
       ${list.map((p) => `
-        <li class="prow ${p.status === "OUT" ? "out" : ""} ${p.excluded ? "excluded" : ""}" data-id="${esc(p.id)}">
+        <li class="prow ${p.status === "OUT" || p.started ? "out" : ""} ${p.excluded ? "excluded" : ""}" data-id="${esc(p.id)}">
           <span><span class="pname">${esc(p.name)}</span>${badges(p)}</span>
           <span class="pproj num">${pts(p.proj)}</span>
           <span class="pmeta">${esc(p.team)} vs ${esc(p.opp)} · ${esc(p.pos)} · ${p.minutesShown ?? "–"} min${p.bump >= 1 ? ` <span class="badge bump">+${p.bump} min</span>` : ""}</span>
@@ -181,6 +196,8 @@ function openPlayer(id) {
     <h3>${esc(p.name)}${badges(p)}</h3>
     <p class="muted">${esc(p.team)} vs ${esc(p.opp)} · ${esc(p.slots.filter((s) => s !== "UTIL").join("/"))} · ${money(p.salary)} · locks ${esc(time(p.lock))}</p>
     ${!p.matched ? `<div class="card notice small">No ESPN stats found for this player, so the projection is DraftKings' season average.</div>` : ""}
+    ${p.started ? `<div class="card notice small">This game has started, so DraftKings won't accept him in new lineups.</div>` : ""}
+    <p class="muted small">${p.teamTotal ? `Vegas: ${esc(p.team)} expected to score ${p.teamTotal}.` : "No Vegas line yet for this game."}${p.games ? ` ${p.games} games played this season.` : ""}</p>
     <div class="stats">
       <div class="stat"><b>${pts(p.proj)}</b><span>projection</span></div>
       <div class="stat"><b>${pts(p.floor)}</b><span>floor</span></div>
@@ -265,9 +282,16 @@ function renderBuild() {
         <input id="bringBack" type="checkbox" ${st.stack_bring_back ? "checked" : ""} style="width:24px;height:24px">
         <span class="help">Also require a player from the other team in the stacked game. Stack games now: ${esc(stackGames().join(", "))}.</span>
       </div>` : ""}
+    <div class="field">
+      <label for="excludeQ">Avoid questionable (Q) players</label>
+      <input id="excludeQ" type="checkbox" ${st.exclude_q ? "checked" : ""} style="width:24px;height:24px">
+      <span class="help">Leaves out players listed Q (${ps.filter((p) => p.status === "Q").length} today) unless you lock them.</span>
+    </div>
+    ${ps.some((p) => p.started) ? `<div class="card notice small">${new Set(ps.filter((p) => p.started).map((p) => p.game)).size} game(s) have started; their players are left out because DraftKings won't accept them.</div>` : ""}
     <p class="muted small">Your edits: ${locked} locked · ${excluded} excluded · ${edited} edited${mode === "gpp" ? ` · ${exp} with exposure limits` : ""}. <a href="#players">Change</a></p>
     <button class="btn primary big" id="buildBtn" ${b.running ? "disabled" : ""}>${b.running ? `Building… ${b.done}/${b.total}` : `Build ${n} lineup${n > 1 ? "s" : ""}`}</button>
     <div class="progress" ${b.running ? "" : "hidden"}><div style="width:${b.total ? (100 * b.done) / b.total : 5}%"></div></div>
+    ${b.running ? `<button class="btn" id="stopBtn" style="width:100%;margin-top:8px">Stop and keep lineups built so far</button>` : ""}
     ${b.error ? `<div class="card notice bad" style="margin-top:12px">${esc(b.error)}</div>` : ""}`;
 }
 
@@ -315,6 +339,17 @@ function renderSettings() {
       <button class="btn" id="resetSettings">Reset to defaults</button>
       <button class="btn" id="clearEdits">Clear today's edits</button>
     </div>
+    <h2>Help</h2>
+    <div class="card small">
+      <p><b>Projection</b>: expected DraftKings points = projected minutes × fantasy points per minute × a Vegas adjustment.</p>
+      <p><b>Floor / Ceiling</b>: a bad night and a great night (about 1 game in 10 lands below the floor, 1 in 10 above the ceiling).</p>
+      <p><b>Value (x)</b>: projected points per $1,000 of salary. 5x and up is strong.</p>
+      <p><b>+min</b> (green): extra minutes because a teammate is OUT.</p>
+      <p><b>Est. owned %</b>: our guess at how many DraftKings entries will use him. It's a formula, not real contest data.</p>
+      <p><b>Badges</b>: OUT and Q come from DraftKings. NO DATA = no ESPN stats (rookie or name mismatch), so DK's average is used. STARTED = game already underway. LOCK / EXCL / EDIT are your changes.</p>
+      <p><b>Uploading</b>: Results → Download CSV (or Share). On DraftKings: Lineups → Upload Lineups → choose the file. The file holds player IDs, which is what DraftKings requires.</p>
+      <p style="margin-bottom:0"><b>Updates</b>: projections refresh around 9:15 AM and 4 PM Central (GitHub sometimes runs late). Your edits stay on this phone until the next slate.</p>
+    </div>
     <h2>About</h2>
     <p class="muted small">Salary file ${esc(S.slate.salaryFile)}. Projections, ownership estimates, lines and settings defaults come from the daily pipeline;
       your edits stay on this phone and reset each slate. Ownership is an estimate from a simple formula, not real contest data. Version __VERSION__.</p>`;
@@ -358,12 +393,21 @@ function startBuild() {
         stack: st.stack_min_players >= 2 ? { minPlayers: st.stack_min_players, bringBack: st.stack_bring_back, games: stackGames() } : null,
       }
     : { mode: "cash", count: st.cash_lineups, minUnique: st.cash_min_unique, floorWeight: st.cash_floor_weight };
-  options.locks = S.edits.locks;
-  options.excludes = S.edits.excludes;
+  const all = players();
+  // Games that have started can't be entered; Q players are optional to avoid.
+  const startedIds = all.filter((p) => p.started).map((p) => p.id);
+  const qIds = st.exclude_q ? all.filter((p) => p.status === "Q" && !p.locked).map((p) => p.id) : [];
+  const lockedStarted = all.filter((p) => p.started && p.locked).map((p) => p.name);
+  options.locks = S.edits.locks.filter((id) => !startedIds.includes(id));
+  options.excludes = [...new Set([...S.edits.excludes, ...startedIds, ...qIds])];
   // Overrides are already folded into the players' projections.
-  const ps = players().map(({ id, name, team, opp, game, salary, slots, proj, floor, ceiling, sd, own, status }) =>
+  const ps = all.map(({ id, name, team, opp, game, salary, slots, proj, floor, ceiling, sd, own, status }) =>
     ({ id, name, team, opp, game, salary, slots, proj, floor, ceiling, sd, own, status }));
-  buildSnapshot = { edits: JSON.stringify(S.edits), projs: new Map(ps.map((p) => [p.id, p.proj])) };
+  buildSnapshot = {
+    edits: JSON.stringify(S.edits), projs: new Map(ps.map((p) => [p.id, p.proj])), byId: new Map(ps.map((p) => [p.id, p])),
+    mode: options.mode, count: options.count, lineups: [], t0: performance.now(),
+    notes: lockedStarted.length ? [`Unlocked ${lockedStarted.join(", ")}: their game has started.`] : [],
+  };
   S.build = { running: true, done: 0, total: options.count, error: null };
   render();
   getWorker().postMessage({ type: "build", players: ps, options });
@@ -373,6 +417,7 @@ function onWorkerMessage(e) {
   const m = e.data;
   if (m.type === "progress") {
     S.build.done = m.done;
+    if (m.lineup) buildSnapshot.lineups.push(m.lineup);
     const bar = $(".progress > div");
     if (bar) bar.style.width = `${(100 * m.done) / m.total}%`;
     const btn = $("#buildBtn");
@@ -388,15 +433,41 @@ function onWorkerMessage(e) {
     const r = m.result;
     S.build = { running: false, done: 0, total: 0, error: r.lineups.length ? null : r.stopReason };
     if (!r.lineups.length) return render();
-    S.results = {
-      ...r,
-      builtAt: new Date().toISOString(),
-      edits: buildSnapshot.edits,
-      lineups: r.lineups.map((l) => ({ ...l, projs: l.ids.map((id) => buildSnapshot.projs.get(id)) })),
-    };
-    saveResults(S.slate.slateDate, S.results);
-    location.hash = "#results";
+    finishBuild({ ...r, warnings: [...buildSnapshot.notes, ...(r.warnings || [])] });
   }
+}
+
+function finishBuild(r) {
+  S.results = {
+    ...r,
+    builtAt: new Date().toISOString(),
+    edits: buildSnapshot.edits,
+    lineups: r.lineups.map((l) => ({ ...l, projs: l.ids.map((id) => buildSnapshot.projs.get(id)) })),
+  };
+  saveResults(S.slate.slateDate, S.results);
+  if (location.hash === "#results") render();
+  else location.hash = "#results";
+}
+
+/** Stop a long build: end the worker and keep the lineups finished so far. */
+function stopBuild() {
+  if (!S.build.running) return;
+  worker?.terminate();
+  worker = null;
+  const lineups = buildSnapshot.lineups;
+  S.build = { running: false, done: 0, total: 0, error: lineups.length ? null : "Stopped before any lineup was finished." };
+  if (!lineups.length) return render();
+  const counts = new Map();
+  lineups.forEach((l) => l.ids.forEach((id) => counts.set(id, (counts.get(id) ?? 0) + 1)));
+  const exposure = [...counts].map(([id, count]) => {
+    const p = buildSnapshot.byId.get(id);
+    return { id, name: p?.name ?? id, count, pct: (100 * count) / lineups.length, own: p?.own ?? null };
+  }).sort((a, b) => b.count - a.count);
+  finishBuild({
+    lineups, exposure, mode: buildSnapshot.mode, warnings: buildSnapshot.notes,
+    stopReason: `Stopped after ${lineups.length} of ${buildSnapshot.count} lineups.`,
+    seconds: Math.round((performance.now() - buildSnapshot.t0) / 100) / 10,
+  });
 }
 
 // ---------------------------------------------------------------- export
@@ -460,12 +531,15 @@ function render() {
 }
 
 view.addEventListener("click", (e) => {
-  const t = e.target.closest("[data-game],[data-id],[data-pos],[data-mode],#showOut,#clearGame,#buildBtn,#dlCsv,#shareCsv,#copyIds,#resetSettings,#clearEdits");
+  const t = e.target.closest("[data-game],[data-id],[data-pos],[data-mode],[data-flag],#showOut,#clearGame,#clearFlag,#stopBtn,#buildBtn,#dlCsv,#shareCsv,#copyIds,#resetSettings,#clearEdits");
   if (!t) return;
   if (t.dataset.mode) {
     S.settings.build_mode = t.dataset.mode;
     saveSettings(S.settings, S.slate.defaults);
     render();
+  } else if (t.dataset.flag) {
+    S.filters.flag = t.dataset.flag;
+    location.hash = "#players";
   } else if (t.dataset.game) {
     S.filters.game = t.dataset.game;
     location.hash = "#players";
@@ -473,6 +547,8 @@ view.addEventListener("click", (e) => {
   else if (t.dataset.pos) { S.filters.pos = t.dataset.pos; render(); }
   else if (t.id === "showOut") { S.filters.showOut = !S.filters.showOut; render(); }
   else if (t.id === "clearGame") { S.filters.game = null; render(); }
+  else if (t.id === "clearFlag") { S.filters.flag = null; render(); }
+  else if (t.id === "stopBtn") stopBuild();
   else if (t.id === "buildBtn") startBuild();
   else if (t.id === "dlCsv") downloadCsv();
   else if (t.id === "shareCsv") shareCsv();
@@ -503,7 +579,11 @@ view.addEventListener("input", (e) => {
 view.addEventListener("change", (e) => {
   const t = e.target;
   if (t.id === "sort") { S.filters.sort = t.value; render(); }
-  else if (t.id === "bringBack") {
+  else if (t.id === "excludeQ") {
+    S.settings.exclude_q = t.checked;
+    saveSettings(S.settings, S.slate.defaults);
+    render();
+  } else if (t.id === "bringBack") {
     S.settings.stack_bring_back = t.checked;
     saveSettings(S.settings, S.slate.defaults);
   } else if (t.dataset.key) {
@@ -533,7 +613,7 @@ sheet.addEventListener("click", (e) => {
     setEdits(ed);
   }
   openPlayer(id);
-  render();
+  refreshBehindSheet();
 });
 sheet.addEventListener("change", (e) => {
   const id = sheet.dataset.id;
@@ -544,9 +624,14 @@ sheet.addEventListener("change", (e) => {
     setEdits(setOverride(S.edits, e.target.id, id, v));
   }
   openPlayer(id);
-  render();
+  refreshBehindSheet();
 });
-sheet.addEventListener("close", () => render());
+// On Players, refresh only the list so the search box isn't replaced while you type.
+function refreshBehindSheet() {
+  if (currentView() === "players" && $("#plistWrap")) $("#plistWrap").innerHTML = playerListHtml(filteredPlayers());
+  else render();
+}
+sheet.addEventListener("close", refreshBehindSheet);
 
 window.addEventListener("hashchange", () => {
   window.scrollTo(0, 0);
@@ -555,9 +640,19 @@ window.addEventListener("hashchange", () => {
 
 // ---------------------------------------------------------------- start
 
-if ("serviceWorker" in navigator && location.protocol === "https:") {
+const hadController = !!navigator.serviceWorker?.controller;
+if ("serviceWorker" in navigator && window.isSecureContext) {
   navigator.serviceWorker.register("sw.js").catch(() => {});
+  // A new version was deployed and has taken over: reload once to use it (not mid-build).
+  let reloaded = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (reloaded || S.build.running || !hadController) return;
+    reloaded = true;
+    location.reload();
+  });
 }
+window.addEventListener("online", () => render());
+window.addEventListener("offline", () => render());
 await loadSlate();
 render();
 if (S.slate) getWorker().postMessage({ type: "warmup" }); // load the solver early

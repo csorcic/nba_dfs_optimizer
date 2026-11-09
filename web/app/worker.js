@@ -23,8 +23,8 @@ self.onmessage = async (e) => {
   try {
     const solver = await getSolver();
     const t0 = performance.now();
-    const result = buildLineups(players, options, solver, (done, total) =>
-      self.postMessage({ type: "progress", done, total }));
+    const result = buildLineups(players, options, solver, (done, total, lineup) =>
+      self.postMessage({ type: "progress", done, total, lineup }));
     result.seconds = Math.round((performance.now() - t0) / 100) / 10;
     self.postMessage({ type: "done", result });
   } catch (err) {

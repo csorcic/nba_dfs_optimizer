@@ -131,7 +131,7 @@ function stackRules(pool, stack) {
  * @param {Array} players
  * @param {object} options see DEFAULTS
  * @param {{solve: Function, name: string}} solver
- * @param {(done:number, total:number)=>void} [onProgress]
+ * @param {(done:number, total:number, lineup:object)=>void} [onProgress]
  */
 export function buildLineups(players, options, solver, onProgress) {
   const opts = { ...DEFAULTS, ...options };
@@ -209,7 +209,7 @@ export function buildLineups(players, options, solver, onProgress) {
     const sum = (f) => Math.round(ids.reduce((s, id) => s + (f(byId.get(id)) ?? 0), 0) * 10) / 10;
     lineups.push({ ids, salary: check.salary, proj: check.proj, ceiling: sum((p) => p.ceiling ?? p.proj), own: sum((p) => p.own ?? 0) });
     ids.forEach((id) => used.set(id, (used.get(id) ?? 0) + 1));
-    onProgress?.(k + 1, N);
+    onProgress?.(k + 1, N, lineups[lineups.length - 1]);
   }
 
   // Report minimum exposures that came up short.

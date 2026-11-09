@@ -2,10 +2,12 @@ name: Pipeline
 
 # Pulls salaries, ESPN box scores and betting lines, then builds the player table.
 # 14:15 UTC is about 8:15 AM Central (after the salary file lands at 13:47 UTC);
-# 22:00 UTC is about 4 PM Central (picks up line moves).
+# 18:30 UTC is about 12:30 PM Central (backup, since GitHub often starts scheduled runs late);
+# 22:00 UTC is about 4 PM Central (picks up line moves). Each run uses 1 Odds API request.
 on:
   schedule:
     - cron: "15 14 * * *"
+    - cron: "30 18 * * *"
     - cron: "0 22 * * *"
   workflow_dispatch:
 

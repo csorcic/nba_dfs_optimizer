@@ -44,3 +44,19 @@ If you skip this, the app still works and takes lines from ESPN instead.
 3. When it finishes, click the run. The summary shows a table:
    - **OK** on all three lines: done.
    - **FAIL** or **WARN**: the line says what's wrong. Tell Claude what it says.
+
+## 6. Install the app on your Android phone
+
+1. In Chrome on the phone, open <https://csorcic.github.io/nba_dfs_optimizer/>.
+2. Tap **⋮** (top right) → **Add to Home screen** (or **Install app**) → **Install**.
+3. Open it from the home screen. It works offline with the last slate it loaded.
+
+## If something looks wrong
+
+- **"Today's slate hasn't been published yet"**: GitHub sometimes starts scheduled runs late. Open
+  <https://github.com/csorcic/nba_dfs_optimizer/actions/workflows/pipeline.yml> → **Run workflow**.
+  The app picks up the new slate a minute or two after the run turns green.
+- **"No betting line yet"**: sportsbooks hadn't posted that game when the pipeline ran. The later runs fill it in.
+- **A player shows NO DATA**: we couldn't find him on ESPN (usually a rookie). If he's a real rotation
+  player, tell Claude his name so it can add a fix to `config/name_overrides.yaml`.
+- **The app looks stale after an update**: close it fully and reopen; it updates itself.

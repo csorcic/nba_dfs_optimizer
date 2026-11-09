@@ -24,7 +24,7 @@ export const SETTING_FIELDS = [
 export const FALLBACK_DEFAULTS = {
   build_mode: "cash", cash_lineups: 1, cash_min_unique: 1, cash_floor_weight: 0, cash_max_lineups: 20,
   gpp_lineups: 20, gpp_min_unique: 3, gpp_max_exposure_pct: 50, gpp_randomness: 1, gpp_ceiling_weight: 0.3,
-  gpp_ownership_penalty: 0.1, stack_min_players: 0, stack_bring_back: false, stack_top_games: 3,
+  gpp_ownership_penalty: 0.1, stack_min_players: 0, stack_bring_back: false, stack_top_games: 3, exclude_q: false,
 };
 
 const store = {
