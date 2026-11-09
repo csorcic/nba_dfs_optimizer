@@ -8,12 +8,24 @@ const KEY_RESULTS = "dfs.results."; // + slate date
 
 // Settings Chris can change in the app. Defaults come from config/settings.yaml via the slate file.
 export const SETTING_FIELDS = [
-  { key: "cash_lineups", label: "Cash lineups", help: "How many lineups Cash mode builds.", min: 1, max: 20, step: 1 },
-  { key: "cash_min_unique", label: "Cash: players different", help: "Each Cash lineup must differ from every earlier one by at least this many players.", min: 1, max: 8, step: 1 },
-  { key: "cash_floor_weight", label: "Cash: floor weight", help: "Extra credit for a safe floor. 0 = only the projection counts; 0.3 = floor counts 30% as much.", min: 0, max: 1, step: 0.05 },
+  { key: "cash_lineups", mode: "cash", label: "Lineups", help: "How many lineups Cash mode builds. Most cash players use 1.", min: 1, max: 20, step: 1 },
+  { key: "cash_min_unique", mode: "cash", label: "Players different", help: "Each lineup differs from every earlier one by at least this many players.", min: 1, max: 8, step: 1 },
+  { key: "cash_floor_weight", mode: "cash", label: "Floor weight", help: "Extra credit for a safe floor. 0 = only the projection counts; 0.3 = floor counts 30% as much.", min: 0, max: 1, step: 0.05 },
+  { key: "gpp_lineups", mode: "gpp", label: "Lineups", help: "How many tournament lineups to build (DraftKings allows up to 150 per contest).", min: 1, max: 150, step: 1 },
+  { key: "gpp_min_unique", mode: "gpp", label: "Players different", help: "Each lineup differs from every earlier one by at least this many players. 3 is a good start.", min: 1, max: 8, step: 1 },
+  { key: "gpp_max_exposure_pct", mode: "gpp", label: "Max exposure %", help: "No player appears in more than this percent of lineups (locks and your own per-player settings win).", min: 1, max: 100, step: 1 },
+  { key: "gpp_randomness", mode: "gpp", label: "Randomness", help: "How much projections are shuffled for each lineup. 0 = none (same as cash), 1 = each player's full boom/bust range.", min: 0, max: 2, step: 0.1 },
+  { key: "gpp_ceiling_weight", mode: "gpp", label: "Ceiling weight", help: "Extra credit for upside: adds this share of (ceiling minus projection).", min: 0, max: 1, step: 0.05 },
+  { key: "gpp_ownership_penalty", mode: "gpp", label: "Ownership penalty", help: "Points taken off per 1% estimated ownership, to fade popular players. 0.1 = a 40%-owned player loses 4 points.", min: 0, max: 1, step: 0.05 },
+  { key: "stack_min_players", mode: "gpp", label: "Game stack size", help: "Require at least this many players from one high-total game. 0 = off; 3 or 4 is typical.", min: 0, max: 7, step: 1 },
+  { key: "stack_top_games", mode: "gpp", label: "Stack from top games", help: "Stacks may only come from this many highest-total games on the slate.", min: 1, max: 15, step: 1 },
 ];
 
-export const FALLBACK_DEFAULTS = { cash_lineups: 1, cash_min_unique: 1, cash_floor_weight: 0, cash_max_lineups: 20 };
+export const FALLBACK_DEFAULTS = {
+  build_mode: "cash", cash_lineups: 1, cash_min_unique: 1, cash_floor_weight: 0, cash_max_lineups: 20,
+  gpp_lineups: 20, gpp_min_unique: 3, gpp_max_exposure_pct: 50, gpp_randomness: 1, gpp_ceiling_weight: 0.3,
+  gpp_ownership_penalty: 0.1, stack_min_players: 0, stack_bring_back: false, stack_top_games: 3,
+};
 
 const store = {
   get(key, fallback) {
@@ -60,7 +72,7 @@ export function resetSettings() {
   store.remove(KEY_SETTINGS);
 }
 
-export const emptyEdits = () => ({ locks: [], excludes: [], proj: {}, minutes: {} });
+export const emptyEdits = () => ({ locks: [], excludes: [], proj: {}, minutes: {}, expMin: {}, expMax: {} });
 
 export function loadEdits(slateDate) {
   // Old slates' edits and results are dropped: edits reset each slate.
@@ -127,6 +139,8 @@ export function effectivePlayers(players, edits) {
       locked: locks.has(p.id),
       excluded: excludes.has(p.id),
       edited: minOv !== undefined || projOv !== undefined,
+      expMin: edits.expMin?.[p.id],
+      expMax: edits.expMax?.[p.id],
     };
   });
 }

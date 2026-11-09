@@ -76,9 +76,9 @@ try {
 
   // Build 3 cash lineups
   await page.click('a[data-view="build"]');
-  await page.fill("#nLineups", "3");
-  await page.press("#nLineups", "Enter");
-  await page.locator("#nLineups").blur();
+  await page.fill("#opt_cash_lineups", "3");
+  
+  await page.locator("#opt_cash_lineups").blur();
   await shot("4-build");
   const t0 = Date.now();
   await page.click("#buildBtn");
@@ -101,6 +101,64 @@ try {
     assert.ok(!ids.includes(toExclude.id), "excluded player used");
   }
   console.log(`CSV ok: ${download.suggestedFilename()}`);
+
+  // Tournament: 20 lineups, 3-player stack with bring-back, a minimum exposure on one player
+  await page.click('a[data-view="players"]');
+  await page.click('.chip[data-pos="ALL"]');
+  await page.fill("#q", "");
+  const minPlayer = slate.players.filter((p) => p.status !== "OUT" && p.salary <= 4500 && p.proj > 12)
+    .find((p) => p.id !== toLock.id && p.id !== toExclude.id);
+  await page.fill("#q", minPlayer.name.split(" ").slice(-1)[0]);
+  await page.click(`.prow[data-id="${minPlayer.id}"]`);
+  await page.fill("#expMin", "60");
+  await page.locator("#expMin").blur();
+  await page.click("#sheet [data-close].btn");
+  await page.fill("#q", "");
+  await page.click('a[data-view="build"]');
+  await page.click('[data-mode="gpp"]');
+  await page.fill("#opt_gpp_lineups", "20");
+  await page.locator("#opt_gpp_lineups").blur();
+  await page.fill("#opt_stack_min_players", "3");
+  await page.locator("#opt_stack_min_players").blur();
+  await page.check("#bringBack");
+  await shot("7-build-gpp");
+  await page.click("#buildBtn");
+  await page.waitForFunction(() => document.querySelectorAll(".lineup").length === 20, null, { timeout: 120000 });
+  await shot("8-results-gpp");
+  const [dl2] = await Promise.all([page.waitForEvent("download"), page.click("#dlCsv")]);
+  const rows2 = readFileSync(await dl2.path(), "utf8").trimEnd().split("\r\n").slice(1).map((r) => r.split(","));
+  assert.equal(rows2.length, 20);
+  const count = new Map();
+  for (const ids of rows2) {
+    const v = validateLineup(ids, byId);
+    assert.ok(v.valid, v.errors.join("; "));
+    assert.ok(ids.includes(toLock.id) && !ids.includes(toExclude.id));
+    ids.forEach((id) => count.set(id, (count.get(id) || 0) + 1));
+    const games = new Map();
+    ids.forEach((id) => { const g = byId.get(id).game; games.set(g, (games.get(g) || 0) + 1); });
+    assert.ok(Math.max(...games.values()) >= 3, "no 3-player stack");
+  }
+  for (const [id, c] of count) if (id !== toLock.id && id !== minPlayer.id) assert.ok(c <= 10, `${byId.get(id).name} in ${c}/20`);
+  assert.ok((count.get(minPlayer.id) || 0) >= 12, `min-exposure player in ${count.get(minPlayer.id) || 0}/20`);
+  for (let i = 0; i < rows2.length; i++) for (let j = 0; j < i; j++)
+    assert.ok(rows2[i].filter((id) => rows2[j].includes(id)).length <= 5, "uniqueness");
+  console.log("GPP CSV ok: 20 lineups, stack, exposure, uniqueness");
+
+  // Speed: 150 tournament lineups with the CPU slowed 4x (roughly a mid-range Android phone)
+  if (process.argv.includes("--bench")) {
+    await page.click('a[data-view="build"]');
+    await page.fill("#opt_stack_min_players", "0");
+    await page.locator("#opt_stack_min_players").blur();
+    await page.fill("#opt_gpp_lineups", "150");
+    await page.locator("#opt_gpp_lineups").blur();
+    const cdp = await ctx.newCDPSession(page);
+    await cdp.send("Emulation.setCPUThrottlingRate", { rate: 4 });
+    const t1 = Date.now();
+    await page.click("#buildBtn");
+    await page.waitForFunction(() => document.querySelectorAll(".lineup").length === 150, null, { timeout: 600000 });
+    console.log(`150 GPP lineups with 4x CPU slowdown: ${((Date.now() - t1) / 1000).toFixed(1)} s`);
+    await cdp.send("Emulation.setCPUThrottlingRate", { rate: 1 });
+  }
 
   // Settings
   await page.click('a[data-view="settings"]');

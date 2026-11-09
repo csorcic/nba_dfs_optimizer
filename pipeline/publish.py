@@ -52,6 +52,7 @@ def build_payload(proj: pd.DataFrame, games: list[dict], meta: dict, settings: d
             "dkAvg": _num(r["avg_ppg"]),
             "games": int(r["games_current"]) if not pd.isna(r["games_current"]) else 0,
             "teamTotal": _num(r["team_implied"], 1),
+            "own": _num(r.get("own"), 1) or 0.0,
         })
     locks = sorted(g["lock_time"] for g in games)
     return {

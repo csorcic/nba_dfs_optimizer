@@ -44,6 +44,7 @@ export const COVERAGE = (() => {
 /**
  * @param {Array} pool players (already filtered) with numeric `value`
  * @param {{salaryCap?:number, locks?:Set<string>, previous?:string[][], minUnique?:number,
+ *          extraVars?:Array<{name:string, obj?:number}>,
  *          extra?:Array<{name:string, ids?:Array<[string,number]>, terms?:Array<[string,number]>, op:string, rhs:number}>}} opts
  */
 export function buildModel(pool, opts = {}) {
@@ -89,10 +90,12 @@ export function buildModel(pool, opts = {}) {
     if (terms.length > maxShared) constraints.push({ name: `uniq_${li}`, terms, op: "<=", rhs: maxShared });
   });
 
-  // Extra rules written against player IDs (e.g. stacking) are translated to variables here.
+  // Extra binary variables (e.g. "this game is the stack") and extra rules. Rules can mix
+  // `terms` on variable names with `ids` on player IDs; IDs not in the pool are skipped.
+  for (const v of opts.extraVars ?? []) vars.push({ name: v.name, kind: "z", obj: v.obj ?? 0 });
   for (const c of opts.extra ?? []) {
-    const terms = c.terms ?? (c.ids ?? []).filter(([id]) => varOf.has(String(id))).map(([id, k]) => [varOf.get(String(id)), k]);
-    constraints.push({ name: c.name, terms, op: c.op, rhs: c.rhs });
+    const fromIds = (c.ids ?? []).filter(([id]) => varOf.has(String(id))).map(([id, k]) => [varOf.get(String(id)), k]);
+    constraints.push({ name: c.name, terms: [...(c.terms ?? []), ...fromIds], op: c.op, rhs: c.rhs });
   }
   return { vars, constraints, varOf, byGame, pool };
 }
