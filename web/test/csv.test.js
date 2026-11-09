@@ -25,3 +25,12 @@ test("DK upload CSV rejects a lineup without 8 players", () => {
 test("copy IDs text: one lineup per line", () => {
   assert.equal(lineupIdsText([lu, lu]), "1,2,3,4,5,6,7,8\n1,2,3,4,5,6,7,8");
 });
+
+test("header matches the DraftKings upload template Chris downloaded (Nov 2026)", async () => {
+  const { readFileSync } = await import("node:fs");
+  const template = readFileSync(new URL("./fixtures/dk_upload_template_top.csv", import.meta.url), "utf8");
+  const dkHeader = template.replace(/^﻿/, "").split(/\r?\n/)[0].split(",").slice(0, 8).join(",");
+  assert.equal(toDkUploadCsv([lu]).split("\r\n")[0], dkHeader);
+  // DK's template says IDs are required (names alone are rejected): every cell must be numeric-looking
+  assert.match(toDkUploadCsv([["44847048", "1", "2", "3", "4", "5", "6", "7"]]).split("\r\n")[1], /^\d+(,\d+){7}$/);
+});

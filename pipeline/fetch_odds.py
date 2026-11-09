@@ -59,7 +59,11 @@ def fetch_odds_api(regions: str, markets: str) -> tuple[dict[str, dict] | None, 
     print(f"  The Odds API: HTTP {r.status_code}, requests used {used}, remaining {remaining}")
     if r.status_code != 200:
         return None, f"HTTP {r.status_code}"
-    return consensus_from_odds_api(r.json()), f"ok ({remaining} requests left)"
+    events = r.json()
+    print(f"  The Odds API listed {len(events)} games: " + ", ".join(
+        f"{e.get('away_team')} @ {e.get('home_team')} ({e.get('commence_time', '')[:16]}, "
+        f"{len(e.get('bookmakers', []))} books)" for e in events))
+    return consensus_from_odds_api(events), f"ok ({remaining} requests left)"
 
 
 def implied_totals(line: dict) -> tuple[float, float]:
@@ -68,8 +72,11 @@ def implied_totals(line: dict) -> tuple[float, float]:
     return round(t / 2 - hs / 2, 2), round(t / 2 + hs / 2, 2)
 
 
-def get_slate_lines(slate_games: list[str], slate_date, settings: dict) -> dict[str, dict]:
-    """Lines for every 'AWAY@HOME' game on the slate. Missing games are simply absent."""
+def get_slate_lines(slate_games: list[str], game_dates, settings: dict) -> dict[str, dict]:
+    """Lines for every 'AWAY@HOME' game on the slate. Missing games are simply absent.
+
+    game_dates: the calendar days (Eastern) the games are played on, for the ESPN fallback.
+    """
     data = settings["data"]
     lines, note = fetch_odds_api(data["odds_regions"], data["odds_markets"])
     lines = lines or {}
@@ -77,13 +84,14 @@ def get_slate_lines(slate_games: list[str], slate_date, settings: dict) -> dict[
     if missing:
         why = note if not lines else f"{len(missing)} games not on The Odds API"
         print(f"  Using ESPN odds for {len(missing)} game(s) ({why})")
-        try:
-            for g in fetch_scoreboard(slate_date, use_cache=False):
-                key = f"{g['away']}@{g['home']}"
-                if key in missing and g.get("odds"):
-                    lines[key] = g["odds"]
-        except Exception as e:
-            print(f"  WARNING: ESPN odds fallback failed: {e}")
+        for day in sorted(set(game_dates)):
+            try:
+                for g in fetch_scoreboard(day, use_cache=False):
+                    key = f"{g['away']}@{g['home']}"
+                    if key in missing and g.get("odds"):
+                        lines[key] = g["odds"]
+            except Exception as e:
+                print(f"  WARNING: ESPN odds fallback for {day} failed: {e}")
     out = {}
     for g in slate_games:
         if g in lines:
