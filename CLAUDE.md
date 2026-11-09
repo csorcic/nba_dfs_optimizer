@@ -110,7 +110,7 @@ Chris's edits (locks, excludes, overrides, settings) are saved in browser storag
 ```
 config/settings.yaml, config/name_overrides.yaml
 pipeline/            # Python: fetch_salaries, fetch_espn, fetch_odds, project, publish
-scripts/backtest.py
+scripts/backtest.py, scripts/lessons.py
 web/                 # PWA source (optimizer in web/src/optimizer/)
 docs/                # GitHub Pages output (built app + docs/data/*.json)
 .github/workflows/   # pipeline.yml (scheduled), deploy.yml (build web -> docs/)
@@ -126,7 +126,18 @@ tests/               # pytest (pipeline) + node tests (optimizer)
 5. **PWA v1:** Slate/Players/Build/Results with cash mode, CSV export, deployed to Pages. Chris installs it on his phone.
 6. **GPP mode:** randomization, ceiling, ownership estimate, uniqueness, exposure, stacking.
 7. **Polish:** offline cache, speed on phone, settings help text, error states (no slate today, missing odds, unmatched players).
-8. **Later / optional:** late swap, re-running on injury news, more slates than the main slate.
+8. **Slate review & learning** (see below). Sub-phases A–E in order, each with tests passing and a summary for Chris.
+9. **Later / optional:** late swap, re-running on injury news, more slates than the main slate.
+
+## Slate review & learning (phase 8)
+
+Goal: after every main slate, find the best possible lineup in hindsight and what winning lineups looked like, then learn from patterns across many slates to improve projections, ownership and GPP settings without overfitting to one night's luck. Every tunable lives under `review:` in `config/settings.yaml`.
+
+- **A. Pre-lock snapshot + daily hindsight review.** `pipeline/run.py` also saves `data/slates/<fileDate>/projections_prelock.csv` (only when the run started before the slate's first lock; the last pre-lock run wins; `snapshot_at` column = run time). `pipeline/review.py` (a step in `pipeline.yml`, backfills every finished slate with no review) joins actual DK points by `espn_id` (did not play = 0, "late scratch" = projected to play but 0 minutes, excluded from accuracy stats), runs the app's own optimizer in Node (`web/scripts/review_lineups.mjs`) with actual points for the best lineup + top N, compares with our best projected lineup, lists smash plays with pre-lock features only, and summarizes lineup make-up. Without a pre-lock snapshot, projections are rebuilt with the backtest replay and the review is marked "rebuilt projections". Writes `data/review/<gameDate>.json`, `data/review/<gameDate>_players.csv`, `docs/data/review_<gameDate>.json`, `review_latest.json`, `review_index.json`.
+- **B. Review tab in the app** (date picker, optimal vs ours, smash list, make-up, contest results once C exists). Works offline.
+- **C. DK contest standings import** from `data/contests/` (Chris uploads on the GitHub website). Auto-detects the slate; records field size, winning score/lineups, top 1%/10%/cash line, real ownership, Chris's entries (`review.dk_username`). Unmatched files go to `data/contests/unmatched/`. A contest file never fails the pipeline.
+- **D. Lessons report** (`scripts/lessons.py` → `data/review/lessons.md`, `docs/data/lessons.json`): ceiling calibration, smash predictors, composition norms, ownership calibration and refit on held-out slates. Below `min_slates_for_lessons` everything is labeled "too early to act on". **No leakage:** only pre-lock information; never feed "was optimal" or actual results straight back into projections. Recommends only; never edits settings.
+- **E. Weekly GPP settings replay** (`review_sweep.yml`): rebuild GPP lineups with the real optimizer over the `review.sweep` grid on past slates, score with actual points, and recommend (never apply) the best configs.
 
 ## Definition of done for any change
 

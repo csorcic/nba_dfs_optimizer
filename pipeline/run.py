@@ -12,7 +12,7 @@ import csv
 import json
 import os
 from collections import Counter
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -85,6 +85,25 @@ def build_player_table(players, matcher, played, lines, current, prior):
     return table, unmatched
 
 
+PRELOCK_FILE = "projections_prelock.csv"
+
+
+def save_prelock(proj: pd.DataFrame, out_dir: Path, run_started: datetime) -> bool:
+    """Save the pre-lock snapshot used later by the slate review.
+
+    Written only when this run started before the slate's earliest lock, so the
+    last pre-lock run wins and a run after lock never overwrites it. The run's
+    start time is stored in the `snapshot_at` column.
+    """
+    locks = pd.to_datetime(proj["lock_time"], utc=True).dropna()
+    if locks.empty or run_started >= locks.min().to_pydatetime():
+        return False
+    snap = proj.copy()
+    snap["snapshot_at"] = run_started.astimezone(timezone.utc).isoformat(timespec="seconds")
+    snap.to_csv(out_dir / PRELOCK_FILE, index=False)
+    return True
+
+
 PROJECTION_COLUMNS = ["fppm", "minutes_base", "play_rate", "minutes_bump", "blowout_cut", "minutes",
                       "vegas_factor", "proj", "proj_source", "sd", "ceiling", "floor", "own"]
 
@@ -114,6 +133,7 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--skip-espn", action="store_true", help="don't download new box scores")
     args = ap.parse_args(argv)
+    run_started = datetime.now(timezone.utc)
 
     settings = load_settings()
     data = settings["data"]
@@ -188,6 +208,10 @@ def main(argv=None) -> int:
         print(f"    {r['name']:<28} {r['team']} ${r['salary']:>5}  proj {r['proj']:5.1f}  "
               f"ceil {r['ceiling']:5.1f}  {r['minutes']:4.1f} min{bump}")
     print(f"  wrote {(out_dir / 'projections.csv').relative_to(REPO_ROOT)}")
+    if save_prelock(proj, out_dir, run_started):
+        print(f"  saved pre-lock snapshot {(out_dir / PRELOCK_FILE).relative_to(REPO_ROOT)} (used by the slate review)")
+    else:
+        print("  slate already locked: pre-lock snapshot left as it was")
 
     print("7) Publish for the phone app")
     payload = publish.build_payload(proj, game_rows, {"slate_date": slate_date, "draft_group_id": group_id,

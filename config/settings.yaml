@@ -65,3 +65,14 @@ optimizer:  # Starting values for the lineup builder (each can be changed in the
 backtest:  # How scripts/backtest.py groups its report
   salary_tiers: [4000, 6000, 8000]  # Salary breakpoints for the report (under $4K, $4-6K, $6-8K, $8K+)
   projection_tiers: [15, 25, 35]  # Projection breakpoints used when a day has no DK salary file
+
+review:  # Slate review: after each slate, the best lineup in hindsight and how our projections did
+  hindsight_top_n: 50  # How many of the best possible lineups (using actual points) to study each night
+  hindsight_min_unique: 1  # Each of those lineups differs from every better one by at least this many players
+  smash_multiplier: 6  # A "smash" is a player who scored at least this many points per $1K of salary (6x)
+  star_salary: 9000  # Players at or above this salary count as "stars" in lineup make-up
+  value_salary: 4500  # Players below this salary count as "value plays" in lineup make-up
+  projection_miss_margin: 5  # An optimal player who beat our ceiling by more than this many points is a "projection miss"
+  settings_miss_value_rank: 20  # An optimal player we projected fairly but ranked worse than this in points per $1K is a "settings miss"
+  fallback_sd_pct: 0.30  # When projections are rebuilt and a player has no history, his boom/bust spread is this share of his projection
+  postponed_after_days: 2  # A game still missing its box score this many days later is treated as postponed, and the slate is reviewed without it
