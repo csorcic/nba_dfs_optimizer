@@ -165,6 +165,24 @@ try {
   await page.waitForSelector("#resetSettings");
   await shot("6-settings");
 
+  // Review: newest review opens, with the hindsight-optimal lineup, ours, smash list and make-up
+  {
+    const index = JSON.parse(readFileSync(join(DOCS, "data", "review_index.json"), "utf8"));
+    const latest = JSON.parse(readFileSync(join(DOCS, "data", "review_latest.json"), "utf8"));
+    await page.click('a[data-view="review"]');
+    await page.waitForSelector("text=Best possible lineup");
+    assert.equal(await page.locator("#reviewDate option").count(), index.dates.length);
+    assert.equal(await page.locator("#reviewDate").inputValue(), latest.gameDate);
+    await page.waitForSelector(`text=${latest.optimal.players[0].name}`);
+    assert.ok(await page.locator(".rtable").count() >= 3);
+    await page.waitForSelector("text=Lineup make-up");
+    await shot("11-review");
+    const box = await page.locator("main").boundingBox();
+    const width = await page.evaluate(() => document.documentElement.scrollWidth);
+    assert.ok(width <= Math.ceil(box.width + 32), `review is wider than the phone (${width}px)`);
+    console.log(`Review tab ok (${index.dates.length} dates, latest ${latest.gameDate})`);
+  }
+
   // ---- Phase 7 checks, each in a fresh phone context ----
 
   // Started games + avoid-Q: pretend it's 5 minutes after the first tip-off.
@@ -223,6 +241,14 @@ try {
     await p3.waitForSelector("text=You're offline");
     if (SHOTS) await p3.screenshot({ path: join(SHOTS, "10-offline.png") });
     console.log("Offline reload shows the cached slate");
+    // A review viewed once online still opens offline
+    await c3.setOffline(false);
+    await p3.click('a[data-view="review"]');
+    await p3.waitForSelector("text=Best possible lineup");
+    await c3.setOffline(true);
+    await p3.reload();
+    await p3.waitForSelector("text=Best possible lineup");
+    console.log("Offline reload shows the cached review");
     await c3.close();
   }
 

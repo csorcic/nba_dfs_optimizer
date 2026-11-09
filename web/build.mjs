@@ -14,6 +14,7 @@ const copies = [
   ["app/app.js", "app/app.js"],
   ["app/state.js", "app/state.js"],
   ["app/worker.js", "app/worker.js"],
+  ["app/review.js", "app/review.js"],
   ["app/styles.css", "app/styles.css"],
   ...["rules.js", "model.js", "solvers.js", "optimizer.js", "csv.js"].map((f) => [`src/optimizer/${f}`, `app/optimizer/${f}`]),
   ["node_modules/highs/build/highs.mjs", "vendor/highs.mjs"],

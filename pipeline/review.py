@@ -521,7 +521,8 @@ def write_index(review_dir: Path = REVIEW_DIR, docs_dir: Path = DOCS_DATA) -> li
         entries.append({"date": r["gameDate"], "optimal": r["standing"]["optimalActual"],
                         "ours": r["standing"]["ourActual"], "pctOfOptimal": r["standing"]["pctOfOptimal"],
                         "projections": r["projections"]["source"]})
-    index = {"generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"), "dates": entries}
+    index = {"generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+             "lessons": (docs_dir / "lessons.json").exists(), "dates": entries}
     out = [docs_dir / "review_index.json"]
     out[0].write_text(json.dumps(index, indent=1), encoding="utf-8")
     if entries:
