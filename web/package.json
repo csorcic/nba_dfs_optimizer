@@ -5,10 +5,15 @@
   "type": "module",
   "description": "DraftKings NBA Classic lineup optimizer (runs in the browser)",
   "scripts": {
-    "test": "node --test test/*.test.js"
+    "test": "node --test test/*.test.js",
+    "build": "node build.mjs",
+    "e2e": "npm run build && node test/e2e/app.e2e.mjs"
   },
   "dependencies": {
     "highs": "1.15.3",
     "javascript-lp-solver": "1.0.3"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
   }
 }

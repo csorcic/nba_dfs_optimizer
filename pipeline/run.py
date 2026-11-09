@@ -17,7 +17,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from pipeline import fetch_espn, fetch_odds, fetch_salaries
+from pipeline import fetch_espn, fetch_odds, fetch_salaries, publish
 from pipeline.project import pos_groups, project
 from pipeline.config import REPO_ROOT, load_name_overrides, load_settings
 from pipeline.names import Matcher
@@ -144,7 +144,9 @@ def main(argv=None) -> int:
         print(f"  {out.relative_to(REPO_ROOT)}: {len(logs[season])} player-game rows")
 
     print("3) Betting lines")
-    lines = fetch_odds.get_slate_lines(games, date.fromisoformat(slate_date), settings)
+    # The salary file can be saved the day before the games, so use the games' own dates.
+    game_dates = {date.fromisoformat(p["lock_time"][:10]) for p in players}
+    lines = fetch_odds.get_slate_lines(games, game_dates, settings)
 
     print("4) Name matching")
     roster, played = espn_roster(logs)
@@ -184,6 +186,12 @@ def main(argv=None) -> int:
         print(f"    {r['name']:<28} {r['team']} ${r['salary']:>5}  proj {r['proj']:5.1f}  "
               f"ceil {r['ceiling']:5.1f}  {r['minutes']:4.1f} min{bump}")
     print(f"  wrote {(out_dir / 'projections.csv').relative_to(REPO_ROOT)}")
+
+    print("7) Publish for the phone app")
+    payload = publish.build_payload(proj, game_rows, {"slate_date": slate_date, "draft_group_id": group_id,
+                                                      "salary_file": latest.name}, settings)
+    for path in publish.publish(payload):
+        print(f"  wrote {path.relative_to(REPO_ROOT)}")
 
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:

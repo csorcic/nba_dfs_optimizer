@@ -2,21 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NBA DFS Optimizer</title>
-  <style>
-    :root { --bg: #f6f7f9; --fg: #16181d; --muted: #5b6270; }
-    @media (prefers-color-scheme: dark) { :root { --bg: #121417; --fg: #eceef2; --muted: #9aa1ad; } }
-    body { margin: 0; padding: 32px 16px; background: var(--bg); color: var(--fg);
-           font: 16px/1.5 system-ui, sans-serif; }
-    main { max-width: 480px; margin: 0 auto; }
-    p { color: var(--muted); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#14171c" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)">
+  <meta name="description" content="DraftKings NBA Classic lineup builder">
+  <title>DFS Lineups</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="app/styles.css?v=b91ae172e0">
 </head>
 <body>
-  <main>
-    <h1>NBA DFS Optimizer</h1>
-    <p>GitHub Pages is working. The lineup builder app will appear here in a later phase.</p>
-  </main>
+  <header class="topbar">
+    <h1 id="title">DFS Lineups</h1>
+    <span id="subtitle" class="muted"></span>
+  </header>
+  <main id="view" aria-live="polite"><p class="empty">Loading slate…</p></main>
+  <nav class="tabs" aria-label="Screens">
+    <a href="#slate" data-view="slate"><span class="ico" aria-hidden="true">◷</span>Slate</a>
+    <a href="#players" data-view="players"><span class="ico" aria-hidden="true">☰</span>Players</a>
+    <a href="#build" data-view="build"><span class="ico" aria-hidden="true">⚙</span>Build</a>
+    <a href="#results" data-view="results"><span class="ico" aria-hidden="true">★</span>Results</a>
+    <a href="#settings" data-view="settings"><span class="ico" aria-hidden="true">⋯</span>Settings</a>
+  </nav>
+  <dialog id="sheet" class="sheet"></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="app/app.js?v=b91ae172e0"></script>
 </body>
 </html>
