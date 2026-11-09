@@ -21,6 +21,7 @@ from pipeline import fetch_espn, fetch_odds, fetch_salaries, publish
 from pipeline.project import pos_groups, project
 from pipeline.config import REPO_ROOT, load_name_overrides, load_settings
 from pipeline.names import Matcher
+from pipeline.ownership import estimate_ownership
 
 SLATES = REPO_ROOT / "data" / "slates"
 
@@ -85,7 +86,7 @@ def build_player_table(players, matcher, played, lines, current, prior):
 
 
 PROJECTION_COLUMNS = ["fppm", "minutes_base", "play_rate", "minutes_bump", "blowout_cut", "minutes",
-                      "vegas_factor", "proj", "proj_source", "sd", "ceiling", "floor"]
+                      "vegas_factor", "proj", "proj_source", "sd", "ceiling", "floor", "own"]
 
 
 def build_projections(table, lines, settings, current, prior) -> pd.DataFrame:
@@ -104,6 +105,7 @@ def build_projections(table, lines, settings, current, prior) -> pd.DataFrame:
         team_lines[home] = {"implied": ln["home_implied"], "spread": ln["home_spread"]}
         team_lines[away] = {"implied": ln["away_implied"], "spread": -ln["home_spread"]}
     df = project(players, logs, team_lines, settings, current, prior)
+    df["own"] = estimate_ownership(df, settings["ownership"], settings["projections"]["ownership_total_pct"])
     # reindex: line columns are absent when no game on the slate has a betting line yet
     return df.reindex(columns=PLAYER_COLUMNS + ["out"] + PROJECTION_COLUMNS).sort_values("proj", ascending=False)
 

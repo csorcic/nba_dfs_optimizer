@@ -24,6 +24,7 @@ const S = {
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const money = (n) => "$" + Number(n).toLocaleString("en-US");
+const pctText = (n) => (n === null || n === undefined ? "–" : n < 1 && n > 0 ? "<1%" : `${Math.round(n)}%`);
 const pts = (n) => (n === null || n === undefined ? "–" : Number(n).toFixed(1));
 const time = (iso) => new Date(iso).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
 const dayLabel = (ymd) =>
@@ -110,6 +111,7 @@ const SORTS = {
   value: { label: "Value", fn: (a, b) => b.value - a.value },
   salary: { label: "Salary", fn: (a, b) => b.salary - a.salary },
   ceiling: { label: "Ceiling", fn: (a, b) => (b.ceiling ?? 0) - (a.ceiling ?? 0) },
+  own: { label: "Ownership", fn: (a, b) => (b.own ?? 0) - (a.own ?? 0) },
   name: { label: "Name", fn: (a, b) => a.name.localeCompare(b.name) },
 };
 
@@ -163,7 +165,7 @@ function playerListHtml(list) {
           <span><span class="pname">${esc(p.name)}</span>${badges(p)}</span>
           <span class="pproj num">${pts(p.proj)}</span>
           <span class="pmeta">${esc(p.team)} vs ${esc(p.opp)} · ${esc(p.pos)} · ${p.minutesShown ?? "–"} min${p.bump >= 1 ? ` <span class="badge bump">+${p.bump} min</span>` : ""}</span>
-          <span class="psal num">${money(p.salary)} · ${p.value.toFixed(1)}x</span>
+          <span class="psal num">${money(p.salary)} · ${p.value.toFixed(1)}x · ${pctText(p.own)}</span>
         </li>`).join("")}
     </ul>
     ${list.length ? "" : `<p class="empty">No players match.</p>`}`;
@@ -186,6 +188,7 @@ function openPlayer(id) {
       <div class="stat"><b>${p.minutesShown ?? "–"}</b><span>minutes${p.bump >= 1 ? ` (+${p.bump})` : ""}</span></div>
       <div class="stat"><b>${p.value.toFixed(2)}</b><span>pts per $1K</span></div>
       <div class="stat"><b>${pts(p.dkAvg)}</b><span>DK avg</span></div>
+      <div class="stat"><b>${pctText(p.own)}</b><span>est. owned</span></div>
     </div>
     <div class="btns" style="margin-top:12px">
       <button class="btn" data-act="lock" aria-pressed="${p.locked}">${p.locked ? "Locked" : "Lock"}</button>
@@ -201,46 +204,69 @@ function openPlayer(id) {
       <input id="ovMin" type="number" inputmode="decimal" step="1" min="0" max="48" placeholder="${p.minutes ?? ""}" value="${minOv ?? ""}">
       <span class="help">Scales the projection by your minutes ÷ ours (${p.minutes ?? "–"}). A projection above overrides this.</span>
     </div>
+    <div class="field">
+      <label>Tournament exposure %</label>
+      <span class="row" style="gap:6px">
+        <input id="expMin" type="number" inputmode="numeric" min="0" max="100" step="5" placeholder="min" value="${p.expMin ?? ""}" aria-label="Minimum exposure percent" style="width:72px">
+        <input id="expMax" type="number" inputmode="numeric" min="0" max="100" step="5" placeholder="max" value="${p.expMax ?? ""}" aria-label="Maximum exposure percent" style="width:72px">
+      </span>
+      <span class="help">Tournament mode only: at least / at most this percent of lineups. Blank = the global max (${S.settings.gpp_max_exposure_pct}%).</span>
+    </div>
     <div class="btns" style="margin-top:12px">
-      <button class="btn" data-act="reset" ${p.edited || p.locked || p.excluded ? "" : "disabled"}>Reset this player</button>
+      <button class="btn" data-act="reset" ${p.edited || p.locked || p.excluded || p.expMin !== undefined || p.expMax !== undefined ? "" : "disabled"}>Reset this player</button>
       <button class="btn primary" data-close>Done</button>
     </div>`;
   sheet.dataset.id = id;
   if (!sheet.open) sheet.showModal();
 }
 
+function fieldHtml(f, value, idPrefix = "opt_") {
+  return `
+    <div class="field">
+      <label for="${idPrefix}${f.key}">${esc(f.label)}</label>
+      <input id="${idPrefix}${f.key}" data-key="${f.key}" type="number" inputmode="decimal" min="${f.min}" max="${f.max}" step="${f.step}" value="${value}">
+      <span class="help">${esc(f.help)}</span>
+    </div>`;
+}
+
+function stackGames() {
+  // The highest-total games (all games if no totals yet).
+  const gs = [...S.slate.games].filter((g) => g.total !== null).sort((a, b) => b.total - a.total);
+  return (gs.length ? gs : S.slate.games).slice(0, S.settings.stack_top_games).map((g) => g.game);
+}
+
 function renderBuild() {
   const st = S.settings;
   const b = S.build;
-  const n = st.cash_lineups;
+  const mode = st.build_mode === "gpp" ? "gpp" : "cash";
+  const n = mode === "gpp" ? st.gpp_lineups : st.cash_lineups;
   const ps = players();
   const locked = ps.filter((p) => p.locked).length;
   const excluded = ps.filter((p) => p.excluded).length;
   const edited = ps.filter((p) => p.edited).length;
+  const exp = ps.filter((p) => p.expMin !== undefined || p.expMax !== undefined).length;
+  const fields = SETTING_FIELDS.filter((f) => f.mode === mode)
+    .filter((f) => !(f.key.endsWith("min_unique") && n === 1))
+    .filter((f) => f.key !== "stack_top_games" || st.stack_min_players >= 2);
   return `
     <h2>Mode</h2>
     <div class="seg">
-      <button aria-pressed="true">Cash</button>
-      <button disabled title="Coming in the next update">Tournament (soon)</button>
+      <button data-mode="cash" aria-pressed="${mode === "cash"}">Cash</button>
+      <button data-mode="gpp" aria-pressed="${mode === "gpp"}">Tournament</button>
     </div>
+    <p class="muted small">${mode === "cash"
+      ? "Cash: the highest-projected lineups. Best for 50/50s and double-ups."
+      : "Tournament: varied lineups with upside, fading popular players. Best for GPPs."}</p>
     <h2>Options</h2>
-    <div class="field">
-      <label for="nLineups">Lineups</label>
-      <input id="nLineups" type="number" inputmode="numeric" min="1" max="${st.cash_max_lineups}" step="1" value="${n}">
-      <span class="help">1 to ${st.cash_max_lineups}. Most cash players use 1.</span>
-    </div>
-    <div class="field" ${n > 1 ? "" : "hidden"}>
-      <label for="minUnique">Players different</label>
-      <input id="minUnique" type="number" inputmode="numeric" min="1" max="8" step="1" value="${st.cash_min_unique}">
-      <span class="help">Each lineup differs from every other by at least this many players.</span>
-    </div>
-    <div class="field">
-      <label for="floorW">Floor weight <span class="muted num" id="floorWVal">${st.cash_floor_weight}</span></label>
-      <input id="floorW" type="range" min="0" max="1" step="0.05" value="${st.cash_floor_weight}">
-      <span class="help">0 = pick the highest projection. Higher = prefer safer players.</span>
-    </div>
-    <p class="muted small">Your edits: ${locked} locked · ${excluded} excluded · ${edited} edited. <a href="#players">Change</a></p>
-    <button class="btn primary big" id="buildBtn" ${b.running ? "disabled" : ""}>${b.running ? "Building…" : `Build ${n} lineup${n > 1 ? "s" : ""}`}</button>
+    ${fields.map((f) => fieldHtml(f, st[f.key])).join("")}
+    ${mode === "gpp" && st.stack_min_players >= 2 ? `
+      <div class="field">
+        <label for="bringBack">Bring-back</label>
+        <input id="bringBack" type="checkbox" ${st.stack_bring_back ? "checked" : ""} style="width:24px;height:24px">
+        <span class="help">Also require a player from the other team in the stacked game. Stack games now: ${esc(stackGames().join(", "))}.</span>
+      </div>` : ""}
+    <p class="muted small">Your edits: ${locked} locked · ${excluded} excluded · ${edited} edited${mode === "gpp" ? ` · ${exp} with exposure limits` : ""}. <a href="#players">Change</a></p>
+    <button class="btn primary big" id="buildBtn" ${b.running ? "disabled" : ""}>${b.running ? `Building… ${b.done}/${b.total}` : `Build ${n} lineup${n > 1 ? "s" : ""}`}</button>
     <div class="progress" ${b.running ? "" : "hidden"}><div style="width:${b.total ? (100 * b.done) / b.total : 5}%"></div></div>
     ${b.error ? `<div class="card notice bad" style="margin-top:12px">${esc(b.error)}</div>` : ""}`;
 }
@@ -262,6 +288,7 @@ function renderResults() {
     ${r.lineups.map((lu, i) => `
       <div class="card lineup">
         <div class="head"><span>#${i + 1}</span><span class="num">${pts(lu.proj)} pts · ${money(lu.salary)}</span></div>
+        ${r.mode === "gpp" ? `<div class="muted small num" style="margin-bottom:4px">Ceiling ${pts(lu.ceiling)} · total ownership ${Math.round(lu.own)}%</div>` : ""}
         <table>${lu.ids.map((id, k) => {
           const p = map.get(id) || { name: id, team: "", salary: 0 };
           const lock = S.edits.locks.includes(id) ? ` <span class="badge lock">LOCK</span>` : "";
@@ -270,27 +297,27 @@ function renderResults() {
         }).join("")}</table>
       </div>`).join("")}
     ${n > 1 ? `<h2>Exposure</h2><div class="card"><table style="width:100%">${r.exposure.map((e) =>
-      `<tr><td>${esc(e.name)}</td><td class="r num muted">${e.count}/${n}</td><td class="r num" style="width:52px">${Math.round(e.pct)}%</td></tr>`).join("")}</table></div>` : ""}`;
+      `<tr><td>${esc(e.name)}</td><td class="r num muted">${e.count}/${n}</td><td class="r num" style="width:52px">${Math.round(e.pct)}%</td>${r.mode === "gpp" ? `<td class="r num muted" style="width:64px">${pctText(e.own)} est</td>` : ""}</tr>`).join("")}</table>
+      ${r.mode === "gpp" ? `<p class="muted small">Left: share of your lineups. Right: estimated share of the field.</p>` : ""}</div>` : ""}`;
 }
 
 function renderSettings() {
   const st = S.settings;
-  const d = S.slate.defaults || {};
+  const d = { ...S.slate.defaults };
+  const group = (mode) => SETTING_FIELDS.filter((f) => f.mode === mode)
+    .map((f) => fieldHtml({ ...f, help: `${f.help} Default ${d[f.key] ?? "–"}.` }, st[f.key], "set_")).join("");
   return `
-    <h2>Lineup builder</h2>
-    ${SETTING_FIELDS.map((f) => `
-      <div class="field">
-        <label for="set_${f.key}">${esc(f.label)}</label>
-        <input id="set_${f.key}" data-key="${f.key}" type="number" inputmode="decimal" min="${f.min}" max="${f.max}" step="${f.step}" value="${st[f.key]}">
-        <span class="help">${esc(f.help)} Default ${d[f.key] ?? "–"}.</span>
-      </div>`).join("")}
+    <h2>Cash</h2>
+    ${group("cash")}
+    <h2>Tournament</h2>
+    ${group("gpp")}
     <div class="btns" style="margin-top:12px">
       <button class="btn" id="resetSettings">Reset to defaults</button>
       <button class="btn" id="clearEdits">Clear today's edits</button>
     </div>
     <h2>About</h2>
-    <p class="muted small">Salary file ${esc(S.slate.salaryFile)}. Projections, lines and settings defaults come from the daily pipeline;
-      your edits stay on this phone and reset each slate. Version b91ae172e0.</p>`;
+    <p class="muted small">Salary file ${esc(S.slate.salaryFile)}. Projections, ownership estimates, lines and settings defaults come from the daily pipeline;
+      your edits stay on this phone and reset each slate. Ownership is an estimate from a simple formula, not real contest data. Version ae74c51270.</p>`;
 }
 
 // ---------------------------------------------------------------- build
@@ -298,7 +325,7 @@ function renderSettings() {
 let worker = null;
 function getWorker() {
   if (!worker) {
-    worker = new Worker(new URL("./worker.js?v=b91ae172e0", import.meta.url), { type: "module" });
+    worker = new Worker(new URL("./worker.js?v=ae74c51270", import.meta.url), { type: "module" });
     worker.onmessage = onWorkerMessage;
     worker.onerror = (e) => {
       S.build = { running: false, done: 0, total: 0, error: `The lineup builder crashed: ${e.message || "unknown error"}` };
@@ -312,17 +339,30 @@ function getWorker() {
 let buildSnapshot = null;
 function startBuild() {
   const st = S.settings;
-  const options = {
-    mode: "cash",
-    count: st.cash_lineups,
-    minUnique: st.cash_min_unique,
-    floorWeight: st.cash_floor_weight,
-    locks: S.edits.locks,
-    excludes: S.edits.excludes,
-  };
+  const gpp = st.build_mode === "gpp";
+  const pct = (v) => (v === undefined ? undefined : v / 100);
+  const playerExposure = {};
+  for (const id of new Set([...Object.keys(S.edits.expMin || {}), ...Object.keys(S.edits.expMax || {})])) {
+    playerExposure[id] = { min: pct(S.edits.expMin?.[id]), max: pct(S.edits.expMax?.[id]) };
+  }
+  const options = gpp
+    ? {
+        mode: "gpp",
+        count: st.gpp_lineups,
+        minUnique: st.gpp_min_unique,
+        maxExposure: st.gpp_max_exposure_pct / 100,
+        playerExposure,
+        randomness: st.gpp_randomness,
+        ceilingWeight: st.gpp_ceiling_weight,
+        ownershipPenalty: st.gpp_ownership_penalty,
+        stack: st.stack_min_players >= 2 ? { minPlayers: st.stack_min_players, bringBack: st.stack_bring_back, games: stackGames() } : null,
+      }
+    : { mode: "cash", count: st.cash_lineups, minUnique: st.cash_min_unique, floorWeight: st.cash_floor_weight };
+  options.locks = S.edits.locks;
+  options.excludes = S.edits.excludes;
   // Overrides are already folded into the players' projections.
-  const ps = players().map(({ id, name, team, opp, game, salary, slots, proj, floor, ceiling, status }) =>
-    ({ id, name, team, opp, game, salary, slots, proj, floor, ceiling, status }));
+  const ps = players().map(({ id, name, team, opp, game, salary, slots, proj, floor, ceiling, sd, own, status }) =>
+    ({ id, name, team, opp, game, salary, slots, proj, floor, ceiling, sd, own, status }));
   buildSnapshot = { edits: JSON.stringify(S.edits), projs: new Map(ps.map((p) => [p.id, p.proj])) };
   S.build = { running: true, done: 0, total: options.count, error: null };
   render();
@@ -335,6 +375,8 @@ function onWorkerMessage(e) {
     S.build.done = m.done;
     const bar = $(".progress > div");
     if (bar) bar.style.width = `${(100 * m.done) / m.total}%`;
+    const btn = $("#buildBtn");
+    if (btn) btn.textContent = `Building… ${m.done}/${m.total}`;
     return;
   }
   if (m.type === "error") {
@@ -418,9 +460,13 @@ function render() {
 }
 
 view.addEventListener("click", (e) => {
-  const t = e.target.closest("[data-game],[data-id],[data-pos],#showOut,#clearGame,#buildBtn,#dlCsv,#shareCsv,#copyIds,#resetSettings,#clearEdits");
+  const t = e.target.closest("[data-game],[data-id],[data-pos],[data-mode],#showOut,#clearGame,#buildBtn,#dlCsv,#shareCsv,#copyIds,#resetSettings,#clearEdits");
   if (!t) return;
-  if (t.dataset.game) {
+  if (t.dataset.mode) {
+    S.settings.build_mode = t.dataset.mode;
+    saveSettings(S.settings, S.slate.defaults);
+    render();
+  } else if (t.dataset.game) {
     S.filters.game = t.dataset.game;
     location.hash = "#players";
   } else if (t.dataset.id) openPlayer(t.dataset.id);
@@ -452,30 +498,24 @@ view.addEventListener("input", (e) => {
     S.filters.q = t.value;
     $("#plistWrap").innerHTML = playerListHtml(filteredPlayers());
   }
-  else if (t.id === "floorW") {
-    S.settings.cash_floor_weight = Number(t.value);
-    $("#floorWVal").textContent = t.value;
-    saveSettings(S.settings, S.slate.defaults);
-  }
 });
 
 view.addEventListener("change", (e) => {
   const t = e.target;
-  const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, Math.round(Number(v) || lo)));
   if (t.id === "sort") { S.filters.sort = t.value; render(); }
-  else if (t.id === "nLineups") {
-    S.settings.cash_lineups = clamp(t.value, 1, S.settings.cash_max_lineups);
-    saveSettings(S.settings, S.slate.defaults);
-    render();
-  } else if (t.id === "minUnique") {
-    S.settings.cash_min_unique = clamp(t.value, 1, 8);
+  else if (t.id === "bringBack") {
+    S.settings.stack_bring_back = t.checked;
     saveSettings(S.settings, S.slate.defaults);
   } else if (t.dataset.key) {
     const f = SETTING_FIELDS.find((x) => x.key === t.dataset.key);
-    const v = Math.min(f.max, Math.max(f.min, Number(t.value)));
+    let v = Number(t.value);
+    if (f.step >= 1) v = Math.round(v);
+    v = Math.min(f.max, Math.max(f.min, v));
     if (Number.isFinite(v)) S.settings[f.key] = v;
     t.value = S.settings[f.key];
     saveSettings(S.settings, S.slate.defaults);
+    // Lineup count and stack size change which options are shown.
+    if (/lineups|stack_min/.test(f.key) && currentView() === "build") render();
   }
 });
 
@@ -489,6 +529,7 @@ sheet.addEventListener("click", (e) => {
   if (act === "reset") {
     let ed = { ...S.edits, locks: S.edits.locks.filter((x) => x !== id), excludes: S.edits.excludes.filter((x) => x !== id) };
     ed = setOverride(setOverride(ed, "proj", id, ""), "minutes", id, "");
+    ed = setOverride(setOverride(ed, "expMin", id, ""), "expMax", id, "");
     setEdits(ed);
   }
   openPlayer(id);
@@ -498,6 +539,10 @@ sheet.addEventListener("change", (e) => {
   const id = sheet.dataset.id;
   if (e.target.id === "ovProj") setEdits(setOverride(S.edits, "proj", id, e.target.value));
   if (e.target.id === "ovMin") setEdits(setOverride(S.edits, "minutes", id, e.target.value));
+  if (e.target.id === "expMin" || e.target.id === "expMax") {
+    const v = e.target.value === "" ? "" : Math.min(100, Math.max(0, Math.round(Number(e.target.value))));
+    setEdits(setOverride(S.edits, e.target.id, id, v));
+  }
   openPlayer(id);
   render();
 });

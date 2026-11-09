@@ -36,6 +36,16 @@ projections:  # How each player's fantasy-point projection is built
   floor_z: 1.28  # Floor = projection - this many standard deviations (1.28 is about the 10th percentile)
   ownership_total_pct: 800  # Estimated ownership across all players adds up to this (8 roster spots x 100%)
 
+ownership:  # Estimated ownership: a simple guess at how popular each player will be (no paid data)
+  intercept: -3.0  # Starting point for every player; lower = ownership more concentrated on the top plays
+  value_weight: 1.1  # How much points per $1K drives popularity (the biggest factor)
+  projection_weight: 0.5  # How much a big projection draws users
+  rank_weight: -0.35  # Extra attention for the very top projections (negative: ranks further down get less)
+  bump_weight: 0.06  # Extra popularity per minute of minutes bump (injury news creates chalk)
+  team_total_weight: 0.25  # Extra popularity for players on teams Vegas expects to score a lot
+  salary_weight: 0.0  # Extra (+) or less (-) popularity for expensive players at the same value
+  max_pct: 75  # Nobody is estimated above this percent owned
+
 optimizer:  # Starting values for the lineup builder (each can be changed in the app)
   salary_cap: 50000  # DraftKings Classic salary cap in dollars
   cash_lineups: 1  # Number of lineups to build in Cash mode
@@ -49,6 +59,7 @@ optimizer:  # Starting values for the lineup builder (each can be changed in the
   gpp_ceiling_weight: 0.3  # In GPP mode, how much a player's ceiling counts on top of his projection
   gpp_ownership_penalty: 0.1  # In GPP mode, points subtracted per 1% of estimated ownership (fades chalk)
   stack_min_players: 0  # Require at least this many players from one game (0 = off)
+  stack_top_games: 3  # Stacks may only come from this many highest-total games
   stack_bring_back: false  # When stacking, also require a player from the other team in that game
 
 backtest:  # How scripts/backtest.py groups its report

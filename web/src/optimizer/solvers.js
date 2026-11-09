@@ -6,7 +6,7 @@ export function highsSolver(highs) {
   return {
     name: "highs",
     solve(model) {
-      const r = highs.solve(toLpString(model));
+      const r = highs.solve(toLpString(model), model.solverOptions ?? {});
       if (r.Status === "Infeasible") return { status: "infeasible", chosen: new Set(), objective: null };
       if (r.Status !== "Optimal") return { status: "error", message: r.Status, chosen: new Set(), objective: null };
       const chosen = new Set();
