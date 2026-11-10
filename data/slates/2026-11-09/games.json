@@ -6,79 +6,79 @@
   {
    "game": "CLE@CHA",
    "lock_time": "2026-11-09T19:00:00-05:00",
-   "total": 215.5,
-   "home_spread": 8.5,
+   "total": 237.5,
+   "home_spread": -19.25,
    "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-10T00:10:00Z",
-   "home_implied": 103.5,
-   "away_implied": 112.0
+   "books": 6,
+   "commence_time": "2026-11-10T00:11:00Z",
+   "home_implied": 128.38,
+   "away_implied": 109.12
   },
   {
    "game": "LAL@ATL",
    "lock_time": "2026-11-09T19:00:00-05:00",
-   "total": 233.5,
-   "home_spread": -2.5,
+   "total": 235.5,
+   "home_spread": 7.5,
    "source": "odds_api",
-   "books": 9,
+   "books": 6,
    "commence_time": "2026-11-10T00:10:00Z",
-   "home_implied": 118.0,
-   "away_implied": 115.5
+   "home_implied": 114.0,
+   "away_implied": 121.5
   },
   {
    "game": "WAS@DET",
    "lock_time": "2026-11-09T19:00:00-05:00",
-   "total": 219.0,
-   "home_spread": -9.0,
+   "total": 231.0,
+   "home_spread": -14.75,
    "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-10T00:10:00Z",
-   "home_implied": 114.0,
-   "away_implied": 105.0
+   "books": 6,
+   "commence_time": "2026-11-10T00:12:00Z",
+   "home_implied": 122.88,
+   "away_implied": 108.12
   },
   {
    "game": "MEM@TOR",
    "lock_time": "2026-11-09T19:30:00-05:00",
-   "total": 225.5,
-   "home_spread": 1.5,
+   "total": 221.5,
+   "home_spread": 4.5,
    "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-10T00:40:00Z",
-   "home_implied": 112.0,
-   "away_implied": 113.5
+   "books": 6,
+   "commence_time": "2026-11-10T00:35:00Z",
+   "home_implied": 108.5,
+   "away_implied": 113.0
   },
   {
    "game": "IND@DAL",
    "lock_time": "2026-11-09T20:00:00-05:00",
-   "total": 226.5,
-   "home_spread": -4.5,
+   "total": 229.0,
+   "home_spread": -1.5,
    "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-10T01:10:00Z",
-   "home_implied": 115.5,
-   "away_implied": 111.0
+   "books": 6,
+   "commence_time": "2026-11-10T01:11:00Z",
+   "home_implied": 115.25,
+   "away_implied": 113.75
   },
   {
    "game": "DEN@HOU",
    "lock_time": "2026-11-09T20:30:00-05:00",
-   "total": 223.5,
-   "home_spread": -4.5,
+   "total": 225.5,
+   "home_spread": -5.5,
    "source": "odds_api",
    "books": 9,
-   "commence_time": "2026-11-10T01:40:00Z",
-   "home_implied": 114.0,
-   "away_implied": 109.5
+   "commence_time": "2026-11-10T01:41:00Z",
+   "home_implied": 115.5,
+   "away_implied": 110.0
   },
   {
    "game": "SAS@PHX",
    "lock_time": "2026-11-09T21:00:00-05:00",
-   "total": 226.0,
+   "total": 225.5,
    "home_spread": 9.0,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-10T02:10:00Z",
-   "home_implied": 108.5,
-   "away_implied": 117.5
+   "home_implied": 108.25,
+   "away_implied": 117.25
   }
  ]
 }
