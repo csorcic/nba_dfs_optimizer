@@ -1,0 +1,20 @@
+{
+ "DEN@HOU": {
+  "total": 210.0,
+  "home_spread": -11.0,
+  "source": "odds_api",
+  "books": 6,
+  "commence_time": "2026-11-10T01:41:00Z",
+  "home_implied": 110.5,
+  "away_implied": 99.5
+ },
+ "SAS@PHX": {
+  "total": 213.0,
+  "home_spread": 28.5,
+  "source": "odds_api",
+  "books": 6,
+  "commence_time": "2026-11-10T02:10:45Z",
+  "home_implied": 92.25,
+  "away_implied": 120.75
+ }
+}

@@ -5,80 +5,45 @@
  "games": [
   {
    "game": "CLE@CHA",
-   "lock_time": "2026-11-09T19:00:00-05:00",
-   "total": 237.5,
-   "home_spread": -19.25,
-   "source": "odds_api",
-   "books": 6,
-   "commence_time": "2026-11-10T00:11:00Z",
-   "home_implied": 128.38,
-   "away_implied": 109.12
+   "lock_time": "2026-11-09T19:00:00-05:00"
   },
   {
    "game": "LAL@ATL",
-   "lock_time": "2026-11-09T19:00:00-05:00",
-   "total": 235.5,
-   "home_spread": 7.5,
-   "source": "odds_api",
-   "books": 6,
-   "commence_time": "2026-11-10T00:10:00Z",
-   "home_implied": 114.0,
-   "away_implied": 121.5
+   "lock_time": "2026-11-09T19:00:00-05:00"
   },
   {
    "game": "WAS@DET",
-   "lock_time": "2026-11-09T19:00:00-05:00",
-   "total": 231.0,
-   "home_spread": -14.75,
-   "source": "odds_api",
-   "books": 6,
-   "commence_time": "2026-11-10T00:12:00Z",
-   "home_implied": 122.88,
-   "away_implied": 108.12
+   "lock_time": "2026-11-09T19:00:00-05:00"
   },
   {
    "game": "MEM@TOR",
-   "lock_time": "2026-11-09T19:30:00-05:00",
-   "total": 221.5,
-   "home_spread": 4.5,
-   "source": "odds_api",
-   "books": 6,
-   "commence_time": "2026-11-10T00:35:00Z",
-   "home_implied": 108.5,
-   "away_implied": 113.0
+   "lock_time": "2026-11-09T19:30:00-05:00"
   },
   {
    "game": "IND@DAL",
-   "lock_time": "2026-11-09T20:00:00-05:00",
-   "total": 229.0,
-   "home_spread": -1.5,
-   "source": "odds_api",
-   "books": 6,
-   "commence_time": "2026-11-10T01:11:00Z",
-   "home_implied": 115.25,
-   "away_implied": 113.75
+   "lock_time": "2026-11-09T20:00:00-05:00"
   },
   {
    "game": "DEN@HOU",
    "lock_time": "2026-11-09T20:30:00-05:00",
-   "total": 225.5,
-   "home_spread": -5.5,
+   "total": 210.0,
+   "home_spread": -11.0,
    "source": "odds_api",
-   "books": 9,
+   "books": 6,
    "commence_time": "2026-11-10T01:41:00Z",
-   "home_implied": 115.5,
-   "away_implied": 110.0
+   "home_implied": 110.5,
+   "away_implied": 99.5
   },
   {
    "game": "SAS@PHX",
    "lock_time": "2026-11-09T21:00:00-05:00",
-   "total": 225.5,
-   "home_spread": 9.0,
+   "total": 213.0,
+   "home_spread": 28.5,
    "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-10T02:10:00Z",
-   "home_implied": 108.25,
-   "away_implied": 117.25
+   "books": 6,
+   "commence_time": "2026-11-10T02:10:45Z",
+   "home_implied": 92.25,
+   "away_implied": 120.75
   }
  ]
 }
