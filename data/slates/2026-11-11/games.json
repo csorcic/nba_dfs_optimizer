@@ -1,0 +1,84 @@
+{
+ "slate_date": "2026-11-11",
+ "draft_group_id": "156572",
+ "salary_file": "DKSalaries_NBA_2026-11-11_156572.csv",
+ "games": [
+  {
+   "game": "BOS@TOR",
+   "lock_time": "2026-11-11T19:00:00-05:00",
+   "total": 215.5,
+   "home_spread": 5.5,
+   "source": "odds_api",
+   "books": 9,
+   "commence_time": "2026-11-12T00:10:00Z",
+   "home_implied": 105.0,
+   "away_implied": 110.5
+  },
+  {
+   "game": "CLE@NYK",
+   "lock_time": "2026-11-11T19:00:00-05:00",
+   "total": 222.5,
+   "home_spread": -3.5,
+   "source": "odds_api",
+   "books": 7,
+   "commence_time": "2026-11-12T00:10:00Z",
+   "home_implied": 113.0,
+   "away_implied": 109.5
+  },
+  {
+   "game": "WAS@IND",
+   "lock_time": "2026-11-11T19:00:00-05:00",
+   "total": 227.5,
+   "home_spread": -3.0,
+   "source": "odds_api",
+   "books": 9,
+   "commence_time": "2026-11-12T00:10:00Z",
+   "home_implied": 115.25,
+   "away_implied": 112.25
+  },
+  {
+   "game": "BKN@NOP",
+   "lock_time": "2026-11-11T20:00:00-05:00",
+   "total": 228.0,
+   "home_spread": -3.5,
+   "source": "odds_api",
+   "books": 9,
+   "commence_time": "2026-11-12T01:10:00Z",
+   "home_implied": 115.75,
+   "away_implied": 112.25
+  },
+  {
+   "game": "DEN@MEM",
+   "lock_time": "2026-11-11T20:00:00-05:00",
+   "total": 230.5,
+   "home_spread": 4.0,
+   "source": "odds_api",
+   "books": 9,
+   "commence_time": "2026-11-12T01:10:00Z",
+   "home_implied": 113.25,
+   "away_implied": 117.25
+  },
+  {
+   "game": "LAL@MIL",
+   "lock_time": "2026-11-11T20:00:00-05:00",
+   "total": 229.5,
+   "home_spread": 14.0,
+   "source": "odds_api",
+   "books": 9,
+   "commence_time": "2026-11-12T01:10:00Z",
+   "home_implied": 107.75,
+   "away_implied": 121.75
+  },
+  {
+   "game": "SAS@CHI",
+   "lock_time": "2026-11-11T20:00:00-05:00",
+   "total": 238.5,
+   "home_spread": 15.0,
+   "source": "odds_api",
+   "books": 9,
+   "commence_time": "2026-11-12T01:10:00Z",
+   "home_implied": 111.75,
+   "away_implied": 126.75
+  }
+ ]
+}

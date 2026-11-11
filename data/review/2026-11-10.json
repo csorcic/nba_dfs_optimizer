@@ -1,0 +1,729 @@
+{
+ "schema": 1,
+ "generatedAt": "2026-11-11T18:21:27+00:00",
+ "gameDate": "2026-11-10",
+ "fileDate": "2026-11-10",
+ "draftGroupId": "156485",
+ "salaryFile": "DKSalaries_NBA_2026-11-10_156485.csv",
+ "projections": {
+  "source": "rebuilt",
+  "snapshotAt": "",
+  "note": "Rebuilt projections: no pre-lock snapshot was saved for this slate, so projections were rebuilt with the backtest replay from games before this day. The replay knows who sat, so minutes bumps are sharper than they were before lock and there are no late scratches."
+ },
+ "games": [
+  {
+   "game": "MIL@NYK",
+   "lock": "2026-11-10T19:30:00-05:00",
+   "total": 205.0,
+   "totalSource": "pre-lock",
+   "homeSpread": -27.5,
+   "final": true
+  },
+  {
+   "game": "BOS@PHI",
+   "lock": "2026-11-10T20:00:00-05:00",
+   "total": 215.0,
+   "totalSource": "pre-lock",
+   "homeSpread": 5.5,
+   "final": true
+  },
+  {
+   "game": "LAC@PHX",
+   "lock": "2026-11-10T21:00:00-05:00",
+   "total": 224.0,
+   "totalSource": "pre-lock",
+   "homeSpread": -3.5,
+   "final": true
+  },
+  {
+   "game": "MIA@UTA",
+   "lock": "2026-11-10T21:00:00-05:00",
+   "total": 227.5,
+   "totalSource": "pre-lock",
+   "homeSpread": 8.5,
+   "final": true
+  },
+  {
+   "game": "ORL@SAC",
+   "lock": "2026-11-10T22:00:00-05:00",
+   "total": 222.0,
+   "totalSource": "pre-lock",
+   "homeSpread": 5.5,
+   "final": true
+  }
+ ],
+ "accuracy": {
+  "players": 118,
+  "mae": 6.76,
+  "bias": 0.42,
+  "overCeilingPct": 8.5,
+  "insideRangePct": 87.3,
+  "lateScratches": 0,
+  "playedButProjectedOut": 0
+ },
+ "lateScratches": [],
+ "noResult": [
+  {
+   "id": "44858276",
+   "name": "Tyler Nickel",
+   "team": "NYK",
+   "salary": 3000,
+   "status": "",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44858297",
+   "name": "Ben Simmons",
+   "team": "SAC",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44858305",
+   "name": "Tre Donaldson",
+   "team": "MIA",
+   "salary": 3000,
+   "status": "",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44858312",
+   "name": "Izaiyah Nelson",
+   "team": "ORL",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  }
+ ],
+ "optimal": {
+  "actual": 327.0,
+  "ourProj": 242.07,
+  "players": [
+   {
+    "slot": "PG",
+    "id": "44857816",
+    "name": "Anthony Black",
+    "team": "ORL",
+    "game": "ORL@SAC",
+    "salary": 6900,
+    "proj": 36.44,
+    "ceiling": 56.78,
+    "own": 25.4,
+    "actual": 49.25,
+    "valueRank": 5,
+    "projRank": 14,
+    "missType": "in our lineup"
+   },
+   {
+    "slot": "SG",
+    "id": "44858137",
+    "name": "Hugo Gonzalez",
+    "team": "BOS",
+    "game": "BOS@PHI",
+    "salary": 3300,
+    "proj": 8.18,
+    "ceiling": 20.63,
+    "own": 0.3,
+    "actual": 24.0,
+    "valueRank": 92,
+    "projRank": 95,
+    "missType": "settings miss"
+   },
+   {
+    "slot": "SF",
+    "id": "44857833",
+    "name": "Zach LaVine",
+    "team": "SAC",
+    "game": "ORL@SAC",
+    "salary": 6600,
+    "proj": 25.38,
+    "ceiling": 42.03,
+    "own": 2.9,
+    "actual": 42.25,
+    "valueRank": 63,
+    "projRank": 31,
+    "missType": "settings miss"
+   },
+   {
+    "slot": "PF",
+    "id": "44857754",
+    "name": "Franz Wagner",
+    "team": "ORL",
+    "game": "ORL@SAC",
+    "salary": 9000,
+    "proj": 48.58,
+    "ceiling": 68.02,
+    "own": 66.1,
+    "actual": 55.25,
+    "valueRank": 2,
+    "projRank": 2,
+    "missType": "in our lineup"
+   },
+   {
+    "slot": "C",
+    "id": "44857758",
+    "name": "Karl-Anthony Towns",
+    "team": "NYK",
+    "game": "MIL@NYK",
+    "salary": 8900,
+    "proj": 45.51,
+    "ceiling": 60.83,
+    "own": 48.0,
+    "actual": 52.5,
+    "valueRank": 13,
+    "projRank": 3,
+    "missType": "close call"
+   },
+   {
+    "slot": "G",
+    "id": "44857826",
+    "name": "Davion Mitchell",
+    "team": "MIA",
+    "game": "MIA@UTA",
+    "salary": 6800,
+    "proj": 34.45,
+    "ceiling": 49.28,
+    "own": 23.1,
+    "actual": 41.75,
+    "valueRank": 14,
+    "projRank": 17,
+    "missType": "close call"
+   },
+   {
+    "slot": "F",
+    "id": "44858009",
+    "name": "Jordan Goodwin",
+    "team": "PHX",
+    "game": "LAC@PHX",
+    "salary": 4100,
+    "proj": 19.79,
+    "ceiling": 32.39,
+    "own": 5.3,
+    "actual": 28.25,
+    "valueRank": 22,
+    "projRank": 55,
+    "missType": "settings miss"
+   },
+   {
+    "slot": "UTIL",
+    "id": "44857971",
+    "name": "Isaiah Collier",
+    "team": "UTA",
+    "game": "MIA@UTA",
+    "salary": 4400,
+    "proj": 23.74,
+    "ceiling": 42.46,
+    "own": 11.1,
+    "actual": 33.75,
+    "valueRank": 3,
+    "projRank": 39,
+    "missType": "in our lineup"
+   }
+  ],
+  "composition": {
+   "salary": 50000,
+   "stars": 1,
+   "values": 3,
+   "maxFromOneGame": 3,
+   "maxGame": "ORL@SAC",
+   "maxGameIsHighestTotal": false,
+   "teams": [
+    "BOS",
+    "MIA",
+    "NYK",
+    "ORL",
+    "PHX",
+    "SAC",
+    "UTA"
+   ],
+   "teamCount": 7,
+   "games": 5,
+   "ownSum": 182.2,
+   "proj": 242.1,
+   "actual": 327.0
+  }
+ },
+ "ours": {
+  "actual": 279.25,
+  "proj": 267.24,
+  "players": [
+   {
+    "slot": "PG",
+    "id": "44857816",
+    "name": "Anthony Black",
+    "team": "ORL",
+    "game": "ORL@SAC",
+    "salary": 6900,
+    "proj": 36.44,
+    "ceiling": 56.78,
+    "own": 25.4,
+    "actual": 49.25,
+    "valueRank": 5,
+    "projRank": 14
+   },
+   {
+    "slot": "SG",
+    "id": "44857822",
+    "name": "Darryn Peterson",
+    "team": "UTA",
+    "game": "MIA@UTA",
+    "salary": 6800,
+    "proj": 35.67,
+    "ceiling": 54.13,
+    "own": 20.5,
+    "actual": 37.5,
+    "valueRank": 6,
+    "projRank": 16
+   },
+   {
+    "slot": "SF",
+    "id": "44857754",
+    "name": "Franz Wagner",
+    "team": "ORL",
+    "game": "ORL@SAC",
+    "salary": 9000,
+    "proj": 48.58,
+    "ceiling": 68.02,
+    "own": 66.1,
+    "actual": 55.25,
+    "valueRank": 2,
+    "projRank": 2
+   },
+   {
+    "slot": "PF",
+    "id": "44857964",
+    "name": "Kyle Kuzma",
+    "team": "MIL",
+    "game": "MIL@NYK",
+    "salary": 4600,
+    "proj": 23.89,
+    "ceiling": 39.95,
+    "own": 5.8,
+    "actual": 17.75,
+    "valueRank": 8,
+    "projRank": 37
+   },
+   {
+    "slot": "C",
+    "id": "44857780",
+    "name": "Bam Adebayo",
+    "team": "MIA",
+    "game": "MIA@UTA",
+    "salary": 8200,
+    "proj": 43.49,
+    "ceiling": 66.17,
+    "own": 44.9,
+    "actual": 37.0,
+    "valueRank": 4,
+    "projRank": 6
+   },
+   {
+    "slot": "G",
+    "id": "44857971",
+    "name": "Isaiah Collier",
+    "team": "UTA",
+    "game": "MIA@UTA",
+    "salary": 4400,
+    "proj": 23.74,
+    "ceiling": 42.46,
+    "own": 11.1,
+    "actual": 33.75,
+    "valueRank": 3,
+    "projRank": 39
+   },
+   {
+    "slot": "F",
+    "id": "44858111",
+    "name": "Brice Sensabaugh",
+    "team": "UTA",
+    "game": "MIA@UTA",
+    "salary": 3500,
+    "proj": 21.38,
+    "ceiling": 38.52,
+    "own": 16.4,
+    "actual": 17.5,
+    "valueRank": 1,
+    "projRank": 48
+   },
+   {
+    "slot": "UTIL",
+    "id": "44857842",
+    "name": "Wendell Carter Jr.",
+    "team": "ORL",
+    "game": "ORL@SAC",
+    "salary": 6600,
+    "proj": 34.05,
+    "ceiling": 48.1,
+    "own": 19.6,
+    "actual": 31.25,
+    "valueRank": 9,
+    "projRank": 18
+   }
+  ],
+  "composition": {
+   "salary": 50000,
+   "stars": 1,
+   "values": 2,
+   "maxFromOneGame": 4,
+   "maxGame": "MIA@UTA",
+   "maxGameIsHighestTotal": true,
+   "teams": [
+    "MIA",
+    "MIL",
+    "ORL",
+    "UTA"
+   ],
+   "teamCount": 4,
+   "games": 3,
+   "ownSum": 209.8,
+   "proj": 267.2,
+   "actual": 279.2
+  }
+ },
+ "standing": {
+  "ourActual": 279.25,
+  "optimalActual": 327.0,
+  "pctOfOptimal": 85.4,
+  "optimalOurProj": 242.07,
+  "ourProj": 267.24,
+  "projGap": 25.17,
+  "overlap": 3
+ },
+ "topN": {
+  "count": 50,
+  "minUnique": 1,
+  "scores": [
+   327,
+   326.25,
+   322.75,
+   322.5,
+   322.25,
+   322,
+   322,
+   321.75,
+   321.75,
+   321.5,
+   321.5,
+   321.5,
+   321.25,
+   321.25,
+   321.25,
+   321,
+   321,
+   321,
+   321,
+   320.75,
+   320.75,
+   320.5,
+   320.5,
+   320.5,
+   320.25,
+   320.25,
+   320.25,
+   320,
+   320,
+   319.75,
+   319.5,
+   319.5,
+   319.5,
+   319.5,
+   319.5,
+   319.5,
+   319.5,
+   319.25,
+   319.25,
+   319.25,
+   319.25,
+   319.25,
+   319.25,
+   319.25,
+   319.25,
+   319.25,
+   319,
+   319,
+   319,
+   319
+  ],
+  "composition": {
+   "lineups": 50,
+   "avgSalary": 49760.0,
+   "avgStars": 0.96,
+   "avgValues": 2.92,
+   "avgMaxFromOneGame": 2.94,
+   "avgTeamCount": 5.7,
+   "avgOwnSum": 164.59,
+   "avgActual": 320.58,
+   "maxFromOneGameCounts": {
+    "2": 9,
+    "3": 35,
+    "4": 6
+   },
+   "starsCounts": {
+    "0": 2,
+    "1": 48
+   },
+   "pctMaxGameIsHighestTotal": 12.0,
+   "teamUsage": {
+    "ORL": 50,
+    "NYK": 47,
+    "UTA": 47,
+    "BOS": 46,
+    "SAC": 38,
+    "PHX": 32,
+    "MIA": 21,
+    "PHI": 2,
+    "LAC": 2
+   }
+  },
+  "playerCounts": [
+   {
+    "id": "44857754",
+    "name": "Franz Wagner",
+    "count": 48
+   },
+   {
+    "id": "44857816",
+    "name": "Anthony Black",
+    "count": 47
+   },
+   {
+    "id": "44857758",
+    "name": "Karl-Anthony Towns",
+    "count": 46
+   },
+   {
+    "id": "44857971",
+    "name": "Isaiah Collier",
+    "count": 46
+   },
+   {
+    "id": "44857833",
+    "name": "Zach LaVine",
+    "count": 37
+   },
+   {
+    "id": "44858009",
+    "name": "Jordan Goodwin",
+    "count": 29
+   },
+   {
+    "id": "44858137",
+    "name": "Hugo Gonzalez",
+    "count": 26
+   },
+   {
+    "id": "44857800",
+    "name": "Paul George",
+    "count": 26
+   },
+   {
+    "id": "44857867",
+    "name": "Payton Pritchard",
+    "count": 22
+   },
+   {
+    "id": "44857826",
+    "name": "Davion Mitchell",
+    "count": 21
+   },
+   {
+    "id": "44858097",
+    "name": "Tyler Kolek",
+    "count": 11
+   },
+   {
+    "id": "44858104",
+    "name": "Mo Bamba",
+    "count": 8
+   },
+   {
+    "id": "44858018",
+    "name": "Sam Hauser",
+    "count": 4
+   },
+   {
+    "id": "44858022",
+    "name": "Ryan Dunn",
+    "count": 4
+   },
+   {
+    "id": "44858014",
+    "name": "Dylan Cardwell",
+    "count": 4
+   }
+  ]
+ },
+ "smash": [
+  {
+   "id": "44857754",
+   "name": "Franz Wagner",
+   "team": "ORL",
+   "pos": "SF/PF",
+   "salary": 9000,
+   "actual": 55.25,
+   "multiple": 6.14,
+   "minutesBump": 5.0,
+   "teamImplied": 114.0,
+   "spread": -5.5,
+   "proj": 48.58,
+   "ceiling": 68.02,
+   "own": 66.1,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44857816",
+   "name": "Anthony Black",
+   "team": "ORL",
+   "pos": "PG/SG",
+   "salary": 6900,
+   "actual": 49.25,
+   "multiple": 7.14,
+   "minutesBump": 3.3,
+   "teamImplied": 114.0,
+   "spread": -5.5,
+   "proj": 36.44,
+   "ceiling": 56.78,
+   "own": 25.4,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44857800",
+   "name": "Paul George",
+   "team": "BOS",
+   "pos": "SF/PF",
+   "salary": 7400,
+   "actual": 46.25,
+   "multiple": 6.25,
+   "minutesBump": 0.0,
+   "teamImplied": 109.0,
+   "spread": -1.5,
+   "proj": 32.5,
+   "ceiling": 50.66,
+   "own": 6.8,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44857833",
+   "name": "Zach LaVine",
+   "team": "SAC",
+   "pos": "SG/SF",
+   "salary": 6600,
+   "actual": 42.25,
+   "multiple": 6.4,
+   "minutesBump": 0.0,
+   "teamImplied": 108.5,
+   "spread": 5.5,
+   "proj": 25.38,
+   "ceiling": 42.03,
+   "own": 2.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44857826",
+   "name": "Davion Mitchell",
+   "team": "MIA",
+   "pos": "PG",
+   "salary": 6800,
+   "actual": 41.75,
+   "multiple": 6.14,
+   "minutesBump": 3.0,
+   "teamImplied": 118.0,
+   "spread": -8.5,
+   "proj": 34.45,
+   "ceiling": 49.28,
+   "own": 23.1,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44857867",
+   "name": "Payton Pritchard",
+   "team": "BOS",
+   "pos": "PG/SG",
+   "salary": 5900,
+   "actual": 37.0,
+   "multiple": 6.27,
+   "minutesBump": 0.0,
+   "teamImplied": 109.0,
+   "spread": -1.5,
+   "proj": 24.44,
+   "ceiling": 42.04,
+   "own": 3.5,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44857971",
+   "name": "Isaiah Collier",
+   "team": "UTA",
+   "pos": "PG",
+   "salary": 4400,
+   "actual": 33.75,
+   "multiple": 7.67,
+   "minutesBump": 4.9,
+   "teamImplied": 109.5,
+   "spread": 8.5,
+   "proj": 23.74,
+   "ceiling": 42.46,
+   "own": 11.1,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44858009",
+   "name": "Jordan Goodwin",
+   "team": "PHX",
+   "pos": "SG/SF",
+   "salary": 4100,
+   "actual": 28.25,
+   "multiple": 6.89,
+   "minutesBump": 0.0,
+   "teamImplied": 114.0,
+   "spread": -3.5,
+   "proj": 19.79,
+   "ceiling": 32.39,
+   "own": 5.3,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44858097",
+   "name": "Tyler Kolek",
+   "team": "NYK",
+   "pos": "PG",
+   "salary": 3600,
+   "actual": 24.25,
+   "multiple": 6.74,
+   "minutesBump": 1.4,
+   "teamImplied": 118.0,
+   "spread": -14.5,
+   "proj": 11.59,
+   "ceiling": 21.74,
+   "own": 1.3,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44858137",
+   "name": "Hugo Gonzalez",
+   "team": "BOS",
+   "pos": "SG",
+   "salary": 3300,
+   "actual": 24.0,
+   "multiple": 7.27,
+   "minutesBump": 0.0,
+   "teamImplied": 109.0,
+   "spread": -1.5,
+   "proj": 8.18,
+   "ceiling": 20.63,
+   "own": 0.3,
+   "projectedToPlay": true
+  }
+ ],
+ "settings": {
+  "hindsight_top_n": 50,
+  "hindsight_min_unique": 1,
+  "smash_multiplier": 6,
+  "star_salary": 9000,
+  "value_salary": 4500,
+  "projection_miss_margin": 5,
+  "settings_miss_value_rank": 20
+ },
+ "solver": "highs"
+}
