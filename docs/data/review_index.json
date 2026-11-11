@@ -1,0 +1,13 @@
+{
+ "generatedAt": "2026-11-09T01:39:08+00:00",
+ "lessons": false,
+ "dates": [
+  {
+   "date": "2026-11-07",
+   "optimal": 378.0,
+   "ours": 256.75,
+   "pctOfOptimal": 67.9,
+   "projections": "rebuilt"
+  }
+ ]
+}

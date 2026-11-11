@@ -1,10 +1,11 @@
-// Phone app: Slate, Players, Build, Results, Settings.
+// Phone app: Slate, Players, Build, Results, Review, Settings.
 import {
   SETTING_FIELDS, loadSettings, saveSettings, resetSettings, loadEdits, saveEdits, emptyEdits,
   loadResults, saveResults, toggleLock, toggleExclude, setOverride, effectivePlayers,
 } from "./state.js";
 import { SLOTS } from "./optimizer/rules.js";
 import { toDkUploadCsv, lineupIdsText } from "./optimizer/csv.js";
+import { reviewHtml, loadReviewIndex, loadReview, loadLessons } from "./review.js";
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const view = $("#view");
@@ -18,6 +19,7 @@ const S = {
   filters: { q: "", pos: "ALL", sort: "proj", showOut: false, game: null, flag: null },
   build: { running: false, done: 0, total: 0, error: null },
   loadError: null,
+  review: { index: null, doc: null, lessons: null, error: null, loading: false },
 };
 
 // ---------------------------------------------------------------- helpers
@@ -508,7 +510,32 @@ async function copyIds() {
 
 // ---------------------------------------------------------------- render + events
 
-const SCREENS = { slate: renderSlate, players: renderPlayers, build: renderBuild, results: renderResults, settings: renderSettings };
+// ---------------------------------------------------------------- review
+
+function renderReview() {
+  if (!S.review.index && !S.review.loading && !S.review.error) openReview();
+  return reviewHtml(S.review, { esc, money, pts, dayLabel });
+}
+
+async function openReview(date) {
+  const R = S.review;
+  R.loading = true;
+  try {
+    if (!R.index) {
+      R.index = await loadReviewIndex();
+      if (R.index.lessons) loadLessons().then((l) => { R.lessons = l; if (currentView() === "review") render(); });
+    }
+    const pick = date || R.index.dates[0]?.date;
+    R.doc = pick ? await loadReview(pick) : null;
+    R.error = null;
+  } catch (e) {
+    R.error = String(e.message || e);
+  }
+  R.loading = false;
+  if (currentView() === "review") render();
+}
+
+const SCREENS = { slate: renderSlate, players: renderPlayers, build: renderBuild, results: renderResults, review: renderReview, settings: renderSettings };
 
 function currentView() {
   const v = location.hash.slice(1);
@@ -518,6 +545,11 @@ function currentView() {
 function render() {
   const v = currentView();
   document.querySelectorAll(".tabs a").forEach((a) => a.classList.toggle("active", a.dataset.view === v));
+  if (v === "review") {
+    // The review doesn't need today's slate, so it works even when the slate didn't load.
+    view.innerHTML = renderReview();
+    return;
+  }
   if (S.loadError) {
     view.innerHTML = `<div class="card notice bad">Couldn't load the slate (${esc(S.loadError)}). Check your connection and pull down to refresh.</div>`;
     return;
@@ -579,6 +611,7 @@ view.addEventListener("input", (e) => {
 view.addEventListener("change", (e) => {
   const t = e.target;
   if (t.id === "sort") { S.filters.sort = t.value; render(); }
+  else if (t.id === "reviewDate") { S.review.doc = null; render(); openReview(t.value); }
   else if (t.id === "excludeQ") {
     S.settings.exclude_q = t.checked;
     saveSettings(S.settings, S.slate.defaults);
