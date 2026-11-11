@@ -193,3 +193,5 @@ select.chip { padding-right: 8px; }
 details.card summary { cursor: pointer; font-weight: 600; min-height: 28px; }
 details.card p { margin: 8px 0 0; }
 .stats.two { grid-template-columns: 1fr 1fr; }
+details.card.inner { margin: 10px 0 0; padding: 8px 10px; background: var(--surface-2); border: 0; }
+.card > .head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 8px; }

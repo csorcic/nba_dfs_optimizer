@@ -1,7 +1,7 @@
 // Service worker: makes the app installable and usable offline.
 // App files: served from cache (updated when a new version is deployed).
 // Slate data: network first, falling back to the last slate seen.
-const VERSION = "63262568d7";
+const VERSION = "efc3246fa5";
 const CACHE = `dfs-${VERSION}`;
 const SHELL = ["./","index.html","app/app.js","app/state.js","app/worker.js","app/review.js","app/styles.css","app/optimizer/rules.js","app/optimizer/model.js","app/optimizer/solvers.js","app/optimizer/optimizer.js","app/optimizer/csv.js","vendor/highs.mjs","vendor/highs.wasm","vendor/lp-solver.mjs","manifest.webmanifest","icons/icon-192.png","icons/icon-512.png","icons/maskable-512.png"];
 

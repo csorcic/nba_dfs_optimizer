@@ -354,7 +354,7 @@ function renderSettings() {
     </div>
     <h2>About</h2>
     <p class="muted small">Salary file ${esc(S.slate.salaryFile)}. Projections, ownership estimates, lines and settings defaults come from the daily pipeline;
-      your edits stay on this phone and reset each slate. Ownership is an estimate from a simple formula, not real contest data. Version 63262568d7.</p>`;
+      your edits stay on this phone and reset each slate. Ownership is an estimate from a simple formula, not real contest data. Version efc3246fa5.</p>`;
 }
 
 // ---------------------------------------------------------------- build
@@ -362,7 +362,7 @@ function renderSettings() {
 let worker = null;
 function getWorker() {
   if (!worker) {
-    worker = new Worker(new URL("./worker.js?v=63262568d7", import.meta.url), { type: "module" });
+    worker = new Worker(new URL("./worker.js?v=efc3246fa5", import.meta.url), { type: "module" });
     worker.onmessage = onWorkerMessage;
     worker.onerror = (e) => {
       S.build = { running: false, done: 0, total: 0, error: `The lineup builder crashed: ${e.message || "unknown error"}` };

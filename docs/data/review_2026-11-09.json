@@ -1,0 +1,2438 @@
+{
+ "schema": 1,
+ "generatedAt": "2026-11-11T02:26:55+00:00",
+ "gameDate": "2026-11-09",
+ "fileDate": "2026-11-09",
+ "draftGroupId": "156358",
+ "salaryFile": "DKSalaries_NBA_2026-11-09_156358.csv",
+ "projections": {
+  "source": "rebuilt",
+  "snapshotAt": "",
+  "note": "Rebuilt projections: no pre-lock snapshot was saved for this slate, so projections were rebuilt with the backtest replay from games before this day. The replay knows who sat, so minutes bumps are sharper than they were before lock and there are no late scratches."
+ },
+ "games": [
+  {
+   "game": "CLE@CHA",
+   "lock": "2026-11-09T19:00:00-05:00",
+   "total": 215.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "LAL@ATL",
+   "lock": "2026-11-09T19:00:00-05:00",
+   "total": 233.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "WAS@DET",
+   "lock": "2026-11-09T19:00:00-05:00",
+   "total": 218.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "MEM@TOR",
+   "lock": "2026-11-09T19:30:00-05:00",
+   "total": 225.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "IND@DAL",
+   "lock": "2026-11-09T20:00:00-05:00",
+   "total": 227.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "DEN@HOU",
+   "lock": "2026-11-09T20:30:00-05:00",
+   "total": 210.0,
+   "totalSource": "pre-lock",
+   "homeSpread": -11.0,
+   "final": true
+  },
+  {
+   "game": "SAS@PHX",
+   "lock": "2026-11-09T21:00:00-05:00",
+   "total": 213.0,
+   "totalSource": "pre-lock",
+   "homeSpread": 28.5,
+   "final": true
+  }
+ ],
+ "accuracy": {
+  "players": 160,
+  "mae": 7.26,
+  "bias": 0.03,
+  "overCeilingPct": 10.0,
+  "insideRangePct": 87.5,
+  "lateScratches": 0,
+  "playedButProjectedOut": 1
+ },
+ "lateScratches": [],
+ "noResult": [
+  {
+   "id": "44847812",
+   "name": "Henri Veesaar",
+   "team": "ATL",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44847814",
+   "name": "Ugonna Onyenso",
+   "team": "DET",
+   "salary": 3000,
+   "status": "",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44847816",
+   "name": "Tarik Biberovic",
+   "team": "DAL",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44847819",
+   "name": "Quadir Copeland",
+   "team": "HOU",
+   "salary": 3000,
+   "status": "",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44847826",
+   "name": "Kylan Boswell",
+   "team": "CHA",
+   "salary": 3000,
+   "status": "",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44847832",
+   "name": "Nate Bittle",
+   "team": "TOR",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44847848",
+   "name": "Khalifa Diop",
+   "team": "CLE",
+   "salary": 3000,
+   "status": "",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44847856",
+   "name": "Jayden Quaintance",
+   "team": "SAS",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44847861",
+   "name": "Richie Saunders",
+   "team": "MEM",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  }
+ ],
+ "optimal": {
+  "actual": 419.75,
+  "ourProj": 248.15,
+  "players": [
+   {
+    "slot": "PG",
+    "id": "44847241",
+    "name": "Jamal Shead",
+    "team": "TOR",
+    "game": "MEM@TOR",
+    "salary": 5500,
+    "proj": 23.74,
+    "ceiling": 37.06,
+    "own": 3.2,
+    "actual": 45.0,
+    "valueRank": 78,
+    "projRank": 58,
+    "missType": "projection miss"
+   },
+   {
+    "slot": "SG",
+    "id": "44847268",
+    "name": "Grayson Allen",
+    "team": "CHA",
+    "game": "CLE@CHA",
+    "salary": 5200,
+    "proj": 32.44,
+    "ceiling": 48.58,
+    "own": 13.2,
+    "actual": 46.5,
+    "valueRank": 2,
+    "projRank": 31,
+    "missType": "in our lineup"
+   },
+   {
+    "slot": "SF",
+    "id": "44847055",
+    "name": "Cooper Flagg",
+    "team": "DAL",
+    "game": "IND@DAL",
+    "salary": 9900,
+    "proj": 44.48,
+    "ceiling": 66.88,
+    "own": 15.1,
+    "actual": 73.0,
+    "valueRank": 68,
+    "projRank": 6,
+    "missType": "projection miss"
+   },
+   {
+    "slot": "PF",
+    "id": "44847073",
+    "name": "Anthony Davis",
+    "team": "WAS",
+    "game": "WAS@DET",
+    "salary": 8600,
+    "proj": 43.46,
+    "ceiling": 66.09,
+    "own": 10.7,
+    "actual": 64.75,
+    "valueRank": 26,
+    "projRank": 8,
+    "missType": "settings miss"
+   },
+   {
+    "slot": "C",
+    "id": "44847155",
+    "name": "Naz Reid",
+    "team": "CHA",
+    "game": "CLE@CHA",
+    "salary": 6900,
+    "proj": 36.91,
+    "ceiling": 52.16,
+    "own": 9.2,
+    "actual": 53.25,
+    "valueRank": 11,
+    "projRank": 20,
+    "missType": "in our lineup"
+   },
+   {
+    "slot": "G",
+    "id": "44847406",
+    "name": "Daniss Jenkins",
+    "team": "DET",
+    "game": "WAS@DET",
+    "salary": 4300,
+    "proj": 24.23,
+    "ceiling": 43.51,
+    "own": 7.3,
+    "actual": 49.5,
+    "valueRank": 6,
+    "projRank": 57,
+    "missType": "projection miss"
+   },
+   {
+    "slot": "F",
+    "id": "44847281",
+    "name": "John Collins",
+    "team": "DET",
+    "game": "WAS@DET",
+    "salary": 5100,
+    "proj": 23.21,
+    "ceiling": 36.83,
+    "own": 3.3,
+    "actual": 49.5,
+    "valueRank": 64,
+    "projRank": 62,
+    "missType": "projection miss"
+   },
+   {
+    "slot": "UTIL",
+    "id": "44847380",
+    "name": "Ryan Kalkbrenner",
+    "team": "CHA",
+    "game": "CLE@CHA",
+    "salary": 4400,
+    "proj": 19.68,
+    "ceiling": 29.98,
+    "own": 1.6,
+    "actual": 38.25,
+    "valueRank": 71,
+    "projRank": 85,
+    "missType": "projection miss"
+   }
+  ],
+  "composition": {
+   "salary": 49900,
+   "stars": 1,
+   "values": 2,
+   "maxFromOneGame": 3,
+   "maxGame": "CLE@CHA",
+   "maxGameIsHighestTotal": false,
+   "teams": [
+    "CHA",
+    "DAL",
+    "DET",
+    "TOR",
+    "WAS"
+   ],
+   "teamCount": 5,
+   "games": 4,
+   "ownSum": 63.6,
+   "proj": 248.1,
+   "actual": 419.8
+  }
+ },
+ "ours": {
+  "actual": 287.75,
+  "proj": 290.34,
+  "players": [
+   {
+    "slot": "PG",
+    "id": "44847048",
+    "name": "Luka Doncic",
+    "team": "LAL",
+    "game": "LAL@ATL",
+    "salary": 12000,
+    "proj": 68.89,
+    "ceiling": 96.65,
+    "own": 75.0,
+    "actual": 71.0,
+    "valueRank": 5,
+    "projRank": 1
+   },
+   {
+    "slot": "SG",
+    "id": "44847182",
+    "name": "Stephon Castle",
+    "team": "SAS",
+    "game": "SAS@PHX",
+    "salary": 6500,
+    "proj": 37.63,
+    "ceiling": 57.26,
+    "own": 24.2,
+    "actual": 25.5,
+    "valueRank": 4,
+    "projRank": 18
+   },
+   {
+    "slot": "SF",
+    "id": "44847268",
+    "name": "Grayson Allen",
+    "team": "CHA",
+    "game": "CLE@CHA",
+    "salary": 5200,
+    "proj": 32.44,
+    "ceiling": 48.58,
+    "own": 13.2,
+    "actual": 46.5,
+    "valueRank": 2,
+    "projRank": 31
+   },
+   {
+    "slot": "PF",
+    "id": "44847155",
+    "name": "Naz Reid",
+    "team": "CHA",
+    "game": "CLE@CHA",
+    "salary": 6900,
+    "proj": 36.91,
+    "ceiling": 52.16,
+    "own": 9.2,
+    "actual": 53.25,
+    "valueRank": 11,
+    "projRank": 20
+   },
+   {
+    "slot": "C",
+    "id": "44847116",
+    "name": "Walker Kessler",
+    "team": "LAL",
+    "game": "LAL@ATL",
+    "salary": 7700,
+    "proj": 41.35,
+    "ceiling": 62.43,
+    "own": 23.7,
+    "actual": 43.0,
+    "valueRank": 10,
+    "projRank": 10
+   },
+   {
+    "slot": "G",
+    "id": "44847453",
+    "name": "Collin Sexton",
+    "team": "LAL",
+    "game": "LAL@ATL",
+    "salary": 4100,
+    "proj": 24.97,
+    "ceiling": 40.66,
+    "own": 15.4,
+    "actual": 32.5,
+    "valueRank": 3,
+    "projRank": 53
+   },
+   {
+    "slot": "F",
+    "id": "44847347",
+    "name": "Santi Aldama",
+    "team": "DAL",
+    "game": "IND@DAL",
+    "salary": 4600,
+    "proj": 25.32,
+    "ceiling": 41.26,
+    "own": 7.5,
+    "actual": 16.0,
+    "valueRank": 9,
+    "projRank": 52
+   },
+   {
+    "slot": "UTIL",
+    "id": "44847799",
+    "name": "Malachi Smith",
+    "team": "TOR",
+    "game": "MEM@TOR",
+    "salary": 3000,
+    "proj": 22.83,
+    "ceiling": 38.92,
+    "own": 25.3,
+    "actual": 0.0,
+    "valueRank": 1,
+    "projRank": 65
+   }
+  ],
+  "composition": {
+   "salary": 50000,
+   "stars": 1,
+   "values": 2,
+   "maxFromOneGame": 3,
+   "maxGame": "LAL@ATL",
+   "maxGameIsHighestTotal": true,
+   "teams": [
+    "CHA",
+    "DAL",
+    "LAL",
+    "SAS",
+    "TOR"
+   ],
+   "teamCount": 5,
+   "games": 5,
+   "ownSum": 193.5,
+   "proj": 290.3,
+   "actual": 287.8
+  }
+ },
+ "standing": {
+  "ourActual": 287.75,
+  "optimalActual": 419.75,
+  "pctOfOptimal": 68.6,
+  "optimalOurProj": 248.15,
+  "ourProj": 290.34,
+  "projGap": 42.19,
+  "overlap": 2
+ },
+ "topN": {
+  "count": 50,
+  "minUnique": 1,
+  "scores": [
+   419.75,
+   419.5,
+   418.5,
+   417.75,
+   416.75,
+   416.5,
+   416.5,
+   416.25,
+   415.5,
+   415.25,
+   415.25,
+   415,
+   415,
+   414.5,
+   414.25,
+   414,
+   413.75,
+   413.75,
+   413.75,
+   413,
+   413,
+   412.75,
+   412.75,
+   412.75,
+   412.5,
+   412.25,
+   412.25,
+   412.25,
+   411.75,
+   411.75,
+   411.75,
+   411.5,
+   411.5,
+   411.5,
+   411.25,
+   411.25,
+   411.25,
+   411,
+   411,
+   410.75,
+   410.75,
+   410.75,
+   410.75,
+   410.75,
+   410.75,
+   410.5,
+   410.5,
+   410.5,
+   410,
+   410
+  ],
+  "composition": {
+   "lineups": 50,
+   "avgSalary": 49480.0,
+   "avgStars": 1.24,
+   "avgValues": 2.16,
+   "avgMaxFromOneGame": 2.74,
+   "avgTeamCount": 6.14,
+   "avgOwnSum": 78.95,
+   "avgActual": 413.14,
+   "maxFromOneGameCounts": {
+    "2": 15,
+    "3": 33,
+    "4": 2
+   },
+   "starsCounts": {
+    "1": 38,
+    "2": 12
+   },
+   "pctMaxGameIsHighestTotal": 0.0,
+   "teamUsage": {
+    "DET": 50,
+    "DAL": 48,
+    "CHA": 47,
+    "LAL": 37,
+    "TOR": 34,
+    "WAS": 31,
+    "CLE": 25,
+    "IND": 14,
+    "SAS": 14,
+    "HOU": 6,
+    "MEM": 1
+   }
+  },
+  "playerCounts": [
+   {
+    "id": "44847406",
+    "name": "Daniss Jenkins",
+    "count": 50
+   },
+   {
+    "id": "44847055",
+    "name": "Cooper Flagg",
+    "count": 48
+   },
+   {
+    "id": "44847281",
+    "name": "John Collins",
+    "count": 44
+   },
+   {
+    "id": "44847268",
+    "name": "Grayson Allen",
+    "count": 42
+   },
+   {
+    "id": "44847073",
+    "name": "Anthony Davis",
+    "count": 31
+   },
+   {
+    "id": "44847323",
+    "name": "Sandro Mamukelashvili",
+    "count": 30
+   },
+   {
+    "id": "44847241",
+    "name": "Jamal Shead",
+    "count": 29
+   },
+   {
+    "id": "44847418",
+    "name": "Meleek Thomas",
+    "count": 25
+   },
+   {
+    "id": "44847155",
+    "name": "Naz Reid",
+    "count": 22
+   },
+   {
+    "id": "44847380",
+    "name": "Ryan Kalkbrenner",
+    "count": 16
+   },
+   {
+    "id": "44847100",
+    "name": "Pascal Siakam",
+    "count": 14
+   },
+   {
+    "id": "44847453",
+    "name": "Collin Sexton",
+    "count": 14
+   },
+   {
+    "id": "44847053",
+    "name": "Victor Wembanyama",
+    "count": 14
+   },
+   {
+    "id": "44847303",
+    "name": "Jakob Poeltl",
+    "count": 11
+   },
+   {
+    "id": "44847123",
+    "name": "Kevin Durant",
+    "count": 6
+   }
+  ]
+ },
+ "smash": [
+  {
+   "id": "44847053",
+   "name": "Victor Wembanyama",
+   "team": "SAS",
+   "pos": "C",
+   "salary": 11300,
+   "actual": 78.25,
+   "multiple": 6.92,
+   "minutesBump": 1.6,
+   "teamImplied": 117.5,
+   "spread": -9.5,
+   "proj": 59.99,
+   "ceiling": 85.32,
+   "own": 55.2,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847055",
+   "name": "Cooper Flagg",
+   "team": "DAL",
+   "pos": "SF",
+   "salary": 9900,
+   "actual": 73.0,
+   "multiple": 7.37,
+   "minutesBump": 0.0,
+   "teamImplied": 116.0,
+   "spread": -4.5,
+   "proj": 44.48,
+   "ceiling": 66.88,
+   "own": 15.1,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847073",
+   "name": "Anthony Davis",
+   "team": "WAS",
+   "pos": "PF",
+   "salary": 8600,
+   "actual": 64.75,
+   "multiple": 7.53,
+   "minutesBump": 0.6,
+   "teamImplied": 104.5,
+   "spread": 9.5,
+   "proj": 43.46,
+   "ceiling": 66.09,
+   "own": 10.7,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847100",
+   "name": "Pascal Siakam",
+   "team": "IND",
+   "pos": "PF",
+   "salary": 8000,
+   "actual": 58.75,
+   "multiple": 7.34,
+   "minutesBump": 0.9,
+   "teamImplied": 111.5,
+   "spread": 4.5,
+   "proj": 39.79,
+   "ceiling": 54.52,
+   "own": 11.6,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847155",
+   "name": "Naz Reid",
+   "team": "CHA",
+   "pos": "PF/C",
+   "salary": 6900,
+   "actual": 53.25,
+   "multiple": 7.72,
+   "minutesBump": 5.0,
+   "teamImplied": 103.5,
+   "spread": 8.5,
+   "proj": 36.91,
+   "ceiling": 52.16,
+   "own": 9.2,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847076",
+   "name": "Jamal Murray",
+   "team": "DEN",
+   "pos": "PG",
+   "salary": 8500,
+   "actual": 51.5,
+   "multiple": 6.06,
+   "minutesBump": 0.0,
+   "teamImplied": 110.0,
+   "spread": 4.5,
+   "proj": 36.46,
+   "ceiling": 57.68,
+   "own": 4.8,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847123",
+   "name": "Kevin Durant",
+   "team": "HOU",
+   "pos": "SF",
+   "salary": 7500,
+   "actual": 51.0,
+   "multiple": 6.8,
+   "minutesBump": 0.0,
+   "teamImplied": 114.5,
+   "spread": -4.5,
+   "proj": 35.49,
+   "ceiling": 51.45,
+   "own": 7.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847281",
+   "name": "John Collins",
+   "team": "DET",
+   "pos": "PF/C",
+   "salary": 5100,
+   "actual": 49.5,
+   "multiple": 9.71,
+   "minutesBump": 1.2,
+   "teamImplied": 114.0,
+   "spread": -9.5,
+   "proj": 23.21,
+   "ceiling": 36.83,
+   "own": 3.3,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847406",
+   "name": "Daniss Jenkins",
+   "team": "DET",
+   "pos": "PG/SG",
+   "salary": 4300,
+   "actual": 49.5,
+   "multiple": 11.51,
+   "minutesBump": 1.1,
+   "teamImplied": 114.0,
+   "spread": -9.5,
+   "proj": 24.23,
+   "ceiling": 43.51,
+   "own": 7.3,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847268",
+   "name": "Grayson Allen",
+   "team": "CHA",
+   "pos": "SG/SF",
+   "salary": 5200,
+   "actual": 46.5,
+   "multiple": 8.94,
+   "minutesBump": 6.3,
+   "teamImplied": 103.5,
+   "spread": 8.5,
+   "proj": 32.44,
+   "ceiling": 48.58,
+   "own": 13.2,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847241",
+   "name": "Jamal Shead",
+   "team": "TOR",
+   "pos": "PG/SG",
+   "salary": 5500,
+   "actual": 45.0,
+   "multiple": 8.18,
+   "minutesBump": 4.8,
+   "teamImplied": 112.0,
+   "spread": 1.5,
+   "proj": 23.74,
+   "ceiling": 37.06,
+   "own": 3.2,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847323",
+   "name": "Sandro Mamukelashvili",
+   "team": "LAL",
+   "pos": "PF/C",
+   "salary": 4700,
+   "actual": 44.0,
+   "multiple": 9.36,
+   "minutesBump": 3.8,
+   "teamImplied": 115.5,
+   "spread": 2.5,
+   "proj": 23.63,
+   "ceiling": 37.22,
+   "own": 5.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847303",
+   "name": "Jakob Poeltl",
+   "team": "TOR",
+   "pos": "C",
+   "salary": 4900,
+   "actual": 39.5,
+   "multiple": 8.06,
+   "minutesBump": 3.6,
+   "teamImplied": 112.0,
+   "spread": 1.5,
+   "proj": 24.74,
+   "ceiling": 43.36,
+   "own": 5.2,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847380",
+   "name": "Ryan Kalkbrenner",
+   "team": "CHA",
+   "pos": "C",
+   "salary": 4400,
+   "actual": 38.25,
+   "multiple": 8.69,
+   "minutesBump": 5.0,
+   "teamImplied": 103.5,
+   "spread": 8.5,
+   "proj": 19.68,
+   "ceiling": 29.98,
+   "own": 1.6,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847418",
+   "name": "Meleek Thomas",
+   "team": "CLE",
+   "pos": "SG/SF",
+   "salary": 4300,
+   "actual": 36.25,
+   "multiple": 8.43,
+   "minutesBump": 1.4,
+   "teamImplied": 112.0,
+   "spread": -8.5,
+   "proj": 19.74,
+   "ceiling": 30.38,
+   "own": 2.4,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847453",
+   "name": "Collin Sexton",
+   "team": "LAL",
+   "pos": "PG/SG",
+   "salary": 4100,
+   "actual": 32.5,
+   "multiple": 7.93,
+   "minutesBump": 7.0,
+   "teamImplied": 115.5,
+   "spread": 2.5,
+   "proj": 24.97,
+   "ceiling": 40.66,
+   "own": 15.4,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847398",
+   "name": "Jerami Grant",
+   "team": "MEM",
+   "pos": "SF/PF",
+   "salary": 4300,
+   "actual": 29.25,
+   "multiple": 6.8,
+   "minutesBump": 0.0,
+   "teamImplied": 113.5,
+   "spread": -1.5,
+   "proj": 20.42,
+   "ceiling": 34.52,
+   "own": 2.8,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847389",
+   "name": "Aaron Nesmith",
+   "team": "IND",
+   "pos": "SG/SF",
+   "salary": 4400,
+   "actual": 28.5,
+   "multiple": 6.48,
+   "minutesBump": 0.9,
+   "teamImplied": 111.5,
+   "spread": 4.5,
+   "proj": 22.03,
+   "ceiling": 35.8,
+   "own": 3.5,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847351",
+   "name": "Sion James",
+   "team": "CHA",
+   "pos": "SF/PF",
+   "salary": 4500,
+   "actual": 27.5,
+   "multiple": 6.11,
+   "minutesBump": 6.3,
+   "teamImplied": 103.5,
+   "spread": 8.5,
+   "proj": 19.57,
+   "ceiling": 30.42,
+   "own": 1.6,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847448",
+   "name": "Quenton Jackson",
+   "team": "IND",
+   "pos": "SG/SF",
+   "salary": 4100,
+   "actual": 26.75,
+   "multiple": 6.52,
+   "minutesBump": 0.9,
+   "teamImplied": 111.5,
+   "spread": 4.5,
+   "proj": 21.38,
+   "ceiling": 36.13,
+   "own": 3.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847471",
+   "name": "Jamison Battle",
+   "team": "TOR",
+   "pos": "SF",
+   "salary": 4000,
+   "actual": 24.25,
+   "multiple": 6.06,
+   "minutesBump": 6.1,
+   "teamImplied": 112.0,
+   "spread": 1.5,
+   "proj": 14.17,
+   "ceiling": 23.83,
+   "own": 1.1,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847573",
+   "name": "Walter Clayton Jr.",
+   "team": "DAL",
+   "pos": "PG",
+   "salary": 3300,
+   "actual": 23.0,
+   "multiple": 6.97,
+   "minutesBump": 0.0,
+   "teamImplied": 116.0,
+   "spread": -4.5,
+   "proj": 15.32,
+   "ceiling": 28.13,
+   "own": 2.3,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44847635",
+   "name": "Trayce Jackson-Davis",
+   "team": "TOR",
+   "pos": "C",
+   "salary": 3000,
+   "actual": 18.5,
+   "multiple": 6.17,
+   "minutesBump": 6.1,
+   "teamImplied": 112.0,
+   "spread": 1.5,
+   "proj": 13.35,
+   "ceiling": 25.11,
+   "own": 2.0,
+   "projectedToPlay": true
+  }
+ ],
+ "settings": {
+  "hindsight_top_n": 50,
+  "hindsight_min_unique": 1,
+  "smash_multiplier": 6,
+  "star_salary": 9000,
+  "value_salary": 4500,
+  "projection_miss_margin": 5,
+  "settings_miss_value_rank": 20
+ },
+ "solver": "highs",
+ "contests": [
+  {
+   "contestId": "197619862",
+   "name": "Contest 197619862",
+   "fieldSize": 118,
+   "winningScore": 371.75,
+   "top1Score": 367.5,
+   "top10Score": 339.75,
+   "cashLine": 285.5,
+   "cashLinePct": 50,
+   "mine": {
+    "username": "csorcic",
+    "entries": [
+     {
+      "rank": 80,
+      "points": 264.25,
+      "entryName": "csorcic",
+      "percentile": 32.5,
+      "players": [
+       {
+        "slot": "PG",
+        "name": "Cade Cunningham",
+        "id": "44847061",
+        "fpts": 33.25
+       },
+       {
+        "slot": "SG",
+        "name": "Ty Jerome",
+        "id": "44847085",
+        "fpts": 38.5
+       },
+       {
+        "slot": "SF",
+        "name": "Grayson Allen",
+        "id": "44847268",
+        "fpts": 46.5
+       },
+       {
+        "slot": "PF",
+        "name": "Sandro Mamukelashvili",
+        "id": "44847323",
+        "fpts": 44.0
+       },
+       {
+        "slot": "C",
+        "name": "Walker Kessler",
+        "id": "44847116",
+        "fpts": 43.0
+       },
+       {
+        "slot": "G",
+        "name": "Collin Gillespie",
+        "id": "44847265",
+        "fpts": 13.5
+       },
+       {
+        "slot": "F",
+        "name": "Duncan Robinson",
+        "id": "44847258",
+        "fpts": 30.75
+       },
+       {
+        "slot": "UTIL",
+        "name": "Tyrese Proctor",
+        "id": "44847494",
+        "fpts": 14.75
+       }
+      ]
+     }
+    ],
+    "best": {
+     "rank": 80,
+     "points": 264.25,
+     "entryName": "csorcic",
+     "percentile": 32.5,
+     "players": [
+      {
+       "slot": "PG",
+       "name": "Cade Cunningham",
+       "id": "44847061",
+       "fpts": 33.25
+      },
+      {
+       "slot": "SG",
+       "name": "Ty Jerome",
+       "id": "44847085",
+       "fpts": 38.5
+      },
+      {
+       "slot": "SF",
+       "name": "Grayson Allen",
+       "id": "44847268",
+       "fpts": 46.5
+      },
+      {
+       "slot": "PF",
+       "name": "Sandro Mamukelashvili",
+       "id": "44847323",
+       "fpts": 44.0
+      },
+      {
+       "slot": "C",
+       "name": "Walker Kessler",
+       "id": "44847116",
+       "fpts": 43.0
+      },
+      {
+       "slot": "G",
+       "name": "Collin Gillespie",
+       "id": "44847265",
+       "fpts": 13.5
+      },
+      {
+       "slot": "F",
+       "name": "Duncan Robinson",
+       "id": "44847258",
+       "fpts": 30.75
+      },
+      {
+       "slot": "UTIL",
+       "name": "Tyrese Proctor",
+       "id": "44847494",
+       "fpts": 14.75
+      }
+     ]
+    }
+   },
+   "unmatchedNames": [],
+   "winningLineups": [
+    {
+     "entryName": "nickfromcwe (1/3)",
+     "points": 371.75,
+     "players": [
+      {
+       "slot": "PG",
+       "name": "Jamal Shead",
+       "id": "44847241",
+       "fpts": 45.0
+      },
+      {
+       "slot": "SG",
+       "name": "Collin Sexton",
+       "id": "44847453",
+       "fpts": 32.5
+      },
+      {
+       "slot": "SF",
+       "name": "Kevin Durant",
+       "id": "44847123",
+       "fpts": 51.0
+      },
+      {
+       "slot": "PF",
+       "name": "John Collins",
+       "id": "44847281",
+       "fpts": 49.5
+      },
+      {
+       "slot": "C",
+       "name": "Jakob Poeltl",
+       "id": "44847303",
+       "fpts": 39.5
+      },
+      {
+       "slot": "G",
+       "name": "Luka Doncic",
+       "id": "44847048",
+       "fpts": 71.0
+      },
+      {
+       "slot": "F",
+       "name": "PJ Washington",
+       "id": "44847171",
+       "fpts": 33.75
+      },
+      {
+       "slot": "UTIL",
+       "name": "Daniss Jenkins",
+       "id": "44847406",
+       "fpts": 49.5
+      }
+     ],
+     "sharedWithOptimal": 3,
+     "gapToOptimal": 48.0,
+     "salary": 50000,
+     "ourOwnSum": 123.5
+    }
+   ],
+   "optimalBeatsWinnerBy": 48.0
+  }
+ ],
+ "ownershipCheck": {
+  "contestId": "197619862",
+  "fieldSize": 118,
+  "players": 174,
+  "mae": 4.31,
+  "bias": -0.0,
+  "byTier": [
+   {
+    "tier": "under $4K",
+    "players": 61,
+    "mae": 1.82,
+    "bias": -0.43
+   },
+   {
+    "tier": "$4-6K",
+    "players": 64,
+    "mae": 4.34,
+    "bias": -2.32
+   },
+   {
+    "tier": "$6-8K",
+    "players": 32,
+    "mae": 5.98,
+    "bias": 0.77
+   },
+   {
+    "tier": "$8K+",
+    "players": 17,
+    "mae": 10.02,
+    "bias": 8.82
+   }
+  ],
+  "list": [
+   {
+    "id": "44847118",
+    "name": "RJ Barrett",
+    "salary": 7600,
+    "real": 50.0,
+    "est": 20.4
+   },
+   {
+    "id": "44847303",
+    "name": "Jakob Poeltl",
+    "salary": 4900,
+    "real": 48.31,
+    "est": 5.2
+   },
+   {
+    "id": "44847268",
+    "name": "Grayson Allen",
+    "salary": 5200,
+    "real": 44.07,
+    "est": 13.2
+   },
+   {
+    "id": "44847048",
+    "name": "Luka Doncic",
+    "salary": 12000,
+    "real": 43.22,
+    "est": 75.0
+   },
+   {
+    "id": "44847155",
+    "name": "Naz Reid",
+    "salary": 6900,
+    "real": 39.83,
+    "est": 9.2
+   },
+   {
+    "id": "44847453",
+    "name": "Collin Sexton",
+    "salary": 4100,
+    "real": 36.44,
+    "est": 15.4
+   },
+   {
+    "id": "44847241",
+    "name": "Jamal Shead",
+    "salary": 5500,
+    "real": 34.75,
+    "est": 3.2
+   },
+   {
+    "id": "44847406",
+    "name": "Daniss Jenkins",
+    "salary": 4300,
+    "real": 33.05,
+    "est": 7.3
+   },
+   {
+    "id": "44847053",
+    "name": "Victor Wembanyama",
+    "salary": 11300,
+    "real": 19.49,
+    "est": 55.2
+   },
+   {
+    "id": "44847253",
+    "name": "Ja'Kobe Walter",
+    "salary": 5300,
+    "real": 16.95,
+    "est": 3.3
+   },
+   {
+    "id": "44847182",
+    "name": "Stephon Castle",
+    "salary": 6500,
+    "real": 16.95,
+    "est": 24.2
+   },
+   {
+    "id": "44847141",
+    "name": "Miles Bridges",
+    "salary": 7100,
+    "real": 14.41,
+    "est": 5.0
+   },
+   {
+    "id": "44847177",
+    "name": "Dyson Daniels",
+    "salary": 6500,
+    "real": 14.41,
+    "est": 8.5
+   },
+   {
+    "id": "44847573",
+    "name": "Walter Clayton Jr.",
+    "salary": 3300,
+    "real": 13.56,
+    "est": 2.3
+   },
+   {
+    "id": "44847258",
+    "name": "Duncan Robinson",
+    "salary": 5300,
+    "real": 11.86,
+    "est": 5.6
+   },
+   {
+    "id": "44847061",
+    "name": "Cade Cunningham",
+    "salary": 9500,
+    "real": 11.86,
+    "est": 30.4
+   },
+   {
+    "id": "44847562",
+    "name": "Christian Anderson",
+    "salary": 3300,
+    "real": 11.86,
+    "est": 0.6
+   },
+   {
+    "id": "44847064",
+    "name": "Alperen Sengun",
+    "salary": 9000,
+    "real": 11.02,
+    "est": 14.1
+   },
+   {
+    "id": "44847358",
+    "name": "Julian Champagnie",
+    "salary": 4500,
+    "real": 10.17,
+    "est": 5.9
+   },
+   {
+    "id": "44847389",
+    "name": "Aaron Nesmith",
+    "salary": 4400,
+    "real": 10.17,
+    "est": 3.5
+   },
+   {
+    "id": "44847635",
+    "name": "Trayce Jackson-Davis",
+    "salary": 3000,
+    "real": 10.17,
+    "est": 2.0
+   },
+   {
+    "id": "44847187",
+    "name": "Kyshawn George",
+    "salary": 6400,
+    "real": 10.17,
+    "est": 6.2
+   },
+   {
+    "id": "44847093",
+    "name": "Cameron Boozer",
+    "salary": 8100,
+    "real": 10.17,
+    "est": 5.1
+   },
+   {
+    "id": "44847541",
+    "name": "Hannes Steinbach",
+    "salary": 3500,
+    "real": 9.32,
+    "est": 0.5
+   },
+   {
+    "id": "44847376",
+    "name": "Keldon Johnson",
+    "salary": 4400,
+    "real": 9.32,
+    "est": 5.5
+   },
+   {
+    "id": "44847058",
+    "name": "Jalen Johnson",
+    "salary": 9700,
+    "real": 8.47,
+    "est": 22.4
+   },
+   {
+    "id": "44847518",
+    "name": "Allen Graves",
+    "salary": 3600,
+    "real": 7.63,
+    "est": 1.4
+   },
+   {
+    "id": "44847433",
+    "name": "Alijah Martin",
+    "salary": 4200,
+    "real": 7.63,
+    "est": 0.5
+   },
+   {
+    "id": "44847159",
+    "name": "Dylan Harper",
+    "salary": 6800,
+    "real": 7.63,
+    "est": 11.4
+   },
+   {
+    "id": "44847089",
+    "name": "Devin Booker",
+    "salary": 8200,
+    "real": 7.63,
+    "est": 7.6
+   },
+   {
+    "id": "44847116",
+    "name": "Walker Kessler",
+    "salary": 7700,
+    "real": 6.78,
+    "est": 23.7
+   },
+   {
+    "id": "44847650",
+    "name": "Kyle Anderson",
+    "salary": 3000,
+    "real": 6.78,
+    "est": 1.1
+   },
+   {
+    "id": "44847123",
+    "name": "Kevin Durant",
+    "salary": 7500,
+    "real": 5.93,
+    "est": 7.9
+   },
+   {
+    "id": "44847100",
+    "name": "Pascal Siakam",
+    "salary": 8000,
+    "real": 5.93,
+    "est": 11.6
+   },
+   {
+    "id": "44847527",
+    "name": "Javonte Green",
+    "salary": 3500,
+    "real": 5.93,
+    "est": 1.7
+   },
+   {
+    "id": "44847364",
+    "name": "Ziaire Williams",
+    "salary": 4500,
+    "real": 5.93,
+    "est": 5.3
+   },
+   {
+    "id": "44847055",
+    "name": "Cooper Flagg",
+    "salary": 9900,
+    "real": 5.93,
+    "est": 15.1
+   },
+   {
+    "id": "44847126",
+    "name": "Kyrie Irving",
+    "salary": 7400,
+    "real": 5.08,
+    "est": 11.2
+   },
+   {
+    "id": "44847369",
+    "name": "Cameron Johnson",
+    "salary": 4500,
+    "real": 5.08,
+    "est": 1.1
+   },
+   {
+    "id": "44847213",
+    "name": "Peyton Watson",
+    "salary": 5900,
+    "real": 5.08,
+    "est": 3.8
+   },
+   {
+    "id": "44847230",
+    "name": "Aaron Wiggins",
+    "salary": 5700,
+    "real": 4.24,
+    "est": 2.8
+   },
+   {
+    "id": "44847380",
+    "name": "Ryan Kalkbrenner",
+    "salary": 4400,
+    "real": 4.24,
+    "est": 1.6
+   },
+   {
+    "id": "44847192",
+    "name": "De'Aaron Fox",
+    "salary": 6300,
+    "real": 4.24,
+    "est": 18.2
+   },
+   {
+    "id": "44847137",
+    "name": "Nickeil Alexander-Walker",
+    "salary": 7100,
+    "real": 4.24,
+    "est": 7.6
+   },
+   {
+    "id": "44847073",
+    "name": "Anthony Davis",
+    "salary": 8600,
+    "real": 4.24,
+    "est": 10.7
+   },
+   {
+    "id": "44847103",
+    "name": "Evan Mobley",
+    "salary": 7900,
+    "real": 4.24,
+    "est": 9.5
+   },
+   {
+    "id": "44847547",
+    "name": "Spencer Jones",
+    "salary": 3500,
+    "real": 3.39,
+    "est": 0.5
+   },
+   {
+    "id": "44847204",
+    "name": "Jarrett Allen",
+    "salary": 6200,
+    "real": 3.39,
+    "est": 4.7
+   },
+   {
+    "id": "44847051",
+    "name": "Nikola Jokic",
+    "salary": 11800,
+    "real": 3.39,
+    "est": 14.9
+   },
+   {
+    "id": "44847085",
+    "name": "Ty Jerome",
+    "salary": 8300,
+    "real": 3.39,
+    "est": 7.7
+   },
+   {
+    "id": "44847171",
+    "name": "PJ Washington",
+    "salary": 6600,
+    "real": 3.39,
+    "est": 6.2
+   },
+   {
+    "id": "44847198",
+    "name": "Ausar Thompson",
+    "salary": 6300,
+    "real": 3.39,
+    "est": 5.6
+   },
+   {
+    "id": "44847169",
+    "name": "Onyeka Okongwu",
+    "salary": 6700,
+    "real": 3.39,
+    "est": 8.8
+   },
+   {
+    "id": "44847228",
+    "name": "Alexandre Sarr",
+    "salary": 5800,
+    "real": 3.39,
+    "est": 4.3
+   },
+   {
+    "id": "44847398",
+    "name": "Jerami Grant",
+    "salary": 4300,
+    "real": 3.39,
+    "est": 2.8
+   },
+   {
+    "id": "44847457",
+    "name": "Kevin Huerter",
+    "salary": 4100,
+    "real": 3.39,
+    "est": 4.9
+   },
+   {
+    "id": "44847292",
+    "name": "Daniel Gafford",
+    "salary": 5000,
+    "real": 3.39,
+    "est": 5.0
+   },
+   {
+    "id": "44847217",
+    "name": "Fred VanVleet",
+    "salary": 5900,
+    "real": 3.39,
+    "est": 4.6
+   },
+   {
+    "id": "44847471",
+    "name": "Jamison Battle",
+    "salary": 4000,
+    "real": 3.39,
+    "est": 1.1
+   },
+   {
+    "id": "44847281",
+    "name": "John Collins",
+    "salary": 5100,
+    "real": 2.54,
+    "est": 3.3
+   },
+   {
+    "id": "44847305",
+    "name": "Obi Toppin",
+    "salary": 4900,
+    "real": 2.54,
+    "est": 5.1
+   },
+   {
+    "id": "44847130",
+    "name": "James Harden",
+    "salary": 7300,
+    "real": 2.54,
+    "est": 12.0
+   },
+   {
+    "id": "44847082",
+    "name": "Tyrese Haliburton",
+    "salary": 8400,
+    "real": 2.54,
+    "est": 0.0
+   },
+   {
+    "id": "44847076",
+    "name": "Jamal Murray",
+    "salary": 8500,
+    "real": 2.54,
+    "est": 4.8
+   },
+   {
+    "id": "44847333",
+    "name": "Mario Hezonja",
+    "salary": 4600,
+    "real": 2.54,
+    "est": 2.1
+   },
+   {
+    "id": "44847263",
+    "name": "Zach Edey",
+    "salary": 5300,
+    "real": 2.54,
+    "est": 3.4
+   },
+   {
+    "id": "44847273",
+    "name": "Naji Marshall",
+    "salary": 5200,
+    "real": 2.54,
+    "est": 5.5
+   },
+   {
+    "id": "44847578",
+    "name": "Braden Smith",
+    "salary": 3300,
+    "real": 2.54,
+    "est": 0.4
+   },
+   {
+    "id": "44847488",
+    "name": "Deandre Ayton",
+    "salary": 3900,
+    "real": 2.54,
+    "est": 0.9
+   },
+   {
+    "id": "44847351",
+    "name": "Sion James",
+    "salary": 4500,
+    "real": 2.54,
+    "est": 1.6
+   },
+   {
+    "id": "44847312",
+    "name": "Jake LaRavia",
+    "salary": 4800,
+    "real": 2.54,
+    "est": 2.6
+   },
+   {
+    "id": "44847323",
+    "name": "Sandro Mamukelashvili",
+    "salary": 4700,
+    "real": 2.54,
+    "est": 5.9
+   },
+   {
+    "id": "44847144",
+    "name": "Jabari Smith Jr.",
+    "salary": 7000,
+    "real": 2.54,
+    "est": 4.0
+   },
+   {
+    "id": "44847185",
+    "name": "Paul Reed",
+    "salary": 6500,
+    "real": 2.54,
+    "est": 4.5
+   },
+   {
+    "id": "44847201",
+    "name": "Cedric Coward",
+    "salary": 6200,
+    "real": 2.54,
+    "est": 4.1
+   },
+   {
+    "id": "44847174",
+    "name": "AJ Dybantsa",
+    "salary": 6600,
+    "real": 2.54,
+    "est": 2.1
+   },
+   {
+    "id": "44847394",
+    "name": "Royce O'Neale",
+    "salary": 4300,
+    "real": 2.54,
+    "est": 3.1
+   },
+   {
+    "id": "44847068",
+    "name": "Scottie Barnes",
+    "salary": 8800,
+    "real": 1.69,
+    "est": 0.0
+   },
+   {
+    "id": "44847515",
+    "name": "Tidjane Salaun",
+    "salary": 3600,
+    "real": 1.69,
+    "est": 3.1
+   },
+   {
+    "id": "44847522",
+    "name": "Will Riley",
+    "salary": 3600,
+    "real": 1.69,
+    "est": 0.1
+   },
+   {
+    "id": "44847448",
+    "name": "Quenton Jackson",
+    "salary": 4100,
+    "real": 1.69,
+    "est": 3.9
+   },
+   {
+    "id": "44847347",
+    "name": "Santi Aldama",
+    "salary": 4600,
+    "real": 1.69,
+    "est": 7.5
+   },
+   {
+    "id": "44847327",
+    "name": "Kingston Flemings",
+    "salary": 4700,
+    "real": 1.69,
+    "est": 2.2
+   },
+   {
+    "id": "44847402",
+    "name": "Trevon Brazile",
+    "salary": 4300,
+    "real": 1.69,
+    "est": 0.7
+   },
+   {
+    "id": "44847148",
+    "name": "Kon Knueppel",
+    "salary": 7000,
+    "real": 1.69,
+    "est": 0.0
+   },
+   {
+    "id": "44847195",
+    "name": "Jalen Green",
+    "salary": 6300,
+    "real": 1.69,
+    "est": 2.2
+   },
+   {
+    "id": "44847110",
+    "name": "Trae Young",
+    "salary": 7800,
+    "real": 1.69,
+    "est": 7.2
+   },
+   {
+    "id": "44847079",
+    "name": "Donovan Mitchell",
+    "salary": 8400,
+    "real": 1.69,
+    "est": 19.4
+   },
+   {
+    "id": "44847382",
+    "name": "Matisse Thybulle",
+    "salary": 4400,
+    "real": 1.69,
+    "est": 7.1
+   },
+   {
+    "id": "44847288",
+    "name": "Tari Eason",
+    "salary": 5000,
+    "real": 1.69,
+    "est": 2.3
+   },
+   {
+    "id": "44847113",
+    "name": "Kawhi Leonard",
+    "salary": 7800,
+    "real": 0.85,
+    "est": 0.0
+   },
+   {
+    "id": "44847107",
+    "name": "Brandon Miller",
+    "salary": 7900,
+    "real": 0.85,
+    "est": 0.0
+   },
+   {
+    "id": "44847096",
+    "name": "Austin Reaves",
+    "salary": 8000,
+    "real": 0.85,
+    "est": 0.0
+   },
+   {
+    "id": "44847133",
+    "name": "Andrew Nembhard",
+    "salary": 7200,
+    "real": 0.85,
+    "est": 7.3
+   },
+   {
+    "id": "44847637",
+    "name": "Tolu Smith",
+    "salary": 3000,
+    "real": 0.85,
+    "est": 0.0
+   },
+   {
+    "id": "44847151",
+    "name": "Amen Thompson",
+    "salary": 6900,
+    "real": 0.85,
+    "est": 4.9
+   },
+   {
+    "id": "44847330",
+    "name": "Zaccharie Risacher",
+    "salary": 4700,
+    "real": 0.85,
+    "est": 2.9
+   },
+   {
+    "id": "44847337",
+    "name": "Quentin Grimes",
+    "salary": 4600,
+    "real": 0.85,
+    "est": 0.0
+   },
+   {
+    "id": "44847418",
+    "name": "Meleek Thomas",
+    "salary": 4300,
+    "real": 0.85,
+    "est": 2.4
+   },
+   {
+    "id": "44847345",
+    "name": "Oso Ighodaro",
+    "salary": 4600,
+    "real": 0.85,
+    "est": 1.0
+   },
+   {
+    "id": "44847410",
+    "name": "Kelly Oubre Jr.",
+    "salary": 4300,
+    "real": 0.85,
+    "est": 2.7
+   },
+   {
+    "id": "44847462",
+    "name": "Jock Landale",
+    "salary": 4100,
+    "real": 0.85,
+    "est": 0.5
+   },
+   {
+    "id": "44847265",
+    "name": "Collin Gillespie",
+    "salary": 5300,
+    "real": 0.85,
+    "est": 1.8
+   },
+   {
+    "id": "44847245",
+    "name": "Dennis Schroder",
+    "salary": 5400,
+    "real": 0.85,
+    "est": 0.0
+   },
+   {
+    "id": "44847209",
+    "name": "Aaron Gordon",
+    "salary": 6000,
+    "real": 0.85,
+    "est": 1.3
+   },
+   {
+    "id": "44847220",
+    "name": "Coby White",
+    "salary": 5900,
+    "real": 0.85,
+    "est": 4.0
+   },
+   {
+    "id": "44847318",
+    "name": "DeMar DeRozan",
+    "salary": 4800,
+    "real": 0.85,
+    "est": 1.2
+   },
+   {
+    "id": "44847285",
+    "name": "Tobias Harris",
+    "salary": 5100,
+    "real": 0.85,
+    "est": 0.0
+   },
+   {
+    "id": "44847299",
+    "name": "Luguentz Dort",
+    "salary": 4900,
+    "real": 0.85,
+    "est": 1.5
+   },
+   {
+    "id": "44847316",
+    "name": "Khaman Maluach",
+    "salary": 4800,
+    "real": 0.85,
+    "est": 0.6
+   },
+   {
+    "id": "44847386",
+    "name": "Sam Merrill",
+    "salary": 4400,
+    "real": 0.85,
+    "est": 0.0
+   },
+   {
+    "id": "44847669",
+    "name": "Corey Kispert",
+    "salary": 3000,
+    "real": 0.85,
+    "est": 0.0
+   },
+   {
+    "id": "44847501",
+    "name": "Jay Huff",
+    "salary": 3800,
+    "real": 0.85,
+    "est": 0.0
+   },
+   {
+    "id": "44847778",
+    "name": "RayJ Dennis",
+    "salary": 3000,
+    "real": 0.85,
+    "est": 0.0
+   },
+   {
+    "id": "44847494",
+    "name": "Tyrese Proctor",
+    "salary": 3900,
+    "real": 0.85,
+    "est": 0.6
+   },
+   {
+    "id": "44847587",
+    "name": "Liam McNeeley",
+    "salary": 3200,
+    "real": 0.85,
+    "est": 0.3
+   },
+   {
+    "id": "44847533",
+    "name": "Kris Murray",
+    "salary": 3500,
+    "real": 0.85,
+    "est": 0.2
+   },
+   {
+    "id": "44847543",
+    "name": "Javon Small",
+    "salary": 3500,
+    "real": 0.85,
+    "est": 4.4
+   },
+   {
+    "id": "44847190",
+    "name": "Ivica Zubac",
+    "salary": 6400,
+    "real": 0.0,
+    "est": 3.1
+   },
+   {
+    "id": "44847277",
+    "name": "Cam Spencer",
+    "salary": 5100,
+    "real": 0.0,
+    "est": 1.9
+   },
+   {
+    "id": "44847294",
+    "name": "Christian Braun",
+    "salary": 5000,
+    "real": 0.0,
+    "est": 1.4
+   },
+   {
+    "id": "44847206",
+    "name": "Dillon Brooks",
+    "salary": 6100,
+    "real": 0.0,
+    "est": 3.0
+   },
+   {
+    "id": "44847237",
+    "name": "CJ McCollum",
+    "salary": 5600,
+    "real": 0.0,
+    "est": 6.1
+   },
+   {
+    "id": "44847342",
+    "name": "Reed Sheppard",
+    "salary": 4600,
+    "real": 0.0,
+    "est": 2.7
+   },
+   {
+    "id": "44847361",
+    "name": "Jaylen Wells",
+    "salary": 4500,
+    "real": 0.0,
+    "est": 1.6
+   },
+   {
+    "id": "44847308",
+    "name": "Marcus Smart",
+    "salary": 4900,
+    "real": 0.0,
+    "est": 1.0
+   },
+   {
+    "id": "44847440",
+    "name": "Thomas Bryant",
+    "salary": 4200,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847436",
+    "name": "Ryan Dunn",
+    "salary": 4200,
+    "real": 0.0,
+    "est": 0.6
+   },
+   {
+    "id": "44847442",
+    "name": "T.J. McConnell",
+    "salary": 4200,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847415",
+    "name": "Max Christie",
+    "salary": 4300,
+    "real": 0.0,
+    "est": 1.3
+   },
+   {
+    "id": "44847355",
+    "name": "Jarace Walker",
+    "salary": 4500,
+    "real": 0.0,
+    "est": 3.8
+   },
+   {
+    "id": "44847530",
+    "name": "Craig Porter Jr.",
+    "salary": 3500,
+    "real": 0.0,
+    "est": 0.2
+   },
+   {
+    "id": "44847513",
+    "name": "Zuby Ejiofor",
+    "salary": 3700,
+    "real": 0.0,
+    "est": 0.3
+   },
+   {
+    "id": "44847525",
+    "name": "Luke Kornet",
+    "salary": 3500,
+    "real": 0.0,
+    "est": 2.1
+   },
+   {
+    "id": "44847565",
+    "name": "Carter Bryant",
+    "salary": 3300,
+    "real": 0.0,
+    "est": 0.3
+   },
+   {
+    "id": "44847556",
+    "name": "Gregory Jackson",
+    "salary": 3400,
+    "real": 0.0,
+    "est": 1.2
+   },
+   {
+    "id": "44847581",
+    "name": "Harrison Barnes",
+    "salary": 3200,
+    "real": 0.0,
+    "est": 0.6
+   },
+   {
+    "id": "44847503",
+    "name": "Tre Johnson",
+    "salary": 3800,
+    "real": 0.0,
+    "est": 1.1
+   },
+   {
+    "id": "44847474",
+    "name": "Ronald Holland II",
+    "salary": 4000,
+    "real": 0.0,
+    "est": 1.6
+   },
+   {
+    "id": "44847467",
+    "name": "Bub Carrington",
+    "salary": 4000,
+    "real": 0.0,
+    "est": 0.9
+   },
+   {
+    "id": "44847497",
+    "name": "Luke Kennard",
+    "salary": 3900,
+    "real": 0.0,
+    "est": 0.4
+   },
+   {
+    "id": "44847552",
+    "name": "Larry Nance Jr.",
+    "salary": 3400,
+    "real": 0.0,
+    "est": 0.6
+   },
+   {
+    "id": "44847606",
+    "name": "Tyus Jones",
+    "salary": 3100,
+    "real": 0.0,
+    "est": 0.2
+   },
+   {
+    "id": "44847596",
+    "name": "Tre Mann",
+    "salary": 3200,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847592",
+    "name": "Jordan McLaughlin",
+    "salary": 3200,
+    "real": 0.0,
+    "est": 0.2
+   },
+   {
+    "id": "44847585",
+    "name": "Quinten Post",
+    "salary": 3200,
+    "real": 0.0,
+    "est": 0.5
+   },
+   {
+    "id": "44847576",
+    "name": "Marvin Bagley III",
+    "salary": 3300,
+    "real": 0.0,
+    "est": 0.7
+   },
+   {
+    "id": "44847623",
+    "name": "Riley Minix",
+    "salary": 3100,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847613",
+    "name": "Jaden Bradley",
+    "salary": 3100,
+    "real": 0.0,
+    "est": 0.4
+   },
+   {
+    "id": "44847619",
+    "name": "Anthony Gill",
+    "salary": 3100,
+    "real": 0.0,
+    "est": 0.0
+   },
+   {
+    "id": "44847626",
+    "name": "Adou Thiero",
+    "salary": 3100,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847630",
+    "name": "Bogdan Bogdanovic",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.5
+   },
+   {
+    "id": "44847656",
+    "name": "Tarris Reed Jr.",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.2
+   },
+   {
+    "id": "44847641",
+    "name": "Bruce Thornton",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847658",
+    "name": "Isaiah Crawford",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847664",
+    "name": "Bryce Hopkins",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.2
+   },
+   {
+    "id": "44847677",
+    "name": "Duop Reath",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847617",
+    "name": "Olivier-Maxence Prosper",
+    "salary": 3100,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847687",
+    "name": "Caleb Martin",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.3
+   },
+   {
+    "id": "44847692",
+    "name": "Jarred Vanderbilt",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.7
+   },
+   {
+    "id": "44847702",
+    "name": "Jamaree Bouyea",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847696",
+    "name": "Ebuka Okorie",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847712",
+    "name": "Taylor Hendricks",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847718",
+    "name": "Isaac Jones",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847722",
+    "name": "Chaz Lanier",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847705",
+    "name": "Koa Peat",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.0
+   },
+   {
+    "id": "44847725",
+    "name": "Pat Spencer",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847734",
+    "name": "DaRon Holmes II",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.0
+   },
+   {
+    "id": "44847755",
+    "name": "Rasheer Fleming",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.0
+   },
+   {
+    "id": "44847746",
+    "name": "Alpha Diallo",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.0
+   },
+   {
+    "id": "44847764",
+    "name": "Felix Okpara",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.0
+   },
+   {
+    "id": "44847774",
+    "name": "David Jones-Garcia",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.1
+   },
+   {
+    "id": "44847791",
+    "name": "Norchad Omier",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 0.0
+   },
+   {
+    "id": "44847799",
+    "name": "Malachi Smith",
+    "salary": 3000,
+    "real": 0.0,
+    "est": 25.3
+   }
+  ]
+ }
+}

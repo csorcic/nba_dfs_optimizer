@@ -19,10 +19,24 @@ RAW = REPO_ROOT / "data" / "raw" / "odds"
 ODDS_URL = "https://api.the-odds-api.com/v4/sports/basketball_nba/odds"
 
 
-def consensus_from_odds_api(events: list[dict]) -> dict[str, dict]:
-    """Odds API events -> {'AWAY@HOME': {'total', 'home_spread', ...}} using the median across books."""
+def _started(ev: dict, now: datetime) -> bool:
+    try:
+        return datetime.fromisoformat(ev["commence_time"].replace("Z", "+00:00")) <= now
+    except (KeyError, ValueError, AttributeError):
+        return False
+
+
+def consensus_from_odds_api(events: list[dict], now: datetime | None = None) -> dict[str, dict]:
+    """Odds API events -> {'AWAY@HOME': {'total', 'home_spread', ...}} using the median across books.
+
+    Games that have already started are skipped: the API then returns live in-game
+    lines (e.g. a 28.5-point spread mid-game), not the pre-game line.
+    """
+    now = now or datetime.now(timezone.utc)
     lines = {}
     for ev in events:
+        if _started(ev, now):
+            continue
         try:
             home, away = canon(ev["home_team"]), canon(ev["away_team"])
         except KeyError:

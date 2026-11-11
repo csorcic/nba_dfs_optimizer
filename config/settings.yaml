@@ -76,3 +76,9 @@ review:  # Slate review: after each slate, the best lineup in hindsight and how 
   settings_miss_value_rank: 20  # An optimal player we projected fairly but ranked worse than this in points per $1K is a "settings miss"
   fallback_sd_pct: 0.30  # When projections are rebuilt and a player has no history, his boom/bust spread is this share of his projection
   postponed_after_days: 2  # A game still missing its box score this many days later is treated as postponed, and the slate is reviewed without it
+  dk_username: csorcic  # Your DraftKings username, used to find your own entries in contest standings files
+  contest_slate_min_match_pct: 90  # A standings file belongs to a slate only if at least this % of its players are on that slate's salary file
+  contest_fpts_tolerance: 0.5  # When two slates both fit, a player's DK points must be within this many points of our box score to count as agreeing
+  contest_cash_line_pct: 50  # Approximate cash line: the score that beat this % of the field (50 = double-up style; GPPs pay about the top 20%)
+  contest_max_winning_lineups: 5  # Most tied first-place lineups to keep per contest
+  contest_min_readable_lineups_pct: 95  # Real ownership is counted from the lineups when at least this % of them can be read; otherwise DK's %Drafted column is used

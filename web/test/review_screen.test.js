@@ -38,6 +38,7 @@ test("contest results appear once standings exist", () => {
   assert.ok(html.includes("377.5"));
   assert.ok(html.includes("280.3"));
   assert.ok(html.includes("rank 400"));
+  assert.ok(html.includes("beat 80% of the field"));
 });
 
 test("empty and error states", () => {
@@ -50,4 +51,15 @@ test("lessons are labeled too early below the slate threshold", () => {
   const html = lessonsHtml({ slates: 3, minSlates: 20, tooEarly: true, highlights: ["x"], recommendations: [] }, f);
   assert.ok(html.includes("Too early to act on"));
   assert.ok(html.includes("Nothing changes until you approve"));
+});
+
+test("real Nov 9 review shows the contest, my finish and real ownership", () => {
+  const d9 = JSON.parse(readFileSync(new URL("../../docs/data/review_2026-11-09.json", import.meta.url), "utf8"));
+  const html = reviewHtml({ index, doc: d9, error: null }, f);
+  const c = d9.contests[0];
+  assert.ok(html.includes("<h2>Contests</h2>"));
+  assert.ok(html.includes(c.winningScore.toFixed(1)));
+  assert.ok(html.includes(`rank ${c.mine.best.rank}`));
+  assert.ok(html.includes("Real ownership vs our estimate"));
+  assert.ok(html.includes(esc(d9.ownershipCheck.list[0].name)));
 });

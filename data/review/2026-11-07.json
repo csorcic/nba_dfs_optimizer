@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-09T01:36:22+00:00",
+ "generatedAt": "2026-11-11T02:26:35+00:00",
  "gameDate": "2026-11-07",
  "fileDate": "2026-11-07",
  "draftGroupId": "156199",
@@ -15,6 +15,7 @@
    "game": "BKN@ATL",
    "lock": "2026-11-07T19:30:00-05:00",
    "total": 235.0,
+   "totalSource": "pre-lock",
    "homeSpread": -1.2,
    "final": true
   },
@@ -22,6 +23,7 @@
    "game": "NYK@CLE",
    "lock": "2026-11-07T20:00:00-05:00",
    "total": 223.0,
+   "totalSource": "pre-lock",
    "homeSpread": 4.5,
    "final": true
   },
@@ -29,6 +31,7 @@
    "game": "WAS@OKC",
    "lock": "2026-11-07T20:00:00-05:00",
    "total": 224.0,
+   "totalSource": "pre-lock",
    "homeSpread": -12.5,
    "final": true
   },
@@ -36,6 +39,7 @@
    "game": "ORL@GSW",
    "lock": "2026-11-07T20:30:00-05:00",
    "total": 219.5,
+   "totalSource": "pre-lock",
    "homeSpread": -7.5,
    "final": true
   },
@@ -43,6 +47,7 @@
    "game": "HOU@PHX",
    "lock": "2026-11-07T21:00:00-05:00",
    "total": 223.5,
+   "totalSource": "pre-lock",
    "homeSpread": 6.5,
    "final": true
   }
@@ -128,7 +133,7 @@
     "salary": 8400,
     "proj": 38.27,
     "ceiling": 57.1,
-    "own": 9.3,
+    "own": 10.1,
     "actual": 58.5,
     "valueRank": 48,
     "projRank": 14,
@@ -143,7 +148,7 @@
     "salary": 6400,
     "proj": 35.29,
     "ceiling": 55.21,
-    "own": 16.6,
+    "own": 17.4,
     "actual": 51.0,
     "valueRank": 11,
     "projRank": 16,
@@ -158,7 +163,7 @@
     "salary": 6300,
     "proj": 32.57,
     "ceiling": 48.77,
-    "own": 13.5,
+    "own": 13.7,
     "actual": 45.0,
     "valueRank": 21,
     "projRank": 25,
@@ -173,7 +178,7 @@
     "salary": 8700,
     "proj": 43.1,
     "ceiling": 61.21,
-    "own": 16.6,
+    "own": 17.4,
     "actual": 58.0,
     "valueRank": 30,
     "projRank": 7,
@@ -188,7 +193,7 @@
     "salary": 5100,
     "proj": 26.29,
     "ceiling": 41.62,
-    "own": 8.5,
+    "own": 6.3,
     "actual": 48.5,
     "valueRank": 22,
     "projRank": 37,
@@ -203,7 +208,7 @@
     "salary": 5400,
     "proj": 23.57,
     "ceiling": 39.84,
-    "own": 4.0,
+    "own": 4.1,
     "actual": 38.5,
     "valueRank": 56,
     "projRank": 43,
@@ -233,7 +238,7 @@
     "salary": 4800,
     "proj": 22.62,
     "ceiling": 36.07,
-    "own": 5.8,
+    "own": 6.3,
     "actual": 38.5,
     "valueRank": 42,
     "projRank": 45,
@@ -256,7 +261,7 @@
    ],
    "teamCount": 5,
    "games": 3,
-   "ownSum": 75.0,
+   "ownSum": 76.0,
    "proj": 235.2,
    "actual": 378.0
   }
@@ -274,7 +279,7 @@
     "salary": 8200,
     "proj": 45.44,
     "ceiling": 63.02,
-    "own": 44.9,
+    "own": 46.5,
     "actual": 53.0,
     "valueRank": 9,
     "projRank": 4
@@ -288,7 +293,7 @@
     "salary": 5900,
     "proj": 34.49,
     "ceiling": 53.0,
-    "own": 15.6,
+    "own": 16.2,
     "actual": 38.25,
     "valueRank": 2,
     "projRank": 20
@@ -302,7 +307,7 @@
     "salary": 7300,
     "proj": 41.83,
     "ceiling": 61.95,
-    "own": 38.1,
+    "own": 29.8,
     "actual": 39.75,
     "valueRank": 5,
     "projRank": 8
@@ -316,7 +321,7 @@
     "salary": 8500,
     "proj": 46.74,
     "ceiling": 61.92,
-    "own": 46.3,
+    "own": 48.0,
     "actual": 56.25,
     "valueRank": 13,
     "projRank": 3
@@ -330,7 +335,7 @@
     "salary": 4800,
     "proj": 30.07,
     "ceiling": 48.38,
-    "own": 15.5,
+    "own": 16.1,
     "actual": 36.0,
     "valueRank": 1,
     "projRank": 28
@@ -344,7 +349,7 @@
     "salary": 7100,
     "proj": 40.9,
     "ceiling": 56.37,
-    "own": 28.8,
+    "own": 29.4,
     "actual": 20.5,
     "valueRank": 4,
     "projRank": 12
@@ -358,7 +363,7 @@
     "salary": 4300,
     "proj": 23.75,
     "ceiling": 37.37,
-    "own": 7.7,
+    "own": 7.9,
     "actual": 7.75,
     "valueRank": 10,
     "projRank": 42
@@ -372,7 +377,7 @@
     "salary": 3900,
     "proj": 21.85,
     "ceiling": 35.6,
-    "own": 5.3,
+    "own": 5.5,
     "actual": 5.25,
     "valueRank": 7,
     "projRank": 50
@@ -393,7 +398,7 @@
    ],
    "teamCount": 4,
    "games": 3,
-   "ownSum": 202.2,
+   "ownSum": 199.4,
    "proj": 285.1,
    "actual": 256.8
   }
@@ -469,7 +474,7 @@
    "avgValues": 1.2,
    "avgMaxFromOneGame": 3.56,
    "avgTeamCount": 5.72,
-   "avgOwnSum": 102.63,
+   "avgOwnSum": 104.06,
    "avgActual": 374.19,
    "maxFromOneGameCounts": {
     "2": 1,
@@ -582,11 +587,11 @@
    "actual": 58.5,
    "multiple": 6.96,
    "minutesBump": 0.0,
-   "teamImplied": 113.5,
+   "teamImplied": 114.0,
    "spread": -7.5,
    "proj": 38.27,
    "ceiling": 57.1,
-   "own": 9.3,
+   "own": 10.1,
    "projectedToPlay": true
   },
   {
@@ -598,11 +603,11 @@
    "actual": 58.0,
    "multiple": 6.67,
    "minutesBump": 4.0,
-   "teamImplied": 106.0,
+   "teamImplied": 106.5,
    "spread": 7.5,
    "proj": 43.1,
    "ceiling": 61.21,
-   "own": 16.6,
+   "own": 17.4,
    "projectedToPlay": true
   },
   {
@@ -614,11 +619,11 @@
    "actual": 56.25,
    "multiple": 6.62,
    "minutesBump": 2.1,
-   "teamImplied": 113.8,
+   "teamImplied": 113.5,
    "spread": -4.5,
    "proj": 46.74,
    "ceiling": 61.92,
-   "own": 46.3,
+   "own": 48.0,
    "projectedToPlay": true
   },
   {
@@ -630,11 +635,11 @@
    "actual": 54.0,
    "multiple": 6.67,
    "minutesBump": 4.5,
-   "teamImplied": 109.2,
+   "teamImplied": 109.0,
    "spread": 4.5,
    "proj": 45.22,
    "ceiling": 62.4,
-   "own": 37.7,
+   "own": 38.5,
    "projectedToPlay": true
   },
   {
@@ -646,11 +651,11 @@
    "actual": 53.0,
    "multiple": 6.46,
    "minutesBump": 3.4,
-   "teamImplied": 113.8,
+   "teamImplied": 113.5,
    "spread": -4.5,
    "proj": 45.44,
    "ceiling": 63.02,
-   "own": 44.9,
+   "own": 46.5,
    "projectedToPlay": true
   },
   {
@@ -662,11 +667,11 @@
    "actual": 51.0,
    "multiple": 7.97,
    "minutesBump": 6.2,
-   "teamImplied": 106.0,
+   "teamImplied": 106.5,
    "spread": 7.5,
    "proj": 35.29,
    "ceiling": 55.21,
-   "own": 16.6,
+   "own": 17.4,
    "projectedToPlay": true
   },
   {
@@ -678,11 +683,11 @@
    "actual": 48.5,
    "multiple": 9.51,
    "minutesBump": 0.6,
-   "teamImplied": 116.9,
-   "spread": 1.2,
+   "teamImplied": 110.5,
+   "spread": 6.5,
    "proj": 26.29,
    "ceiling": 41.62,
-   "own": 8.5,
+   "own": 6.3,
    "projectedToPlay": true
   },
   {
@@ -694,11 +699,11 @@
    "actual": 45.0,
    "multiple": 7.14,
    "minutesBump": 0.9,
-   "teamImplied": 118.1,
-   "spread": -1.2,
+   "teamImplied": 117.0,
+   "spread": -6.5,
    "proj": 32.57,
    "ceiling": 48.77,
-   "own": 13.5,
+   "own": 13.7,
    "projectedToPlay": true
   },
   {
@@ -710,7 +715,7 @@
    "actual": 40.0,
    "multiple": 10.53,
    "minutesBump": 4.0,
-   "teamImplied": 106.0,
+   "teamImplied": 106.5,
    "spread": 7.5,
    "proj": 13.5,
    "ceiling": 25.89,
@@ -726,11 +731,11 @@
    "actual": 38.5,
    "multiple": 7.13,
    "minutesBump": 0.9,
-   "teamImplied": 118.1,
-   "spread": -1.2,
+   "teamImplied": 117.0,
+   "spread": -6.5,
    "proj": 23.57,
    "ceiling": 39.84,
-   "own": 4.0,
+   "own": 4.1,
    "projectedToPlay": true
   },
   {
@@ -742,11 +747,11 @@
    "actual": 38.5,
    "multiple": 8.02,
    "minutesBump": 2.9,
-   "teamImplied": 118.2,
+   "teamImplied": 118.5,
    "spread": -12.5,
    "proj": 22.62,
    "ceiling": 36.07,
-   "own": 5.8,
+   "own": 6.3,
    "projectedToPlay": true
   },
   {
@@ -758,11 +763,11 @@
    "actual": 38.25,
    "multiple": 6.48,
    "minutesBump": 2.4,
-   "teamImplied": 105.8,
+   "teamImplied": 106.0,
    "spread": 12.5,
    "proj": 34.49,
    "ceiling": 53.0,
-   "own": 15.6,
+   "own": 16.2,
    "projectedToPlay": true
   },
   {
@@ -774,11 +779,11 @@
    "actual": 36.0,
    "multiple": 7.5,
    "minutesBump": 1.2,
-   "teamImplied": 105.8,
+   "teamImplied": 106.0,
    "spread": 12.5,
    "proj": 30.07,
    "ceiling": 48.38,
-   "own": 15.5,
+   "own": 16.1,
    "projectedToPlay": true
   },
   {
@@ -790,11 +795,11 @@
    "actual": 35.0,
    "multiple": 6.14,
    "minutesBump": 0.0,
-   "teamImplied": 113.5,
+   "teamImplied": 114.0,
    "spread": -7.5,
    "proj": 21.55,
    "ceiling": 33.62,
-   "own": 1.5,
+   "own": 1.7,
    "projectedToPlay": true
   },
   {
@@ -806,11 +811,11 @@
    "actual": 34.75,
    "multiple": 6.21,
    "minutesBump": 4.0,
-   "teamImplied": 106.0,
+   "teamImplied": 106.5,
    "spread": 7.5,
    "proj": 24.89,
    "ceiling": 39.19,
-   "own": 2.9,
+   "own": 3.1,
    "projectedToPlay": true
   },
   {
@@ -822,11 +827,11 @@
    "actual": 31.75,
    "multiple": 6.61,
    "minutesBump": 1.2,
-   "teamImplied": 116.9,
-   "spread": 1.2,
+   "teamImplied": 110.5,
+   "spread": 6.5,
    "proj": 22.46,
    "ceiling": 36.53,
-   "own": 4.7,
+   "own": 3.4,
    "projectedToPlay": true
   },
   {
@@ -842,7 +847,7 @@
    "spread": 6.5,
    "proj": 14.81,
    "ceiling": 27.76,
-   "own": 0.7,
+   "own": 0.8,
    "projectedToPlay": true
   },
   {
@@ -854,7 +859,7 @@
    "actual": 25.0,
    "multiple": 6.58,
    "minutesBump": 1.2,
-   "teamImplied": 105.8,
+   "teamImplied": 106.0,
    "spread": 12.5,
    "proj": 15.95,
    "ceiling": 28.98,
@@ -870,11 +875,11 @@
    "actual": 24.75,
    "multiple": 6.35,
    "minutesBump": 3.0,
-   "teamImplied": 118.2,
+   "teamImplied": 118.5,
    "spread": -12.5,
    "proj": 14.78,
    "ceiling": 26.32,
-   "own": 1.6,
+   "own": 1.7,
    "projectedToPlay": true
   },
   {
@@ -886,11 +891,11 @@
    "actual": 23.25,
    "multiple": 6.64,
    "minutesBump": 0.7,
-   "teamImplied": 116.9,
-   "spread": 1.2,
+   "teamImplied": 110.5,
+   "spread": 6.5,
    "proj": 20.32,
    "ceiling": 33.23,
-   "own": 10.0,
+   "own": 7.5,
    "projectedToPlay": true
   }
  ],
