@@ -54,16 +54,34 @@ export function reviewHtml(R, f) {
   const rebuilt = d.projections.source === "rebuilt"
     ? `<div class="card notice">Rebuilt projections: no pre-lock snapshot was saved for this slate, so these numbers are a replay and look a bit better than reality.</div>` : "";
 
-  const contestBlock = (d.contests || []).map((c) => `
+  const contestBlock = (d.contests || []).map((c) => {
+    const best = c.mine && c.mine.best;
+    const w = (c.winningLineups || [])[0];
+    const winner = w ? `<details class="card inner"><summary>Winning lineup: ${pts(w.points)} pts (${esc(w.entryName)})</summary>
+        <table class="rtable">${(w.players || []).map((x) => `<tr><td class="slot">${esc(x.slot)}</td><td>${esc(x.name)}</td><td class="r num">${pts(x.fpts)}</td></tr>`).join("")}</table>
+        <p class="muted small">${w.sharedWithOptimal} of 8 players were in the best possible lineup, which beat it by ${pts(c.optimalBeatsWinnerBy)} pts. Salary ${money(w.salary)} · our est. ownership ${pct(w.ourOwnSum)}.</p>
+      </details>` : "";
+    return `
     <div class="card">
       <div class="head"><b>${esc(c.name || "Contest")}</b><span class="muted small">${Number(c.fieldSize).toLocaleString("en-US")} entries</span></div>
-      <div class="stats">
+      <div class="stats two">
         <div class="stat"><b>${pts(c.winningScore)}</b><span>winning score</span></div>
-        <div class="stat"><b>${pts(c.top1Score)}</b><span>top 1%</span></div>
+        <div class="stat"><b>${pts(c.top1Score)}</b><span>top 1%${c.top10Score !== undefined ? ` · top 10%: ${pts(c.top10Score)}` : ""}</span></div>
         <div class="stat"><b>${pts(c.cashLine)}</b><span>cash line (approx.)</span></div>
-        <div class="stat"><b>${c.mine && c.mine.best ? `${pct(c.mine.best.percentile)}` : "–"}</b><span>${c.mine && c.mine.best ? `my best: ${pts(c.mine.best.points)} pts, rank ${c.mine.best.rank}` : "my best finish"}</span></div>
+        <div class="stat"><b>${best ? pts(best.points) : "–"}</b><span>${best ? `my best: rank ${best.rank}, beat ${pct(best.percentile)} of the field` : "no entries of mine"}</span></div>
       </div>
-    </div>`).join("");
+      ${winner}
+    </div>`;
+  }).join("");
+
+  const oc = d.ownershipCheck;
+  const ownBlock = oc && oc.list ? `<h2>Real ownership vs our estimate</h2>
+    <p class="muted small">From the ${Number(oc.fieldSize).toLocaleString("en-US")}-entry contest. Average miss ${pts(oc.mae)} points of ownership (bias ${oc.bias > 0 ? "+" : ""}${pts(oc.bias)}; + = we guessed too high). Small contests are noisy.</p>
+    <div class="card"><table class="rtable">
+      <tr class="muted small"><th>Player</th><th class="r">Real</th><th class="r">Ours</th></tr>
+      ${oc.list.slice(0, 12).map((x) => `<tr><td>${esc(x.name)} <span class="muted small">${money(x.salary)}</span></td><td class="r num"><b>${pct(x.real)}</b></td><td class="r num muted">${pct(x.est)}</td></tr>`).join("")}
+    </table>
+    <p class="muted small">${(oc.byTier || []).map((t) => `${esc(t.tier)}: miss ${pts(t.mae)}`).join(" · ")}</p></div>` : "";
 
   const missCounts = {};
   opt.players.forEach((p) => (missCounts[p.missType] = (missCounts[p.missType] || 0) + 1));
@@ -130,6 +148,7 @@ export function reviewHtml(R, f) {
     <div class="card">${composition}</div>
     ${extras}
     <p class="muted small">Projection accuracy: ${a.players} players who played · ${pct(a.overCeilingPct)} beat their ceiling (target about 10%) · ${pct(a.insideRangePct)} landed inside floor–ceiling (target about 80%).</p>
+    ${ownBlock}
     ${lessonsHtml(R.lessons, f)}`;
 }
 

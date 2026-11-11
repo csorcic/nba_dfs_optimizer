@@ -46,6 +46,9 @@ jobs:
         run: python scripts/backtest.py
       - name: Review finished slates (hindsight-optimal lineups)
         run: python -m pipeline.review
+      - name: Import DK contest standings (never fails the run)
+        continue-on-error: true
+        run: python -m pipeline.contests
       - name: Save data back to the repo
         if: always()  # keep downloaded box scores even if a later step failed
         run: |

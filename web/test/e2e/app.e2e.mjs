@@ -41,6 +41,11 @@ const slate = JSON.parse(readFileSync(join(DOCS, "data", "slate_latest.json"), "
 const byId = new Map(slate.players.map((p) => [p.id, p]));
 
 try {
+  // Pretend it's 3 hours before the first game so the test passes at any time of day
+  // (after tip-off the app correctly leaves started games' players out of builds).
+  const firstLock = Math.min(...slate.games.map((g) => Date.parse(g.lock)));
+  await page.clock.install({ time: new Date(firstLock - 3 * 3600 * 1000) });
+
   // Slate
   await page.goto(base);
   await page.waitForSelector(".game");
@@ -170,10 +175,10 @@ try {
     const index = JSON.parse(readFileSync(join(DOCS, "data", "review_index.json"), "utf8"));
     const latest = JSON.parse(readFileSync(join(DOCS, "data", "review_latest.json"), "utf8"));
     await page.click('a[data-view="review"]');
-    await page.waitForSelector("text=Best possible lineup");
+    await page.waitForSelector("h2:text-is(\"Best possible lineup\")");
     assert.equal(await page.locator("#reviewDate option").count(), index.dates.length);
     assert.equal(await page.locator("#reviewDate").inputValue(), latest.gameDate);
-    await page.waitForSelector(`text=${latest.optimal.players[0].name}`);
+    await page.locator("td", { hasText: latest.optimal.players[0].name }).filter({ visible: true }).first().waitFor();
     assert.ok(await page.locator(".rtable").count() >= 3);
     await page.waitForSelector("text=Lineup make-up");
     await shot("11-review");
@@ -244,10 +249,10 @@ try {
     // A review viewed once online still opens offline
     await c3.setOffline(false);
     await p3.click('a[data-view="review"]');
-    await p3.waitForSelector("text=Best possible lineup");
+    await p3.waitForSelector("h2:text-is(\"Best possible lineup\")");
     await c3.setOffline(true);
     await p3.reload();
-    await p3.waitForSelector("text=Best possible lineup");
+    await p3.waitForSelector("h2:text-is(\"Best possible lineup\")");
     console.log("Offline reload shows the cached review");
     await c3.close();
   }

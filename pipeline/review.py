@@ -139,6 +139,21 @@ def rebuild_projections(slate_dir: Path, gdate: str, settings: dict) -> pd.DataF
     rep = rep[keep].drop_duplicates("espn_id") if len(rep) else pd.DataFrame(columns=keep)
     df = players.merge(rep, on="espn_id", how="left")
 
+    # Same Vegas lines the replay used (ESPN closing lines), so team totals and the
+    # ownership estimate don't depend on whatever the salary-file run happened to see.
+    closing = load_lines(season)
+    day_events = logs[logs["date"] == gdate]["event_id"].astype(str).unique()
+    for ev in day_events:
+        ln = closing.get(ev)
+        if not ln:
+            continue
+        hs, t = float(ln["home_spread"]), float(ln["total"])
+        for team, spread in ((ln["home"], hs), (ln["away"], -hs)):
+            m = df["team"] == team
+            df.loc[m, "team_spread"] = spread
+            df.loc[m, "game_total"] = t
+            df.loc[m, "team_implied"] = round(t / 2 - spread / 2, 2)
+
     # Players the replay has no model for: DK's average if they played that day (rookies
     # and players with no history), otherwise treated as OUT.
     played_today = set(logs[(logs["date"] == gdate) & (logs["dnp"] == 0) & (logs["min"] > 0)]["espn_id"])
@@ -254,6 +269,28 @@ def run_optimizer(players: list[dict], jobs: list[dict]) -> dict:
 
 # ---------- composition ----------
 
+def slate_game_totals(games: dict, gdate: str, logs_day: pd.DataFrame, settings: dict) -> tuple[dict, dict]:
+    """Each game's over/under for "was the stack from the highest-total game?".
+
+    Uses the pre-lock line from the pipeline; when a game had none yet, falls back to
+    ESPN's closing line (only for this comparison; player features are left alone).
+    """
+    totals = {g["game"]: g.get("total") for g in games["games"]}
+    source = {g: ("pre-lock" if t is not None else None) for g, t in totals.items()}
+    if all(t is not None for t in totals.values()) or not len(logs_day):
+        return totals, source
+    from scripts.backtest import load_lines  # noqa: PLC0415
+
+    closing = load_lines(settings["data"]["current_season"])
+    for ev in logs_day["event_id"].unique():
+        ln = closing.get(str(ev))
+        game = f"{ln['away']}@{ln['home']}" if ln else None
+        if game in totals and totals[game] is None and ln.get("total") is not None:
+            totals[game] = float(ln["total"])
+            source[game] = "closing"
+    return totals, source
+
+
 def composition(ids: list[str], by_id: dict, game_totals: dict, cfg: dict) -> dict:
     ps = [by_id[i] for i in ids]
     per_game = Counter(p["game"] for p in ps)
@@ -354,7 +391,7 @@ def build_review(slate_dir: Path, settings: dict, logs: pd.DataFrame, today: dat
     if not hind or not ours_l:
         raise RuntimeError(f"{gdate}: optimizer found no lineup")
     best_ids, our_ids = hind[0]["ids"], ours_l[0]["ids"]
-    game_totals = {g["game"]: g.get("total") for g in games["games"]}
+    game_totals, total_source = slate_game_totals(games, gdate, logs_day, settings)
 
     def lineup_detail(ids, with_miss=False):
         rows = []
@@ -407,7 +444,8 @@ def build_review(slate_dir: Path, settings: dict, logs: pd.DataFrame, today: dat
         "draftGroupId": games.get("draft_group_id"),
         "salaryFile": games.get("salary_file"),
         "projections": proj_info,
-        "games": [{"game": g["game"], "lock": g["lock_time"], "total": _num(g.get("total"), 1),
+        "games": [{"game": g["game"], "lock": g["lock_time"], "total": _num(game_totals.get(g["game"]), 1),
+                   "totalSource": total_source.get(g["game"]),
                    "homeSpread": _num(g.get("home_spread"), 1), "final": g["game"] in done} for g in games["games"]],
         "accuracy": accuracy(df),
         "lateScratches": late,
@@ -435,6 +473,8 @@ def build_review(slate_dir: Path, settings: dict, logs: pd.DataFrame, today: dat
                                           "settings_miss_value_rank")},
         "solver": res.get("solver"),
     }
+    from pipeline.contests import attach_contests  # noqa: PLC0415 (contests imports this module)
+    attach_contests(review, df, settings)
     errs = validate_review(review)
     if errs:
         raise RuntimeError(f"{gdate}: review failed its schema check: {errs}")
@@ -553,6 +593,23 @@ def summary_text(r: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
+def slates_by_game_date(slates_root: Path = SLATES) -> dict[str, Path]:
+    """One slate folder per game date.
+
+    The salary file is sometimes saved twice for the same games (e.g. on the 8th and
+    again on the 9th, with fresher injury statuses). Prefer the folder that has a
+    pre-lock snapshot; otherwise the newest file.
+    """
+    picked: dict[str, Path] = {}
+    dirs = sorted(p for p in slates_root.iterdir() if (p / "games.json").exists() and (p / "players.csv").exists())
+    for d in dirs:  # oldest first, so a later folder replaces an earlier one
+        gdate = game_date_of(json.loads((d / "games.json").read_text()))
+        cur = picked.get(gdate)
+        if cur is None or (d / PRELOCK_FILE).exists() or not (cur / PRELOCK_FILE).exists():
+            picked[gdate] = d
+    return dict(sorted(picked.items()))
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Review finished slates (hindsight-optimal lineups).")
     ap.add_argument("--date", help="only review the slate played on this day (YYYY-MM-DD)")
@@ -562,8 +619,7 @@ def main(argv=None) -> int:
     settings = load_settings()
     logs = load_logs([settings["data"]["current_season"], settings["data"]["prior_season"]])
     done_any = False
-    for slate_dir in sorted(p for p in SLATES.iterdir() if (p / "games.json").exists() and (p / "players.csv").exists()):
-        gdate = game_date_of(json.loads((slate_dir / "games.json").read_text()))
+    for gdate, slate_dir in slates_by_game_date().items():
         if args.date and gdate != args.date:
             continue
         if (REVIEW_DIR / f"{gdate}.json").exists() and not args.force:

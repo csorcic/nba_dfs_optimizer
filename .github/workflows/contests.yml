@@ -1,0 +1,52 @@
+name: Contest standings
+
+# Runs when a DK contest standings file (.csv or .zip) is uploaded to data/contests/
+# on the GitHub website. Matches it to a slate, adds the results to that slate's
+# review, and moves the file to data/contests/processed/ (or unmatched/).
+# A bad file never fails this run; the run summary says what happened.
+on:
+  push:
+    branches: [main]
+    paths: ["data/contests/*.csv", "data/contests/*.zip", "data/contests/*.CSV", "data/contests/*.ZIP"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pipeline  # same group as the data pipeline so their commits don't collide
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+        working-directory: web
+      - name: Review any finished slates that have no review yet
+        run: python -m pipeline.review
+      - name: Import contest standings
+        continue-on-error: true
+        run: python -m pipeline.contests
+      - name: Save to the repo
+        if: always()
+        run: |
+          git config user.name "pipeline-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data docs/data
+          if git diff --cached --quiet; then echo "No changes."; exit 0; fi
+          git commit -q -m "Contest standings $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && exit 0; sleep 5; done
+          exit 1

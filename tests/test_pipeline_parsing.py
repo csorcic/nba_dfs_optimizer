@@ -131,6 +131,18 @@ def test_odds_api_consensus_uses_median_and_home_spread():
     assert lines["WAS@OKC"]["total"] == 227.5
 
 
+def test_odds_api_skips_games_already_in_progress():
+    from datetime import datetime, timezone
+    line = [{"key": "spreads", "outcomes": [{"name": "Phoenix Suns", "point": 28.5}]},
+            {"key": "totals", "outcomes": [{"name": "Over", "point": 213.0}]}]
+    events = [{"home_team": "Phoenix Suns", "away_team": "San Antonio Spurs",
+               "commence_time": "2026-11-10T02:00:00Z", "bookmakers": [{"markets": line}]}]
+    before = datetime(2026, 11, 10, 1, 0, tzinfo=timezone.utc)
+    during = datetime(2026, 11, 10, 2, 44, tzinfo=timezone.utc)
+    assert "SAS@PHX" in fetch_odds.consensus_from_odds_api(events, now=before)
+    assert fetch_odds.consensus_from_odds_api(events, now=during) == {}  # live line ignored
+
+
 def test_implied_totals():
     # total 230, home favored by 10 -> home 120, away 110
     assert fetch_odds.implied_totals({"total": 230, "home_spread": -10}) == (120, 110)

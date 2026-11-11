@@ -51,6 +51,30 @@ If you skip this, the app still works and takes lines from ESPN instead.
 2. Tap **⋮** (top right) → **Add to Home screen** (or **Install app**) → **Install**.
 3. Open it from the home screen. It works offline with the last slate it loaded.
 
+## 7. Upload DK contest results (optional)
+
+This adds the real winning score, the cash line, real ownership and your own finish to the
+**Review** tab. Do it any time after a slate's games are over.
+
+**Get the file from DraftKings** (phone or computer):
+1. On draftkings.com, open **My Contests → Completed**, then open the contest.
+2. Tap **Export Lineups to CSV** near the standings (DK sometimes renames this button; look for "export" or a download icon).
+   DK gives you a `.zip` file, e.g. `contest-standings-197619862.zip`. You don't need to unzip it.
+
+**Upload it to GitHub:**
+1. Open <https://github.com/csorcic/nba_dfs_optimizer/tree/main/data/contests>.
+2. Click **Add file → Upload files**.
+3. Drag the `.zip` (or `.csv`) onto the page. You can add several at once.
+4. At the bottom, leave **Commit directly to the main branch** selected and click **Commit changes**.
+
+That's it. Within a few minutes the **Contest standings** action runs on its own. It works out
+which slate the file belongs to, adds the results to that day's review, and moves the file into
+`data/contests/processed/`. Open the **Review** tab on your phone to see it.
+
+If a file can't be used (not a standings file, or no matching slate yet), it's moved to
+`data/contests/unmatched/` with a note saying why. Nothing else is affected. If you uploaded it
+before the slate's review existed, the next pipeline run picks it up automatically.
+
 ## If something looks wrong
 
 - **"Today's slate hasn't been published yet"**: GitHub sometimes starts scheduled runs late. Open
