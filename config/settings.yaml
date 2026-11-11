@@ -82,3 +82,16 @@ review:  # Slate review: after each slate, the best lineup in hindsight and how 
   contest_cash_line_pct: 50  # Approximate cash line: the score that beat this % of the field (50 = double-up style; GPPs pay about the top 20%)
   contest_max_winning_lineups: 5  # Most tied first-place lineups to keep per contest
   contest_min_readable_lineups_pct: 95  # Real ownership is counted from the lineups when at least this % of them can be read; otherwise DK's %Drafted column is used
+  min_slates_for_lessons: 20  # Below this many slates, the lessons report is labeled "too early to act on"
+  lessons_use_rebuilt_slates: false  # Use slates whose projections were rebuilt after the fact? (false = pre-lock only, no hindsight leaks in)
+  lessons_ceiling_target_pct: 10  # Share of players who should beat their ceiling if our boom/bust range is right
+  lessons_inside_target_pct: 80  # Share of players who should land between floor and ceiling
+  lessons_ceiling_tolerance_pct: 3  # Suggest a new sd_scale only when the over-ceiling share is off target by more than this
+  lessons_bump_bands: [1, 4]  # Minutes-bump groups for smash rates (under 1 min, 1-4 min, 4+ min)
+  lessons_implied_bands: [110, 116, 122]  # Team implied total groups for smash rates
+  lessons_min_bucket_players: 30  # Groups with fewer players than this are marked "small sample"
+  lessons_stack_share_pct: 60  # Suggest a game stack if at least this % of winning lineups had 3+ players from one game
+  lessons_holdout_folds: 5  # Slates are split into this many groups; each is left out once to test a change fairly
+  lessons_refit_penalty: 0.02  # How strongly an ownership refit is pulled back toward today's weights (bigger = smaller changes)
+  lessons_refit_iterations: 300  # Search steps when refitting the ownership weights
+  lessons_min_mae_gain: 0.25  # Recommend new ownership weights only if they cut the held-out miss by more than this many points

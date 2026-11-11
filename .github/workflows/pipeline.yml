@@ -49,6 +49,8 @@ jobs:
       - name: Import DK contest standings (never fails the run)
         continue-on-error: true
         run: python -m pipeline.contests
+      - name: Lessons across all slates (recommendations only)
+        run: python scripts/lessons.py
       - name: Save data back to the repo
         if: always()  # keep downloaded box scores even if a later step failed
         run: |

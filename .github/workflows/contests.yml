@@ -40,6 +40,8 @@ jobs:
       - name: Import contest standings
         continue-on-error: true
         run: python -m pipeline.contests
+      - name: Lessons across all slates (recommendations only)
+        run: python scripts/lessons.py
       - name: Save to the repo
         if: always()
         run: |

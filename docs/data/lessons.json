@@ -1,0 +1,37 @@
+{
+ "generatedAt": "2026-11-11T02:38:13+00:00",
+ "slates": 0,
+ "minSlates": 20,
+ "tooEarly": true,
+ "dates": [],
+ "skippedRebuilt": [
+  "2026-11-07",
+  "2026-11-09"
+ ],
+ "highlights": [
+  "2 slate(s) skipped because their projections were rebuilt after the fact (2026-11-07, 2026-11-09); lessons use pre-lock projections only."
+ ],
+ "recommendations": [],
+ "calibration": {
+  "players": 0
+ },
+ "smash": {
+  "players": 0
+ },
+ "composition": {
+  "optimal": null,
+  "winning": null,
+  "defaults": {
+   "stack_min_players": 0,
+   "stack_top_games": 3,
+   "stack_bring_back": false,
+   "gpp_max_exposure_pct": 50,
+   "gpp_ownership_penalty": 0.1,
+   "gpp_ceiling_weight": 0.3
+  }
+ },
+ "ownership": {
+  "slates": 0
+ },
+ "tables": []
+}
