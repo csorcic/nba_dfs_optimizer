@@ -6,24 +6,24 @@
   {
    "game": "DET@WAS",
    "lock_time": "2026-11-12T19:00:00-05:00",
-   "total": 220.5,
-   "home_spread": 10.5,
+   "total": 221.5,
+   "home_spread": 10.0,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-13T00:10:00Z",
-   "home_implied": 105.0,
-   "away_implied": 115.5
+   "home_implied": 105.75,
+   "away_implied": 115.75
   },
   {
    "game": "TOR@PHI",
    "lock_time": "2026-11-12T19:00:00-05:00",
    "total": 224.0,
-   "home_spread": -8.5,
+   "home_spread": -7.5,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-13T00:10:00Z",
-   "home_implied": 116.25,
-   "away_implied": 107.75
+   "home_implied": 115.75,
+   "away_implied": 108.25
   },
   {
    "game": "DAL@MIN",
