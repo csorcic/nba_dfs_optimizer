@@ -1,0 +1,1120 @@
+{
+ "schema": 1,
+ "generatedAt": "2026-11-13T20:54:43+00:00",
+ "gameDate": "2026-11-12",
+ "fileDate": "2026-11-12",
+ "draftGroupId": "156641",
+ "salaryFile": "DKSalaries_NBA_2026-11-12_156641.csv",
+ "projections": {
+  "source": "prelock",
+  "snapshotAt": "2026-11-12T23:49:03+00:00",
+  "note": "Pre-lock projections from the last pipeline run before the first game locked."
+ },
+ "games": [
+  {
+   "game": "DET@WAS",
+   "lock": "2026-11-12T19:00:00-05:00",
+   "total": 223.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "TOR@PHI",
+   "lock": "2026-11-12T19:00:00-05:00",
+   "total": 222.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "DAL@MIN",
+   "lock": "2026-11-12T20:00:00-05:00",
+   "total": 226.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "CHA@PHX",
+   "lock": "2026-11-12T21:00:00-05:00",
+   "total": 214.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  }
+ ],
+ "accuracy": {
+  "players": 90,
+  "mae": 7.88,
+  "bias": -2.42,
+  "overCeilingPct": 17.8,
+  "insideRangePct": 80.0,
+  "lateScratches": 24,
+  "playedButProjectedOut": 0
+ },
+ "lateScratches": [
+  {
+   "id": "44887728",
+   "name": "LeBron James",
+   "team": "PHI",
+   "salary": 7800,
+   "proj": 38.44,
+   "status": "Q"
+  },
+  {
+   "id": "44887698",
+   "name": "Scottie Barnes",
+   "team": "TOR",
+   "salary": 8800,
+   "proj": 35.95,
+   "status": "Q"
+  },
+  {
+   "id": "44887943",
+   "name": "Trayce Jackson-Davis",
+   "team": "TOR",
+   "salary": 3800,
+   "proj": 5.94,
+   "status": "Q"
+  },
+  {
+   "id": "44887950",
+   "name": "Hannes Steinbach",
+   "team": "CHA",
+   "salary": 3800,
+   "proj": 5.03,
+   "status": ""
+  },
+  {
+   "id": "44887989",
+   "name": "Liam McNeeley",
+   "team": "CHA",
+   "salary": 3400,
+   "proj": 4.83,
+   "status": ""
+  },
+  {
+   "id": "44888035",
+   "name": "Jamaree Bouyea",
+   "team": "PHX",
+   "salary": 3000,
+   "proj": 4.36,
+   "status": ""
+  },
+  {
+   "id": "44888031",
+   "name": "Tolu Smith",
+   "team": "DET",
+   "salary": 3000,
+   "proj": 4.34,
+   "status": ""
+  },
+  {
+   "id": "44888066",
+   "name": "Pat Spencer",
+   "team": "PHX",
+   "salary": 3000,
+   "proj": 3.79,
+   "status": ""
+  },
+  {
+   "id": "44888049",
+   "name": "Khris Middleton",
+   "team": "WAS",
+   "salary": 3000,
+   "proj": 3.26,
+   "status": ""
+  },
+  {
+   "id": "44888086",
+   "name": "Taurean Prince",
+   "team": "DET",
+   "salary": 3000,
+   "proj": 2.84,
+   "status": ""
+  },
+  {
+   "id": "44888041",
+   "name": "Duop Reath",
+   "team": "PHX",
+   "salary": 3000,
+   "proj": 2.76,
+   "status": ""
+  },
+  {
+   "id": "44888016",
+   "name": "Rasheer Fleming",
+   "team": "PHX",
+   "salary": 3100,
+   "proj": 2.63,
+   "status": ""
+  },
+  {
+   "id": "44888089",
+   "name": "PJ Hall",
+   "team": "CHA",
+   "salary": 3000,
+   "proj": 2.42,
+   "status": ""
+  },
+  {
+   "id": "44888046",
+   "name": "Tre Mann",
+   "team": "WAS",
+   "salary": 3000,
+   "proj": 2.25,
+   "status": ""
+  },
+  {
+   "id": "44888056",
+   "name": "Ebuka Okorie",
+   "team": "DET",
+   "salary": 3000,
+   "proj": 2.17,
+   "status": ""
+  },
+  {
+   "id": "44888038",
+   "name": "Koa Peat",
+   "team": "PHX",
+   "salary": 3000,
+   "proj": 1.95,
+   "status": ""
+  },
+  {
+   "id": "44887964",
+   "name": "Rayan Rupert",
+   "team": "PHI",
+   "salary": 3700,
+   "proj": 1.84,
+   "status": ""
+  },
+  {
+   "id": "44888070",
+   "name": "Chaz Lanier",
+   "team": "DET",
+   "salary": 3000,
+   "proj": 1.73,
+   "status": ""
+  },
+  {
+   "id": "44888102",
+   "name": "EJ Harkless",
+   "team": "DET",
+   "salary": 3000,
+   "proj": 1.36,
+   "status": ""
+  },
+  {
+   "id": "44888077",
+   "name": "Anthony Gill",
+   "team": "WAS",
+   "salary": 3000,
+   "proj": 1.29,
+   "status": ""
+  },
+  {
+   "id": "44888073",
+   "name": "Isaac Jones",
+   "team": "DET",
+   "salary": 3000,
+   "proj": 1.29,
+   "status": ""
+  },
+  {
+   "id": "44888083",
+   "name": "Zyon Pullin",
+   "team": "MIN",
+   "salary": 3000,
+   "proj": 1.28,
+   "status": ""
+  },
+  {
+   "id": "44888100",
+   "name": "Rocco Zikarsky",
+   "team": "MIN",
+   "salary": 3000,
+   "proj": 0.71,
+   "status": ""
+  },
+  {
+   "id": "44888081",
+   "name": "Felix Okpara",
+   "team": "WAS",
+   "salary": 3000,
+   "proj": 0.33,
+   "status": ""
+  }
+ ],
+ "noResult": [
+  {
+   "id": "44887728",
+   "name": "LeBron James",
+   "team": "PHI",
+   "salary": 7800,
+   "status": "Q",
+   "reason": "not_in_box"
+  },
+  {
+   "id": "44887698",
+   "name": "Scottie Barnes",
+   "team": "TOR",
+   "salary": 8800,
+   "status": "Q",
+   "reason": "not_in_box"
+  },
+  {
+   "id": "44887943",
+   "name": "Trayce Jackson-Davis",
+   "team": "TOR",
+   "salary": 3800,
+   "status": "Q",
+   "reason": "not_in_box"
+  },
+  {
+   "id": "44887950",
+   "name": "Hannes Steinbach",
+   "team": "CHA",
+   "salary": 3800,
+   "status": "",
+   "reason": "not_in_box"
+  },
+  {
+   "id": "44888066",
+   "name": "Pat Spencer",
+   "team": "PHX",
+   "salary": 3000,
+   "status": "",
+   "reason": "not_in_box"
+  },
+  {
+   "id": "44888056",
+   "name": "Ebuka Okorie",
+   "team": "DET",
+   "salary": 3000,
+   "status": "",
+   "reason": "not_in_box"
+  },
+  {
+   "id": "44888070",
+   "name": "Chaz Lanier",
+   "team": "DET",
+   "salary": 3000,
+   "status": "",
+   "reason": "not_in_box"
+  },
+  {
+   "id": "44888083",
+   "name": "Zyon Pullin",
+   "team": "MIN",
+   "salary": 3000,
+   "status": "",
+   "reason": "not_in_box"
+  },
+  {
+   "id": "44888100",
+   "name": "Rocco Zikarsky",
+   "team": "MIN",
+   "salary": 3000,
+   "status": "",
+   "reason": "not_in_box"
+  },
+  {
+   "id": "44888081",
+   "name": "Felix Okpara",
+   "team": "WAS",
+   "salary": 3000,
+   "status": "",
+   "reason": "not_in_box"
+  },
+  {
+   "id": "44888123",
+   "name": "Ugonna Onyenso",
+   "team": "DET",
+   "salary": 3000,
+   "status": "Q",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44888128",
+   "name": "Nate Bittle",
+   "team": "TOR",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44888133",
+   "name": "Kylan Boswell",
+   "team": "CHA",
+   "salary": 3000,
+   "status": "",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44888139",
+   "name": "Tarik Biberovic",
+   "team": "DAL",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  }
+ ],
+ "optimal": {
+  "actual": 424.5,
+  "ourProj": 227.02,
+  "players": [
+   {
+    "slot": "PG",
+    "id": "44887689",
+    "name": "Cade Cunningham",
+    "team": "DET",
+    "game": "DET@WAS",
+    "salary": 9600,
+    "proj": 48.19,
+    "ceiling": 69.54,
+    "own": 75.0,
+    "actual": 81.75,
+    "valueRank": 6,
+    "projRank": 1,
+    "missType": "in our lineup"
+   },
+   {
+    "slot": "SG",
+    "id": "44887781",
+    "name": "VJ Edgecombe",
+    "team": "PHI",
+    "game": "TOR@PHI",
+    "salary": 6100,
+    "proj": 30.06,
+    "ceiling": 47.59,
+    "own": 20.6,
+    "actual": 45.5,
+    "valueRank": 11,
+    "projRank": 17,
+    "missType": "close call"
+   },
+   {
+    "slot": "SF",
+    "id": "44887770",
+    "name": "Ausar Thompson",
+    "team": "DET",
+    "game": "DET@WAS",
+    "salary": 6500,
+    "proj": 29.0,
+    "ceiling": 43.06,
+    "own": 14.9,
+    "actual": 62.25,
+    "valueRank": 23,
+    "projRank": 21,
+    "missType": "projection miss"
+   },
+   {
+    "slot": "PF",
+    "id": "44887778",
+    "name": "Jonathan Kuminga",
+    "team": "MIN",
+    "game": "DAL@MIN",
+    "salary": 6200,
+    "proj": 27.3,
+    "ceiling": 43.25,
+    "own": 12.4,
+    "actual": 34.5,
+    "valueRank": 29,
+    "projRank": 24,
+    "missType": "settings miss"
+   },
+   {
+    "slot": "C",
+    "id": "44887796",
+    "name": "Alexandre Sarr",
+    "team": "WAS",
+    "game": "DET@WAS",
+    "salary": 5900,
+    "proj": 25.8,
+    "ceiling": 44.21,
+    "own": 6.5,
+    "actual": 51.25,
+    "valueRank": 30,
+    "projRank": 28,
+    "missType": "projection miss"
+   },
+   {
+    "slot": "G",
+    "id": "44887734",
+    "name": "Trae Young",
+    "team": "WAS",
+    "game": "DET@WAS",
+    "salary": 7700,
+    "proj": 33.98,
+    "ceiling": 51.5,
+    "own": 12.5,
+    "actual": 62.0,
+    "valueRank": 28,
+    "projRank": 11,
+    "missType": "projection miss"
+   },
+   {
+    "slot": "F",
+    "id": "44887855",
+    "name": "Zaccharie Risacher",
+    "team": "DAL",
+    "game": "DAL@MIN",
+    "salary": 4500,
+    "proj": 16.16,
+    "ceiling": 29.22,
+    "own": 2.6,
+    "actual": 41.5,
+    "valueRank": 59,
+    "projRank": 54,
+    "missType": "projection miss"
+   },
+   {
+    "slot": "UTIL",
+    "id": "44887994",
+    "name": "Bones Hyland",
+    "team": "MIN",
+    "game": "DAL@MIN",
+    "salary": 3300,
+    "proj": 16.53,
+    "ceiling": 31.66,
+    "own": 9.3,
+    "actual": 45.75,
+    "valueRank": 7,
+    "projRank": 52,
+    "missType": "projection miss"
+   }
+  ],
+  "composition": {
+   "salary": 49800,
+   "stars": 1,
+   "values": 1,
+   "maxFromOneGame": 4,
+   "maxGame": "DET@WAS",
+   "maxGameIsHighestTotal": false,
+   "teams": [
+    "DAL",
+    "DET",
+    "MIN",
+    "PHI",
+    "WAS"
+   ],
+   "teamCount": 5,
+   "games": 3,
+   "ownSum": 153.8,
+   "proj": 227.0,
+   "actual": 424.5
+  }
+ },
+ "ours": {
+  "actual": 280.5,
+  "proj": 255.0,
+  "players": [
+   {
+    "slot": "PG",
+    "id": "44887689",
+    "name": "Cade Cunningham",
+    "team": "DET",
+    "game": "DET@WAS",
+    "salary": 9600,
+    "proj": 48.19,
+    "ceiling": 69.54,
+    "own": 75.0,
+    "actual": 81.75,
+    "valueRank": 6,
+    "projRank": 1
+   },
+   {
+    "slot": "SG",
+    "id": "44887789",
+    "name": "Grayson Allen",
+    "team": "CHA",
+    "game": "CHA@PHX",
+    "salary": 5900,
+    "proj": 28.31,
+    "ceiling": 44.39,
+    "own": 9.3,
+    "actual": 30.0,
+    "valueRank": 15,
+    "projRank": 23
+   },
+   {
+    "slot": "SF",
+    "id": "44887711",
+    "name": "Jaylen Brown",
+    "team": "PHI",
+    "game": "TOR@PHI",
+    "salary": 8100,
+    "proj": 42.17,
+    "ceiling": 59.81,
+    "own": 55.7,
+    "actual": 32.0,
+    "valueRank": 3,
+    "projRank": 3
+   },
+   {
+    "slot": "PF",
+    "id": "44888130",
+    "name": "Grant Williams",
+    "team": "CHA",
+    "game": "CHA@PHX",
+    "salary": 3000,
+    "proj": 17.08,
+    "ceiling": 28.2,
+    "own": 8.2,
+    "actual": 18.0,
+    "valueRank": 1,
+    "projRank": 49
+   },
+   {
+    "slot": "C",
+    "id": "44887794",
+    "name": "Rudy Gobert",
+    "team": "MIN",
+    "game": "DAL@MIN",
+    "salary": 5800,
+    "proj": 29.32,
+    "ceiling": 44.83,
+    "own": 20.9,
+    "actual": 23.5,
+    "valueRank": 5,
+    "projRank": 20
+   },
+   {
+    "slot": "G",
+    "id": "44887703",
+    "name": "Tyrese Maxey",
+    "team": "PHI",
+    "game": "TOR@PHI",
+    "salary": 8600,
+    "proj": 42.81,
+    "ceiling": 61.03,
+    "own": 56.2,
+    "actual": 47.0,
+    "valueRank": 8,
+    "projRank": 2
+   },
+   {
+    "slot": "F",
+    "id": "44887918",
+    "name": "Kevin Huerter",
+    "team": "DET",
+    "game": "DET@WAS",
+    "salary": 3900,
+    "proj": 21.48,
+    "ceiling": 36.92,
+    "own": 18.0,
+    "actual": 14.25,
+    "valueRank": 2,
+    "projRank": 36
+   },
+   {
+    "slot": "UTIL",
+    "id": "44887845",
+    "name": "Daniss Jenkins",
+    "team": "DET",
+    "game": "DET@WAS",
+    "salary": 5000,
+    "proj": 25.64,
+    "ceiling": 45.81,
+    "own": 17.8,
+    "actual": 34.0,
+    "valueRank": 4,
+    "projRank": 29
+   }
+  ],
+  "composition": {
+   "salary": 49900,
+   "stars": 1,
+   "values": 2,
+   "maxFromOneGame": 3,
+   "maxGame": "DET@WAS",
+   "maxGameIsHighestTotal": false,
+   "teams": [
+    "CHA",
+    "DET",
+    "MIN",
+    "PHI"
+   ],
+   "teamCount": 4,
+   "games": 4,
+   "ownSum": 261.1,
+   "proj": 255.0,
+   "actual": 280.5
+  }
+ },
+ "standing": {
+  "ourActual": 280.5,
+  "optimalActual": 424.5,
+  "pctOfOptimal": 66.1,
+  "optimalOurProj": 227.02,
+  "ourProj": 255.0,
+  "projGap": 27.98,
+  "overlap": 1
+ },
+ "topN": {
+  "count": 50,
+  "minUnique": 1,
+  "scores": [
+   424.5,
+   423.5,
+   422.75,
+   422.75,
+   421.5,
+   421.5,
+   420.5,
+   419.75,
+   419.25,
+   418.75,
+   417.5,
+   416.25,
+   416,
+   415.25,
+   415,
+   414.5,
+   414.25,
+   414.25,
+   413.75,
+   413.75,
+   413.5,
+   413.25,
+   413.25,
+   413,
+   413,
+   412.5,
+   412.5,
+   412.25,
+   412.25,
+   412,
+   411.75,
+   411.5,
+   411.5,
+   411.5,
+   411.5,
+   411.5,
+   411.5,
+   411,
+   411,
+   411,
+   411,
+   411,
+   411,
+   410.75,
+   410.75,
+   410.5,
+   410.5,
+   410.25,
+   410.25,
+   410.25
+  ],
+  "composition": {
+   "lineups": 50,
+   "avgSalary": 49364.0,
+   "avgStars": 1.3,
+   "avgValues": 1.74,
+   "avgMaxFromOneGame": 4.32,
+   "avgTeamCount": 5.2,
+   "avgOwnSum": 141.9,
+   "avgActual": 414.25,
+   "maxFromOneGameCounts": {
+    "3": 3,
+    "4": 30,
+    "5": 15,
+    "6": 2
+   },
+   "starsCounts": {
+    "1": 35,
+    "2": 15
+   },
+   "pctMaxGameIsHighestTotal": 0.0,
+   "teamUsage": {
+    "DET": 50,
+    "MIN": 50,
+    "WAS": 50,
+    "DAL": 40,
+    "PHI": 30,
+    "TOR": 25,
+    "CHA": 10,
+    "PHX": 5
+   }
+  },
+  "playerCounts": [
+   {
+    "id": "44887770",
+    "name": "Ausar Thompson",
+    "count": 50
+   },
+   {
+    "id": "44887796",
+    "name": "Alexandre Sarr",
+    "count": 50
+   },
+   {
+    "id": "44887994",
+    "name": "Bones Hyland",
+    "count": 50
+   },
+   {
+    "id": "44887689",
+    "name": "Cade Cunningham",
+    "count": 49
+   },
+   {
+    "id": "44887734",
+    "name": "Trae Young",
+    "count": 40
+   },
+   {
+    "id": "44887855",
+    "name": "Zaccharie Risacher",
+    "count": 39
+   },
+   {
+    "id": "44887695",
+    "name": "Anthony Davis",
+    "count": 16
+   },
+   {
+    "id": "44887716",
+    "name": "RJ Barrett",
+    "count": 15
+   },
+   {
+    "id": "44887781",
+    "name": "VJ Edgecombe",
+    "count": 14
+   },
+   {
+    "id": "44887998",
+    "name": "Jabari Walker",
+    "count": 13
+   },
+   {
+    "id": "44887759",
+    "name": "Immanuel Quickley",
+    "count": 8
+   },
+   {
+    "id": "44887845",
+    "name": "Daniss Jenkins",
+    "count": 7
+   },
+   {
+    "id": "44887808",
+    "name": "Collin Murray-Boyles",
+    "count": 6
+   },
+   {
+    "id": "44888130",
+    "name": "Grant Williams",
+    "count": 6
+   },
+   {
+    "id": "44887888",
+    "name": "Kentavious Caldwell-Pope",
+    "count": 6
+   }
+  ]
+ },
+ "smash": [
+  {
+   "id": "44887689",
+   "name": "Cade Cunningham",
+   "team": "DET",
+   "pos": "PG",
+   "salary": 9600,
+   "actual": 81.75,
+   "multiple": 8.52,
+   "minutesBump": 0.2,
+   "teamImplied": 116.8,
+   "spread": -10.5,
+   "proj": 48.19,
+   "ceiling": 69.54,
+   "own": 75.0,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887770",
+   "name": "Ausar Thompson",
+   "team": "DET",
+   "pos": "SF",
+   "salary": 6500,
+   "actual": 62.25,
+   "multiple": 9.58,
+   "minutesBump": 0.2,
+   "teamImplied": 116.8,
+   "spread": -10.5,
+   "proj": 29.0,
+   "ceiling": 43.06,
+   "own": 14.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887734",
+   "name": "Trae Young",
+   "team": "WAS",
+   "pos": "PG",
+   "salary": 7700,
+   "actual": 62.0,
+   "multiple": 8.05,
+   "minutesBump": 0.0,
+   "teamImplied": 106.2,
+   "spread": 10.5,
+   "proj": 33.98,
+   "ceiling": 51.5,
+   "own": 12.5,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887716",
+   "name": "RJ Barrett",
+   "team": "TOR",
+   "pos": "SG/SF",
+   "salary": 8300,
+   "actual": 58.0,
+   "multiple": 6.99,
+   "minutesBump": 0.0,
+   "teamImplied": 108.2,
+   "spread": 7.5,
+   "proj": 29.81,
+   "ceiling": 41.73,
+   "own": 5.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887695",
+   "name": "Anthony Davis",
+   "team": "WAS",
+   "pos": "PF",
+   "salary": 9000,
+   "actual": 57.25,
+   "multiple": 6.36,
+   "minutesBump": 0.0,
+   "teamImplied": 106.2,
+   "spread": 10.5,
+   "proj": 40.4,
+   "ceiling": 62.61,
+   "own": 22.6,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887796",
+   "name": "Alexandre Sarr",
+   "team": "WAS",
+   "pos": "C",
+   "salary": 5900,
+   "actual": 51.25,
+   "multiple": 8.69,
+   "minutesBump": 0.0,
+   "teamImplied": 106.2,
+   "spread": 10.5,
+   "proj": 25.8,
+   "ceiling": 44.21,
+   "own": 6.5,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887721",
+   "name": "Devin Booker",
+   "team": "PHX",
+   "pos": "PG/SG",
+   "salary": 8200,
+   "actual": 50.75,
+   "multiple": 6.19,
+   "minutesBump": 0.0,
+   "teamImplied": 110.2,
+   "spread": -6.5,
+   "proj": 36.24,
+   "ceiling": 53.84,
+   "own": 17.7,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887994",
+   "name": "Bones Hyland",
+   "team": "MIN",
+   "pos": "PG/SG",
+   "salary": 3300,
+   "actual": 45.75,
+   "multiple": 13.86,
+   "minutesBump": 0.1,
+   "teamImplied": 116.0,
+   "spread": -6.0,
+   "proj": 16.53,
+   "ceiling": 31.66,
+   "own": 9.3,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887759",
+   "name": "Immanuel Quickley",
+   "team": "TOR",
+   "pos": "PG",
+   "salary": 6800,
+   "actual": 45.5,
+   "multiple": 6.69,
+   "minutesBump": 0.0,
+   "teamImplied": 108.2,
+   "spread": 7.5,
+   "proj": 27.17,
+   "ceiling": 43.06,
+   "own": 6.1,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887781",
+   "name": "VJ Edgecombe",
+   "team": "PHI",
+   "pos": "PG/SG",
+   "salary": 6100,
+   "actual": 45.5,
+   "multiple": 7.46,
+   "minutesBump": 0.0,
+   "teamImplied": 115.8,
+   "spread": -7.5,
+   "proj": 30.06,
+   "ceiling": 47.59,
+   "own": 20.6,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887855",
+   "name": "Zaccharie Risacher",
+   "team": "DAL",
+   "pos": "SF",
+   "salary": 4500,
+   "actual": 41.5,
+   "multiple": 9.22,
+   "minutesBump": 0.0,
+   "teamImplied": 110.0,
+   "spread": 6.0,
+   "proj": 16.16,
+   "ceiling": 29.22,
+   "own": 2.6,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887845",
+   "name": "Daniss Jenkins",
+   "team": "DET",
+   "pos": "PG/SG",
+   "salary": 5000,
+   "actual": 34.0,
+   "multiple": 6.8,
+   "minutesBump": 0.2,
+   "teamImplied": 116.8,
+   "spread": -10.5,
+   "proj": 25.64,
+   "ceiling": 45.81,
+   "own": 17.8,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887853",
+   "name": "Joan Beringer",
+   "team": "MIN",
+   "pos": "C",
+   "salary": 4700,
+   "actual": 29.75,
+   "multiple": 6.33,
+   "minutesBump": 0.1,
+   "teamImplied": 116.0,
+   "spread": -6.0,
+   "proj": 15.13,
+   "ceiling": 30.53,
+   "own": 2.6,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887888",
+   "name": "Kentavious Caldwell-Pope",
+   "team": "PHI",
+   "pos": "SG/SF",
+   "salary": 4100,
+   "actual": 29.0,
+   "multiple": 7.07,
+   "minutesBump": 0.0,
+   "teamImplied": 115.8,
+   "spread": -7.5,
+   "proj": 14.26,
+   "ceiling": 24.58,
+   "own": 2.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887903",
+   "name": "Anfernee Simons",
+   "team": "PHI",
+   "pos": "PG/SG",
+   "salary": 4000,
+   "actual": 26.25,
+   "multiple": 6.56,
+   "minutesBump": 0.0,
+   "teamImplied": 115.8,
+   "spread": -7.5,
+   "proj": 18.23,
+   "ceiling": 33.56,
+   "own": 7.7,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887981",
+   "name": "Caleb Martin",
+   "team": "DAL",
+   "pos": "SG/SF",
+   "salary": 3500,
+   "actual": 21.0,
+   "multiple": 6.0,
+   "minutesBump": 0.0,
+   "teamImplied": 110.0,
+   "spread": 6.0,
+   "proj": 6.35,
+   "ceiling": 18.22,
+   "own": 0.5,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44887998",
+   "name": "Jabari Walker",
+   "team": "PHI",
+   "pos": "SF/PF",
+   "salary": 3300,
+   "actual": 21.0,
+   "multiple": 6.36,
+   "minutesBump": 0.0,
+   "teamImplied": 115.8,
+   "spread": -7.5,
+   "proj": 5.93,
+   "ceiling": 18.59,
+   "own": 0.6,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44888130",
+   "name": "Grant Williams",
+   "team": "CHA",
+   "pos": "PF",
+   "salary": 3000,
+   "actual": 18.0,
+   "multiple": 6.0,
+   "minutesBump": 0.8,
+   "teamImplied": 103.8,
+   "spread": 6.5,
+   "proj": 17.08,
+   "ceiling": 28.2,
+   "own": 8.2,
+   "projectedToPlay": true
+  }
+ ],
+ "settings": {
+  "hindsight_top_n": 50,
+  "hindsight_min_unique": 1,
+  "smash_multiplier": 6,
+  "star_salary": 9000,
+  "value_salary": 4500,
+  "projection_miss_margin": 5,
+  "settings_miss_value_rank": 20
+ },
+ "solver": "highs"
+}
