@@ -171,8 +171,12 @@ def main(argv=None) -> int:
         return 1
     latest, players, skipped = pick_salary_file(files)
     for name in skipped:
-        warn(f"Salary file {name} has no players (DraftKings returned an empty list). Skipped it.")
-    if skipped:
+        print(f"  Salary file {name} has no players (DraftKings returned an empty list). Skipped it.")
+    # No new slate only when no file from the newest day has players. (An empty file can sit
+    # next to a good one for the same day, e.g. after dk_salary is re-run.)
+    newest_day = fetch_salaries.slate_info(files[-1])[0]
+    no_new_slate = latest is None or fetch_salaries.slate_info(latest)[0] < newest_day
+    if no_new_slate:
         # Re-projecting an older slate would overwrite its saved data with post-game numbers,
         # so only refresh box scores (the slate review needs them) and leave the app as it is.
         warn("Today's DraftKings salary file is empty, so there's no new slate to project. "
@@ -197,7 +201,7 @@ def main(argv=None) -> int:
         logs[season] = read_gamelogs(season)
         print(f"  {out.relative_to(REPO_ROOT)}: {len(logs[season])} player-game rows")
 
-    if skipped:
+    if no_new_slate:
         print("Stopping here: no new slate (see the warning above).")
         return 0
 
