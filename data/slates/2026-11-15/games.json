@@ -6,35 +6,35 @@
   {
    "game": "DAL@BOS",
    "lock_time": "2026-11-15T18:00:00-05:00",
-   "total": 217.5,
-   "home_spread": -14.5,
+   "total": 218.0,
+   "home_spread": -15.0,
    "source": "odds_api",
    "books": 9,
-   "commence_time": "2026-11-15T23:10:00Z",
-   "home_implied": 116.0,
+   "commence_time": "2026-11-15T23:11:00Z",
+   "home_implied": 116.5,
    "away_implied": 101.5
   },
   {
    "game": "NYK@TOR",
    "lock_time": "2026-11-15T18:00:00-05:00",
-   "total": 218.0,
+   "total": 218.5,
    "home_spread": 4.0,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-15T23:10:00Z",
-   "home_implied": 107.0,
-   "away_implied": 111.0
+   "home_implied": 107.25,
+   "away_implied": 111.25
   },
   {
    "game": "HOU@WAS",
    "lock_time": "2026-11-15T19:00:00-05:00",
    "total": 223.5,
-   "home_spread": 8.0,
+   "home_spread": 8.5,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-16T00:10:00Z",
-   "home_implied": 107.75,
-   "away_implied": 115.75
+   "home_implied": 107.5,
+   "away_implied": 116.0
   },
   {
    "game": "ATL@MIL",
