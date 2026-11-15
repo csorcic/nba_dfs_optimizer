@@ -174,7 +174,8 @@ def rebuild_projections(slate_dir: Path, gdate: str, settings: dict) -> pd.DataF
 
 # ---------- actual results ----------
 
-def join_actuals(proj: pd.DataFrame, logs_day: pd.DataFrame, missing_games: list[str] = ()) -> pd.DataFrame:
+def join_actuals(proj: pd.DataFrame, logs_day: pd.DataFrame, missing_games: list[str] = (),
+                 late_scratch_min_proj: float = 0.0) -> pd.DataFrame:
     """Add actual DK points and how each player's night went.
 
     result:  played | dnp (in the box score, 0 minutes) | not_in_box (inactive) |
@@ -207,7 +208,10 @@ def join_actuals(proj: pd.DataFrame, logs_day: pd.DataFrame, missing_games: list
     df["out"] = df["out"].astype(str).str.lower().isin(["true", "1", "1.0"])
     df["proj"] = pd.to_numeric(df["proj"], errors="coerce").fillna(0.0)
     df["projected_to_play"] = ~df["out"] & (df["proj"] > 0)
-    df["late_scratch"] = df["projected_to_play"] & df["result"].isin(["dnp", "not_in_box"])
+    # A late scratch is a real rotation player who sat. Deep-bench players projected for a
+    # few points who don't get in are normal; they just score 0.
+    df["late_scratch"] = (df["projected_to_play"] & (df["proj"] >= late_scratch_min_proj)
+                          & df["result"].isin(["dnp", "not_in_box"]))
     return df
 
 
@@ -228,8 +232,9 @@ def rematch_unmatched(proj: pd.DataFrame, logs_day: pd.DataFrame, overrides: dic
 
 
 def accuracy(df: pd.DataFrame) -> dict:
-    """Projection accuracy on players we projected to play who did play (late scratches excluded)."""
-    d = df[df["projected_to_play"] & (df["result"] == "played")]
+    """Projection accuracy on players we projected to play (late scratches excluded; a bench
+    player who didn't get in counts as 0 points)."""
+    d = df[df["projected_to_play"] & ~df["late_scratch"] & df["result"].isin(["played", "dnp", "not_in_box"])]
     if d.empty:
         return {"players": 0, "mae": None, "bias": None, "overCeilingPct": None, "insideRangePct": None}
     err = d["proj"] - d["actual"]
@@ -364,7 +369,8 @@ def build_review(slate_dir: Path, settings: dict, logs: pd.DataFrame, today: dat
         return None, None, f"{gdate}: waiting for box scores ({len(done)}/{len(done) + len(missing)} games final)"
 
     proj, proj_info = projection_frame(slate_dir, gdate, settings)
-    df = join_actuals(rematch_unmatched(proj, logs_day, load_name_overrides()), logs_day, missing)
+    df = join_actuals(rematch_unmatched(proj, logs_day, load_name_overrides()), logs_day, missing,
+                      cfg["late_scratch_min_proj"])
     df["value"] = df["proj"] / (df["salary"] / 1000)
     ranked = df[df["projected_to_play"]]
     df["value_rank"] = ranked["value"].rank(ascending=False, method="min")
@@ -430,8 +436,7 @@ def build_review(slate_dir: Path, settings: dict, logs: pd.DataFrame, today: dat
     no_result = [{"id": str(r["dk_id"]), "name": r["name"], "team": r["team"], "salary": int(r["salary"]),
                   "status": _str(r.get("status")), "reason": r["result"]}
                  for _, r in df.iterrows()
-                 if r["result"] in ("unmatched", "postponed")
-                 or (r["result"] == "not_in_box" and r["projected_to_play"])]
+                 if r["result"] in ("unmatched", "postponed")]
     late = [{"id": str(r["dk_id"]), "name": r["name"], "team": r["team"], "salary": int(r["salary"]),
              "proj": _num(r["proj"]), "status": _str(r.get("status"))}
             for _, r in df[df["late_scratch"]].iterrows()]
@@ -603,7 +608,10 @@ def slates_by_game_date(slates_root: Path = SLATES) -> dict[str, Path]:
     picked: dict[str, Path] = {}
     dirs = sorted(p for p in slates_root.iterdir() if (p / "games.json").exists() and (p / "players.csv").exists())
     for d in dirs:  # oldest first, so a later folder replaces an earlier one
-        gdate = game_date_of(json.loads((d / "games.json").read_text()))
+        games = json.loads((d / "games.json").read_text())
+        if not games.get("games"):
+            continue  # an empty salary file (DraftKings returned no players): nothing to review
+        gdate = game_date_of(games)
         cur = picked.get(gdate)
         if cur is None or (d / PRELOCK_FILE).exists() or not (cur / PRELOCK_FILE).exists():
             picked[gdate] = d
@@ -624,7 +632,15 @@ def main(argv=None) -> int:
             continue
         if (REVIEW_DIR / f"{gdate}.json").exists() and not args.force:
             continue
-        review, players, msg = build_review(slate_dir, settings, logs)
+        try:
+            review, players, msg = build_review(slate_dir, settings, logs)
+        except Exception as e:  # one bad slate shouldn't stop the others (or the rest of the pipeline)
+            msg = f"Couldn't review the {gdate} slate ({slate_dir.name}): {e}"
+            print(f"WARNING: {msg}")
+            if os.environ.get("GITHUB_STEP_SUMMARY"):
+                with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
+                    f.write(f"> **Warning:** {msg}\n\n")
+            continue
         print(msg)
         if review is None:
             continue

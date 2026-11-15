@@ -23,6 +23,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - name: Start from the latest main (a re-run would otherwise use an older copy)
+        run: git fetch -q origin main && git reset -q --hard origin/main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -40,6 +42,8 @@ jobs:
       - name: Import contest standings
         continue-on-error: true
         run: python -m pipeline.contests
+      - name: Lessons across all slates (recommendations only)
+        run: python scripts/lessons.py
       - name: Save to the repo
         if: always()
         run: |
@@ -48,5 +52,10 @@ jobs:
           git add -A data docs/data
           if git diff --cached --quiet; then echo "No changes."; exit 0; fi
           git commit -q -m "Contest standings $(date -u +%Y-%m-%dT%H:%MZ)"
-          for i in 1 2 3; do git pull -q --rebase && git push -q && exit 0; sleep 5; done
+          # If another run saved the same data files meanwhile, this run's newer files win.
+          for i in 1 2 3; do
+            if git pull -q --rebase -X theirs && git push -q; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+          done
           exit 1

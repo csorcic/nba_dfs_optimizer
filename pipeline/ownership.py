@@ -27,25 +27,41 @@ def _z(s: pd.Series) -> pd.Series:
     return (s - s.mean()) / sd if sd and not np.isnan(sd) else s * 0
 
 
-def estimate_ownership(df: pd.DataFrame, cfg: dict, total_pct: float = 800.0) -> pd.Series:
-    """df columns: proj, salary, minutes_bump, team_implied, out. Returns % owned (0-100)."""
-    own = pd.Series(0.0, index=df.index)
+WEIGHTS = ["intercept", "value_weight", "projection_weight", "rank_weight", "bump_weight",
+           "team_total_weight", "salary_weight"]
+
+
+def ownership_features(df: pd.DataFrame) -> tuple[pd.Index, np.ndarray]:
+    """(index of active players, feature matrix with one column per weight in WEIGHTS).
+
+    Features depend only on the slate, not on the weights, so a refit can build them once.
+    """
     active = df[~df["out"].astype(bool) & (df["proj"] > 0)]
     if active.empty:
-        return own
+        return active.index, np.zeros((0, len(WEIGHTS)))
     value = active["proj"] / (active["salary"] / 1000)
     rank = active["proj"].rank(ascending=False, method="min")
     team_total = (active["team_implied"] if "team_implied" in active else pd.Series(np.nan, index=active.index)).astype(float)
     team_total = team_total.fillna(team_total.mean() if team_total.notna().any() else 0)
-    score = (cfg["intercept"]
-             + cfg["value_weight"] * _z(value)
-             + cfg["projection_weight"] * _z(active["proj"])
-             + cfg["rank_weight"] * np.log(rank)
-             + cfg["bump_weight"] * active["minutes_bump"].fillna(0)
-             + cfg["team_total_weight"] * _z(team_total)
-             + cfg["salary_weight"] * _z(active["salary"]))
+    X = np.column_stack([
+        np.ones(len(active)), _z(value), _z(active["proj"]), np.log(rank),
+        active["minutes_bump"].fillna(0).astype(float), _z(team_total), _z(active["salary"]),
+    ])
+    return active.index, X
+
+
+def ownership_from_features(X: np.ndarray, cfg: dict, total_pct: float) -> np.ndarray:
+    score = X @ np.array([cfg[k] for k in WEIGHTS], dtype=float)
     raw = 1 / (1 + np.exp(-score))
-    own.loc[active.index] = _scale_with_cap(raw, total_pct, cfg["max_pct"])
+    return _scale_with_cap(pd.Series(raw), total_pct, cfg["max_pct"]).to_numpy()
+
+
+def estimate_ownership(df: pd.DataFrame, cfg: dict, total_pct: float = 800.0) -> pd.Series:
+    """df columns: proj, salary, minutes_bump, team_implied, out. Returns % owned (0-100)."""
+    own = pd.Series(0.0, index=df.index)
+    idx, X = ownership_features(df)
+    if len(idx):
+        own.loc[idx] = ownership_from_features(X, cfg, total_pct)
     return own.round(1)
 
 

@@ -163,9 +163,21 @@ export function lessonsHtml(L, f) {
       ${r.before !== undefined ? `<p class="small num">Before: ${esc(r.before)} → After: ${esc(r.after)}</p>` : ""}
     </div>`).join("");
   const notes = (L.highlights || []).map((h) => `<li>${esc(h)}</li>`).join("");
+  const tables = (L.tables || []).map((t) => `<details class="card">
+      <summary>${esc(t.title)}</summary>
+      <table class="rtable">
+        <tr class="muted small">${t.columns.map((c, i) => `<th${i ? ' class="r"' : ""}>${esc(c)}</th>`).join("")}</tr>
+        ${t.rows.map((r) => `<tr>${r.map((v, i) => `<td${i ? ' class="r num"' : ""}>${esc(v)}</td>`).join("")}</tr>`).join("")}
+      </table>
+      ${t.note ? `<p class="muted small">${esc(t.note)}</p>` : ""}
+    </details>`).join("");
+  const none = !L.slates ? `<p class="muted small">No slates with pre-lock projections reviewed yet. Lessons start with the first one.</p>` : "";
   return `<h2>Lessons across ${L.slates} slate${L.slates === 1 ? "" : "s"}</h2>
     ${early}
+    ${none}
     ${notes ? `<div class="card"><ul class="small">${notes}</ul></div>` : ""}
+    <h2>Recommended changes</h2>
     ${recs || `<p class="muted small">No recommended changes yet.</p>`}
+    ${tables}
     <p class="muted small">Recommendations only. Nothing changes until you approve it.</p>`;
 }

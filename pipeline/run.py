@@ -85,6 +85,30 @@ def build_player_table(players, matcher, played, lines, current, prior):
     return table, unmatched
 
 
+def warn(msg: str) -> None:
+    """Print a warning and add it to the GitHub run summary."""
+    print(f"  WARNING: {msg}")
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as f:
+            f.write(f"> **Warning:** {msg}\n\n")
+
+
+def pick_salary_file(files: list[Path]) -> tuple[Path | None, list[dict], list[str]]:
+    """Newest salary file that actually has players, its players, and the empty files skipped.
+
+    DraftKings sometimes hands dk_salary an empty contest (header row only);
+    projecting that would crash, so fall back to the newest real file.
+    """
+    skipped = []
+    for path in reversed(files):
+        players = fetch_salaries.load_salary_file(path)
+        if players:
+            return path, players, skipped
+        skipped.append(path.name)
+    return None, [], skipped
+
+
 PRELOCK_FILE = "projections_prelock.csv"
 
 
@@ -145,11 +169,19 @@ def main(argv=None) -> int:
     if not files:
         print("No salary files found. Nothing to do.")
         return 1
-    latest = files[-1]
-    slate_date, group_id = fetch_salaries.slate_info(latest)
-    players = fetch_salaries.load_salary_file(latest)
-    games = sorted({p["game"] for p in players})
-    print(f"  slate {slate_date} (draft group {group_id}): {len(players)} players, {len(games)} games")
+    latest, players, skipped = pick_salary_file(files)
+    for name in skipped:
+        warn(f"Salary file {name} has no players (DraftKings returned an empty list). Skipped it.")
+    if skipped:
+        # Re-projecting an older slate would overwrite its saved data with post-game numbers,
+        # so only refresh box scores (the slate review needs them) and leave the app as it is.
+        warn("Today's DraftKings salary file is empty, so there's no new slate to project. "
+             "Box scores are still updated for the slate reviews; the app keeps showing the last slate. "
+             "Check the dk_salary repo's latest run.")
+    else:
+        slate_date, group_id = fetch_salaries.slate_info(latest)
+        games = sorted({p["game"] for p in players})
+        print(f"  slate {slate_date} (draft group {group_id}): {len(players)} players, {len(games)} games")
 
     print("2) ESPN box scores")
     seasons = [current] + ([prior] if use_prior else [])
@@ -164,6 +196,10 @@ def main(argv=None) -> int:
         out = fetch_espn.build_gamelogs(season)
         logs[season] = read_gamelogs(season)
         print(f"  {out.relative_to(REPO_ROOT)}: {len(logs[season])} player-game rows")
+
+    if skipped:
+        print("Stopping here: no new slate (see the warning above).")
+        return 0
 
     print("3) Betting lines")
     # The salary file can be saved the day before the games, so use the games' own dates.

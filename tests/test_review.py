@@ -158,3 +158,25 @@ def test_real_nov7_review_schema_and_numbers(real_review, tmp_path):
 
 def test_validate_review_catches_problems():
     assert "root.optimal missing" in review.validate_review({"schema": 1})
+
+
+def test_bench_player_who_did_not_get_in_is_not_a_late_scratch():
+    p = _players()
+    p.loc[p["dk_id"] == "2", "proj"] = 3.0   # deep bench, 0 minutes
+    df = review.join_actuals(p, _box(), late_scratch_min_proj=10).set_index("dk_id")
+    assert not df.loc["2", "late_scratch"] and df.loc["2", "actual"] == 0
+    assert df.loc["3", "late_scratch"]       # projected 15, not in the box score: a real late scratch
+    acc = review.accuracy(df.reset_index())
+    assert acc["players"] == 2               # player 1 and the bench player (scored 0 vs 3 projected)
+    assert acc["lateScratches"] == 1
+
+
+def test_empty_slate_folders_are_skipped(tmp_path):
+    good, empty = tmp_path / "2026-11-13", tmp_path / "2026-11-14"
+    for d in (good, empty):
+        d.mkdir()
+        (d / "players.csv").write_text("dk_id\n")
+    (good / "games.json").write_text(json.dumps(
+        {"slate_date": "2026-11-13", "games": [{"game": "A@B", "lock_time": "2026-11-13T19:00:00-05:00"}]}))
+    (empty / "games.json").write_text(json.dumps({"slate_date": "2026-11-14", "games": []}))
+    assert list(review.slates_by_game_date(tmp_path)) == ["2026-11-13"]

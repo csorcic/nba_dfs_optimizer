@@ -63,3 +63,16 @@ test("real Nov 9 review shows the contest, my finish and real ownership", () => 
   assert.ok(html.includes("Real ownership vs our estimate"));
   assert.ok(html.includes(esc(d9.ownershipCheck.list[0].name)));
 });
+
+test("lessons tables and recommendations render", () => {
+  const L = {
+    slates: 3, minSlates: 20, tooEarly: true, highlights: ["Ceilings: 8% beat their ceiling"],
+    recommendations: [{ title: "Adjust the boom/bust range (sd_scale)", detail: "d", before: "sd_scale 1.15", after: "sd_scale 1.05" }],
+    tables: [{ title: "Smash rate by salary", columns: ["", "Players", "Smash", "vs avg"], rows: [["$8K+", 24, "41.7%", "2.55x *"]], note: "* = small sample." }],
+  };
+  const html = lessonsHtml(L, f);
+  assert.ok(html.includes("Too early to act on"));
+  assert.ok(html.includes("sd_scale 1.15") && html.includes("sd_scale 1.05"));
+  assert.ok(html.includes("Smash rate by salary") && html.includes("2.55x *"));
+  assert.ok(lessonsHtml({ slates: 0, minSlates: 20, tooEarly: true }, f).includes("No slates with pre-lock projections"));
+});

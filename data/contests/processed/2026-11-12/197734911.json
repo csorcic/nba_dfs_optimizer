@@ -1,0 +1,658 @@
+{
+ "contestId": "197734911",
+ "name": "Contest 197734911",
+ "file": "contest-standings-197734911.zip",
+ "gameDate": "2026-11-12",
+ "importedAt": "2026-11-15T21:38:19+00:00",
+ "fieldSize": 118,
+ "winningScore": 323.75,
+ "winningLineups": [
+  {
+   "entryName": "fatcolumbus (2/3)",
+   "points": 323.75,
+   "players": [
+    {
+     "slot": "PG",
+     "name": "Cade Cunningham",
+     "id": "44887689",
+     "fpts": 81.75
+    },
+    {
+     "slot": "SG",
+     "name": "VJ Edgecombe",
+     "id": "44887781",
+     "fpts": 45.5
+    },
+    {
+     "slot": "SF",
+     "name": "Ausar Thompson",
+     "id": "44887770",
+     "fpts": 62.25
+    },
+    {
+     "slot": "PF",
+     "name": "Jaden McDaniels",
+     "id": "44887755",
+     "fpts": 32.25
+    },
+    {
+     "slot": "C",
+     "name": "John Collins",
+     "id": "44887832",
+     "fpts": 16.5
+    },
+    {
+     "slot": "G",
+     "name": "Daniss Jenkins",
+     "id": "44887845",
+     "fpts": 34.0
+    },
+    {
+     "slot": "F",
+     "name": "Sion James",
+     "id": "44887841",
+     "fpts": 21.5
+    },
+    {
+     "slot": "UTIL",
+     "name": "Grayson Allen",
+     "id": "44887789",
+     "fpts": 30.0
+    }
+   ]
+  }
+ ],
+ "top1Score": 316.5,
+ "top10Score": 283.0,
+ "cashLine": 236.0,
+ "cashLinePct": 50,
+ "mine": {
+  "username": "csorcic",
+  "entries": [
+   {
+    "rank": 12,
+    "points": 283.0,
+    "entryName": "csorcic",
+    "percentile": 90.6,
+    "players": [
+     {
+      "slot": "PG",
+      "name": "Cade Cunningham",
+      "id": "44887689",
+      "fpts": 81.75
+     },
+     {
+      "slot": "SG",
+      "name": "Daniss Jenkins",
+      "id": "44887845",
+      "fpts": 34.0
+     },
+     {
+      "slot": "SF",
+      "name": "Grayson Allen",
+      "id": "44887789",
+      "fpts": 30.0
+     },
+     {
+      "slot": "PF",
+      "name": "Collin Murray-Boyles",
+      "id": "44887808",
+      "fpts": 31.5
+     },
+     {
+      "slot": "C",
+      "name": "Moussa Diabate",
+      "id": "44887812",
+      "fpts": 26.25
+     },
+     {
+      "slot": "G",
+      "name": "Tyrese Maxey",
+      "id": "44887703",
+      "fpts": 47.0
+     },
+     {
+      "slot": "F",
+      "name": "Terrence Shannon Jr.",
+      "id": "44887874",
+      "fpts": 16.0
+     },
+     {
+      "slot": "UTIL",
+      "name": "John Collins",
+      "id": "44887832",
+      "fpts": 16.5
+     }
+    ]
+   }
+  ],
+  "best": {
+   "rank": 12,
+   "points": 283.0,
+   "entryName": "csorcic",
+   "percentile": 90.6,
+   "players": [
+    {
+     "slot": "PG",
+     "name": "Cade Cunningham",
+     "id": "44887689",
+     "fpts": 81.75
+    },
+    {
+     "slot": "SG",
+     "name": "Daniss Jenkins",
+     "id": "44887845",
+     "fpts": 34.0
+    },
+    {
+     "slot": "SF",
+     "name": "Grayson Allen",
+     "id": "44887789",
+     "fpts": 30.0
+    },
+    {
+     "slot": "PF",
+     "name": "Collin Murray-Boyles",
+     "id": "44887808",
+     "fpts": 31.5
+    },
+    {
+     "slot": "C",
+     "name": "Moussa Diabate",
+     "id": "44887812",
+     "fpts": 26.25
+    },
+    {
+     "slot": "G",
+     "name": "Tyrese Maxey",
+     "id": "44887703",
+     "fpts": 47.0
+    },
+    {
+     "slot": "F",
+     "name": "Terrence Shannon Jr.",
+     "id": "44887874",
+     "fpts": 16.0
+    },
+    {
+     "slot": "UTIL",
+     "name": "John Collins",
+     "id": "44887832",
+     "fpts": 16.5
+    }
+   ]
+  }
+ },
+ "ownership": [
+  {
+   "name": "AJ Dybantsa",
+   "id": "44887773",
+   "drafted": 2.56,
+   "fpts": 23.5
+  },
+  {
+   "name": "Alexandre Sarr",
+   "id": "44887796",
+   "drafted": 1.71,
+   "fpts": 51.25
+  },
+  {
+   "name": "Alijah Martin",
+   "id": "44887864",
+   "drafted": 0.85,
+   "fpts": 15.5
+  },
+  {
+   "name": "Anfernee Simons",
+   "id": "44887903",
+   "drafted": 3.42,
+   "fpts": 26.25
+  },
+  {
+   "name": "Anthony Davis",
+   "id": "44887695",
+   "drafted": 23.93,
+   "fpts": 57.25
+  },
+  {
+   "name": "Anthony Edwards",
+   "id": "44887692",
+   "drafted": 1.71,
+   "fpts": 0.0
+  },
+  {
+   "name": "Ausar Thompson",
+   "id": "44887770",
+   "drafted": 10.26,
+   "fpts": 62.25
+  },
+  {
+   "name": "Ayo Dosunmu",
+   "id": "44887751",
+   "drafted": 12.82,
+   "fpts": 26.5
+  },
+  {
+   "name": "Bilal Coulibaly",
+   "id": "44887897",
+   "drafted": 0.85,
+   "fpts": 18.75
+  },
+  {
+   "name": "Bones Hyland",
+   "id": "44887994",
+   "drafted": 1.71,
+   "fpts": 45.75
+  },
+  {
+   "name": "Brandon Miller",
+   "id": "44887725",
+   "drafted": 0.85,
+   "fpts": 0.0
+  },
+  {
+   "name": "Cade Cunningham",
+   "id": "44887689",
+   "drafted": 29.91,
+   "fpts": 81.75
+  },
+  {
+   "name": "Coby White",
+   "id": "44887801",
+   "drafted": 0.85,
+   "fpts": 28.25
+  },
+  {
+   "name": "Collin Gillespie",
+   "id": "44887836",
+   "drafted": 1.71,
+   "fpts": 21.5
+  },
+  {
+   "name": "Collin Murray-Boyles",
+   "id": "44887808",
+   "drafted": 10.26,
+   "fpts": 31.5
+  },
+  {
+   "name": "Cooper Flagg",
+   "id": "44887686",
+   "drafted": 23.08,
+   "fpts": 28.75
+  },
+  {
+   "name": "Daniel Gafford",
+   "id": "44887821",
+   "drafted": 1.71,
+   "fpts": 11.75
+  },
+  {
+   "name": "Daniss Jenkins",
+   "id": "44887845",
+   "drafted": 82.05,
+   "fpts": 34.0
+  },
+  {
+   "name": "Dean Wade",
+   "id": "44887933",
+   "drafted": 11.97,
+   "fpts": 16.25
+  },
+  {
+   "name": "Devin Booker",
+   "id": "44887721",
+   "drafted": 11.97,
+   "fpts": 50.75
+  },
+  {
+   "name": "Dillon Brooks",
+   "id": "44887798",
+   "drafted": 0.85,
+   "fpts": 23.75
+  },
+  {
+   "name": "Dominick Barlow",
+   "id": "44888114",
+   "drafted": 0.85,
+   "fpts": 0.0
+  },
+  {
+   "name": "Duncan Robinson",
+   "id": "44887823",
+   "drafted": 17.09,
+   "fpts": 21.25
+  },
+  {
+   "name": "EJ Harkless",
+   "id": "44888102",
+   "drafted": 0.85,
+   "fpts": 0.0
+  },
+  {
+   "name": "Grant Williams",
+   "id": "44888130",
+   "drafted": 0.85,
+   "fpts": 18.0
+  },
+  {
+   "name": "Grayson Allen",
+   "id": "44887789",
+   "drafted": 48.72,
+   "fpts": 30.0
+  },
+  {
+   "name": "Immanuel Quickley",
+   "id": "44887759",
+   "drafted": 11.11,
+   "fpts": 45.5
+  },
+  {
+   "name": "Isaiah Joe",
+   "id": "44887952",
+   "drafted": 0.85,
+   "fpts": 0.0
+  },
+  {
+   "name": "Ja'Kobe Walter",
+   "id": "44887814",
+   "drafted": 8.55,
+   "fpts": 13.75
+  },
+  {
+   "name": "Jabari Walker",
+   "id": "44887998",
+   "drafted": 2.56,
+   "fpts": 21.0
+  },
+  {
+   "name": "Jaden McDaniels",
+   "id": "44887755",
+   "drafted": 18.8,
+   "fpts": 32.25
+  },
+  {
+   "name": "Jakob Poeltl",
+   "id": "44887819",
+   "drafted": 17.95,
+   "fpts": 21.75
+  },
+  {
+   "name": "Jalen Green",
+   "id": "44887805",
+   "drafted": 2.56,
+   "fpts": 18.5
+  },
+  {
+   "name": "Jamal Shead",
+   "id": "44887785",
+   "drafted": 3.42,
+   "fpts": 15.25
+  },
+  {
+   "name": "Jamison Battle",
+   "id": "44887871",
+   "drafted": 0.85,
+   "fpts": 21.25
+  },
+  {
+   "name": "Javonte Green",
+   "id": "44887978",
+   "drafted": 0.85,
+   "fpts": 10.75
+  },
+  {
+   "name": "Jaylen Brown",
+   "id": "44887711",
+   "drafted": 33.33,
+   "fpts": 32.0
+  },
+  {
+   "name": "Joel Embiid",
+   "id": "44887706",
+   "drafted": 12.82,
+   "fpts": 32.5
+  },
+  {
+   "name": "John Collins",
+   "id": "44887832",
+   "drafted": 37.61,
+   "fpts": 16.5
+  },
+  {
+   "name": "Jonathan Kuminga",
+   "id": "44887778",
+   "drafted": 5.98,
+   "fpts": 34.5
+  },
+  {
+   "name": "Jordan Goodwin",
+   "id": "44887945",
+   "drafted": 5.98,
+   "fpts": 20.25
+  },
+  {
+   "name": "Kawhi Leonard",
+   "id": "44887731",
+   "drafted": 1.71,
+   "fpts": 0.0
+  },
+  {
+   "name": "Kevin Huerter",
+   "id": "44887918",
+   "drafted": 52.14,
+   "fpts": 14.25
+  },
+  {
+   "name": "Khaman Maluach",
+   "id": "44887869",
+   "drafted": 0.85,
+   "fpts": 11.5
+  },
+  {
+   "name": "Khris Middleton",
+   "id": "44888049",
+   "drafted": 0.85,
+   "fpts": 0.0
+  },
+  {
+   "name": "Kyrie Irving",
+   "id": "44887737",
+   "drafted": 25.64,
+   "fpts": 22.25
+  },
+  {
+   "name": "Kyshawn George",
+   "id": "44887764",
+   "drafted": 12.82,
+   "fpts": 25.75
+  },
+  {
+   "name": "LaMelo Ball",
+   "id": "44887708",
+   "drafted": 14.53,
+   "fpts": 44.25
+  },
+  {
+   "name": "Labaron Philon Jr.",
+   "id": "44888002",
+   "drafted": 0.85,
+   "fpts": 0.0
+  },
+  {
+   "name": "Luke Kennard",
+   "id": "44887971",
+   "drafted": 0.85,
+   "fpts": 10.75
+  },
+  {
+   "name": "Marcus Sasser",
+   "id": "44888024",
+   "drafted": 0.85,
+   "fpts": 3.75
+  },
+  {
+   "name": "Miles Bridges",
+   "id": "44887745",
+   "drafted": 5.13,
+   "fpts": 25.0
+  },
+  {
+   "name": "Morez Johnson",
+   "id": "44888020",
+   "drafted": 45.3,
+   "fpts": 1.5
+  },
+  {
+   "name": "Moussa Diabate",
+   "id": "44887812",
+   "drafted": 5.13,
+   "fpts": 26.25
+  },
+  {
+   "name": "Naji Marshall",
+   "id": "44887849",
+   "drafted": 0.85,
+   "fpts": 23.75
+  },
+  {
+   "name": "Naz Reid",
+   "id": "44887741",
+   "drafted": 40.17,
+   "fpts": 35.0
+  },
+  {
+   "name": "Oso Ighodaro",
+   "id": "44887858",
+   "drafted": 3.42,
+   "fpts": 18.25
+  },
+  {
+   "name": "PJ Washington",
+   "id": "44887767",
+   "drafted": 8.55,
+   "fpts": 13.25
+  },
+  {
+   "name": "Paul Reed",
+   "id": "44887776",
+   "drafted": 0.85,
+   "fpts": 31.75
+  },
+  {
+   "name": "RJ Barrett",
+   "id": "44887716",
+   "drafted": 9.4,
+   "fpts": 58.0
+  },
+  {
+   "name": "Rayan Rupert",
+   "id": "44887964",
+   "drafted": 0.85,
+   "fpts": 0.0
+  },
+  {
+   "name": "Ronald Holland II",
+   "id": "44887961",
+   "drafted": 0.85,
+   "fpts": 12.75
+  },
+  {
+   "name": "Rudy Gobert",
+   "id": "44887794",
+   "drafted": 25.64,
+   "fpts": 23.5
+  },
+  {
+   "name": "Ryan Dunn",
+   "id": "44887923",
+   "drafted": 1.71,
+   "fpts": 7.0
+  },
+  {
+   "name": "Ryan Kalkbrenner",
+   "id": "44887839",
+   "drafted": 1.71,
+   "fpts": 13.0
+  },
+  {
+   "name": "Santi Aldama",
+   "id": "44887860",
+   "drafted": 5.13,
+   "fpts": 9.75
+  },
+  {
+   "name": "Scottie Barnes",
+   "id": "44887698",
+   "drafted": 1.71,
+   "fpts": 0.0
+  },
+  {
+   "name": "Sion James",
+   "id": "44887841",
+   "drafted": 4.27,
+   "fpts": 21.5
+  },
+  {
+   "name": "Terrence Shannon Jr.",
+   "id": "44887874",
+   "drafted": 2.56,
+   "fpts": 16.0
+  },
+  {
+   "name": "Tidjane Salaun",
+   "id": "44887975",
+   "drafted": 0.85,
+   "fpts": 7.0
+  },
+  {
+   "name": "Tobi Lawal",
+   "id": "44888043",
+   "drafted": 0.85,
+   "fpts": 9.0
+  },
+  {
+   "name": "Trae Young",
+   "id": "44887734",
+   "drafted": 2.56,
+   "fpts": 62.0
+  },
+  {
+   "name": "Trey Lyles",
+   "id": "44887957",
+   "drafted": 1.71,
+   "fpts": 2.0
+  },
+  {
+   "name": "Tyrese Maxey",
+   "id": "44887703",
+   "drafted": 30.77,
+   "fpts": 47.0
+  },
+  {
+   "name": "VJ Edgecombe",
+   "id": "44887781",
+   "drafted": 17.09,
+   "fpts": 45.5
+  },
+  {
+   "name": "Walter Clayton Jr.",
+   "id": "44887927",
+   "drafted": 3.42,
+   "fpts": 9.75
+  },
+  {
+   "name": "Will Riley",
+   "id": "44887986",
+   "drafted": 0.85,
+   "fpts": 3.5
+  },
+  {
+   "name": "Zaccharie Risacher",
+   "id": "44887855",
+   "drafted": 0.85,
+   "fpts": 41.5
+  }
+ ],
+ "ownershipSource": "lineups",
+ "unmatchedNames": []
+}
