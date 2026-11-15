@@ -1,0 +1,23 @@
+{
+ "slate_date": "2026-11-12",
+ "draft_group_id": "156641",
+ "salary_file": "DKSalaries_NBA_2026-11-12_156641.csv",
+ "games": [
+  {
+   "game": "DET@WAS",
+   "lock_time": "2026-11-12T19:00:00-05:00"
+  },
+  {
+   "game": "TOR@PHI",
+   "lock_time": "2026-11-12T19:00:00-05:00"
+  },
+  {
+   "game": "DAL@MIN",
+   "lock_time": "2026-11-12T20:00:00-05:00"
+  },
+  {
+   "game": "CHA@PHX",
+   "lock_time": "2026-11-12T21:00:00-05:00"
+  }
+ ]
+}

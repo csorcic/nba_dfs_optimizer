@@ -1,0 +1,35 @@
+{
+ "slate_date": "2026-11-11",
+ "draft_group_id": "156572",
+ "salary_file": "DKSalaries_NBA_2026-11-11_156572.csv",
+ "games": [
+  {
+   "game": "BOS@TOR",
+   "lock_time": "2026-11-11T19:00:00-05:00"
+  },
+  {
+   "game": "CLE@NYK",
+   "lock_time": "2026-11-11T19:00:00-05:00"
+  },
+  {
+   "game": "WAS@IND",
+   "lock_time": "2026-11-11T19:00:00-05:00"
+  },
+  {
+   "game": "BKN@NOP",
+   "lock_time": "2026-11-11T20:00:00-05:00"
+  },
+  {
+   "game": "DEN@MEM",
+   "lock_time": "2026-11-11T20:00:00-05:00"
+  },
+  {
+   "game": "LAL@MIL",
+   "lock_time": "2026-11-11T20:00:00-05:00"
+  },
+  {
+   "game": "SAS@CHI",
+   "lock_time": "2026-11-11T20:00:00-05:00"
+  }
+ ]
+}

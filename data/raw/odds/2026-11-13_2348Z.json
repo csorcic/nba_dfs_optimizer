@@ -1,0 +1,56 @@
+{
+ "ATL@CHI": {
+  "total": 246.0,
+  "home_spread": 6.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-14T01:10:00Z",
+  "home_implied": 119.75,
+  "away_implied": 126.25
+ },
+ "CLE@MIA": {
+  "total": 235.5,
+  "home_spread": -2.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-14T01:10:00Z",
+  "home_implied": 119.0,
+  "away_implied": 116.5
+ },
+ "MEM@NOP": {
+  "total": 235.5,
+  "home_spread": 3.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-14T01:10:00Z",
+  "home_implied": 116.0,
+  "away_implied": 119.5
+ },
+ "MIL@ORL": {
+  "total": 224.0,
+  "home_spread": -9.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-14T00:10:00Z",
+  "home_implied": 116.75,
+  "away_implied": 107.25
+ },
+ "NYK@IND": {
+  "total": 219.0,
+  "home_spread": 8.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-14T00:10:00Z",
+  "home_implied": 105.5,
+  "away_implied": 113.5
+ },
+ "UTA@HOU": {
+  "total": 221.0,
+  "home_spread": -15.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-14T01:40:00Z",
+  "home_implied": 118.0,
+  "away_implied": 103.0
+ }
+}

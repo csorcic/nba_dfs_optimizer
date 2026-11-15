@@ -1,7 +1,35 @@
 {
- "generatedAt": "2026-11-11T02:38:13+00:00",
- "lessons": true,
+ "generatedAt": "2026-11-15T21:25:57+00:00",
+ "lessons": false,
  "dates": [
+  {
+   "date": "2026-11-13",
+   "optimal": 395.25,
+   "ours": 276.5,
+   "pctOfOptimal": 70.0,
+   "projections": "prelock"
+  },
+  {
+   "date": "2026-11-12",
+   "optimal": 424.5,
+   "ours": 280.5,
+   "pctOfOptimal": 66.1,
+   "projections": "prelock"
+  },
+  {
+   "date": "2026-11-11",
+   "optimal": 349.75,
+   "ours": 217.0,
+   "pctOfOptimal": 62.0,
+   "projections": "prelock"
+  },
+  {
+   "date": "2026-11-10",
+   "optimal": 327.0,
+   "ours": 279.25,
+   "pctOfOptimal": 85.4,
+   "projections": "rebuilt"
+  },
   {
    "date": "2026-11-09",
    "optimal": 419.75,

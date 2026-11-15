@@ -1,0 +1,65 @@
+{
+ "BKN@NOP": {
+  "total": 228.0,
+  "home_spread": -3.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-12T01:10:00Z",
+  "home_implied": 115.75,
+  "away_implied": 112.25
+ },
+ "BOS@TOR": {
+  "total": 215.5,
+  "home_spread": 5.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-12T00:10:00Z",
+  "home_implied": 105.0,
+  "away_implied": 110.5
+ },
+ "CLE@NYK": {
+  "total": 221.5,
+  "home_spread": -4.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-12T00:10:00Z",
+  "home_implied": 113.0,
+  "away_implied": 108.5
+ },
+ "DEN@MEM": {
+  "total": 230.0,
+  "home_spread": 4.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-12T01:10:00Z",
+  "home_implied": 113.0,
+  "away_implied": 117.0
+ },
+ "LAL@MIL": {
+  "total": 228.5,
+  "home_spread": 14.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-12T01:10:00Z",
+  "home_implied": 107.0,
+  "away_implied": 121.5
+ },
+ "SAS@CHI": {
+  "total": 238.0,
+  "home_spread": 15.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-12T01:10:00Z",
+  "home_implied": 111.25,
+  "away_implied": 126.75
+ },
+ "WAS@IND": {
+  "total": 227.5,
+  "home_spread": -3.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-12T00:10:00Z",
+  "home_implied": 115.25,
+  "away_implied": 112.25
+ }
+}
