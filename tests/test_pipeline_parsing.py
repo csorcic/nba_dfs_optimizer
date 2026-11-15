@@ -210,3 +210,19 @@ def test_build_projections_without_any_betting_lines():
     assert set(PLAYER_COLUMNS) <= set(df.columns)
     assert df["team_implied"].isna().all()
     assert (df[~df["out"]]["proj_source"] == "dk_avg").all()
+
+
+def test_empty_salary_file_falls_back_to_newest_real_one(tmp_path):
+    from pipeline.run import pick_salary_file
+    header = "﻿Position,Name + ID,Name,ID,Roster Position,Salary,Game Info,TeamAbbrev,AvgPointsPerGame,Status,Starting\n"
+    row = "PG,A B (1),A B,1,PG/G/UTIL,5000,WAS@OKC 11/13/2026 08:00PM ET,WAS,20.0,,\n"
+    real = tmp_path / "DKSalaries_NBA_2026-11-13_1.csv"
+    real.write_text(header + row, encoding="utf-8")
+    empty1 = tmp_path / "DKSalaries_NBA_2026-11-14_2.csv"
+    empty2 = tmp_path / "DKSalaries_NBA_2026-11-15_2.csv"
+    for e in (empty1, empty2):
+        e.write_text(header, encoding="utf-8")
+    path, players, skipped = pick_salary_file([real, empty1, empty2])
+    assert path == real and len(players) == 1
+    assert skipped == [empty2.name, empty1.name]
+    assert pick_salary_file([empty1])[0] is None
