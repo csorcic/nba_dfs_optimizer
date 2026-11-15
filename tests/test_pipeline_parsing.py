@@ -226,3 +226,22 @@ def test_empty_salary_file_falls_back_to_newest_real_one(tmp_path):
     assert path == real and len(players) == 1
     assert skipped == [empty2.name, empty1.name]
     assert pick_salary_file([empty1])[0] is None
+
+
+def test_good_file_next_to_an_empty_one_for_the_same_day_is_used(tmp_path):
+    """Nov 15: dk_salary saved an empty file (156831), then a good one (156734) on a re-run."""
+    from pipeline import fetch_salaries
+    from pipeline.run import pick_salary_file
+    header = "﻿Position,Name + ID,Name,ID,Roster Position,Salary,Game Info,TeamAbbrev,AvgPointsPerGame,Status,Starting\n"
+    row = "PG,A B (1),A B,1,PG/G/UTIL,5000,DAL@BOS 11/15/2026 06:00PM ET,DAL,20.0,,\n"
+    (tmp_path / "DKSalaries_NBA_2026-11-15_156734.csv").write_text(header + row, encoding="utf-8")
+    (tmp_path / "DKSalaries_NBA_2026-11-15_156831.csv").write_text(header, encoding="utf-8")
+    import os
+    os.environ["DK_SALARY_DIR"] = str(tmp_path)
+    try:
+        files = fetch_salaries.sync_salary_files("x/y", "salaries", raw_dir=tmp_path / "raw")
+    finally:
+        del os.environ["DK_SALARY_DIR"]
+    path, players, skipped = pick_salary_file(files)
+    assert path.name == "DKSalaries_NBA_2026-11-15_156734.csv" and len(players) == 1
+    assert fetch_salaries.slate_info(path)[0] == fetch_salaries.slate_info(files[-1])[0]  # same day: not stale
