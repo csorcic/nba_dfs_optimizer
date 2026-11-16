@@ -1,0 +1,11 @@
+{
+ "OKC@SAC": {
+  "total": 221.5,
+  "home_spread": 12.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-16T02:10:00Z",
+  "home_implied": 104.5,
+  "away_implied": 117.0
+ }
+}
