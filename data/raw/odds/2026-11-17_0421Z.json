@@ -1,0 +1,11 @@
+{
+ "POR@MIN": {
+  "total": 226.5,
+  "home_spread": -2.5,
+  "source": "odds_api",
+  "books": 3,
+  "commence_time": "2026-11-18T01:10:00Z",
+  "home_implied": 114.5,
+  "away_implied": 112.0
+ }
+}
