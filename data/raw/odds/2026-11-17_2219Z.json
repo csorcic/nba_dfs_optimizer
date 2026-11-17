@@ -1,0 +1,47 @@
+{
+ "CHA@LAL": {
+  "total": 221.0,
+  "home_spread": -7.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-18T04:10:00Z",
+  "home_implied": 114.25,
+  "away_implied": 106.75
+ },
+ "DET@SAS": {
+  "total": 222.0,
+  "home_spread": -9.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-18T01:10:00Z",
+  "home_implied": 115.75,
+  "away_implied": 106.25
+ },
+ "NYK@TOR": {
+  "total": 214.5,
+  "home_spread": 4.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-18T00:40:00Z",
+  "home_implied": 105.25,
+  "away_implied": 109.25
+ },
+ "POR@MIN": {
+  "total": 225.0,
+  "home_spread": -2.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-18T01:10:00Z",
+  "home_implied": 113.75,
+  "away_implied": 111.25
+ },
+ "UTA@LAC": {
+  "total": 225.5,
+  "home_spread": -6.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-18T03:40:00Z",
+  "home_implied": 116.0,
+  "away_implied": 109.5
+ }
+}

@@ -7,12 +7,12 @@
    "game": "NYK@TOR",
    "lock_time": "2026-11-17T19:30:00-05:00",
    "total": 214.5,
-   "home_spread": 4.5,
+   "home_spread": 4.0,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-18T00:40:00Z",
-   "home_implied": 105.0,
-   "away_implied": 109.5
+   "home_implied": 105.25,
+   "away_implied": 109.25
   },
   {
    "game": "DET@SAS",
@@ -28,12 +28,12 @@
   {
    "game": "POR@MIN",
    "lock_time": "2026-11-17T20:00:00-05:00",
-   "total": 225.5,
-   "home_spread": -3.0,
+   "total": 225.0,
+   "home_spread": -2.5,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-18T01:10:00Z",
-   "home_implied": 114.25,
+   "home_implied": 113.75,
    "away_implied": 111.25
   },
   {
@@ -50,12 +50,12 @@
   {
    "game": "CHA@LAL",
    "lock_time": "2026-11-17T23:00:00-05:00",
-   "total": 220.5,
-   "home_spread": -7.0,
+   "total": 221.0,
+   "home_spread": -7.5,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-18T04:10:00Z",
-   "home_implied": 113.75,
+   "home_implied": 114.25,
    "away_implied": 106.75
   }
  ]
