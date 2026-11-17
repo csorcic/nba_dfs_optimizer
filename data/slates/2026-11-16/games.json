@@ -5,80 +5,31 @@
  "games": [
   {
    "game": "CHI@CLE",
-   "lock_time": "2026-11-16T19:00:00-05:00",
-   "total": 241.5,
-   "home_spread": -8.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-17T00:10:00Z",
-   "home_implied": 125.0,
-   "away_implied": 116.5
+   "lock_time": "2026-11-16T19:00:00-05:00"
   },
   {
    "game": "MEM@WAS",
-   "lock_time": "2026-11-16T19:00:00-05:00",
-   "total": 231.5,
-   "home_spread": 3.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-17T00:10:00Z",
-   "home_implied": 114.0,
-   "away_implied": 117.5
+   "lock_time": "2026-11-16T19:00:00-05:00"
   },
   {
    "game": "ORL@BOS",
-   "lock_time": "2026-11-16T19:00:00-05:00",
-   "total": 214.5,
-   "home_spread": -9.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-17T00:10:00Z",
-   "home_implied": 111.75,
-   "away_implied": 102.75
+   "lock_time": "2026-11-16T19:00:00-05:00"
   },
   {
    "game": "HOU@MIA",
-   "lock_time": "2026-11-16T19:30:00-05:00",
-   "total": 232.0,
-   "home_spread": 2.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-17T00:40:00Z",
-   "home_implied": 115.0,
-   "away_implied": 117.0
+   "lock_time": "2026-11-16T19:30:00-05:00"
   },
   {
    "game": "PHI@BKN",
-   "lock_time": "2026-11-16T19:30:00-05:00",
-   "total": 226.5,
-   "home_spread": 5.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-17T00:40:00Z",
-   "home_implied": 110.75,
-   "away_implied": 115.75
+   "lock_time": "2026-11-16T19:30:00-05:00"
   },
   {
    "game": "GSW@NOP",
-   "lock_time": "2026-11-16T20:00:00-05:00",
-   "total": 223.5,
-   "home_spread": 3.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-17T01:10:00Z",
-   "home_implied": 110.25,
-   "away_implied": 113.25
+   "lock_time": "2026-11-16T20:00:00-05:00"
   },
   {
    "game": "POR@MIN",
-   "lock_time": "2026-11-16T20:00:00-05:00",
-   "total": 227.5,
-   "home_spread": -2.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-17T01:10:00Z",
-   "home_implied": 114.75,
-   "away_implied": 112.75
+   "lock_time": "2026-11-16T20:00:00-05:00"
   }
  ]
 }
