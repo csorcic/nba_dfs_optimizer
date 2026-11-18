@@ -1,0 +1,28 @@
+{
+ "CHA@LAL": {
+  "total": 222.5,
+  "home_spread": -7.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-18T04:10:00Z",
+  "home_implied": 114.75,
+  "away_implied": 107.75
+ },
+ "DET@SAS": {
+  "total": 221.5,
+  "home_spread": -9.5,
+  "source": "espn",
+  "book": "DraftKings",
+  "home_implied": 115.5,
+  "away_implied": 106.0
+ },
+ "UTA@LAC": {
+  "total": 226.5,
+  "home_spread": -6.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-18T03:40:00Z",
+  "home_implied": 116.25,
+  "away_implied": 110.25
+ }
+}
