@@ -1,0 +1,20 @@
+{
+ "CHA@LAL": {
+  "total": 221.5,
+  "home_spread": -7.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-18T04:10:00Z",
+  "home_implied": 114.25,
+  "away_implied": 107.25
+ },
+ "UTA@LAC": {
+  "total": 227.5,
+  "home_spread": -6.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-18T03:40:00Z",
+  "home_implied": 116.75,
+  "away_implied": 110.75
+ }
+}
