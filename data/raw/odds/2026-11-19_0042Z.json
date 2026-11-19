@@ -1,0 +1,29 @@
+{
+ "ATL@OKC": {
+  "total": 229.0,
+  "home_spread": -6.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-19T01:10:00Z",
+  "home_implied": 117.75,
+  "away_implied": 111.25
+ },
+ "DET@NOP": {
+  "total": 224.0,
+  "home_spread": 3.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-19T01:10:00Z",
+  "home_implied": 110.25,
+  "away_implied": 113.75
+ },
+ "GSW@DAL": {
+  "total": 223.5,
+  "home_spread": -4.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-19T01:10:00Z",
+  "home_implied": 114.0,
+  "away_implied": 109.5
+ }
+}
