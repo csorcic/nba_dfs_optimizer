@@ -29,36 +29,15 @@
   },
   {
    "game": "ATL@OKC",
-   "lock_time": "2026-11-18T20:00:00-05:00",
-   "total": 229.0,
-   "home_spread": -6.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-19T01:10:00Z",
-   "home_implied": 117.75,
-   "away_implied": 111.25
+   "lock_time": "2026-11-18T20:00:00-05:00"
   },
   {
    "game": "DET@NOP",
-   "lock_time": "2026-11-18T20:00:00-05:00",
-   "total": 224.0,
-   "home_spread": 3.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-19T01:10:00Z",
-   "home_implied": 110.25,
-   "away_implied": 113.75
+   "lock_time": "2026-11-18T20:00:00-05:00"
   },
   {
    "game": "GSW@DAL",
-   "lock_time": "2026-11-18T20:00:00-05:00",
-   "total": 223.5,
-   "home_spread": -4.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-19T01:10:00Z",
-   "home_implied": 114.0,
-   "away_implied": 109.5
+   "lock_time": "2026-11-18T20:00:00-05:00"
   }
  ]
 }
