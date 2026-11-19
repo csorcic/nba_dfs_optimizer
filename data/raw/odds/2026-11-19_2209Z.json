@@ -1,0 +1,38 @@
+{
+ "GSW@MEM": {
+  "total": 224.5,
+  "home_spread": -5.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-20T01:10:00Z",
+  "home_implied": 115.0,
+  "away_implied": 109.5
+ },
+ "LAC@SAS": {
+  "total": 224.5,
+  "home_spread": -15.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-20T01:10:00Z",
+  "home_implied": 120.0,
+  "away_implied": 104.5
+ },
+ "NYK@MIN": {
+  "total": 216.0,
+  "home_spread": 1.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-20T01:10:00Z",
+  "home_implied": 107.5,
+  "away_implied": 108.5
+ },
+ "POR@MIL": {
+  "total": 230.5,
+  "home_spread": 11.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-20T01:10:00Z",
+  "home_implied": 109.75,
+  "away_implied": 120.75
+ }
+}
