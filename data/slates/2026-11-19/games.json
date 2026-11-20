@@ -5,47 +5,19 @@
  "games": [
   {
    "game": "GSW@MEM",
-   "lock_time": "2026-11-19T20:00:00-05:00",
-   "total": 224.5,
-   "home_spread": -5.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-20T01:10:00Z",
-   "home_implied": 115.0,
-   "away_implied": 109.5
+   "lock_time": "2026-11-19T20:00:00-05:00"
   },
   {
    "game": "LAC@SAS",
-   "lock_time": "2026-11-19T20:00:00-05:00",
-   "total": 224.5,
-   "home_spread": -15.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-20T01:10:00Z",
-   "home_implied": 120.0,
-   "away_implied": 104.5
+   "lock_time": "2026-11-19T20:00:00-05:00"
   },
   {
    "game": "NYK@MIN",
-   "lock_time": "2026-11-19T20:00:00-05:00",
-   "total": 216.0,
-   "home_spread": 1.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-20T01:10:00Z",
-   "home_implied": 107.5,
-   "away_implied": 108.5
+   "lock_time": "2026-11-19T20:00:00-05:00"
   },
   {
    "game": "POR@MIL",
-   "lock_time": "2026-11-19T20:00:00-05:00",
-   "total": 229.5,
-   "home_spread": 9.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-20T01:10:00Z",
-   "home_implied": 110.0,
-   "away_implied": 119.5
+   "lock_time": "2026-11-19T20:00:00-05:00"
   }
  ]
 }
