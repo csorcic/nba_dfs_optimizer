@@ -39,13 +39,13 @@
   {
    "game": "POR@MIL",
    "lock_time": "2026-11-19T20:00:00-05:00",
-   "total": 230.5,
-   "home_spread": 11.0,
+   "total": 229.5,
+   "home_spread": 9.5,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-20T01:10:00Z",
-   "home_implied": 109.75,
-   "away_implied": 120.75
+   "home_implied": 110.0,
+   "away_implied": 119.5
   }
  ]
 }
