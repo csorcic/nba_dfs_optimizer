@@ -224,7 +224,7 @@ def test_empty_salary_file_falls_back_to_newest_real_one(tmp_path):
         e.write_text(header, encoding="utf-8")
     path, players, skipped = pick_salary_file([real, empty1, empty2])
     assert path == real and len(players) == 1
-    assert skipped == [empty2.name, empty1.name]
+    assert [x.split(":")[0] for x in skipped] == [empty2.name, empty1.name]
     assert pick_salary_file([empty1])[0] is None
 
 
@@ -245,3 +245,21 @@ def test_good_file_next_to_an_empty_one_for_the_same_day_is_used(tmp_path):
     path, players, skipped = pick_salary_file(files)
     assert path.name == "DKSalaries_NBA_2026-11-15_156734.csv" and len(players) == 1
     assert fetch_salaries.slate_info(path)[0] == fetch_salaries.slate_info(files[-1])[0]  # same day: not stale
+
+
+def test_snake_draft_salary_file_is_skipped(tmp_path):
+    """Nov 20: dk_salary saved a snake draft (BENCH slots, 'salaries' 1-212)."""
+    from pipeline.run import pick_salary_file
+    header = "\ufeffPosition,Name + ID,Name,ID,Roster Position,Salary,Game Info,TeamAbbrev,AvgPointsPerGame,Status,Starting\n"
+    classic = "PG,A B (1),A B,1,PG/G/UTIL,5000,IND@CLE 11/20/2026 07:30PM ET,IND,20.0,,\n"
+    snake = "C,T S (2) (LOCKED),T S,2,UTIL/F/C/BENCH,212,NOP@OKC 11/20/2026 08:00PM ET,OKC,0,OUT,\n"
+    good = tmp_path / "DKSalaries_NBA_2026-11-20_157200.csv"
+    bad = tmp_path / "DKSalaries_NBA_2026-11-20_157125.csv"
+    good.write_text(header + classic, encoding="utf-8")
+    bad.write_text(header + snake, encoding="utf-8")
+    path, players, skipped = pick_salary_file([good, bad])
+    assert path == good
+    assert "BENCH" in skipped[0] and "snake" in skipped[0]
+    low = tmp_path / "DKSalaries_NBA_2026-11-21_1.csv"
+    low.write_text(header + classic.replace(",5000,", ",212,"), encoding="utf-8")
+    assert "lowest salary $212" in pick_salary_file([low])[2][0]

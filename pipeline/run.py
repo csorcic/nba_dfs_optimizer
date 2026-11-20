@@ -94,18 +94,38 @@ def warn(msg: str) -> None:
             f.write(f"> **Warning:** {msg}\n\n")
 
 
-def pick_salary_file(files: list[Path]) -> tuple[Path | None, list[dict], list[str]]:
-    """Newest salary file that actually has players, its players, and the empty files skipped.
+CLASSIC_SLOTS = {"PG", "SG", "SF", "PF", "C", "G", "F", "UTIL"}
 
-    DraftKings sometimes hands dk_salary an empty contest (header row only);
-    projecting that would crash, so fall back to the newest real file.
+
+def salary_file_problem(players: list[dict], min_salary: int) -> str | None:
+    """Why a salary file can't be used for DraftKings Classic, or None if it's fine."""
+    if not players:
+        return "no players (DraftKings returned an empty list)"
+    odd = sorted({s for p in players for s in p["roster_positions"].split("/") if s and s not in CLASSIC_SLOTS})
+    if odd:
+        return f"not a Classic slate (roster slots {', '.join(odd)}; probably a snake draft)"
+    low = min(p["salary"] for p in players)
+    if low < min_salary:
+        return f"not a Classic slate (lowest salary ${low}; Classic starts at ${min_salary})"
+    return None
+
+
+def pick_salary_file(files: list[Path], min_salary: int = 3000) -> tuple[Path | None, list[dict], list[str]]:
+    """Newest usable salary file, its players, and the files skipped (with the reason).
+
+    dk_salary has saved an empty contest (Nov 14-15) and a snake draft (Nov 20);
+    projecting those would crash the pipeline or the optimizer, so skip them.
     """
     skipped = []
     for path in reversed(files):
-        players = fetch_salaries.load_salary_file(path)
-        if players:
+        try:
+            players = fetch_salaries.load_salary_file(path)
+            problem = salary_file_problem(players, min_salary)
+        except Exception as e:  # unreadable file
+            players, problem = [], f"couldn't read it ({e})"
+        if problem is None:
             return path, players, skipped
-        skipped.append(path.name)
+        skipped.append(f"{path.name}: {problem}")
     return None, [], skipped
 
 
@@ -169,9 +189,9 @@ def main(argv=None) -> int:
     if not files:
         print("No salary files found. Nothing to do.")
         return 1
-    latest, players, skipped = pick_salary_file(files)
-    for name in skipped:
-        print(f"  Salary file {name} has no players (DraftKings returned an empty list). Skipped it.")
+    latest, players, skipped = pick_salary_file(files, data["classic_min_salary"])
+    for why in skipped:
+        print(f"  Skipped salary file {why}")
     # No new slate only when no file from the newest day has players. (An empty file can sit
     # next to a good one for the same day, e.g. after dk_salary is re-run.)
     newest_day = fetch_salaries.slate_info(files[-1])[0]
@@ -179,7 +199,7 @@ def main(argv=None) -> int:
     if no_new_slate:
         # Re-projecting an older slate would overwrite its saved data with post-game numbers,
         # so only refresh box scores (the slate review needs them) and leave the app as it is.
-        warn("Today's DraftKings salary file is empty, so there's no new slate to project. "
+        warn("Today's DraftKings salary file is empty or not a Classic slate, so there's no new slate to project. "
              "Box scores are still updated for the slate reviews; the app keeps showing the last slate. "
              "Check the dk_salary repo's latest run.")
     else:

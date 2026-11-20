@@ -12,6 +12,7 @@ data:  # Where data comes from
   espn_max_new_games_per_run: 2000  # Most new ESPN box scores downloaded in one run (the first run backfills ~1,400 games)
   odds_regions: us  # Sportsbook region for The Odds API
   odds_markets: spreads,totals  # Betting markets to pull (no player props: those cost money)
+  classic_min_salary: 3000  # A salary file whose cheapest player is below this isn't a Classic slate (snake drafts list 1, 2, 3...) and is skipped
 
 projections:  # How each player's fantasy-point projection is built
   recency_half_life_games: 10  # How fast old games fade: a game this many games ago counts half as much as the latest one
