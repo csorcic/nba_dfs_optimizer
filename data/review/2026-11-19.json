@@ -1,0 +1,821 @@
+{
+ "schema": 1,
+ "generatedAt": "2026-11-20T21:49:52+00:00",
+ "gameDate": "2026-11-19",
+ "fileDate": "2026-11-19",
+ "draftGroupId": "157035",
+ "salaryFile": "DKSalaries_NBA_2026-11-19_157035.csv",
+ "projections": {
+  "source": "prelock",
+  "snapshotAt": "2026-11-20T00:52:04+00:00",
+  "note": "Pre-lock projections from the last pipeline run before the first game locked."
+ },
+ "games": [
+  {
+   "game": "GSW@MEM",
+   "lock": "2026-11-19T20:00:00-05:00",
+   "total": 225.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "LAC@SAS",
+   "lock": "2026-11-19T20:00:00-05:00",
+   "total": 224.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "NYK@MIN",
+   "lock": "2026-11-19T20:00:00-05:00",
+   "total": 216.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "POR@MIL",
+   "lock": "2026-11-19T20:00:00-05:00",
+   "total": 230.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  }
+ ],
+ "accuracy": {
+  "players": 107,
+  "mae": 6.09,
+  "bias": -0.96,
+  "overCeilingPct": 11.2,
+  "insideRangePct": 85.0,
+  "lateScratches": 4,
+  "playedButProjectedOut": 1
+ },
+ "lateScratches": [
+  {
+   "id": "44997984",
+   "name": "Deni Avdija",
+   "team": "POR",
+   "salary": 9200,
+   "proj": 48.63,
+   "status": "Q"
+  },
+  {
+   "id": "44998002",
+   "name": "Ty Jerome",
+   "team": "MEM",
+   "salary": 8300,
+   "proj": 36.78,
+   "status": "Q"
+  },
+  {
+   "id": "44998410",
+   "name": "Cormac Ryan",
+   "team": "MIL",
+   "salary": 3000,
+   "proj": 24.27,
+   "status": ""
+  },
+  {
+   "id": "44998263",
+   "name": "AJ Green",
+   "team": "MIL",
+   "salary": 3500,
+   "proj": 12.2,
+   "status": ""
+  }
+ ],
+ "noResult": [
+  {
+   "id": "44998419",
+   "name": "Jayden Quaintance",
+   "team": "SAS",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44998421",
+   "name": "Richie Saunders",
+   "team": "MEM",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  },
+  {
+   "id": "44998439",
+   "name": "Tyler Nickel",
+   "team": "NYK",
+   "salary": 3000,
+   "status": "",
+   "reason": "unmatched"
+  }
+ ],
+ "optimal": {
+  "actual": 348.25,
+  "ourProj": 237.47,
+  "players": [
+   {
+    "slot": "PG",
+    "id": "44998025",
+    "name": "Damian Lillard",
+    "team": "POR",
+    "game": "POR@MIL",
+    "salary": 7600,
+    "proj": 34.86,
+    "ceiling": 51.4,
+    "own": 24.7,
+    "actual": 41.0,
+    "valueRank": 14,
+    "projRank": 10,
+    "missType": "in our lineup"
+   },
+   {
+    "slot": "SG",
+    "id": "44998033",
+    "name": "Stephon Castle",
+    "team": "SAS",
+    "game": "LAC@SAS",
+    "salary": 7200,
+    "proj": 33.83,
+    "ceiling": 50.5,
+    "own": 25.2,
+    "actual": 53.0,
+    "valueRank": 11,
+    "projRank": 11,
+    "missType": "in our lineup"
+   },
+   {
+    "slot": "SF",
+    "id": "44998076",
+    "name": "Jrue Holiday",
+    "team": "POR",
+    "game": "POR@MIL",
+    "salary": 5900,
+    "proj": 32.17,
+    "ceiling": 50.44,
+    "own": 33.9,
+    "actual": 42.0,
+    "valueRank": 2,
+    "projRank": 14,
+    "missType": "in our lineup"
+   },
+   {
+    "slot": "PF",
+    "id": "44997977",
+    "name": "Karl-Anthony Towns",
+    "team": "NYK",
+    "game": "NYK@MIN",
+    "salary": 9600,
+    "proj": 42.7,
+    "ceiling": 57.91,
+    "own": 25.6,
+    "actual": 49.5,
+    "valueRank": 20,
+    "projRank": 3,
+    "missType": "close call"
+   },
+   {
+    "slot": "C",
+    "id": "44998212",
+    "name": "Charles Bassey",
+    "team": "GSW",
+    "game": "GSW@MEM",
+    "salary": 4100,
+    "proj": 20.94,
+    "ceiling": 36.09,
+    "own": 9.5,
+    "actual": 40.25,
+    "valueRank": 6,
+    "projRank": 36,
+    "missType": "close call"
+   },
+   {
+    "slot": "G",
+    "id": "44998121",
+    "name": "Ryan Rollins",
+    "team": "MIL",
+    "game": "POR@MIL",
+    "salary": 5100,
+    "proj": 27.18,
+    "ceiling": 43.52,
+    "own": 14.9,
+    "actual": 34.75,
+    "valueRank": 4,
+    "projRank": 22,
+    "missType": "in our lineup"
+   },
+   {
+    "slot": "F",
+    "id": "44998090",
+    "name": "Toumani Camara",
+    "team": "POR",
+    "game": "POR@MIL",
+    "salary": 5500,
+    "proj": 25.57,
+    "ceiling": 39.97,
+    "own": 14.1,
+    "actual": 42.5,
+    "valueRank": 12,
+    "projRank": 25,
+    "missType": "close call"
+   },
+   {
+    "slot": "UTIL",
+    "id": "44998169",
+    "name": "Scoot Henderson",
+    "team": "POR",
+    "game": "POR@MIL",
+    "salary": 4500,
+    "proj": 20.22,
+    "ceiling": 33.99,
+    "own": 8.9,
+    "actual": 45.25,
+    "valueRank": 17,
+    "projRank": 38,
+    "missType": "projection miss"
+   }
+  ],
+  "composition": {
+   "salary": 49500,
+   "stars": 1,
+   "values": 1,
+   "maxFromOneGame": 5,
+   "maxGame": "POR@MIL",
+   "maxGameIsHighestTotal": true,
+   "teams": [
+    "GSW",
+    "MIL",
+    "NYK",
+    "POR",
+    "SAS"
+   ],
+   "teamCount": 5,
+   "games": 4,
+   "ownSum": 156.8,
+   "proj": 237.5,
+   "actual": 348.2
+  }
+ },
+ "ours": {
+  "actual": 220.25,
+  "proj": 262.39,
+  "players": [
+   {
+    "slot": "PG",
+    "id": "44998121",
+    "name": "Ryan Rollins",
+    "team": "MIL",
+    "game": "POR@MIL",
+    "salary": 5100,
+    "proj": 27.18,
+    "ceiling": 43.52,
+    "own": 14.9,
+    "actual": 34.75,
+    "valueRank": 4,
+    "projRank": 22
+   },
+   {
+    "slot": "SG",
+    "id": "44998025",
+    "name": "Damian Lillard",
+    "team": "POR",
+    "game": "POR@MIL",
+    "salary": 7600,
+    "proj": 34.86,
+    "ceiling": 51.4,
+    "own": 24.7,
+    "actual": 41.0,
+    "valueRank": 14,
+    "projRank": 10
+   },
+   {
+    "slot": "SF",
+    "id": "44997984",
+    "name": "Deni Avdija",
+    "team": "POR",
+    "game": "POR@MIL",
+    "salary": 9200,
+    "proj": 48.63,
+    "ceiling": 67.77,
+    "own": 75.0,
+    "actual": 0.0,
+    "valueRank": 5,
+    "projRank": 2
+   },
+   {
+    "slot": "PF",
+    "id": "44998129",
+    "name": "Kel'el Ware",
+    "team": "MIL",
+    "game": "POR@MIL",
+    "salary": 5000,
+    "proj": 24.41,
+    "ceiling": 43.63,
+    "own": 9.7,
+    "actual": 20.25,
+    "valueRank": 8,
+    "projRank": 29
+   },
+   {
+    "slot": "C",
+    "id": "44998040",
+    "name": "Donovan Clingan",
+    "team": "POR",
+    "game": "POR@MIL",
+    "salary": 6900,
+    "proj": 37.04,
+    "ceiling": 56.31,
+    "own": 45.9,
+    "actual": 29.25,
+    "valueRank": 3,
+    "projRank": 6
+   },
+   {
+    "slot": "G",
+    "id": "44998033",
+    "name": "Stephon Castle",
+    "team": "SAS",
+    "game": "LAC@SAS",
+    "salary": 7200,
+    "proj": 33.83,
+    "ceiling": 50.5,
+    "own": 25.2,
+    "actual": 53.0,
+    "valueRank": 11,
+    "projRank": 11
+   },
+   {
+    "slot": "F",
+    "id": "44998076",
+    "name": "Jrue Holiday",
+    "team": "POR",
+    "game": "POR@MIL",
+    "salary": 5900,
+    "proj": 32.17,
+    "ceiling": 50.44,
+    "own": 33.9,
+    "actual": 42.0,
+    "valueRank": 2,
+    "projRank": 14
+   },
+   {
+    "slot": "UTIL",
+    "id": "44998410",
+    "name": "Cormac Ryan",
+    "team": "MIL",
+    "game": "POR@MIL",
+    "salary": 3000,
+    "proj": 24.27,
+    "ceiling": 44.36,
+    "own": 54.3,
+    "actual": 0.0,
+    "valueRank": 1,
+    "projRank": 30
+   }
+  ],
+  "composition": {
+   "salary": 49900,
+   "stars": 1,
+   "values": 1,
+   "maxFromOneGame": 7,
+   "maxGame": "POR@MIL",
+   "maxGameIsHighestTotal": true,
+   "teams": [
+    "MIL",
+    "POR",
+    "SAS"
+   ],
+   "teamCount": 3,
+   "games": 2,
+   "ownSum": 283.6,
+   "proj": 262.4,
+   "actual": 220.2
+  }
+ },
+ "standing": {
+  "ourActual": 220.25,
+  "optimalActual": 348.25,
+  "pctOfOptimal": 63.2,
+  "optimalOurProj": 237.47,
+  "ourProj": 262.39,
+  "projGap": 24.92,
+  "overlap": 4
+ },
+ "topN": {
+  "count": 50,
+  "minUnique": 1,
+  "scores": [
+   348.25,
+   347.5,
+   347,
+   346.25,
+   345.75,
+   345.75,
+   344.75,
+   344.5,
+   344.5,
+   344.5,
+   344.25,
+   344.25,
+   344.25,
+   344.25,
+   344.25,
+   344.25,
+   344.25,
+   344,
+   343.75,
+   343.75,
+   343.75,
+   343.25,
+   343.25,
+   343,
+   343,
+   343,
+   342.75,
+   342.5,
+   342.5,
+   342.5,
+   342.25,
+   342.25,
+   342.25,
+   342.25,
+   342.25,
+   342.25,
+   342,
+   341.75,
+   341.75,
+   341.5,
+   341.25,
+   341.25,
+   341.25,
+   341.25,
+   341.25,
+   341.25,
+   341.25,
+   341,
+   341,
+   340.75
+  ],
+  "composition": {
+   "lineups": 50,
+   "avgSalary": 49276.0,
+   "avgStars": 1.0,
+   "avgValues": 1.42,
+   "avgMaxFromOneGame": 3.64,
+   "avgTeamCount": 4.94,
+   "avgOwnSum": 153.71,
+   "avgActual": 343.22,
+   "maxFromOneGameCounts": {
+    "3": 22,
+    "4": 24,
+    "5": 4
+   },
+   "starsCounts": {
+    "1": 50
+   },
+   "pctMaxGameIsHighestTotal": 92.0,
+   "teamUsage": {
+    "GSW": 50,
+    "POR": 50,
+    "SAS": 50,
+    "NYK": 32,
+    "MEM": 19,
+    "LAC": 18,
+    "MIL": 17,
+    "MIN": 11
+   }
+  },
+  "playerCounts": [
+   {
+    "id": "44998033",
+    "name": "Stephon Castle",
+    "count": 50
+   },
+   {
+    "id": "44998212",
+    "name": "Charles Bassey",
+    "count": 50
+   },
+   {
+    "id": "44998090",
+    "name": "Toumani Camara",
+    "count": 50
+   },
+   {
+    "id": "44998169",
+    "name": "Scoot Henderson",
+    "count": 50
+   },
+   {
+    "id": "44998076",
+    "name": "Jrue Holiday",
+    "count": 48
+   },
+   {
+    "id": "44997977",
+    "name": "Karl-Anthony Towns",
+    "count": 31
+   },
+   {
+    "id": "44997975",
+    "name": "Victor Wembanyama",
+    "count": 19
+   },
+   {
+    "id": "44998095",
+    "name": "Devin Vassell",
+    "count": 12
+   },
+   {
+    "id": "44998025",
+    "name": "Damian Lillard",
+    "count": 11
+   },
+   {
+    "id": "44998121",
+    "name": "Ryan Rollins",
+    "count": 10
+   },
+   {
+    "id": "44998053",
+    "name": "Jonathan Kuminga",
+    "count": 10
+   },
+   {
+    "id": "44998188",
+    "name": "Jaylen Wells",
+    "count": 9
+   },
+   {
+    "id": "44998219",
+    "name": "Nate Ament",
+    "count": 7
+   },
+   {
+    "id": "44998158",
+    "name": "Max Strus",
+    "count": 6
+   },
+   {
+    "id": "44998085",
+    "name": "Brook Lopez",
+    "count": 6
+   }
+  ]
+ },
+ "smash": [
+  {
+   "id": "44998033",
+   "name": "Stephon Castle",
+   "team": "SAS",
+   "pos": "SG",
+   "salary": 7200,
+   "actual": 53.0,
+   "multiple": 7.36,
+   "minutesBump": 1.5,
+   "teamImplied": 120.0,
+   "spread": -15.5,
+   "proj": 33.83,
+   "ceiling": 50.5,
+   "own": 25.2,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998169",
+   "name": "Scoot Henderson",
+   "team": "POR",
+   "pos": "PG/SG",
+   "salary": 4500,
+   "actual": 45.25,
+   "multiple": 10.06,
+   "minutesBump": 1.5,
+   "teamImplied": 119.5,
+   "spread": -9.5,
+   "proj": 20.22,
+   "ceiling": 33.99,
+   "own": 8.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998090",
+   "name": "Toumani Camara",
+   "team": "POR",
+   "pos": "SF",
+   "salary": 5500,
+   "actual": 42.5,
+   "multiple": 7.73,
+   "minutesBump": 1.8,
+   "teamImplied": 119.5,
+   "spread": -9.5,
+   "proj": 25.57,
+   "ceiling": 39.97,
+   "own": 14.1,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998076",
+   "name": "Jrue Holiday",
+   "team": "POR",
+   "pos": "PG/SF",
+   "salary": 5900,
+   "actual": 42.0,
+   "multiple": 7.12,
+   "minutesBump": 2.1,
+   "teamImplied": 119.5,
+   "spread": -9.5,
+   "proj": 32.17,
+   "ceiling": 50.44,
+   "own": 33.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998212",
+   "name": "Charles Bassey",
+   "team": "GSW",
+   "pos": "C",
+   "salary": 4100,
+   "actual": 40.25,
+   "multiple": 9.82,
+   "minutesBump": 2.6,
+   "teamImplied": 109.5,
+   "spread": 5.5,
+   "proj": 20.94,
+   "ceiling": 36.09,
+   "own": 9.5,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998085",
+   "name": "Brook Lopez",
+   "team": "LAC",
+   "pos": "C",
+   "salary": 5700,
+   "actual": 35.75,
+   "multiple": 6.27,
+   "minutesBump": 0.0,
+   "teamImplied": 104.5,
+   "spread": 15.5,
+   "proj": 21.27,
+   "ceiling": 36.97,
+   "own": 2.7,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998121",
+   "name": "Ryan Rollins",
+   "team": "MIL",
+   "pos": "PG/SG",
+   "salary": 5100,
+   "actual": 34.75,
+   "multiple": 6.81,
+   "minutesBump": 0.8,
+   "teamImplied": 110.0,
+   "spread": 9.5,
+   "proj": 27.18,
+   "ceiling": 43.52,
+   "own": 14.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998095",
+   "name": "Devin Vassell",
+   "team": "SAS",
+   "pos": "SF/PF",
+   "salary": 5600,
+   "actual": 34.0,
+   "multiple": 6.07,
+   "minutesBump": 1.5,
+   "teamImplied": 120.0,
+   "spread": -15.5,
+   "proj": 24.78,
+   "ceiling": 37.52,
+   "own": 11.6,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998151",
+   "name": "Javon Small",
+   "team": "MEM",
+   "pos": "PG/SG",
+   "salary": 4800,
+   "actual": 32.25,
+   "multiple": 6.72,
+   "minutesBump": 0.0,
+   "teamImplied": 115.0,
+   "spread": -5.5,
+   "proj": 20.38,
+   "ceiling": 34.63,
+   "own": 5.8,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998188",
+   "name": "Jaylen Wells",
+   "team": "MEM",
+   "pos": "SF",
+   "salary": 4300,
+   "actual": 32.25,
+   "multiple": 7.5,
+   "minutesBump": 0.0,
+   "teamImplied": 115.0,
+   "spread": -5.5,
+   "proj": 17.89,
+   "ceiling": 29.95,
+   "own": 4.6,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998158",
+   "name": "Max Strus",
+   "team": "LAC",
+   "pos": "SF/PF",
+   "salary": 4700,
+   "actual": 30.75,
+   "multiple": 6.54,
+   "minutesBump": 0.0,
+   "teamImplied": 104.5,
+   "spread": 15.5,
+   "proj": 18.21,
+   "ceiling": 31.39,
+   "own": 2.4,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998199",
+   "name": "Sidy Cissoko",
+   "team": "POR",
+   "pos": "SG/SF",
+   "salary": 4200,
+   "actual": 30.25,
+   "multiple": 7.2,
+   "minutesBump": 2.1,
+   "teamImplied": 119.5,
+   "spread": -9.5,
+   "proj": 17.43,
+   "ceiling": 28.75,
+   "own": 6.1,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998219",
+   "name": "Nate Ament",
+   "team": "MIL",
+   "pos": "SF/PF",
+   "salary": 4000,
+   "actual": 30.25,
+   "multiple": 7.56,
+   "minutesBump": 1.2,
+   "teamImplied": 110.0,
+   "spread": 9.5,
+   "proj": 14.64,
+   "ceiling": 23.36,
+   "own": 2.2,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998204",
+   "name": "Kasparas Jakucionis",
+   "team": "MIL",
+   "pos": "PG/SF",
+   "salary": 4200,
+   "actual": 27.25,
+   "multiple": 6.49,
+   "minutesBump": 1.2,
+   "teamImplied": 110.0,
+   "spread": 9.5,
+   "proj": 16.33,
+   "ceiling": 31.36,
+   "own": 2.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "44998261",
+   "name": "Olivier-Maxence Prosper",
+   "team": "MEM",
+   "pos": "C",
+   "salary": 3600,
+   "actual": 25.25,
+   "multiple": 7.01,
+   "minutesBump": 0.0,
+   "teamImplied": 115.0,
+   "spread": -5.5,
+   "proj": 7.75,
+   "ceiling": 21.62,
+   "own": 0.7,
+   "projectedToPlay": true
+  }
+ ],
+ "settings": {
+  "hindsight_top_n": 50,
+  "hindsight_min_unique": 1,
+  "smash_multiplier": 6,
+  "star_salary": 9000,
+  "value_salary": 4500,
+  "projection_miss_margin": 5,
+  "settings_miss_value_rank": 20
+ },
+ "solver": "highs"
+}

@@ -1,7 +1,14 @@
 {
- "generatedAt": "2026-11-20T02:52:51+00:00",
+ "generatedAt": "2026-11-20T21:49:55+00:00",
  "lessons": true,
  "dates": [
+  {
+   "date": "2026-11-19",
+   "optimal": 348.25,
+   "ours": 220.25,
+   "pctOfOptimal": 63.2,
+   "projections": "prelock"
+  },
   {
    "date": "2026-11-18",
    "optimal": 371.5,
