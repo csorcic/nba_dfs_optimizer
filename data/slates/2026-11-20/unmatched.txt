@@ -1,8 +1,8 @@
-Thomas Sorber	OKC	212	OUT
-Izaiyah Nelson	ORL	210	OUT
-Henri Veesaar	ATL	209	OUT
-Nate Bittle	TOR	206	OUT
-Kylan Boswell	CHA	199	
-Ugonna Onyenso	DET	198	Q
-Tyler Bilodeau	BKN	196	
-Rafael Castro	ATL	194	
+Thomas Sorber	OKC	3000	OUT
+Rafael Castro	ATL	3000	
+Henri Veesaar	ATL	3000	OUT
+Tyler Bilodeau	BKN	3000	
+Ugonna Onyenso	DET	3000	Q
+Kylan Boswell	CHA	3000	
+Izaiyah Nelson	ORL	3000	OUT
+Nate Bittle	TOR	3000	OUT

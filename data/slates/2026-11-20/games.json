@@ -1,7 +1,7 @@
 {
  "slate_date": "2026-11-20",
- "draft_group_id": "157125",
- "salary_file": "DKSalaries_NBA_2026-11-20_157125.csv",
+ "draft_group_id": "156300",
+ "salary_file": "DKSalaries_NBA_2026-11-20_156300.csv",
  "games": [
   {
    "game": "CHA@ATL",
@@ -28,35 +28,35 @@
   {
    "game": "ORL@BKN",
    "lock_time": "2026-11-20T19:30:00-05:00",
-   "total": 223.0,
+   "total": 223.5,
    "home_spread": 6.5,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-21T00:40:00Z",
-   "home_implied": 108.25,
-   "away_implied": 114.75
+   "home_implied": 108.5,
+   "away_implied": 115.0
   },
   {
    "game": "TOR@DET",
    "lock_time": "2026-11-20T19:30:00-05:00",
-   "total": 216.0,
+   "total": 216.5,
    "home_spread": -7.0,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-21T00:40:00Z",
-   "home_implied": 111.5,
-   "away_implied": 104.5
+   "home_implied": 111.75,
+   "away_implied": 104.75
   },
   {
    "game": "NOP@OKC",
    "lock_time": "2026-11-20T20:00:00-05:00",
-   "total": 227.5,
+   "total": 228.0,
    "home_spread": -11.5,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-21T01:10:00Z",
-   "home_implied": 119.5,
-   "away_implied": 108.0
+   "home_implied": 119.75,
+   "away_implied": 108.25
   },
   {
    "game": "WAS@CHI",
