@@ -1,0 +1,38 @@
+{
+ "LAC@DAL": {
+  "total": 230.5,
+  "home_spread": -5.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-22T01:10:00Z",
+  "home_implied": 117.75,
+  "away_implied": 112.75
+ },
+ "MEM@MIN": {
+  "total": 229.5,
+  "home_spread": -6.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-22T01:10:00Z",
+  "home_implied": 117.75,
+  "away_implied": 111.75
+ },
+ "NOP@SAS": {
+  "total": 228.5,
+  "home_spread": -18.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-22T01:10:00Z",
+  "home_implied": 123.5,
+  "away_implied": 105.0
+ },
+ "POR@NYK": {
+  "total": 213.5,
+  "home_spread": 1.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-22T00:40:00Z",
+  "home_implied": 106.25,
+  "away_implied": 107.25
+ }
+}
