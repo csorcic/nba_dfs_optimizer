@@ -1,0 +1,51 @@
+{
+ "slate_date": "2026-11-21",
+ "draft_group_id": "157174",
+ "salary_file": "DKSalaries_NBA_2026-11-21_157174.csv",
+ "games": [
+  {
+   "game": "POR@NYK",
+   "lock_time": "2026-11-21T19:30:00-05:00",
+   "total": 215.5,
+   "home_spread": -3.5,
+   "source": "odds_api",
+   "books": 9,
+   "commence_time": "2026-11-22T00:40:00Z",
+   "home_implied": 109.5,
+   "away_implied": 106.0
+  },
+  {
+   "game": "LAC@DAL",
+   "lock_time": "2026-11-21T20:00:00-05:00",
+   "total": 230.5,
+   "home_spread": -5.0,
+   "source": "odds_api",
+   "books": 9,
+   "commence_time": "2026-11-22T01:10:00Z",
+   "home_implied": 117.75,
+   "away_implied": 112.75
+  },
+  {
+   "game": "MEM@MIN",
+   "lock_time": "2026-11-21T20:00:00-05:00",
+   "total": 229.5,
+   "home_spread": -6.5,
+   "source": "odds_api",
+   "books": 9,
+   "commence_time": "2026-11-22T01:10:00Z",
+   "home_implied": 118.0,
+   "away_implied": 111.5
+  },
+  {
+   "game": "NOP@SAS",
+   "lock_time": "2026-11-21T20:00:00-05:00",
+   "total": 228.0,
+   "home_spread": -18.5,
+   "source": "odds_api",
+   "books": 9,
+   "commence_time": "2026-11-22T01:10:00Z",
+   "home_implied": 123.25,
+   "away_implied": 104.75
+  }
+ ]
+}
