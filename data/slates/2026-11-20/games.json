@@ -5,69 +5,27 @@
  "games": [
   {
    "game": "CHA@ATL",
-   "lock_time": "2026-11-20T19:00:00-05:00",
-   "total": 219.0,
-   "home_spread": -7.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-21T00:11:00Z",
-   "home_implied": 113.25,
-   "away_implied": 105.75
+   "lock_time": "2026-11-20T19:00:00-05:00"
   },
   {
    "game": "IND@CLE",
-   "lock_time": "2026-11-20T19:30:00-05:00",
-   "total": 235.0,
-   "home_spread": -6.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-21T00:40:00Z",
-   "home_implied": 120.5,
-   "away_implied": 114.5
+   "lock_time": "2026-11-20T19:30:00-05:00"
   },
   {
    "game": "ORL@BKN",
-   "lock_time": "2026-11-20T19:30:00-05:00",
-   "total": 223.5,
-   "home_spread": 6.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-21T00:40:00Z",
-   "home_implied": 108.5,
-   "away_implied": 115.0
+   "lock_time": "2026-11-20T19:30:00-05:00"
   },
   {
    "game": "TOR@DET",
-   "lock_time": "2026-11-20T19:30:00-05:00",
-   "total": 215.5,
-   "home_spread": -6.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-21T00:40:00Z",
-   "home_implied": 111.0,
-   "away_implied": 104.5
+   "lock_time": "2026-11-20T19:30:00-05:00"
   },
   {
    "game": "NOP@OKC",
-   "lock_time": "2026-11-20T20:00:00-05:00",
-   "total": 229.0,
-   "home_spread": -11.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-21T01:10:00Z",
-   "home_implied": 120.0,
-   "away_implied": 109.0
+   "lock_time": "2026-11-20T20:00:00-05:00"
   },
   {
    "game": "WAS@CHI",
-   "lock_time": "2026-11-20T20:00:00-05:00",
-   "total": 238.0,
-   "home_spread": -2.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-21T01:10:00Z",
-   "home_implied": 120.0,
-   "away_implied": 118.0
+   "lock_time": "2026-11-20T20:00:00-05:00"
   }
  ]
 }
