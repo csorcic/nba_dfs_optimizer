@@ -6,24 +6,24 @@
   {
    "game": "DAL@UTA",
    "lock_time": "2026-11-22T19:00:00-05:00",
-   "total": 227.0,
-   "home_spread": 2.0,
+   "total": 226.5,
+   "home_spread": 2.5,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-23T00:10:00Z",
-   "home_implied": 112.5,
+   "home_implied": 112.0,
    "away_implied": 114.5
   },
   {
    "game": "DEN@CHI",
    "lock_time": "2026-11-22T19:00:00-05:00",
-   "total": 236.0,
-   "home_spread": 9.5,
+   "total": 237.5,
+   "home_spread": 10.0,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-23T00:10:00Z",
-   "home_implied": 113.25,
-   "away_implied": 122.75
+   "home_implied": 113.75,
+   "away_implied": 123.75
   },
   {
    "game": "ORL@WAS",
@@ -51,12 +51,12 @@
    "game": "BOS@GSW",
    "lock_time": "2026-11-22T20:30:00-05:00",
    "total": 210.5,
-   "home_spread": 8.5,
+   "home_spread": 8.0,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-23T01:40:00Z",
-   "home_implied": 101.0,
-   "away_implied": 109.5
+   "home_implied": 101.25,
+   "away_implied": 109.25
   }
  ]
 }
