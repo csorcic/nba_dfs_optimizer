@@ -1,0 +1,47 @@
+{
+ "BOS@GSW": {
+  "total": 210.5,
+  "home_spread": 8.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-23T01:40:00Z",
+  "home_implied": 101.0,
+  "away_implied": 109.5
+ },
+ "DAL@UTA": {
+  "total": 227.0,
+  "home_spread": 2.0,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-23T00:10:00Z",
+  "home_implied": 112.5,
+  "away_implied": 114.5
+ },
+ "DEN@CHI": {
+  "total": 236.0,
+  "home_spread": 9.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-23T00:10:00Z",
+  "home_implied": 113.25,
+  "away_implied": 122.75
+ },
+ "IND@NYK": {
+  "total": 213.5,
+  "home_spread": -7.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-23T01:10:00Z",
+  "home_implied": 110.5,
+  "away_implied": 103.0
+ },
+ "ORL@WAS": {
+  "total": 219.5,
+  "home_spread": 4.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-23T00:10:00Z",
+  "home_implied": 107.5,
+  "away_implied": 112.0
+ }
+}
