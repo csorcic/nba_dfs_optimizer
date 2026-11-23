@@ -1,10 +1,10 @@
-# Lessons across 10 slate(s)
+# Lessons across 11 slate(s)
 
-**Too early to act on:** 10 of 20 slates so far. Numbers are shown for interest only.
+**Too early to act on:** 11 of 20 slates so far. Numbers are shown for interest only.
 
 - 3 slate(s) skipped because their projections were rebuilt after the fact (2026-11-07, 2026-11-09, 2026-11-10); lessons use pre-lock projections only.
-- Ceilings: 12.3% of players beat their ceiling (target 10%); 84.0% landed inside floor–ceiling (target 80%).
-- Smash rate is 14.5% overall; highest for salary $6-8K (21.7%, 249 players).
+- Ceilings: 11.9% of players beat their ceiling (target 10%); 84.5% landed inside floor–ceiling (target 80%).
+- Smash rate is 14.2% overall; highest for salary $6-8K (21.4%, 266 players).
 - Ownership estimate misses real %Drafted by 3.97 points on average (bias +0.0) over 3 slate(s).
 
 ## Recommended changes
@@ -21,10 +21,10 @@
 
 | Salary | Players | Over ceiling | Inside range |
 |---|---|---|---|
-| under $4K | 428 | 16.8% | 80.8% |
-| $4-6K | 483 | 10.6% | 84.7% |
-| $6-8K | 239 | 10.0% | 85.8% |
-| $8K+ | 100 | 7.0% | 90.0% |
+| under $4K | 475 | 15.6% | 81.9% |
+| $4-6K | 520 | 10.6% | 85.0% |
+| $6-8K | 256 | 9.8% | 85.9% |
+| $8K+ | 111 | 7.2% | 90.1% |
 
 Targets: about 10% over ceiling, 80% inside floor–ceiling.
 
@@ -32,51 +32,51 @@ Targets: about 10% over ceiling, 80% inside floor–ceiling.
 
 |  | Players | Smash | vs avg |
 |---|---|---|---|
-| under 1 min | 1287 | 13.8% | 0.95x |
-| 1-4 min | 271 | 17.3% | 1.2x |
-| 4 min+ | 22 | 18.2% | 1.25x * |
+| under 1 min | 1398 | 13.3% | 0.94x |
+| 1-4 min | 297 | 17.8% | 1.26x |
+| 4 min+ | 22 | 18.2% | 1.28x * |
 
-Average smash rate 14.5%. * = small sample.
+Average smash rate 14.2%. * = small sample.
 
 ## Smash rate by team implied total
 
 |  | Players | Smash | vs avg |
 |---|---|---|---|
-| under 110 | 430 | 12.3% | 0.85x |
-| 110-116 | 642 | 15.0% | 1.03x |
-| 116-122 | 440 | 16.4% | 1.13x |
-| 122+ | 68 | 11.8% | 0.81x |
+| under 110 | 485 | 11.1% | 0.79x |
+| 110-116 | 709 | 14.8% | 1.05x |
+| 116-122 | 440 | 16.4% | 1.16x |
+| 122+ | 83 | 14.5% | 1.02x |
 
-Average smash rate 14.5%. * = small sample.
+Average smash rate 14.2%. * = small sample.
 
 ## Smash rate by salary
 
 |  | Players | Smash | vs avg |
 |---|---|---|---|
-| under $4K | 712 | 7.6% | 0.52x |
-| $4-6K | 511 | 19.6% | 1.35x |
-| $6-8K | 249 | 21.7% | 1.5x |
-| $8K+ | 108 | 19.4% | 1.34x |
+| under $4K | 782 | 7.2% | 0.51x |
+| $4-6K | 549 | 19.3% | 1.36x |
+| $6-8K | 266 | 21.4% | 1.51x |
+| $8K+ | 120 | 20.0% | 1.41x |
 
-Average smash rate 14.5%. * = small sample.
+Average smash rate 14.2%. * = small sample.
 
 ## Smash rate by position
 
 |  | Players | Smash | vs avg |
 |---|---|---|---|
-| C | 298 | 14.4% | 1.0x |
-| PF | 279 | 11.8% | 0.82x |
-| PG | 426 | 15.5% | 1.07x |
-| SF | 301 | 12.0% | 0.83x |
-| SG | 276 | 18.5% | 1.27x |
+| C | 329 | 14.0% | 0.99x |
+| PF | 302 | 11.6% | 0.82x |
+| PG | 459 | 15.3% | 1.08x |
+| SF | 325 | 11.1% | 0.78x |
+| SG | 302 | 18.5% | 1.31x |
 
-Average smash rate 14.5%. * = small sample.
+Average smash rate 14.2%. * = small sample.
 
 ## Lineup make-up
 
 |  | Lineups | Stars | Values | 3+ one game | From top total |
 |---|---|---|---|---|---|
-| Best possible | 10 | 0.7 | 1.7 | 70.0% | 20.0% |
+| Best possible | 11 | 0.73 | 1.82 | 72.7% | 27.3% |
 | Contest winners | 3 | 1.0 | 1.33 | 100.0% | 0.0% |
 
 Your GPP stack default: off.
