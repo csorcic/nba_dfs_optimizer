@@ -18,22 +18,22 @@
    "game": "BOS@WAS",
    "lock_time": "2026-11-24T20:00:00-05:00",
    "total": 219.0,
-   "home_spread": 10.5,
+   "home_spread": 11.0,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-25T01:10:00Z",
-   "home_implied": 104.25,
-   "away_implied": 114.75
+   "home_implied": 104.0,
+   "away_implied": 115.0
   },
   {
    "game": "DAL@DEN",
    "lock_time": "2026-11-24T22:00:00-05:00",
-   "total": 234.0,
-   "home_spread": -8.0,
+   "total": 234.5,
+   "home_spread": -8.5,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-25T03:10:00Z",
-   "home_implied": 121.0,
+   "home_implied": 121.5,
    "away_implied": 113.0
   }
  ]
