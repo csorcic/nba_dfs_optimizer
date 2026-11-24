@@ -1,19 +1,19 @@
 # Backtest 2026-27
 
-32 days, 2026-10-21 to 2026-11-22. Error = projection minus actual DK points (positive bias = we projected too high).
+33 days, 2026-10-21 to 2026-11-23. Error = projection minus actual DK points (positive bias = we projected too high).
 
 | Group | Players | MAE | Bias | Baseline MAE | Minutes MAE | Inside floor-ceiling | Over ceiling |
 |---|---|---|---|---|---|---|---|
-| **All** | 5401 | 7.49 | +0.36 | 7.80 | 4.75 | 85% | 9% |
-| Salary under $4K | 709 | 6.29 | -0.59 | 6.29 | 5.23 | 85% | 10% |
-| Salary $4K-$6K | 630 | 7.64 | +0.20 | 7.75 | 4.65 | 88% | 7% |
-| Salary $6K-$8K | 299 | 8.34 | +1.03 | 8.46 | 4.06 | 89% | 6% |
-| Salary $8K+ | 143 | 10.04 | -0.95 | 9.88 | 3.89 | 90% | 7% |
-| Projected under 15 pts | 1682 | 5.97 | -1.66 | 6.13 | 5.40 | 80% | 16% |
-| Projected 15-25 pts | 1809 | 7.54 | +1.46 | 7.75 | 4.85 | 86% | 6% |
-| Projected 25-35 pts | 1123 | 8.32 | +1.21 | 8.94 | 4.27 | 89% | 5% |
-| Projected 35+ pts | 787 | 9.45 | +0.92 | 9.88 | 3.81 | 88% | 5% |
-| Games with a Vegas line | 5401 | 7.49 | +0.36 | 7.80 | 4.75 | 85% | 9% |
+| **All** | 5626 | 7.46 | +0.32 | 7.78 | 4.73 | 85% | 9% |
+| Salary under $4K | 729 | 6.31 | -0.60 | 6.33 | 5.22 | 84% | 10% |
+| Salary $4K-$6K | 645 | 7.60 | +0.17 | 7.74 | 4.66 | 88% | 7% |
+| Salary $6K-$8K | 307 | 8.31 | +0.95 | 8.44 | 4.03 | 90% | 6% |
+| Salary $8K+ | 146 | 10.16 | -0.78 | 10.00 | 3.85 | 89% | 7% |
+| Projected under 15 pts | 1753 | 5.97 | -1.62 | 6.13 | 5.39 | 80% | 16% |
+| Projected 15-25 pts | 1889 | 7.52 | +1.37 | 7.75 | 4.82 | 86% | 6% |
+| Projected 25-35 pts | 1169 | 8.26 | +1.07 | 8.88 | 4.23 | 89% | 5% |
+| Projected 35+ pts | 815 | 9.41 | +0.96 | 9.84 | 3.79 | 89% | 5% |
+| Games with a Vegas line | 5626 | 7.46 | +0.32 | 7.78 | 4.73 | 85% | 9% |
 
 Baseline = player's season average DK points to date (what a naive projection would say).
 Inside floor-ceiling should be about 80% and over ceiling about 10% if the spread is right.

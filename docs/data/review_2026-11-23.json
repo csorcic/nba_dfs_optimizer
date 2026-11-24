@@ -1,0 +1,730 @@
+{
+ "schema": 1,
+ "generatedAt": "2026-11-24T05:47:04+00:00",
+ "gameDate": "2026-11-23",
+ "fileDate": "2026-11-23",
+ "draftGroupId": "157216",
+ "salaryFile": "DKSalaries_NBA_2026-11-23_157216.csv",
+ "projections": {
+  "source": "prelock",
+  "snapshotAt": "2026-11-24T01:40:47+00:00",
+  "note": "Pre-lock projections from the last pipeline run before the first game locked."
+ },
+ "games": [
+  {
+   "game": "MEM@CHA",
+   "lock": "2026-11-23T19:00:00-05:00",
+   "total": 213.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "POR@PHI",
+   "lock": "2026-11-23T19:00:00-05:00",
+   "total": 230.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "BKN@MIN",
+   "lock": "2026-11-23T19:30:00-05:00",
+   "total": 223.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "MIL@TOR",
+   "lock": "2026-11-23T19:30:00-05:00",
+   "total": 222.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "OKC@IND",
+   "lock": "2026-11-23T19:30:00-05:00",
+   "total": 226.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "CLE@CHI",
+   "lock": "2026-11-23T20:00:00-05:00",
+   "total": 240.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "PHX@NOP",
+   "lock": "2026-11-23T20:00:00-05:00",
+   "total": 232.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "LAC@HOU",
+   "lock": "2026-11-23T20:30:00-05:00",
+   "total": 222.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  }
+ ],
+ "accuracy": {
+  "players": 55,
+  "mae": 6.54,
+  "bias": -1.63,
+  "overCeilingPct": 14.5,
+  "insideRangePct": 81.8,
+  "lateScratches": 2,
+  "playedButProjectedOut": 1
+ },
+ "lateScratches": [
+  {
+   "id": "45057039",
+   "name": "Victor Wembanyama",
+   "team": "SAS",
+   "salary": 12000,
+   "proj": 59.31,
+   "status": "Q"
+  },
+  {
+   "id": "45057075",
+   "name": "De'Aaron Fox",
+   "team": "SAS",
+   "salary": 6700,
+   "proj": 29.13,
+   "status": "Q"
+  }
+ ],
+ "noResult": [
+  {
+   "id": "45057251",
+   "name": "Ben Simmons",
+   "team": "SAC",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  },
+  {
+   "id": "45057257",
+   "name": "Jayden Quaintance",
+   "team": "SAS",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  }
+ ],
+ "optimal": {
+  "actual": 335.0,
+  "ourProj": 211.88,
+  "players": [
+   {
+    "slot": "PG",
+    "id": "45057041",
+    "name": "Luka Doncic",
+    "team": "LAL",
+    "game": "UTA@LAL",
+    "salary": 11900,
+    "proj": 59.55,
+    "ceiling": 85.91,
+    "own": 75.0,
+    "actual": 46.5,
+    "valueRank": 2,
+    "projRank": 1,
+    "missType": "in our lineup"
+   },
+   {
+    "slot": "SG",
+    "id": "45057061",
+    "name": "Stephon Castle",
+    "team": "SAS",
+    "game": "SAS@SAC",
+    "salary": 7500,
+    "proj": 36.81,
+    "ceiling": 53.87,
+    "own": 65.7,
+    "actual": 57.0,
+    "valueRank": 4,
+    "projRank": 5,
+    "missType": "close call"
+   },
+   {
+    "slot": "SF",
+    "id": "45057142",
+    "name": "Matisse Thybulle",
+    "team": "LAL",
+    "game": "UTA@LAL",
+    "salary": 4400,
+    "proj": 19.38,
+    "ceiling": 30.6,
+    "own": 18.5,
+    "actual": 28.0,
+    "valueRank": 12,
+    "projRank": 22,
+    "missType": "in our lineup"
+   },
+   {
+    "slot": "PF",
+    "id": "45057127",
+    "name": "Jake LaRavia",
+    "team": "LAL",
+    "game": "UTA@LAL",
+    "salary": 4800,
+    "proj": 18.79,
+    "ceiling": 30.17,
+    "own": 13.2,
+    "actual": 34.5,
+    "valueRank": 26,
+    "projRank": 23,
+    "missType": "settings miss"
+   },
+   {
+    "slot": "C",
+    "id": "45057048",
+    "name": "Domantas Sabonis",
+    "team": "SAC",
+    "game": "SAS@SAC",
+    "salary": 8700,
+    "proj": 33.87,
+    "ceiling": 52.26,
+    "own": 20.4,
+    "actual": 47.0,
+    "valueRank": 27,
+    "projRank": 7,
+    "missType": "settings miss"
+   },
+   {
+    "slot": "G",
+    "id": "45057121",
+    "name": "Julian Champagnie",
+    "team": "SAS",
+    "game": "SAS@SAC",
+    "salary": 5000,
+    "proj": 22.46,
+    "ceiling": 33.95,
+    "own": 22.9,
+    "actual": 39.25,
+    "valueRank": 11,
+    "projRank": 17,
+    "missType": "projection miss"
+   },
+   {
+    "slot": "F",
+    "id": "45057167",
+    "name": "Kyle Filipowski",
+    "team": "UTA",
+    "game": "UTA@LAL",
+    "salary": 3700,
+    "proj": 8.24,
+    "ceiling": 29.9,
+    "own": 1.6,
+    "actual": 45.0,
+    "valueRank": 39,
+    "projRank": 37,
+    "missType": "projection miss"
+   },
+   {
+    "slot": "UTIL",
+    "id": "45057197",
+    "name": "Luke Kornet",
+    "team": "SAS",
+    "game": "SAS@SAC",
+    "salary": 3100,
+    "proj": 12.78,
+    "ceiling": 22.86,
+    "own": 10.4,
+    "actual": 37.75,
+    "valueRank": 17,
+    "projRank": 30,
+    "missType": "projection miss"
+   }
+  ],
+  "composition": {
+   "salary": 49100,
+   "stars": 1,
+   "values": 3,
+   "maxFromOneGame": 4,
+   "maxGame": "UTA@LAL",
+   "maxGameIsHighestTotal": null,
+   "teams": [
+    "LAL",
+    "SAC",
+    "SAS",
+    "UTA"
+   ],
+   "teamCount": 4,
+   "games": 2,
+   "ownSum": 227.7,
+   "proj": 211.9,
+   "actual": 335.0
+  }
+ },
+ "ours": {
+  "actual": 211.75,
+  "proj": 240.91,
+  "players": [
+   {
+    "slot": "PG",
+    "id": "45057041",
+    "name": "Luka Doncic",
+    "team": "LAL",
+    "game": "UTA@LAL",
+    "salary": 11900,
+    "proj": 59.55,
+    "ceiling": 85.91,
+    "own": 75.0,
+    "actual": 46.5,
+    "valueRank": 2,
+    "projRank": 1
+   },
+   {
+    "slot": "SG",
+    "id": "45057175",
+    "name": "Svi Mykhailiuk",
+    "team": "UTA",
+    "game": "UTA@LAL",
+    "salary": 3500,
+    "proj": 16.99,
+    "ceiling": 31.54,
+    "own": 13.0,
+    "actual": 9.75,
+    "valueRank": 5,
+    "projRank": 25
+   },
+   {
+    "slot": "SF",
+    "id": "45057104",
+    "name": "Devin Vassell",
+    "team": "SAS",
+    "game": "SAS@SAC",
+    "salary": 5500,
+    "proj": 25.49,
+    "ceiling": 38.2,
+    "own": 30.8,
+    "actual": 30.5,
+    "valueRank": 8,
+    "projRank": 12
+   },
+   {
+    "slot": "PF",
+    "id": "45057114",
+    "name": "Keldon Johnson",
+    "team": "SAS",
+    "game": "SAS@SAC",
+    "salary": 5100,
+    "proj": 23.44,
+    "ceiling": 35.27,
+    "own": 26.2,
+    "actual": 25.5,
+    "valueRank": 9,
+    "projRank": 15
+   },
+   {
+    "slot": "C",
+    "id": "45057073",
+    "name": "Walker Kessler",
+    "team": "LAL",
+    "game": "UTA@LAL",
+    "salary": 7200,
+    "proj": 36.36,
+    "ceiling": 55.01,
+    "own": 68.1,
+    "actual": 32.5,
+    "valueRank": 1,
+    "projRank": 6
+   },
+   {
+    "slot": "G",
+    "id": "45057050",
+    "name": "Keyonte George",
+    "team": "UTA",
+    "game": "UTA@LAL",
+    "salary": 7900,
+    "proj": 38.2,
+    "ceiling": 58.25,
+    "own": 50.4,
+    "actual": 25.5,
+    "valueRank": 6,
+    "projRank": 3
+   },
+   {
+    "slot": "F",
+    "id": "45057138",
+    "name": "Sandro Mamukelashvili",
+    "team": "LAL",
+    "game": "UTA@LAL",
+    "salary": 4500,
+    "proj": 21.5,
+    "ceiling": 35.6,
+    "own": 25.8,
+    "actual": 13.5,
+    "valueRank": 7,
+    "projRank": 20
+   },
+   {
+    "slot": "UTIL",
+    "id": "45057142",
+    "name": "Matisse Thybulle",
+    "team": "LAL",
+    "game": "UTA@LAL",
+    "salary": 4400,
+    "proj": 19.38,
+    "ceiling": 30.6,
+    "own": 18.5,
+    "actual": 28.0,
+    "valueRank": 12,
+    "projRank": 22
+   }
+  ],
+  "composition": {
+   "salary": 50000,
+   "stars": 1,
+   "values": 2,
+   "maxFromOneGame": 6,
+   "maxGame": "UTA@LAL",
+   "maxGameIsHighestTotal": null,
+   "teams": [
+    "LAL",
+    "SAS",
+    "UTA"
+   ],
+   "teamCount": 3,
+   "games": 2,
+   "ownSum": 307.8,
+   "proj": 240.9,
+   "actual": 211.8
+  }
+ },
+ "standing": {
+  "ourActual": 211.75,
+  "optimalActual": 335.0,
+  "pctOfOptimal": 63.2,
+  "optimalOurProj": 211.88,
+  "ourProj": 240.91,
+  "projGap": 29.03,
+  "overlap": 2
+ },
+ "topN": {
+  "count": 50,
+  "minUnique": 1,
+  "scores": [
+   335,
+   334.25,
+   332.5,
+   331,
+   330.25,
+   328.75,
+   328.5,
+   328.25,
+   327.75,
+   327.25,
+   327,
+   327,
+   326.75,
+   326.5,
+   326.25,
+   326,
+   326,
+   325.75,
+   325.25,
+   324.75,
+   324.75,
+   324.5,
+   324.5,
+   324.5,
+   324,
+   323.75,
+   323.75,
+   323.75,
+   323.5,
+   323.5,
+   323.5,
+   323.5,
+   323.5,
+   323.25,
+   323.25,
+   323.25,
+   323.25,
+   323.25,
+   323.25,
+   323,
+   323,
+   323,
+   322.75,
+   322.75,
+   322.75,
+   322.75,
+   322.5,
+   322.25,
+   322.25,
+   322
+  ],
+  "composition": {
+   "lineups": 50,
+   "avgSalary": 48164.0,
+   "avgStars": 0.8,
+   "avgValues": 2.56,
+   "avgMaxFromOneGame": 4.92,
+   "avgTeamCount": 3.84,
+   "avgOwnSum": 218.98,
+   "avgActual": 325.28,
+   "maxFromOneGameCounts": {
+    "4": 18,
+    "5": 20,
+    "6": 10,
+    "7": 2
+   },
+   "starsCounts": {
+    "0": 10,
+    "1": 40
+   },
+   "pctMaxGameIsHighestTotal": null,
+   "teamUsage": {
+    "SAS": 50,
+    "UTA": 50,
+    "SAC": 48,
+    "LAL": 44
+   }
+  },
+  "playerCounts": [
+   {
+    "id": "45057061",
+    "name": "Stephon Castle",
+    "count": 50
+   },
+   {
+    "id": "45057167",
+    "name": "Kyle Filipowski",
+    "count": 50
+   },
+   {
+    "id": "45057197",
+    "name": "Luke Kornet",
+    "count": 49
+   },
+   {
+    "id": "45057121",
+    "name": "Julian Champagnie",
+    "count": 42
+   },
+   {
+    "id": "45057041",
+    "name": "Luka Doncic",
+    "count": 40
+   },
+   {
+    "id": "45057095",
+    "name": "De'Andre Hunter",
+    "count": 37
+   },
+   {
+    "id": "45057127",
+    "name": "Jake LaRavia",
+    "count": 27
+   },
+   {
+    "id": "45057048",
+    "name": "Domantas Sabonis",
+    "count": 27
+   },
+   {
+    "id": "45057156",
+    "name": "Malik Monk",
+    "count": 15
+   },
+   {
+    "id": "45057142",
+    "name": "Matisse Thybulle",
+    "count": 11
+   },
+   {
+    "id": "45057104",
+    "name": "Devin Vassell",
+    "count": 11
+   },
+   {
+    "id": "45057085",
+    "name": "Zach LaVine",
+    "count": 7
+   },
+   {
+    "id": "45057082",
+    "name": "Ace Bailey",
+    "count": 7
+   },
+   {
+    "id": "45057073",
+    "name": "Walker Kessler",
+    "count": 6
+   },
+   {
+    "id": "45057057",
+    "name": "Darryn Peterson",
+    "count": 5
+   }
+  ]
+ },
+ "smash": [
+  {
+   "id": "45057061",
+   "name": "Stephon Castle",
+   "team": "SAS",
+   "pos": "SG",
+   "salary": 7500,
+   "actual": 57.0,
+   "multiple": 7.6,
+   "minutesBump": 1.2,
+   "teamImplied": 117.0,
+   "spread": -8.5,
+   "proj": 36.81,
+   "ceiling": 53.87,
+   "own": 65.7,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45057167",
+   "name": "Kyle Filipowski",
+   "team": "UTA",
+   "pos": "PF/C",
+   "salary": 3700,
+   "actual": 45.0,
+   "multiple": 12.16,
+   "minutesBump": 2.0,
+   "teamImplied": 105.8,
+   "spread": 13.5,
+   "proj": 8.24,
+   "ceiling": 29.9,
+   "own": 1.6,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45057121",
+   "name": "Julian Champagnie",
+   "team": "SAS",
+   "pos": "SG",
+   "salary": 5000,
+   "actual": 39.25,
+   "multiple": 7.85,
+   "minutesBump": 1.2,
+   "teamImplied": 117.0,
+   "spread": -8.5,
+   "proj": 22.46,
+   "ceiling": 33.95,
+   "own": 22.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45057197",
+   "name": "Luke Kornet",
+   "team": "SAS",
+   "pos": "C",
+   "salary": 3100,
+   "actual": 37.75,
+   "multiple": 12.18,
+   "minutesBump": 0.6,
+   "teamImplied": 117.0,
+   "spread": -8.5,
+   "proj": 12.78,
+   "ceiling": 22.86,
+   "own": 10.4,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45057095",
+   "name": "De'Andre Hunter",
+   "team": "SAC",
+   "pos": "SF/PF",
+   "salary": 6000,
+   "actual": 37.75,
+   "multiple": 6.29,
+   "minutesBump": 0.0,
+   "teamImplied": 108.5,
+   "spread": 8.5,
+   "proj": 24.69,
+   "ceiling": 39.7,
+   "own": 13.7,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45057127",
+   "name": "Jake LaRavia",
+   "team": "LAL",
+   "pos": "SF/PF",
+   "salary": 4800,
+   "actual": 34.5,
+   "multiple": 7.19,
+   "minutesBump": 0.1,
+   "teamImplied": 119.2,
+   "spread": -13.5,
+   "proj": 18.79,
+   "ceiling": 30.17,
+   "own": 13.2,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45057156",
+   "name": "Malik Monk",
+   "team": "SAC",
+   "pos": "PG/SG",
+   "salary": 4000,
+   "actual": 28.75,
+   "multiple": 7.19,
+   "minutesBump": 0.0,
+   "teamImplied": 108.5,
+   "spread": 8.5,
+   "proj": 15.78,
+   "ceiling": 31.66,
+   "own": 7.2,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45057142",
+   "name": "Matisse Thybulle",
+   "team": "LAL",
+   "pos": "SF",
+   "salary": 4400,
+   "actual": 28.0,
+   "multiple": 6.36,
+   "minutesBump": 0.1,
+   "teamImplied": 119.2,
+   "spread": -13.5,
+   "proj": 19.38,
+   "ceiling": 30.6,
+   "own": 18.5,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45057207",
+   "name": "Tarris Reed Jr.",
+   "team": "SAS",
+   "pos": "C",
+   "salary": 3000,
+   "actual": 20.75,
+   "multiple": 6.92,
+   "minutesBump": 0.6,
+   "teamImplied": 117.0,
+   "spread": -8.5,
+   "proj": 4.37,
+   "ceiling": 9.9,
+   "own": 1.2,
+   "projectedToPlay": true
+  }
+ ],
+ "settings": {
+  "hindsight_top_n": 50,
+  "hindsight_min_unique": 1,
+  "smash_multiplier": 6,
+  "star_salary": 9000,
+  "value_salary": 4500,
+  "projection_miss_margin": 5,
+  "settings_miss_value_rank": 20
+ },
+ "solver": "highs"
+}
