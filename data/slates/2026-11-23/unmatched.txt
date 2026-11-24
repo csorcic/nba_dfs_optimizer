@@ -1,6 +1,2 @@
-Nate Bittle	TOR	3000	OUT
-Kylan Boswell	CHA	3000	
-Quadir Copeland	HOU	3000	
-Richie Saunders	MEM	3000	OUT
-Thomas Sorber	OKC	3000	OUT
-Tyler Bilodeau	BKN	3000	
+Ben Simmons	SAC	3000	OUT
+Jayden Quaintance	SAS	3000	OUT

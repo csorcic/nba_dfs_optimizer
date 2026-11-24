@@ -1,0 +1,20 @@
+{
+ "SAS@SAC": {
+  "total": 225.5,
+  "home_spread": 8.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-24T03:10:00Z",
+  "home_implied": 108.5,
+  "away_implied": 117.0
+ },
+ "UTA@LAL": {
+  "total": 225.0,
+  "home_spread": -13.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-24T03:10:00Z",
+  "home_implied": 119.25,
+  "away_implied": 105.75
+ }
+}

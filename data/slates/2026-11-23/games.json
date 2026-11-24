@@ -1,94 +1,28 @@
 {
  "slate_date": "2026-11-23",
- "draft_group_id": "157216",
- "salary_file": "DKSalaries_NBA_2026-11-23_157216.csv",
+ "draft_group_id": "157224",
+ "salary_file": "DKSalaries_NBA_2026-11-23_157224.csv",
  "games": [
   {
-   "game": "MEM@CHA",
-   "lock_time": "2026-11-23T19:00:00-05:00",
-   "total": 213.5,
-   "home_spread": 2.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-24T00:10:00Z",
-   "home_implied": 105.5,
-   "away_implied": 108.0
-  },
-  {
-   "game": "POR@PHI",
-   "lock_time": "2026-11-23T19:00:00-05:00",
-   "total": 231.5,
-   "home_spread": -2.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-24T00:10:00Z",
-   "home_implied": 117.0,
-   "away_implied": 114.5
-  },
-  {
-   "game": "BKN@MIN",
-   "lock_time": "2026-11-23T19:30:00-05:00",
-   "total": 223.0,
-   "home_spread": -11.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-24T00:40:00Z",
-   "home_implied": 117.0,
-   "away_implied": 106.0
-  },
-  {
-   "game": "MIL@TOR",
-   "lock_time": "2026-11-23T19:30:00-05:00",
-   "total": 222.5,
-   "home_spread": -10.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-24T00:40:00Z",
-   "home_implied": 116.5,
-   "away_implied": 106.0
-  },
-  {
-   "game": "OKC@IND",
-   "lock_time": "2026-11-23T19:30:00-05:00",
-   "total": 225.0,
-   "home_spread": 6.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-24T00:40:00Z",
-   "home_implied": 109.5,
-   "away_implied": 115.5
-  },
-  {
-   "game": "CLE@CHI",
-   "lock_time": "2026-11-23T20:00:00-05:00",
-   "total": 241.5,
+   "game": "SAS@SAC",
+   "lock_time": "2026-11-23T22:00:00-05:00",
+   "total": 225.5,
    "home_spread": 8.5,
    "source": "odds_api",
    "books": 9,
-   "commence_time": "2026-11-24T01:10:00Z",
-   "home_implied": 116.5,
-   "away_implied": 125.0
+   "commence_time": "2026-11-24T03:10:00Z",
+   "home_implied": 108.5,
+   "away_implied": 117.0
   },
   {
-   "game": "PHX@NOP",
-   "lock_time": "2026-11-23T20:00:00-05:00",
-   "total": 232.5,
-   "home_spread": 3.0,
+   "game": "UTA@LAL",
+   "lock_time": "2026-11-23T22:00:00-05:00",
+   "total": 225.0,
+   "home_spread": -13.5,
    "source": "odds_api",
    "books": 9,
-   "commence_time": "2026-11-24T01:10:00Z",
-   "home_implied": 114.75,
-   "away_implied": 117.75
-  },
-  {
-   "game": "LAC@HOU",
-   "lock_time": "2026-11-23T20:30:00-05:00",
-   "total": 224.0,
-   "home_spread": -12.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-24T01:40:00Z",
-   "home_implied": 118.25,
+   "commence_time": "2026-11-24T03:10:00Z",
+   "home_implied": 119.25,
    "away_implied": 105.75
   }
  ]
