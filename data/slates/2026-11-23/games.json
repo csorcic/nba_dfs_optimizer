@@ -1,29 +1,39 @@
 {
  "slate_date": "2026-11-23",
- "draft_group_id": "157224",
- "salary_file": "DKSalaries_NBA_2026-11-23_157224.csv",
+ "draft_group_id": "157216",
+ "salary_file": "DKSalaries_NBA_2026-11-23_157216.csv",
  "games": [
   {
-   "game": "SAS@SAC",
-   "lock_time": "2026-11-23T22:00:00-05:00",
-   "total": 225.5,
-   "home_spread": 8.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-24T03:10:00Z",
-   "home_implied": 108.5,
-   "away_implied": 117.0
+   "game": "MEM@CHA",
+   "lock_time": "2026-11-23T19:00:00-05:00"
   },
   {
-   "game": "UTA@LAL",
-   "lock_time": "2026-11-23T22:00:00-05:00",
-   "total": 225.0,
-   "home_spread": -13.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-24T03:10:00Z",
-   "home_implied": 119.25,
-   "away_implied": 105.75
+   "game": "POR@PHI",
+   "lock_time": "2026-11-23T19:00:00-05:00"
+  },
+  {
+   "game": "BKN@MIN",
+   "lock_time": "2026-11-23T19:30:00-05:00"
+  },
+  {
+   "game": "MIL@TOR",
+   "lock_time": "2026-11-23T19:30:00-05:00"
+  },
+  {
+   "game": "OKC@IND",
+   "lock_time": "2026-11-23T19:30:00-05:00"
+  },
+  {
+   "game": "CLE@CHI",
+   "lock_time": "2026-11-23T20:00:00-05:00"
+  },
+  {
+   "game": "PHX@NOP",
+   "lock_time": "2026-11-23T20:00:00-05:00"
+  },
+  {
+   "game": "LAC@HOU",
+   "lock_time": "2026-11-23T20:30:00-05:00"
   }
  ]
 }
