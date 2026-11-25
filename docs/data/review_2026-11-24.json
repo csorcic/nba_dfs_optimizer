@@ -1,0 +1,748 @@
+{
+ "schema": 1,
+ "generatedAt": "2026-11-25T23:06:21+00:00",
+ "gameDate": "2026-11-24",
+ "fileDate": "2026-11-24",
+ "draftGroupId": "156301",
+ "salaryFile": "DKSalaries_NBA_2026-11-24_156301.csv",
+ "projections": {
+  "source": "prelock",
+  "snapshotAt": "2026-11-24T23:29:17+00:00",
+  "note": "Pre-lock projections from the last pipeline run before the first game locked."
+ },
+ "games": [
+  {
+   "game": "DET@ORL",
+   "lock": "2026-11-24T19:00:00-05:00",
+   "total": 210.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "BOS@WAS",
+   "lock": "2026-11-24T20:00:00-05:00",
+   "total": 218.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  },
+  {
+   "game": "DAL@DEN",
+   "lock": "2026-11-24T22:00:00-05:00",
+   "total": 234.5,
+   "totalSource": "closing",
+   "homeSpread": null,
+   "final": true
+  }
+ ],
+ "accuracy": {
+  "players": 81,
+  "mae": 6.23,
+  "bias": -0.8,
+  "overCeilingPct": 6.2,
+  "insideRangePct": 91.4,
+  "lateScratches": 2,
+  "playedButProjectedOut": 0
+ },
+ "lateScratches": [
+  {
+   "id": "45062573",
+   "name": "Cade Cunningham",
+   "team": "DET",
+   "salary": 9400,
+   "proj": 46.16,
+   "status": "Q"
+  },
+  {
+   "id": "45062765",
+   "name": "Nikola Vucevic",
+   "team": "ORL",
+   "salary": 3400,
+   "proj": 10.35,
+   "status": ""
+  }
+ ],
+ "noResult": [
+  {
+   "id": "45062891",
+   "name": "Izaiyah Nelson",
+   "team": "ORL",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  },
+  {
+   "id": "45062901",
+   "name": "Ugonna Onyenso",
+   "team": "DET",
+   "salary": 3000,
+   "status": "",
+   "reason": "unmatched"
+  },
+  {
+   "id": "45062903",
+   "name": "Tarik Biberovic",
+   "team": "DAL",
+   "salary": 3000,
+   "status": "OUT",
+   "reason": "unmatched"
+  }
+ ],
+ "optimal": {
+  "actual": 349.75,
+  "ourProj": 225.47,
+  "players": [
+   {
+    "slot": "PG",
+    "id": "45062624",
+    "name": "Daniss Jenkins",
+    "team": "DET",
+    "game": "DET@ORL",
+    "salary": 6100,
+    "proj": 28.09,
+    "ceiling": 47.32,
+    "own": 13.9,
+    "actual": 38.5,
+    "valueRank": 13,
+    "projRank": 17,
+    "missType": "close call"
+   },
+   {
+    "slot": "SG",
+    "id": "45062614",
+    "name": "Kyshawn George",
+    "team": "WAS",
+    "game": "BOS@WAS",
+    "salary": 6400,
+    "proj": 29.38,
+    "ceiling": 46.58,
+    "own": 13.9,
+    "actual": 43.25,
+    "valueRank": 15,
+    "projRank": 12,
+    "missType": "close call"
+   },
+   {
+    "slot": "SF",
+    "id": "45062607",
+    "name": "AJ Dybantsa",
+    "team": "WAS",
+    "game": "BOS@WAS",
+    "salary": 6600,
+    "proj": 29.16,
+    "ceiling": 43.8,
+    "own": 11.7,
+    "actual": 45.25,
+    "valueRank": 21,
+    "projRank": 14,
+    "missType": "settings miss"
+   },
+   {
+    "slot": "PF",
+    "id": "45062566",
+    "name": "Jayson Tatum",
+    "team": "BOS",
+    "game": "BOS@WAS",
+    "salary": 9700,
+    "proj": 46.18,
+    "ceiling": 65.35,
+    "own": 64.9,
+    "actual": 68.0,
+    "valueRank": 7,
+    "projRank": 2,
+    "missType": "close call"
+   },
+   {
+    "slot": "C",
+    "id": "45062657",
+    "name": "Neemias Queta",
+    "team": "BOS",
+    "game": "BOS@WAS",
+    "salary": 5100,
+    "proj": 26.12,
+    "ceiling": 42.7,
+    "own": 22.2,
+    "actual": 35.25,
+    "valueRank": 2,
+    "projRank": 20,
+    "missType": "in our lineup"
+   },
+   {
+    "slot": "G",
+    "id": "45062726",
+    "name": "Isaiah Joe",
+    "team": "DET",
+    "game": "DET@ORL",
+    "salary": 3800,
+    "proj": 16.39,
+    "ceiling": 29.66,
+    "own": 5.7,
+    "actual": 29.5,
+    "valueRank": 31,
+    "projRank": 38,
+    "missType": "in our lineup"
+   },
+   {
+    "slot": "F",
+    "id": "45062593",
+    "name": "Paul George",
+    "team": "BOS",
+    "game": "BOS@WAS",
+    "salary": 7800,
+    "proj": 35.03,
+    "ceiling": 53.42,
+    "own": 26.1,
+    "actual": 51.0,
+    "valueRank": 18,
+    "projRank": 9,
+    "missType": "close call"
+   },
+   {
+    "slot": "UTIL",
+    "id": "45062683",
+    "name": "Caleb Martin",
+    "team": "DAL",
+    "game": "DAL@DEN",
+    "salary": 4400,
+    "proj": 15.12,
+    "ceiling": 28.64,
+    "own": 3.6,
+    "actual": 39.0,
+    "valueRank": 47,
+    "projRank": 40,
+    "missType": "projection miss"
+   }
+  ],
+  "composition": {
+   "salary": 49900,
+   "stars": 1,
+   "values": 2,
+   "maxFromOneGame": 5,
+   "maxGame": "BOS@WAS",
+   "maxGameIsHighestTotal": false,
+   "teams": [
+    "BOS",
+    "DAL",
+    "DET",
+    "WAS"
+   ],
+   "teamCount": 4,
+   "games": 3,
+   "ownSum": 162.0,
+   "proj": 225.5,
+   "actual": 349.8
+  }
+ },
+ "ours": {
+  "actual": 230.25,
+  "proj": 243.43,
+  "players": [
+   {
+    "slot": "PG",
+    "id": "45062583",
+    "name": "Jamal Murray",
+    "team": "DEN",
+    "game": "DAL@DEN",
+    "salary": 8800,
+    "proj": 43.77,
+    "ceiling": 66.99,
+    "own": 68.4,
+    "actual": 31.0,
+    "valueRank": 4,
+    "projRank": 4
+   },
+   {
+    "slot": "SG",
+    "id": "45062663",
+    "name": "Cameron Johnson",
+    "team": "DEN",
+    "game": "DAL@DEN",
+    "salary": 4900,
+    "proj": 22.98,
+    "ceiling": 36.2,
+    "own": 17.3,
+    "actual": 28.75,
+    "valueRank": 9,
+    "projRank": 28
+   },
+   {
+    "slot": "SF",
+    "id": "45062733",
+    "name": "Bilal Coulibaly",
+    "team": "WAS",
+    "game": "BOS@WAS",
+    "salary": 3700,
+    "proj": 16.44,
+    "ceiling": 29.91,
+    "own": 5.4,
+    "actual": 15.75,
+    "valueRank": 20,
+    "projRank": 37
+   },
+   {
+    "slot": "PF",
+    "id": "45062599",
+    "name": "Ausar Thompson",
+    "team": "DET",
+    "game": "DET@ORL",
+    "salary": 6800,
+    "proj": 31.92,
+    "ceiling": 49.07,
+    "own": 19.9,
+    "actual": 38.0,
+    "valueRank": 8,
+    "projRank": 10
+   },
+   {
+    "slot": "C",
+    "id": "45062564",
+    "name": "Nikola Jokic",
+    "team": "DEN",
+    "game": "DAL@DEN",
+    "salary": 11700,
+    "proj": 60.3,
+    "ceiling": 84.95,
+    "own": 75.0,
+    "actual": 40.75,
+    "valueRank": 1,
+    "projRank": 1
+   },
+   {
+    "slot": "G",
+    "id": "45062726",
+    "name": "Isaiah Joe",
+    "team": "DET",
+    "game": "DET@ORL",
+    "salary": 3800,
+    "proj": 16.39,
+    "ceiling": 29.66,
+    "own": 5.7,
+    "actual": 29.5,
+    "valueRank": 31,
+    "projRank": 38
+   },
+   {
+    "slot": "F",
+    "id": "45062653",
+    "name": "Aaron Gordon",
+    "team": "DEN",
+    "game": "DAL@DEN",
+    "salary": 5200,
+    "proj": 25.51,
+    "ceiling": 40.81,
+    "own": 22.7,
+    "actual": 11.25,
+    "valueRank": 6,
+    "projRank": 24
+   },
+   {
+    "slot": "UTIL",
+    "id": "45062657",
+    "name": "Neemias Queta",
+    "team": "BOS",
+    "game": "BOS@WAS",
+    "salary": 5100,
+    "proj": 26.12,
+    "ceiling": 42.7,
+    "own": 22.2,
+    "actual": 35.25,
+    "valueRank": 2,
+    "projRank": 20
+   }
+  ],
+  "composition": {
+   "salary": 50000,
+   "stars": 1,
+   "values": 2,
+   "maxFromOneGame": 4,
+   "maxGame": "DAL@DEN",
+   "maxGameIsHighestTotal": true,
+   "teams": [
+    "BOS",
+    "DEN",
+    "DET",
+    "WAS"
+   ],
+   "teamCount": 4,
+   "games": 3,
+   "ownSum": 236.6,
+   "proj": 243.4,
+   "actual": 230.2
+  }
+ },
+ "standing": {
+  "ourActual": 230.25,
+  "optimalActual": 349.75,
+  "pctOfOptimal": 65.8,
+  "optimalOurProj": 225.47,
+  "ourProj": 243.43,
+  "projGap": 17.96,
+  "overlap": 2
+ },
+ "topN": {
+  "count": 50,
+  "minUnique": 1,
+  "scores": [
+   349.75,
+   345.75,
+   344.75,
+   344.5,
+   343.5,
+   343.25,
+   342,
+   341.75,
+   341.5,
+   341.25,
+   341.25,
+   341,
+   340.75,
+   340.25,
+   340.25,
+   340,
+   340,
+   340,
+   339.75,
+   339.75,
+   339.75,
+   339.5,
+   339.5,
+   339.25,
+   339.25,
+   339,
+   338.75,
+   338.75,
+   338.75,
+   338.5,
+   338.5,
+   338.5,
+   338.5,
+   338.25,
+   338.25,
+   338.25,
+   338.25,
+   338.25,
+   338,
+   337.75,
+   337.75,
+   337.75,
+   337.5,
+   337.5,
+   337.5,
+   337.5,
+   337.25,
+   337.25,
+   337.25,
+   337.25
+  ],
+  "composition": {
+   "lineups": 50,
+   "avgSalary": 49612.0,
+   "avgStars": 1.52,
+   "avgValues": 2.32,
+   "avgMaxFromOneGame": 4.22,
+   "avgTeamCount": 4.3,
+   "avgOwnSum": 149.89,
+   "avgActual": 339.78,
+   "maxFromOneGameCounts": {
+    "3": 6,
+    "4": 27,
+    "5": 17
+   },
+   "starsCounts": {
+    "1": 24,
+    "2": 26
+   },
+   "pctMaxGameIsHighestTotal": 2.0,
+   "teamUsage": {
+    "BOS": 50,
+    "DAL": 50,
+    "DET": 50,
+    "WAS": 50,
+    "ORL": 11,
+    "DEN": 4
+   }
+  },
+  "playerCounts": [
+   {
+    "id": "45062683",
+    "name": "Caleb Martin",
+    "count": 50
+   },
+   {
+    "id": "45062566",
+    "name": "Jayson Tatum",
+    "count": 47
+   },
+   {
+    "id": "45062726",
+    "name": "Isaiah Joe",
+    "count": 40
+   },
+   {
+    "id": "45062624",
+    "name": "Daniss Jenkins",
+    "count": 38
+   },
+   {
+    "id": "45062607",
+    "name": "AJ Dybantsa",
+    "count": 34
+   },
+   {
+    "id": "45062657",
+    "name": "Neemias Queta",
+    "count": 32
+   },
+   {
+    "id": "45062593",
+    "name": "Paul George",
+    "count": 29
+   },
+   {
+    "id": "45062580",
+    "name": "Anthony Davis",
+    "count": 29
+   },
+   {
+    "id": "45062614",
+    "name": "Kyshawn George",
+    "count": 28
+   },
+   {
+    "id": "45062677",
+    "name": "Daniel Gafford",
+    "count": 17
+   },
+   {
+    "id": "45062718",
+    "name": "Morez Johnson",
+    "count": 12
+   },
+   {
+    "id": "45062596",
+    "name": "Trae Young",
+    "count": 12
+   },
+   {
+    "id": "45062631",
+    "name": "Wendell Carter Jr.",
+    "count": 7
+   },
+   {
+    "id": "45062688",
+    "name": "Zaccharie Risacher",
+    "count": 5
+   },
+   {
+    "id": "45062663",
+    "name": "Cameron Johnson",
+    "count": 4
+   }
+  ]
+ },
+ "smash": [
+  {
+   "id": "45062566",
+   "name": "Jayson Tatum",
+   "team": "BOS",
+   "pos": "SF/PF",
+   "salary": 9700,
+   "actual": 68.0,
+   "multiple": 7.01,
+   "minutesBump": 0.0,
+   "teamImplied": 115.0,
+   "spread": -11.0,
+   "proj": 46.18,
+   "ceiling": 65.35,
+   "own": 64.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45062580",
+   "name": "Anthony Davis",
+   "team": "WAS",
+   "pos": "PF",
+   "salary": 9000,
+   "actual": 57.75,
+   "multiple": 6.42,
+   "minutesBump": 0.0,
+   "teamImplied": 104.0,
+   "spread": 11.0,
+   "proj": 39.37,
+   "ceiling": 60.48,
+   "own": 21.5,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45062593",
+   "name": "Paul George",
+   "team": "BOS",
+   "pos": "PF",
+   "salary": 7800,
+   "actual": 51.0,
+   "multiple": 6.54,
+   "minutesBump": 0.0,
+   "teamImplied": 115.0,
+   "spread": -11.0,
+   "proj": 35.03,
+   "ceiling": 53.42,
+   "own": 26.1,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45062607",
+   "name": "AJ Dybantsa",
+   "team": "WAS",
+   "pos": "SF",
+   "salary": 6600,
+   "actual": 45.25,
+   "multiple": 6.86,
+   "minutesBump": 0.0,
+   "teamImplied": 104.0,
+   "spread": 11.0,
+   "proj": 29.16,
+   "ceiling": 43.8,
+   "own": 11.7,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45062614",
+   "name": "Kyshawn George",
+   "team": "WAS",
+   "pos": "SG",
+   "salary": 6400,
+   "actual": 43.25,
+   "multiple": 6.76,
+   "minutesBump": 0.0,
+   "teamImplied": 104.0,
+   "spread": 11.0,
+   "proj": 29.38,
+   "ceiling": 46.58,
+   "own": 13.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45062683",
+   "name": "Caleb Martin",
+   "team": "DAL",
+   "pos": "SG/SF",
+   "salary": 4400,
+   "actual": 39.0,
+   "multiple": 8.86,
+   "minutesBump": 0.0,
+   "teamImplied": 113.0,
+   "spread": 8.5,
+   "proj": 15.12,
+   "ceiling": 28.64,
+   "own": 3.6,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45062624",
+   "name": "Daniss Jenkins",
+   "team": "DET",
+   "pos": "PG/SG",
+   "salary": 6100,
+   "actual": 38.5,
+   "multiple": 6.31,
+   "minutesBump": 0.4,
+   "teamImplied": 107.2,
+   "spread": -2.0,
+   "proj": 28.09,
+   "ceiling": 47.32,
+   "own": 13.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45062657",
+   "name": "Neemias Queta",
+   "team": "BOS",
+   "pos": "C",
+   "salary": 5100,
+   "actual": 35.25,
+   "multiple": 6.91,
+   "minutesBump": 0.0,
+   "teamImplied": 115.0,
+   "spread": -11.0,
+   "proj": 26.12,
+   "ceiling": 42.7,
+   "own": 22.2,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45062677",
+   "name": "Daniel Gafford",
+   "team": "DAL",
+   "pos": "C",
+   "salary": 4600,
+   "actual": 30.0,
+   "multiple": 6.52,
+   "minutesBump": 0.0,
+   "teamImplied": 113.0,
+   "spread": 8.5,
+   "proj": 20.1,
+   "ceiling": 34.21,
+   "own": 8.9,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45062726",
+   "name": "Isaiah Joe",
+   "team": "DET",
+   "pos": "SG/SF",
+   "salary": 3800,
+   "actual": 29.5,
+   "multiple": 7.76,
+   "minutesBump": 0.4,
+   "teamImplied": 107.2,
+   "spread": -2.0,
+   "proj": 16.39,
+   "ceiling": 29.66,
+   "own": 5.7,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45062718",
+   "name": "Morez Johnson",
+   "team": "DAL",
+   "pos": "PF/C",
+   "salary": 3900,
+   "actual": 24.5,
+   "multiple": 6.28,
+   "minutesBump": 0.0,
+   "teamImplied": 113.0,
+   "spread": 8.5,
+   "proj": 15.25,
+   "ceiling": 28.11,
+   "own": 5.0,
+   "projectedToPlay": true
+  },
+  {
+   "id": "45062767",
+   "name": "Ronald Holland II",
+   "team": "DET",
+   "pos": "PF",
+   "salary": 3400,
+   "actual": 21.25,
+   "multiple": 6.25,
+   "minutesBump": 0.4,
+   "teamImplied": 107.2,
+   "spread": -2.0,
+   "proj": 10.03,
+   "ceiling": 21.11,
+   "own": 1.6,
+   "projectedToPlay": true
+  }
+ ],
+ "settings": {
+  "hindsight_top_n": 50,
+  "hindsight_min_unique": 1,
+  "smash_multiplier": 6,
+  "star_salary": 9000,
+  "value_salary": 4500,
+  "projection_miss_margin": 5,
+  "settings_miss_value_rank": 20
+ },
+ "solver": "highs"
+}

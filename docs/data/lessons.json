@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-11-25T04:48:50+00:00",
- "slates": 12,
+ "generatedAt": "2026-11-25T23:06:23+00:00",
+ "slates": 13,
  "minSlates": 20,
  "tooEarly": true,
  "dates": [
@@ -15,7 +15,8 @@
   "2026-11-20",
   "2026-11-21",
   "2026-11-22",
-  "2026-11-23"
+  "2026-11-23",
+  "2026-11-24"
  ],
  "skippedRebuilt": [
   "2026-11-07",
@@ -24,8 +25,8 @@
  ],
  "highlights": [
   "3 slate(s) skipped because their projections were rebuilt after the fact (2026-11-07, 2026-11-09, 2026-11-10); lessons use pre-lock projections only.",
-  "Ceilings: 12.1% of players beat their ceiling (target 10%); 84.3% landed inside floor\u2013ceiling (target 80%).",
-  "Smash rate is 14.2% overall; highest for salary $6-8K (21.5%, 275 players).",
+  "Ceilings: 11.8% of players beat their ceiling (target 10%); 84.6% landed inside floor\u2013ceiling (target 80%).",
+  "Smash rate is 14.2% overall; highest for salary $6-8K (22.0%, 286 players).",
   "Ownership estimate misses real %Drafted by 3.97 points on average (bias +0.0) over 3 slate(s)."
  ],
  "recommendations": [
@@ -38,48 +39,48 @@
   }
  ],
  "calibration": {
-  "players": 1408,
-  "overCeilingPct": 12.1,
-  "insideRangePct": 84.3,
+  "players": 1478,
+  "overCeilingPct": 11.8,
+  "insideRangePct": 84.6,
   "targetOverPct": 10,
   "targetInsidePct": 80,
   "byTier": [
    {
     "tier": "under $4K",
-    "players": 495,
-    "overCeilingPct": 16.0,
-    "insideRangePct": 81.4
+    "players": 526,
+    "overCeilingPct": 15.4,
+    "insideRangePct": 81.7
    },
    {
     "tier": "$4-6K",
-    "players": 535,
-    "overCeilingPct": 10.7,
-    "insideRangePct": 85.0
+    "players": 557,
+    "overCeilingPct": 10.4,
+    "insideRangePct": 85.5
    },
    {
     "tier": "$6-8K",
-    "players": 264,
+    "players": 275,
     "overCeilingPct": 9.8,
-    "insideRangePct": 86.0
+    "insideRangePct": 86.2
    },
    {
     "tier": "$8K+",
-    "players": 114,
-    "overCeilingPct": 7.0,
-    "insideRangePct": 89.5
+    "players": 120,
+    "overCeilingPct": 7.5,
+    "insideRangePct": 89.2
    }
   ],
-  "widthMultiplier": 1.099,
+  "widthMultiplier": 1.084,
   "sdScaleNow": 1.15,
-  "sdScaleSuggested": 1.26,
+  "sdScaleSuggested": 1.25,
   "heldOut": {
-   "slates": 12,
-   "overCeilingPctNow": 12.1,
-   "overCeilingPctSuggested": 10.2
+   "slates": 13,
+   "overCeilingPctNow": 11.8,
+   "overCeilingPctSuggested": 10.0
   }
  },
  "smash": {
-  "players": 1774,
+  "players": 1857,
   "baselinePct": 14.2,
   "groups": [
    {
@@ -87,9 +88,9 @@
     "rows": [
      {
       "bucket": "under 1 min",
-      "players": 1431,
-      "smashPct": 13.4,
-      "lift": 0.94,
+      "players": 1514,
+      "smashPct": 13.5,
+      "lift": 0.95,
       "smallSample": false
      },
      {
@@ -113,23 +114,23 @@
     "rows": [
      {
       "bucket": "under 110",
-      "players": 512,
-      "smashPct": 11.1,
-      "lift": 0.78,
+      "players": 552,
+      "smashPct": 11.4,
+      "lift": 0.8,
       "smallSample": false
      },
      {
       "bucket": "110-116",
-      "players": 709,
-      "smashPct": 14.8,
-      "lift": 1.04,
+      "players": 737,
+      "smashPct": 15.1,
+      "lift": 1.06,
       "smallSample": false
      },
      {
       "bucket": "116-122",
-      "players": 470,
-      "smashPct": 16.6,
-      "lift": 1.17,
+      "players": 485,
+      "smashPct": 16.1,
+      "lift": 1.13,
       "smallSample": false
      },
      {
@@ -146,30 +147,30 @@
     "rows": [
      {
       "bucket": "under $4K",
-      "players": 811,
+      "players": 854,
       "smashPct": 7.3,
       "lift": 0.51,
       "smallSample": false
      },
      {
       "bucket": "$4-6K",
-      "players": 564,
-      "smashPct": 19.5,
-      "lift": 1.37,
+      "players": 586,
+      "smashPct": 19.3,
+      "lift": 1.36,
       "smallSample": false
      },
      {
       "bucket": "$6-8K",
-      "players": 275,
-      "smashPct": 21.5,
-      "lift": 1.51,
+      "players": 286,
+      "smashPct": 22.0,
+      "lift": 1.55,
       "smallSample": false
      },
      {
       "bucket": "$8K+",
-      "players": 124,
-      "smashPct": 19.4,
-      "lift": 1.36,
+      "players": 131,
+      "smashPct": 19.8,
+      "lift": 1.4,
       "smallSample": false
      }
     ]
@@ -179,37 +180,37 @@
     "rows": [
      {
       "bucket": "C",
-      "players": 339,
-      "smashPct": 14.2,
-      "lift": 1.0,
+      "players": 356,
+      "smashPct": 14.0,
+      "lift": 0.99,
       "smallSample": false
      },
      {
       "bucket": "PF",
-      "players": 313,
-      "smashPct": 11.5,
-      "lift": 0.81,
+      "players": 327,
+      "smashPct": 12.2,
+      "lift": 0.86,
       "smallSample": false
      },
      {
       "bucket": "PG",
-      "players": 473,
-      "smashPct": 15.0,
-      "lift": 1.06,
+      "players": 494,
+      "smashPct": 14.6,
+      "lift": 1.03,
       "smallSample": false
      },
      {
       "bucket": "SF",
-      "players": 340,
-      "smashPct": 11.5,
-      "lift": 0.81,
+      "players": 353,
+      "smashPct": 11.6,
+      "lift": 0.82,
       "smallSample": false
      },
      {
       "bucket": "SG",
-      "players": 309,
-      "smashPct": 18.8,
-      "lift": 1.32,
+      "players": 327,
+      "smashPct": 18.7,
+      "lift": 1.31,
       "smallSample": false
      }
     ]
@@ -218,15 +219,15 @@
  },
  "composition": {
   "optimal": {
-   "lineups": 12,
-   "avgSalary": 49742,
-   "avgStars": 0.75,
+   "lineups": 13,
+   "avgSalary": 49754,
+   "avgStars": 0.77,
    "avgValues": 1.92,
-   "avgMaxFromOneGame": 3.25,
-   "pctStack3Plus": 75.0,
-   "pctFromHighestTotal": 27.3,
-   "avgTeamCount": 5.92,
-   "avgOwnSum": 121.1
+   "avgMaxFromOneGame": 3.38,
+   "pctStack3Plus": 76.9,
+   "pctFromHighestTotal": 25.0,
+   "avgTeamCount": 5.77,
+   "avgOwnSum": 124.3
   },
   "winning": {
    "lineups": 3,
@@ -314,27 +315,27 @@
    "rows": [
     [
      "under $4K",
-     495,
-     "16.0%",
-     "81.4%"
+     526,
+     "15.4%",
+     "81.7%"
     ],
     [
      "$4-6K",
-     535,
-     "10.7%",
-     "85.0%"
+     557,
+     "10.4%",
+     "85.5%"
     ],
     [
      "$6-8K",
-     264,
+     275,
      "9.8%",
-     "86.0%"
+     "86.2%"
     ],
     [
      "$8K+",
-     114,
-     "7.0%",
-     "89.5%"
+     120,
+     "7.5%",
+     "89.2%"
     ]
    ],
    "note": "Targets: about 10% over ceiling, 80% inside floor\u2013ceiling."
@@ -350,9 +351,9 @@
    "rows": [
     [
      "under 1 min",
-     1431,
-     "13.4%",
-     "0.94x"
+     1514,
+     "13.5%",
+     "0.95x"
     ],
     [
      "1-4 min",
@@ -380,21 +381,21 @@
    "rows": [
     [
      "under 110",
-     512,
-     "11.1%",
-     "0.78x"
+     552,
+     "11.4%",
+     "0.8x"
     ],
     [
      "110-116",
-     709,
-     "14.8%",
-     "1.04x"
+     737,
+     "15.1%",
+     "1.06x"
     ],
     [
      "116-122",
-     470,
-     "16.6%",
-     "1.17x"
+     485,
+     "16.1%",
+     "1.13x"
     ],
     [
      "122+",
@@ -416,27 +417,27 @@
    "rows": [
     [
      "under $4K",
-     811,
+     854,
      "7.3%",
      "0.51x"
     ],
     [
      "$4-6K",
-     564,
-     "19.5%",
-     "1.37x"
+     586,
+     "19.3%",
+     "1.36x"
     ],
     [
      "$6-8K",
-     275,
-     "21.5%",
-     "1.51x"
+     286,
+     "22.0%",
+     "1.55x"
     ],
     [
      "$8K+",
-     124,
-     "19.4%",
-     "1.36x"
+     131,
+     "19.8%",
+     "1.4x"
     ]
    ],
    "note": "Average smash rate 14.2%. * = small sample."
@@ -452,33 +453,33 @@
    "rows": [
     [
      "C",
-     339,
-     "14.2%",
-     "1.0x"
+     356,
+     "14.0%",
+     "0.99x"
     ],
     [
      "PF",
-     313,
-     "11.5%",
-     "0.81x"
+     327,
+     "12.2%",
+     "0.86x"
     ],
     [
      "PG",
-     473,
-     "15.0%",
-     "1.06x"
+     494,
+     "14.6%",
+     "1.03x"
     ],
     [
      "SF",
-     340,
-     "11.5%",
-     "0.81x"
+     353,
+     "11.6%",
+     "0.82x"
     ],
     [
      "SG",
-     309,
-     "18.8%",
-     "1.32x"
+     327,
+     "18.7%",
+     "1.31x"
     ]
    ],
    "note": "Average smash rate 14.2%. * = small sample."
@@ -496,11 +497,11 @@
    "rows": [
     [
      "Best possible",
-     12,
-     0.75,
+     13,
+     0.77,
      1.92,
-     "75.0%",
-     "27.3%"
+     "76.9%",
+     "25.0%"
     ],
     [
      "Contest winners",
