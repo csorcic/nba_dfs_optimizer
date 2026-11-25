@@ -1,0 +1,11 @@
+{
+ "DAL@DEN": {
+  "total": 234.5,
+  "home_spread": -7.5,
+  "source": "odds_api",
+  "books": 9,
+  "commence_time": "2026-11-25T03:10:00Z",
+  "home_implied": 121.0,
+  "away_implied": 113.5
+ }
+}

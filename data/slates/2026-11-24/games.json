@@ -5,36 +5,22 @@
  "games": [
   {
    "game": "DET@ORL",
-   "lock_time": "2026-11-24T19:00:00-05:00",
-   "total": 212.5,
-   "home_spread": 2.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-25T00:11:00Z",
-   "home_implied": 105.25,
-   "away_implied": 107.25
+   "lock_time": "2026-11-24T19:00:00-05:00"
   },
   {
    "game": "BOS@WAS",
-   "lock_time": "2026-11-24T20:00:00-05:00",
-   "total": 219.0,
-   "home_spread": 11.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-25T01:10:00Z",
-   "home_implied": 104.0,
-   "away_implied": 115.0
+   "lock_time": "2026-11-24T20:00:00-05:00"
   },
   {
    "game": "DAL@DEN",
    "lock_time": "2026-11-24T22:00:00-05:00",
    "total": 234.5,
-   "home_spread": -8.5,
+   "home_spread": -7.5,
    "source": "odds_api",
    "books": 9,
    "commence_time": "2026-11-25T03:10:00Z",
-   "home_implied": 121.5,
-   "away_implied": 113.0
+   "home_implied": 121.0,
+   "away_implied": 113.5
   }
  ]
 }
