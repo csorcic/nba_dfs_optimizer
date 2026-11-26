@@ -5,69 +5,27 @@
  "games": [
   {
    "game": "CHI@CHA",
-   "lock_time": "2026-11-25T19:00:00-05:00",
-   "total": 218.5,
-   "home_spread": -4.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-26T00:10:00Z",
-   "home_implied": 111.25,
-   "away_implied": 107.25
+   "lock_time": "2026-11-25T19:00:00-05:00"
   },
   {
    "game": "CLE@NYK",
-   "lock_time": "2026-11-25T19:30:00-05:00",
-   "total": 218.5,
-   "home_spread": -4.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-26T00:40:00Z",
-   "home_implied": 111.25,
-   "away_implied": 107.25
+   "lock_time": "2026-11-25T19:30:00-05:00"
   },
   {
    "game": "MIN@OKC",
-   "lock_time": "2026-11-25T19:30:00-05:00",
-   "total": 222.5,
-   "home_spread": -2.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-26T00:40:00Z",
-   "home_implied": 112.5,
-   "away_implied": 110.0
+   "lock_time": "2026-11-25T19:30:00-05:00"
   },
   {
    "game": "BKN@MIL",
-   "lock_time": "2026-11-25T20:00:00-05:00",
-   "total": 234.0,
-   "home_spread": -1.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-26T01:10:00Z",
-   "home_implied": 117.5,
-   "away_implied": 116.5
+   "lock_time": "2026-11-25T20:00:00-05:00"
   },
   {
    "game": "LAC@MEM",
-   "lock_time": "2026-11-25T20:00:00-05:00",
-   "total": 227.5,
-   "home_spread": -7.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-26T01:10:00Z",
-   "home_implied": 117.5,
-   "away_implied": 110.0
+   "lock_time": "2026-11-25T20:00:00-05:00"
   },
   {
    "game": "PHX@HOU",
-   "lock_time": "2026-11-25T20:30:00-05:00",
-   "total": 222.5,
-   "home_spread": -9.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-26T01:40:00Z",
-   "home_implied": 115.75,
-   "away_implied": 106.75
+   "lock_time": "2026-11-25T20:30:00-05:00"
   }
  ]
 }
