@@ -9,7 +9,7 @@
    "total": 223.5,
    "home_spread": -3.5,
    "source": "odds_api",
-   "books": 7,
+   "books": 9,
    "commence_time": "2026-11-28T00:10:00Z",
    "home_implied": 113.5,
    "away_implied": 110.0
@@ -20,7 +20,7 @@
    "total": 219.5,
    "home_spread": -7.5,
    "source": "odds_api",
-   "books": 7,
+   "books": 9,
    "commence_time": "2026-11-28T00:40:00Z",
    "home_implied": 113.5,
    "away_implied": 106.0
@@ -29,34 +29,34 @@
    "game": "MIL@DET",
    "lock_time": "2026-11-27T19:30:00-05:00",
    "total": 219.5,
-   "home_spread": -8.5,
+   "home_spread": -9.25,
    "source": "odds_api",
-   "books": 7,
+   "books": 8,
    "commence_time": "2026-11-28T00:40:00Z",
-   "home_implied": 114.0,
-   "away_implied": 105.5
+   "home_implied": 114.38,
+   "away_implied": 105.12
   },
   {
    "game": "PHI@IND",
    "lock_time": "2026-11-27T19:30:00-05:00",
    "total": 232.5,
-   "home_spread": 2.0,
+   "home_spread": 2.5,
    "source": "odds_api",
-   "books": 7,
+   "books": 9,
    "commence_time": "2026-11-28T00:40:00Z",
-   "home_implied": 115.25,
-   "away_implied": 117.25
+   "home_implied": 115.0,
+   "away_implied": 117.5
   },
   {
    "game": "ATL@BOS",
    "lock_time": "2026-11-27T20:00:00-05:00",
-   "total": 222.5,
+   "total": 222.0,
    "home_spread": -9.5,
    "source": "odds_api",
-   "books": 7,
+   "books": 9,
    "commence_time": "2026-11-28T01:10:00Z",
-   "home_implied": 116.0,
-   "away_implied": 106.5
+   "home_implied": 115.75,
+   "away_implied": 106.25
   },
   {
    "game": "MEM@MIN",
@@ -64,7 +64,7 @@
    "total": 220.5,
    "home_spread": -3.5,
    "source": "odds_api",
-   "books": 7,
+   "books": 9,
    "commence_time": "2026-11-28T01:40:00Z",
    "home_implied": 112.0,
    "away_implied": 108.5
@@ -73,12 +73,12 @@
    "game": "DAL@PHX",
    "lock_time": "2026-11-27T21:00:00-05:00",
    "total": 227.5,
-   "home_spread": -2.0,
+   "home_spread": -2.5,
    "source": "odds_api",
    "books": 7,
    "commence_time": "2026-11-28T02:10:00Z",
-   "home_implied": 114.75,
-   "away_implied": 112.75
+   "home_implied": 115.0,
+   "away_implied": 112.5
   }
  ]
 }
