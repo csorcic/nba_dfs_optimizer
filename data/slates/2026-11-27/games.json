@@ -25,25 +25,11 @@
   },
   {
    "game": "MEM@MIN",
-   "lock_time": "2026-11-27T20:30:00-05:00",
-   "total": 220.0,
-   "home_spread": -2.5,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-28T01:40:00Z",
-   "home_implied": 111.25,
-   "away_implied": 108.75
+   "lock_time": "2026-11-27T20:30:00-05:00"
   },
   {
    "game": "DAL@PHX",
-   "lock_time": "2026-11-27T21:00:00-05:00",
-   "total": 225.0,
-   "home_spread": -4.0,
-   "source": "odds_api",
-   "books": 9,
-   "commence_time": "2026-11-28T02:10:00Z",
-   "home_implied": 114.5,
-   "away_implied": 110.5
+   "lock_time": "2026-11-27T21:00:00-05:00"
   }
  ]
 }
